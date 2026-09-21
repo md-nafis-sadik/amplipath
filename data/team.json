@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Full Name",
+    "title": "Job Title",
+    "bio": "Short bio — 2 to 3 sentences.",
+    "image": "/images/team/filename.jpg",
+    "linkedin": "https://linkedin.com/in/handle",
+    "order": 1
+  }
+]

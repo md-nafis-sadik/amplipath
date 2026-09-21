@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "client": "Client Name or Industry Description",
+    "service": "Service delivered",
+    "result": "+287% organic traffic",
+    "metric2": "6 months",
+    "description": "Brief description of what was done and the outcome.",
+    "tags": [
+      "SEO",
+      "Content"
+    ],
+    "featured": true
+  }
+]
