@@ -347,6 +347,12 @@
 .sidebar-cta p{font-size:12px;color:#475569;line-height:1.55;margin-bottom:10px}
 .sidebar-cta button{background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:9px 18px;border-radius:7px;border:none;cursor:pointer;width:100%}
 
+@media (max-width: 860px) {
+  .cat-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Industries dropdown nav ── */
 .ind-drop-wrap{position:relative;display:inline-block}
 .ind-drop-menu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1.5px solid var(--border);border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,0.12);min-width:240px;z-index:1000;padding:8px 0;margin-top:4px}
@@ -1313,3 +1319,76 @@ html {
   .audience-grid,
   .related-grid { grid-template-columns: 1fr; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   GOOGLE TRANSLATE HIDING & CLEAN INTEGRATION
+   ═══════════════════════════════════════════════════════════ */
+/* 1. Complete suppression of top banner and Google Translate iframes */
+body > .skiptranslate,
+.skiptranslate,
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+iframe[id*=":1.container"],
+iframe[id*=":2.container"],
+iframe[id*=":0.container"],
+iframe[class*="VIpgJd"],
+div[class*="VIpgJd"],
+.VIpgJd-ZVi9C-bOHAno-hpBBKc-OWXEXe-O12Aj-bN77Pb-haAclf,
+.VIpgJd-ZVi9C-bOHAno-hpBBKc-OWXEXe-O12Aj-bN77Pb-haAclf-Hvh21 {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  width: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  z-index: -9999 !important;
+}
+
+/* 2. Prevent Google Translate from shifting the body down */
+html,
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* 3. Keep header locked at the top without disruption */
+header,
+header.sticky {
+  top: 0 !important;
+  z-index: 50 !important;
+}
+
+#google_translate_element {
+  position: fixed !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  z-index: -9999 !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+[id*="goog-gt-"],
+.VIpgJd-yAWneB-L7tpub,
+iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+

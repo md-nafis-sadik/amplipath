@@ -54,7 +54,7 @@ export default function ServicesPage() {
       </div>
       <div className="cat-arrow">Explore Social Media &amp; Paid Ads <span>→</span></div>
     </div>
-    <div className="cat-card" onClick={() => router.push('/ai')}>
+    <div className="cat-card" onClick={() => router.push('/services/ai-marketing')}>
       <div className="cat-ico-wrap" style={{"background":"#FEF3C7","color":"#d97706"}}>🤖</div>
       <div className="cat-name">AI Marketing</div>
       <div className="cat-count-row"><span className="cat-count">6 services</span></div>
@@ -69,7 +69,7 @@ export default function ServicesPage() {
       </div>
       <div className="cat-arrow">Explore AI Marketing <span>→</span></div>
     </div>
-    <div className="cat-card" onClick={() => router.push('/services/website-copywriting')}>
+    <div className="cat-card" onClick={() => router.push('/services/content-strategy')}>
       <div className="cat-ico-wrap" style={{"background":"#DCFCE7","color":"#15803d"}}>✍️</div>
       <div className="cat-name">Content, Email &amp; PR</div>
       <div className="cat-count-row"><span className="cat-count">11 services</span></div>
@@ -114,7 +114,7 @@ export default function ServicesPage() {
       </div>
       <div className="cat-arrow">Explore Web &amp; AI Development <span>→</span></div>
     </div>
-    <div className="cat-card" onClick={() => router.push('/services/website-copywriting')}>
+    <div className="cat-card" onClick={() => router.push('/services/analytics-strategy')}>
       <div className="cat-ico-wrap" style={{"background":"#DBEAFE","color":"#1e40af"}}>📊</div>
       <div className="cat-name">Analytics &amp; Strategy</div>
       <div className="cat-count-row"><span className="cat-count">5 services</span></div>

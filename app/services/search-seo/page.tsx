@@ -3,11 +3,16 @@ import { SERVICES_DATA } from '@/data/servicesData';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'SEO & Search Optimization Services | AMPLIPATH',
-  description: 'Measurable growth delivered through specialized digital marketing and technology solutions from AMPLIPATH.',
+  title: 'Search & GEO/AEO Services | AMPLIPATH',
+  description: 'Search Engine Optimization, GEO and AI search optimization services from AMPLIPATH.',
 };
 
 export default function ServicePage() {
-  const data = SERVICES_DATA['seo'] || Object.values(SERVICES_DATA)[0];
+  const baseData = SERVICES_DATA['seo'] || Object.values(SERVICES_DATA)[0];
+  const data = {
+    ...baseData,
+    eye: 'Search & GEO/AEO Services',
+    shortTitle: 'Search & GEO/AEO',
+  };
   return <ServicePageTemplate data={data} serviceId="search-seo" />;
 }

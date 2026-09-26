@@ -3,13 +3,15 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ServiceDetail } from '@/data/servicesData';
 import { useModal } from '@/components/ModalContext';
+import { getParentCategory, getParentCategoryForChild, ParentCategoryData } from '@/data/parentCategories';
 
 interface ServicePageProps {
   data: ServiceDetail;
   serviceId: string;
+  parentCategory?: ParentCategoryData;
 }
 
-export default function ServicePageTemplate({ data, serviceId }: ServicePageProps) {
+export default function ServicePageTemplate({ data, serviceId, parentCategory }: ServicePageProps) {
   const { openModal } = useModal();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
@@ -17,12 +19,40 @@ export default function ServicePageTemplate({ data, serviceId }: ServicePageProp
     return <div className="p-20 text-center text-slate-600">Service information not found.</div>;
   }
 
+  // Check if this page is a parent category page
+  const parentCat = parentCategory || getParentCategory(serviceId);
+
+  // If this is a child service page, find which parent category it belongs to
+  const childParentCat = !parentCat ? getParentCategoryForChild(serviceId) : null;
+
   return (
     <div>
       {/* ══ SERVICE HERO ══ */}
       <div className="sp-hero">
         <div className="sp-breadcrumb">
-          <Link href="/" className="hover:underline">Home</Link> / <Link href="/services" className="hover:underline">Services</Link> / <span>{data.shortTitle || data.eye}</span>
+          <Link href="/" className="hover:underline">Home</Link>
+          {' / '}
+          <Link href="/services" className="hover:underline">Services</Link>
+          {parentCat ? (
+            <>
+              {' / '}
+              <span>{parentCat.categoryName}</span>
+            </>
+          ) : childParentCat ? (
+            <>
+              {' / '}
+              <Link href={`/services/${childParentCat.id}`} className="hover:underline">
+                {childParentCat.categoryName}
+              </Link>
+              {' / '}
+              <span>{data.shortTitle || data.eye}</span>
+            </>
+          ) : (
+            <>
+              {' / '}
+              <span>{data.shortTitle || data.eye}</span>
+            </>
+          )}
         </div>
         {data.eyebrow && (
           <div className="eyebrow">{data.eyebrow}</div>
@@ -46,6 +76,94 @@ export default function ServicePageTemplate({ data, serviceId }: ServicePageProp
           </div>
         )}
       </div>
+
+      {/* ══ PARENT CATEGORY SERVICES DIRECTORY (WHEN ON PARENT PAGE) ══ */}
+      {parentCat && (
+        <section className="section white" id="category-services" style={{ borderBottom: '1px solid #e2e8f0', background: '#fafcff', padding: '60px 0' }}>
+          <div className="container">
+            <div className="sec-tag">{parentCat.categoryTag}</div>
+            <h2 className="sec-h2">
+              Explore All {parentCat.childServices.length} {parentCat.categoryName} Services
+            </h2>
+            <div className="aln"></div>
+            <p className="sec-sub">
+              Browse our specialized {parentCat.categoryName.toLowerCase()} solutions below. Click on any service to explore detailed capabilities, deliverables, methodology and case studies.
+            </p>
+
+            <div className="cat-layout" style={{ marginTop: '36px' }}>
+              {/* Left Column: Cards List */}
+              <div className="svc-list">
+                {parentCat.childServices.map((svc, idx) => (
+                  <Link
+                    key={idx}
+                    href={svc.href}
+                    className="svc-card text-left no-underline block"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <div className="svc-card-ico" style={{ background: '#eff6ff', color: '#1d4ed8' }}>
+                      {svc.icon || '⚡'}
+                    </div>
+                    <div className="svc-card-body">
+                      <div className="svc-card-name flex items-center gap-2">
+                        <span>{svc.name}</span>
+                        {svc.badge && (
+                          <span className="badge-new">{svc.badge}</span>
+                        )}
+                      </div>
+                      <div className="svc-card-desc">{svc.desc}</div>
+                      <div className="svc-card-link flex items-center gap-1 font-semibold">
+                        <span>Explore {svc.name}</span>
+                        <span>→</span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Right Column: Quick Nav & Proposal CTA */}
+              <div className="space-y-5" style={{ position: 'sticky', top: '90px' }}>
+                <div className="sidebar-box">
+                  <div className="sidebar-head">Quick Navigation</div>
+                  {parentCat.childServices.map((svc, idx) => (
+                    <Link
+                      key={idx}
+                      href={svc.href}
+                      className="sidebar-item no-underline flex items-center justify-between"
+                      style={{ textDecoration: 'none' }}
+                    >
+                      <div className="flex items-center gap-2 truncate">
+                        <span className="sidebar-arrow">›</span>
+                        <span className="sidebar-name truncate">{svc.name}</span>
+                      </div>
+                      {svc.badge && (
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 ml-1">
+                          {svc.badge}
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+
+                <div className="sidebar-cta">
+                  <p className="font-semibold text-slate-900 text-sm">
+                    {parentCat.sidebarCta?.title || 'Need a custom strategy?'}
+                  </p>
+                  <p className="text-xs text-slate-500 mt-1 mb-3">
+                    {parentCat.sidebarCta?.text || 'We assemble tailored capabilities into a high-ROI managed plan.'}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => openModal('rfp')}
+                    className="btn-primary w-full text-center text-xs py-2.5 cursor-pointer"
+                  >
+                    {parentCat.sidebarCta?.buttonText || 'Request Custom Proposal →'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ══ THE CHALLENGE / PROBLEMS ══ */}
       {data.problems && data.problems.length > 0 && (
@@ -286,6 +404,60 @@ export default function ServicePageTemplate({ data, serviceId }: ServicePageProp
                   </article>
                 );
               })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ══ SIBLING SERVICES IN PARENT CATEGORY (FOR CHILD SERVICE PAGES) ══ */}
+      {childParentCat && (
+        <section className="section gray" style={{ borderTop: '1px solid #e2e8f0', background: '#f8fafc', padding: '60px 0' }}>
+          <div className="container">
+            <div className="sec-tag">{childParentCat.categoryTag}</div>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+              <div>
+                <h2 className="sec-h2">Other Services in {childParentCat.categoryName}</h2>
+                <div className="aln"></div>
+                <p className="sec-sub" style={{ margin: 0 }}>
+                  Explore complementary capabilities engineered to compound your growth across the {childParentCat.categoryName.toLowerCase()} ecosystem.
+                </p>
+              </div>
+              <Link
+                href={`/services/${childParentCat.id}`}
+                className="text-sm font-bold text-blue-600 hover:text-blue-800 whitespace-nowrap flex items-center gap-1"
+              >
+                <span>View all {childParentCat.childServices.length} {childParentCat.categoryName} services</span>
+                <span>→</span>
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {childParentCat.childServices
+                .filter(s => s.slug !== serviceId && s.href !== `/services/${serviceId}`)
+                .slice(0, 6)
+                .map((sibling, idx) => (
+                  <Link
+                    key={idx}
+                    href={sibling.href}
+                    className="bg-white p-5 rounded-xl border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all flex flex-col justify-between no-underline"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-2xl">{sibling.icon || '⚡'}</span>
+                        {sibling.badge && (
+                          <span className="badge-new">{sibling.badge}</span>
+                        )}
+                      </div>
+                      <h3 className="font-bold text-slate-900 text-sm mb-1">{sibling.name}</h3>
+                      <p className="text-slate-600 text-xs leading-relaxed line-clamp-2">{sibling.desc}</p>
+                    </div>
+                    <div className="text-xs font-bold text-blue-600 hover:underline mt-3 flex items-center gap-1">
+                      <span>Explore service</span>
+                      <span>→</span>
+                    </div>
+                  </Link>
+                ))}
             </div>
           </div>
         </section>

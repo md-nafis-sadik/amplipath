@@ -3,10 +3,31 @@ import { notFound } from 'next/navigation';
 import { SERVICES_DATA, ServiceDetail } from '@/data/servicesData';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
+const CATEGORY_ALIAS_MAP: Record<string, string> = {
+  'search-geo-aeo': 'seo',
+  'search-seo': 'seo',
+  'ai-marketing': 'aiprompt',
+  'social-paid-ads': 'fbads',
+  'paid-ads': 'fbads',
+  'content-strategy': 'content',
+  'niche-growth': 'game',
+  'niche-services': 'game',
+  'analytics-strategy': 'analytics',
+  'web-tech': 'webdev',
+  'web-development': 'webdev',
+  'ai-development': 'aidev',
+};
+
 // Helper to normalize slugs to match SERVICES_DATA keys
 function resolveServiceData(slug: string): { data: ServiceDetail; serviceId: string } | null {
   if (!slug) return null;
   const decodedSlug = decodeURIComponent(slug).toLowerCase().trim();
+
+  // 0. Explicit category alias match
+  if (CATEGORY_ALIAS_MAP[decodedSlug] && SERVICES_DATA[CATEGORY_ALIAS_MAP[decodedSlug]]) {
+    const key = CATEGORY_ALIAS_MAP[decodedSlug];
+    return { data: SERVICES_DATA[key], serviceId: key };
+  }
 
   // 1. Direct match (e.g. "seo", "mobileapp", "crm", "aiconsult", "crowdfund", "affiliate", "guestpost")
   if (SERVICES_DATA[decodedSlug]) {

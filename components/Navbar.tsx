@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Logo from './Logo';
 import MegaMenu from './MegaMenu';
 import { useModal } from './ModalContext';
+import GlobalLanguageSwitcher from './GlobalLanguageSwitcher';
 
 // Comprehensive catalog of all 73 services grouped by their 8 categories
 const SERVICE_CATEGORIES = [
@@ -213,7 +214,7 @@ export default function Navbar() {
       <nav ref={navRef} className="nx-nav flex items-center justify-between px-4 sm:px-6 md:px-10 h-16 border-b border-slate-200 bg-white relative">
         <div className="flex items-center">
           <Logo />
-          <span className="nx-globe hidden sm:inline-block">/ Global ▾</span>
+          <GlobalLanguageSwitcher isMobile={false} />
         </div>
 
         {/* ══ DESKTOP NAV LINKS (100% UNCHANGED >= 1024px) ══ */}
@@ -620,6 +621,9 @@ export default function Navbar() {
                 </Link>
               </div>
             )}
+
+            {/* Mobile Language Switcher */}
+            <GlobalLanguageSwitcher isMobile={true} onSelectMobile={closeAllMobile} />
 
             {/* Mobile Action Buttons */}
             <div className="pt-6 flex flex-col gap-2.5 border-t border-slate-200 mt-4">

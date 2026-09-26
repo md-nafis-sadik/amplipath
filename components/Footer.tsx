@@ -92,13 +92,14 @@ export default function Footer() {
 
           <div>
             <div className="fc-head">Services</div>
-            <Link href="/services/search-seo" className="fl">SEO Services</Link>
-            <Link href="/services/search-seo" className="fl">GEO / AEO</Link>
-            <Link href="/services/paid-ads" className="fl">Paid Advertising</Link>
-            <Link href="/services/web-development" className="fl">Web Development</Link>
-            <Link href="/ai" className="fl">AI Development</Link>
-            <Link href="/services/africa-market" className="fl">Africa Services</Link>
-            <Link href="/services/niche-services" className="fl">Game Marketing</Link>
+            <Link href="/services/search-seo" className="fl">Search &amp; GEO/AEO</Link>
+            <Link href="/services/ai-marketing" className="fl">AI Marketing</Link>
+            <Link href="/services/paid-ads" className="fl">Social &amp; Paid Ads</Link>
+            <Link href="/services/content-strategy" className="fl">Content &amp; Strategy</Link>
+            <Link href="/services/niche-services" className="fl">Niche &amp; Growth</Link>
+            <Link href="/services/analytics-strategy" className="fl">Analytics &amp; Strategy</Link>
+            <Link href="/services/web-development" className="fl">Web &amp; Tech</Link>
+            <Link href="/services/ai-development" className="fl">AI Development</Link>
           </div>
 
           <div>
