@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: 'Africa market entry and growth services from Amplipath: country-specific research, websites and ecommerce, local SEO, paid media, WhatsApp journeys, AI automation and measurement.',
 };
 
-export default function ServicePage() {
+export default function AfricaServicePage() {
   return <AfricaMarketTemplate />;
 }

@@ -543,110 +543,36 @@ export default function HomePage() {
     </div>
   </div>
 
-  {/* 6 Featured Portfolio Case Studies */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {/* Portfolio Item 1 */}
+  {/* 4 Featured Portfolio Case Studies */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    {/* Portfolio Item 1: Amber's Eternal */}
     <div
       className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
-      onClick={() => router.push('/work')}
+      onClick={() => router.push('/work?case=amber')}
     >
-      <div className="h-32 bg-gradient-to-br from-blue-900 to-indigo-800 p-5 flex flex-col justify-between relative overflow-hidden">
+      <div className="h-32 bg-gradient-to-br from-[#3a2a1a] to-[#c9862e] p-5 flex flex-col justify-between relative overflow-hidden">
         <div className="flex items-center justify-between z-10">
           <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            Finance &amp; AI
+            Health &amp; Beauty
           </span>
           <span className="text-white/40 text-xs font-mono">Case #01</span>
         </div>
         <div className="z-10">
-          <div className="text-xs text-blue-200 font-semibold">Auto Refinancing Platform</div>
-          <div className="text-white font-bold text-base leading-tight">AI Search &amp; GEO/AEO Authority</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">AI</div>
-      </div>
-      <div className="p-5 flex-1 flex flex-col justify-between">
-        <div>
-          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+2,012%</div>
-          <p className="text-xs text-slate-600 leading-relaxed mb-4">
-            Positioned as the leading answer engine recommendation for auto refinancing across ChatGPT, Gemini, and Perplexity through structured entity citations and prompt cluster architecture.
-          </p>
-          <div className="flex flex-wrap gap-1.5 mb-4">
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">GEO / AEO</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Entity SEO</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Brand Authority</span>
-          </div>
-        </div>
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
-          <span>Read Full Case Study</span>
-          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Portfolio Item 2 */}
-    <div
-      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
-      onClick={() => router.push('/work')}
-    >
-      <div className="h-32 bg-gradient-to-br from-slate-900 to-blue-950 p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            B2B SaaS
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #02</span>
-        </div>
-        <div className="z-10">
-          <div className="text-xs text-blue-200 font-semibold">Workflow Management Software</div>
-          <div className="text-white font-bold text-base leading-tight">Organic Pipeline &amp; Technical SEO</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">SaaS</div>
-      </div>
-      <div className="p-5 flex-1 flex flex-col justify-between">
-        <div>
-          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+259%</div>
-          <p className="text-xs text-slate-600 leading-relaxed mb-4">
-            Rebuilt the site architecture to eliminate crawl debt, implemented high-intent commercial keyword silos, and generated a 259% surge in qualified demo requests within 6 months.
-          </p>
-          <div className="flex flex-wrap gap-1.5 mb-4">
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Technical SEO</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Demand Gen</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Content Clusters</span>
-          </div>
-        </div>
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
-          <span>Read Full Case Study</span>
-          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Portfolio Item 3 */}
-    <div
-      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
-      onClick={() => router.push('/work')}
-    >
-      <div className="h-32 bg-gradient-to-br from-emerald-950 to-teal-900 p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            E-Commerce
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #03</span>
-        </div>
-        <div className="z-10">
-          <div className="text-xs text-emerald-200 font-semibold">D2C Fashion &amp; Retail Brand</div>
-          <div className="text-white font-bold text-base leading-tight">Shopify Rebuild &amp; Conversion CRO</div>
+          <div className="text-xs text-amber-200 font-semibold">Amber’s Eternal</div>
+          <div className="text-white font-bold text-base leading-tight">Ecommerce Rebuild &amp; SEO</div>
         </div>
         <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Shop</div>
       </div>
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
-          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+2,068%</div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+140%</div>
           <p className="text-xs text-slate-600 leading-relaxed mb-4">
-            Engineered a custom high-performance Shopify storefront with sub-second page loads, conversion-optimized checkout, and a full organic search strategy across 12 countries.
+            Full-scope storefront development and technical SEO, transforming a diverse 132+ product catalogue into an organic acquisition channel with a +90% conversion lift.
           </p>
           <div className="flex flex-wrap gap-1.5 mb-4">
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Shopify Development</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">CRO Overhaul</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Shopping SEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Ecommerce Build</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Technical SEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">CRO</span>
           </div>
         </div>
         <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
@@ -656,108 +582,108 @@ export default function HomePage() {
       </div>
     </div>
 
-    {/* Portfolio Item 4 */}
+    {/* Portfolio Item 2: Printin3D */}
     <div
       className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
-      onClick={() => router.push('/work')}
+      onClick={() => router.push('/work?case=print')}
     >
-      <div className="h-32 bg-gradient-to-br from-purple-950 to-violet-900 p-5 flex flex-col justify-between relative overflow-hidden">
+      <div className="h-32 bg-gradient-to-br from-[#10243f] to-[#0f766e] p-5 flex flex-col justify-between relative overflow-hidden">
         <div className="flex items-center justify-between z-10">
           <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            Gaming &amp; Entertainment
+            3D Printing &amp; Hardware
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #02</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-teal-200 font-semibold">Printin3D</div>
+          <div className="text-white font-bold text-base leading-tight">Shopify &amp; TikTok Shop Launch</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">3D</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+400%</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Specialist 3D-printing storefront connecting Shopify, Meta Shop and TikTok Shop with dropshipping setup and technical SEO, achieving 50%+ early sales growth.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Shopify</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">TikTok Shop</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">SEO</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Portfolio Item 3: Furry Fiesta */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work?case=furry')}
+    >
+      <div className="h-32 bg-gradient-to-br from-[#331021] to-[#be185d] p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            Pet Ecommerce
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #03</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-pink-200 font-semibold">Furry Fiesta</div>
+          <div className="text-white font-bold text-base leading-tight">Storefront Redesign &amp; CRO</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Pet</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+250%</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Conversion-focused storefront overhaul removing checkout friction, simplifying navigation, and turning everyday pet supply browsing into completed orders.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Store Redesign</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">CRO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Mobile UX</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Portfolio Item 4: Olakunle & Partners */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work?case=ola')}
+    >
+      <div className="h-32 bg-gradient-to-br from-[#0f2a4a] to-[#0369a1] p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            Real Estate &amp; Property
           </span>
           <span className="text-white/40 text-xs font-mono">Case #04</span>
         </div>
         <div className="z-10">
-          <div className="text-xs text-purple-200 font-semibold">Indie Gaming Studio</div>
-          <div className="text-white font-bold text-base leading-tight">Steam Launch Campaign Blitz</div>
+          <div className="text-xs text-sky-200 font-semibold">Olakunle &amp; Partners</div>
+          <div className="text-white font-bold text-base leading-tight">Property Web Platform &amp; Lead Gen</div>
         </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Game</div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Prop</div>
       </div>
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
-          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">50,000+</div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+80%</div>
           <p className="text-xs text-slate-600 leading-relaxed mb-4">
-            Generated 50,000+ pre-release Steam wishlists via Steam algorithm SEO, Reddit community viral marketing, and micro-streamer influencer seeding. Ranked in Top 10 New Releases.
+            End-to-end real estate digital platform combining property listings with structured lead capture forms and WhatsApp paths, driving an 80%+ lift in buyer enquiries.
           </p>
           <div className="flex flex-wrap gap-1.5 mb-4">
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Steam SEO</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Influencer Seeding</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">TikTok Growth</span>
-          </div>
-        </div>
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
-          <span>Read Full Case Study</span>
-          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Portfolio Item 5 */}
-    <div
-      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
-      onClick={() => router.push('/work')}
-    >
-      <div className="h-32 bg-gradient-to-br from-amber-950 to-orange-900 p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            Emerging Markets
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #05</span>
-        </div>
-        <div className="z-10">
-          <div className="text-xs text-amber-200 font-semibold">Pan-African Multi-Location Retail</div>
-          <div className="text-white font-bold text-base leading-tight">WhatsApp Commerce + Local SEO</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Africa</div>
-      </div>
-      <div className="p-5 flex-1 flex flex-col justify-between">
-        <div>
-          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+329%</div>
-          <p className="text-xs text-slate-600 leading-relaxed mb-4">
-            Connected Google Maps local discovery directly to automated WhatsApp Business catalogue ordering across 15 regional hubs, driving a 329% direct sales increase in one quarter.
-          </p>
-          <div className="flex flex-wrap gap-1.5 mb-4">
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">WhatsApp Marketing</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Google Maps SEO</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Localized CRO</span>
-          </div>
-        </div>
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
-          <span>Read Full Case Study</span>
-          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Portfolio Item 6 */}
-    <div
-      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
-      onClick={() => router.push('/work')}
-    >
-      <div className="h-32 bg-gradient-to-br from-cyan-950 to-blue-900 p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            Fintech &amp; Banking
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #06</span>
-        </div>
-        <div className="z-10">
-          <div className="text-xs text-cyan-200 font-semibold">Digital Investment &amp; Banking App</div>
-          <div className="text-white font-bold text-base leading-tight">Product Launch Acquisition Engine</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Bank</div>
-      </div>
-      <div className="p-5 flex-1 flex flex-col justify-between">
-        <div>
-          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+120%</div>
-          <p className="text-xs text-slate-600 leading-relaxed mb-4">
-            Constructed regulated YMYL content clusters and digital PR authority to make organic search the #1 acquisition source for verified funded depository accounts from day one.
-          </p>
-          <div className="flex flex-wrap gap-1.5 mb-4">
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">YMYL SEO</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Digital PR</span>
-            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Funded Funnels</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Web Platform</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Lead Generation</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">WhatsApp Routing</span>
           </div>
         </div>
         <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">

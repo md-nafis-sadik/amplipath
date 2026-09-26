@@ -640,9 +640,9 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "africa": {
-    "eye": "Africa Market Services",
-    "h1": "The first premium global agency built for Africa's digital economy.",
-    "sub": "While competitors ignore Africa, Amplipath has built dedicated infrastructure, real local market data and specialist teams for 15 African markets. Whether you are marketing in Africa or targeting African audiences worldwide — we are the only global agency with the depth to do it properly.",
+    "eye": "Africa Market Growth & Digital Marketing Services",
+    "h1": "Africa is many markets. Build for the one you want to win.",
+    "sub": "Amplipath connects country-specific research, websites, search, paid media, WhatsApp and intelligent automation into one growth plan. Enter a new African market or strengthen your position in an existing one with work built around your customers and commercial goals.",
     "stats": [
       {
         "n": "15",
