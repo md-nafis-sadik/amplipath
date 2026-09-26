@@ -159,127 +159,636 @@ export default function HomePage() {
   </div>
 </div>
 
-{/*  Comparison table - Section 5.3  */}
-<div className="s-white">
-  <div className="sec-tag">AMPLIPATH VS THE ALTERNATIVES — MARKETING + TECHNOLOGY</div>
+{/* ══ COMPARISON TABLE — Amplipath vs The Alternatives (Redesigned) ══ */}
+<div className="s-gray" id="why-amplipath">
+  <div className="sec-tag">THE AMPLIPATH ADVANTAGE</div>
   <h2 className="sec-h2">Marketing agency. Technology company. One team.</h2>
   <div className="aln"></div>
-  <p className="sec-sub" style={{"marginBottom":"28px"}}>See how Amplipath compares to large agencies, freelancers and in-house teams — including the technology and AI capabilities most agencies simply don't offer.</p>
-  <div style={{"overflowX":"auto"}}>
-    <table style={{"width":"100%","borderCollapse":"collapse","fontSize":"13px"}}>
-      <thead>
-        <tr style={{"background":"#0f172a"}}>
-          <th style={{"padding":"14px 18px","textAlign":"left","color":"#94a3b8","fontSize":"11px","fontWeight":"700","letterSpacing":".1em","textTransform":"uppercase","width":"28%"}}>What you need</th>
-          <th style={{"padding":"14px 18px","textAlign":"center","color":"var(--ac)","fontSize":"12px","fontWeight":"700","width":"18%"}}>Amplipath</th>
-          <th style={{"padding":"14px 18px","textAlign":"center","color":"#94a3b8","fontSize":"12px","fontWeight":"700","width":"18%"}}>Large Agency</th>
-          <th style={{"padding":"14px 18px","textAlign":"center","color":"#94a3b8","fontSize":"12px","fontWeight":"700","width":"18%"}}>Freelancer</th>
-          <th style={{"padding":"14px 18px","textAlign":"center","color":"#94a3b8","fontSize":"12px","fontWeight":"700","width":"18%"}}>In-House</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{"borderBottom":"1px solid var(--border)"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>Senior specialist on your account</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ Always</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Junior staff typical</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ 1 person only</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ Depends on hire</td>
-        </tr>
-        <tr style={{"borderBottom":"1px solid var(--border)","background":"#f8fafc"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>GEO/AEO — AI search optimization</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ Core service</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Rarely offered</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Very rare</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Hard to build</td>
-        </tr>
-        <tr style={{"borderBottom":"1px solid var(--border)"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>Africa market expertise</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ 15 countries</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Generic coverage</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Very rare</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Not scalable</td>
-        </tr>
-        <tr style={{"borderBottom":"1px solid var(--border)","background":"#f8fafc"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>No long-term contracts</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ Month-to-month</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ 6–12 month lock-in</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a"}}>✓ Flexible</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Employment contract</td>
-        </tr>
-        <tr style={{"borderBottom":"1px solid var(--border)"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>50+ services under one roof</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ Full-service</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ Limited scope</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ 1–3 skills only</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Expensive to staff</td>
-        </tr>
-        <tr style={{"borderBottom":"1px solid var(--border)","background":"#f8fafc"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>Niche services (games, courses, music)</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ Specialist teams</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Not offered</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ Rare specialists</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Not feasible</td>
-        </tr>
-        <tr style={{"borderBottom":"1px solid var(--border)"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>Revenue-tied reporting (not vanity metrics)</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ Always</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ Varies widely</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ Depends</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ Internal only</td>
-        </tr>
-        <tr style={{"background":"#f8fafc"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>Results within 90 days</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ Committed</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ 6–12 months typical</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#f59e0b"}}>~ Varies</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Slow ramp-up</td>
-        </tr>
-        <tr style={{"background":"#f0fdf4"}}>
-          <td style={{"padding":"13px 18px","color":"#0f172a","fontWeight":"600"}}>In-house tech: websites, apps &amp; AI systems</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#16a34a","fontWeight":"700"}}>✓ In-house team</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Outsourced or N/A</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Not offered</td>
-          <td style={{"padding":"13px 18px","textAlign":"center","color":"#dc2626"}}>✗ Cost-prohibitive</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div style={{"marginTop":"32px","textAlign":"center","padding":"32px 24px","background":"#f8fafc","borderRadius":"12px","border":"1.5px solid var(--border)"}}>
-    <div style={{"fontSize":"12px","fontWeight":"700","letterSpacing":".08em","color":"var(--ac1)","textTransform":"uppercase","marginBottom":"10px"}}>Ready to grow?</div>
-    <p style={{"fontSize":"18px","fontWeight":"700","color":"#0f172a","marginBottom":"8px"}}>One team for marketing strategy and the technology that delivers it.</p>
-    <p style={{"fontSize":"14px","color":"#64748b","marginBottom":"20px"}}>SEO, paid ads, web development, AI chatbots, apps and automation — no lock-in contracts.</p>
-    <button className="btn-fill" onClick={() => openModal('rfp')}>Work With Us</button>
+  <p className="sec-sub" style={{ marginBottom: '32px' }}>
+    See how Amplipath compares to traditional agencies, fragmented freelancers, and expensive in-house teams — including the custom AI and engineering infrastructure most agencies simply cannot build.
+  </p>
+
+  {/* Outer Card Wrapper */}
+  <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xl shadow-slate-900/5 overflow-hidden">
+    <div className="overflow-x-auto">
+      <table className="w-full border-collapse text-left min-w-[780px]">
+        <thead>
+          <tr className="border-b border-slate-200">
+            {/* Criteria Column Header */}
+            <th className="p-4 sm:p-5 bg-slate-900 text-slate-300 font-bold text-xs uppercase tracking-wider w-[28%]">
+              <span className="block text-[11px] text-slate-400 font-medium normal-case tracking-normal mb-0.5">Evaluation Metric</span>
+              What Your Business Needs
+            </th>
+
+            {/* Amplipath Hero Column Header */}
+            <th className="p-4 sm:p-5 bg-gradient-to-b from-[#1A56DB] to-[#1242aa] text-white text-center w-[22%] relative border-x-2 border-blue-600 shadow-md">
+              <div className="inline-block bg-white/20 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full tracking-wider mb-1.5">
+                ★ Standard Choice
+              </div>
+              <div className="text-base font-extrabold text-white tracking-tight flex items-center justify-center gap-1">
+                Ampli<span className="text-blue-200">path</span>
+              </div>
+              <span className="block text-[11px] text-blue-100 font-normal mt-0.5">Strategy + Tech + AI</span>
+            </th>
+
+            {/* Large Agency Header */}
+            <th className="p-4 sm:p-5 bg-slate-900 text-slate-300 text-center w-[16%]">
+              <div className="text-sm font-bold text-white">Large Agency</div>
+              <span className="block text-[11px] text-slate-400 font-normal mt-0.5">High overhead &amp; silos</span>
+            </th>
+
+            {/* Freelancer Header */}
+            <th className="p-4 sm:p-5 bg-slate-900 text-slate-300 text-center w-[17%]">
+              <div className="text-sm font-bold text-white">Freelancers</div>
+              <span className="block text-[11px] text-slate-400 font-normal mt-0.5">Single-skill capacity</span>
+            </th>
+
+            {/* In-House Header */}
+            <th className="p-4 sm:p-5 bg-slate-900 text-slate-300 text-center w-[17%]">
+              <div className="text-sm font-bold text-white">In-House Team</div>
+              <span className="block text-[11px] text-slate-400 font-normal mt-0.5">Recruiting &amp; overhead</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-slate-100 text-xs sm:text-[13px]">
+          {/* Row 1 */}
+          <tr className="hover:bg-slate-50/70 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">Senior specialist on your account</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Direct strategists without junior middlemen</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                Always
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Day 1 senior lead</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Junior staff typical
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-medium border border-amber-200/60">
+                ~ 1 person only
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[11px] font-medium border border-slate-200">
+                ~ Depends on hire
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 2 */}
+          <tr className="bg-slate-50/40 hover:bg-slate-50 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">GEO / AEO — AI Search Optimization</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">ChatGPT, Perplexity &amp; Gemini visibility</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                Core Service
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Early market pioneer</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Rarely offered
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Very rare
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Hard to build
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 3 */}
+          <tr className="hover:bg-slate-50/70 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">Africa &amp; Emerging Market Depth</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Local data, WhatsApp funnels &amp; telco payments</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                15+ Countries
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Deep regional intelligence</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Generic coverage
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Very rare
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Not scalable
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 4 */}
+          <tr className="bg-slate-50/40 hover:bg-slate-50 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">No long-term lock-in contracts</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Flexibility backed by month-to-month results</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                Month-to-Month
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Earned trust every 30 days</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ 6–12 mo. lock-in
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-medium border border-emerald-200/60">
+                ✓ Flexible
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Employment contracts
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 5 */}
+          <tr className="hover:bg-slate-50/70 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">50+ integrated services under one roof</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Marketing, technology, AI &amp; creative unified</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                Full-Service
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Zero vendor fragmentation</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-medium border border-amber-200/60">
+                ~ Limited scope
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ 1–3 skills only
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Costly to staff all
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 6 */}
+          <tr className="bg-slate-50/40 hover:bg-slate-50 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">Niche verticals (Gaming, Courses, Music)</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Steam launch, Udemy growth, Spotify streaming</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                Specialist Squads
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Domain-specific playbooks</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Not offered
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-medium border border-amber-200/60">
+                ~ Rare specialists
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Not feasible
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 7 */}
+          <tr className="hover:bg-slate-50/70 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">Revenue-tied reporting &amp; live dashboards</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Pipeline &amp; real business revenue, not vanity clicks</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                Always
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Real-time revenue attribution</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-medium border border-amber-200/60">
+                ~ Vanity metrics
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-medium border border-amber-200/60">
+                ~ Varies
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-medium border border-amber-200/60">
+                ~ Siloed tools
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 8 */}
+          <tr className="bg-slate-50/40 hover:bg-slate-50 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">Measurable results within 30–90 days</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Rapid 90-day momentum framework</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                Committed
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Fast time-to-value</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ 6–12 mo. typical
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[11px] font-medium border border-amber-200/60">
+                ~ Inconsistent
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Slow ramp-up
+              </span>
+            </td>
+          </tr>
+
+          {/* Row 9 */}
+          <tr className="hover:bg-slate-50/70 transition-colors">
+            <td className="p-4 sm:p-5 font-semibold text-slate-900">
+              <div className="text-slate-900 font-bold">In-house tech: Web, Apps &amp; AI Systems</div>
+              <div className="text-[11px] text-slate-500 font-normal mt-0.5">Software engineers, React, custom AI bots</div>
+            </td>
+            <td className="p-4 sm:p-5 bg-blue-50/50 border-x-2 border-blue-600/30 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                <svg className="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                In-House Team
+              </span>
+              <span className="block text-[10px] text-slate-500 mt-1 font-medium">Real engineers on staff</span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Outsourced / markup
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Not offered
+              </span>
+            </td>
+            <td className="p-4 sm:p-5 text-center">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-medium border border-rose-200/60">
+                ✕ Cost-prohibitive
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Table Card Bottom Banner */}
+    <div className="bg-slate-900 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-slate-800">
+      <div>
+        <div className="text-white text-base sm:text-lg font-bold">Experience the Amplipath Difference</div>
+        <p className="text-slate-400 text-xs sm:text-sm mt-1 max-w-xl">
+          Get a growth team that blends enterprise digital strategy, technical engineering, and AI execution — without the high agency markups or legal handcuffs.
+        </p>
+      </div>
+      <div className="flex items-center gap-3 shrink-0">
+        <button
+          className="btn-fill cursor-pointer text-xs sm:text-sm font-bold shadow-lg"
+          onClick={() => openModal('rfp')}
+        >
+          Request a Custom Proposal
+        </button>
+        <button
+          className="btn-out cursor-pointer text-xs sm:text-sm font-bold text-white border-white/30 hover:border-white"
+          onClick={() => openModal('lead')}
+        >
+          Book a Free Call
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 
-{/*  RESULTS — Social proof with strong commercial signals  */}
-<div className="s-white">
-  <div className="sec-tag">CLIENT RESULTS</div>
-  <h2 className="sec-h2">Real brands. Real revenue. Real numbers.</h2>
+{/* ══ CLIENT RESULTS & FEATURED PORTFOLIO ══ */}
+<div className="s-white" id="portfolio">
+  <div className="sec-tag">CLIENT RESULTS &amp; PORTFOLIO</div>
+  <h2 className="sec-h2">Real brands. Proven growth. Measurable ROI.</h2>
   <div className="aln"></div>
-  <div className="rg">
-    <div className="rc">
-      <div className="rc-cl">E-Commerce / Retail — SEO Campaign</div>
-      <div className="rc-st">+2,068%</div>
-      <div className="rc-d">Increase in direct sales from organic search after a holistic SEO strategy — content, technical and off-page combined. Achieved within 12 months of engagement.</div>
-      <button className="rc-lk" onClick={() => router.push('/work')}>Read full case study →</button>
+  <p className="sec-sub" style={{ marginBottom: '32px' }}>
+    We measure success the way our clients do — in commercial revenue, pipeline generation, and market leadership. Here is a selection of verified client outcomes across our core growth engines.
+  </p>
+
+  {/* Stat Highlights Bar */}
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-10">
+    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-4 sm:p-5 text-center">
+      <div className="text-2xl sm:text-3xl font-extrabold text-[#1A56DB] tracking-tight">+2,012%</div>
+      <div className="text-xs font-semibold text-slate-700 mt-1">AI Search &amp; GEO Traffic</div>
+      <div className="text-[11px] text-slate-500 mt-0.5">ChatGPT &amp; Perplexity</div>
     </div>
-    <div className="rc">
-      <div className="rc-cl">SaaS / Technology — Organic Growth</div>
-      <div className="rc-st">+259%</div>
-      <div className="rc-d">Total organic conversions after improving on-site relevancy, off-site authority and technical page health. Competitor traffic captured within 6 months.</div>
-      <button className="rc-lk" onClick={() => router.push('/work')}>Read full case study →</button>
+    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-4 sm:p-5 text-center">
+      <div className="text-2xl sm:text-3xl font-extrabold text-[#1A56DB] tracking-tight">+259%</div>
+      <div className="text-xs font-semibold text-slate-700 mt-1">SaaS Organic Conversions</div>
+      <div className="text-[11px] text-slate-500 mt-0.5">High-intent demo pipeline</div>
     </div>
-    <div className="rc">
-      <div className="rc-cl">Finance / Fintech — Product Launch</div>
-      <div className="rc-st">+120%</div>
-      <div className="rc-d">Organic search became the primary driver of traffic and funded accounts for a brand new product — powered by targeted content clusters and off-site trust building.</div>
-      <button className="rc-lk" onClick={() => router.push('/work')}>Read full case study →</button>
+    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-4 sm:p-5 text-center">
+      <div className="text-2xl sm:text-3xl font-extrabold text-[#1A56DB] tracking-tight">+2,068%</div>
+      <div className="text-xs font-semibold text-slate-700 mt-1">E-Commerce Direct Revenue</div>
+      <div className="text-[11px] text-slate-500 mt-0.5">Shopify rebuild &amp; CRO</div>
     </div>
-    <div className="rc">
-      <div className="rc-cl">Media / Publishing — SEO & Content</div>
-      <div className="rc-st">+91%</div>
-      <div className="rc-d">Page views delivered in a single calendar year through integrated SEO and content strategy — a 91% increase delivered ahead of schedule and under budget.</div>
-      <button className="rc-lk" onClick={() => router.push('/work')}>Read full case study →</button>
+    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-4 sm:p-5 text-center">
+      <div className="text-2xl sm:text-3xl font-extrabold text-[#1A56DB] tracking-tight">50,000+</div>
+      <div className="text-xs font-semibold text-slate-700 mt-1">Gaming Launch Wishlists</div>
+      <div className="text-[11px] text-slate-500 mt-0.5">Top 10 New Release on Steam</div>
+    </div>
+  </div>
+
+  {/* 6 Featured Portfolio Case Studies */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {/* Portfolio Item 1 */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work')}
+    >
+      <div className="h-32 bg-gradient-to-br from-blue-900 to-indigo-800 p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            Finance &amp; AI
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #01</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-blue-200 font-semibold">Auto Refinancing Platform</div>
+          <div className="text-white font-bold text-base leading-tight">AI Search &amp; GEO/AEO Authority</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">AI</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+2,012%</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Positioned as the leading answer engine recommendation for auto refinancing across ChatGPT, Gemini, and Perplexity through structured entity citations and prompt cluster architecture.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">GEO / AEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Entity SEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Brand Authority</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Portfolio Item 2 */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work')}
+    >
+      <div className="h-32 bg-gradient-to-br from-slate-900 to-blue-950 p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            B2B SaaS
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #02</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-blue-200 font-semibold">Workflow Management Software</div>
+          <div className="text-white font-bold text-base leading-tight">Organic Pipeline &amp; Technical SEO</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">SaaS</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+259%</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Rebuilt the site architecture to eliminate crawl debt, implemented high-intent commercial keyword silos, and generated a 259% surge in qualified demo requests within 6 months.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Technical SEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Demand Gen</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Content Clusters</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Portfolio Item 3 */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work')}
+    >
+      <div className="h-32 bg-gradient-to-br from-emerald-950 to-teal-900 p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            E-Commerce
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #03</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-emerald-200 font-semibold">D2C Fashion &amp; Retail Brand</div>
+          <div className="text-white font-bold text-base leading-tight">Shopify Rebuild &amp; Conversion CRO</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Shop</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+2,068%</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Engineered a custom high-performance Shopify storefront with sub-second page loads, conversion-optimized checkout, and a full organic search strategy across 12 countries.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Shopify Development</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">CRO Overhaul</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Shopping SEO</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Portfolio Item 4 */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work')}
+    >
+      <div className="h-32 bg-gradient-to-br from-purple-950 to-violet-900 p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            Gaming &amp; Entertainment
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #04</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-purple-200 font-semibold">Indie Gaming Studio</div>
+          <div className="text-white font-bold text-base leading-tight">Steam Launch Campaign Blitz</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Game</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">50,000+</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Generated 50,000+ pre-release Steam wishlists via Steam algorithm SEO, Reddit community viral marketing, and micro-streamer influencer seeding. Ranked in Top 10 New Releases.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Steam SEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Influencer Seeding</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">TikTok Growth</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Portfolio Item 5 */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work')}
+    >
+      <div className="h-32 bg-gradient-to-br from-amber-950 to-orange-900 p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            Emerging Markets
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #05</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-amber-200 font-semibold">Pan-African Multi-Location Retail</div>
+          <div className="text-white font-bold text-base leading-tight">WhatsApp Commerce + Local SEO</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Africa</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+329%</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Connected Google Maps local discovery directly to automated WhatsApp Business catalogue ordering across 15 regional hubs, driving a 329% direct sales increase in one quarter.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">WhatsApp Marketing</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Google Maps SEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Localized CRO</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Portfolio Item 6 */}
+    <div
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
+      onClick={() => router.push('/work')}
+    >
+      <div className="h-32 bg-gradient-to-br from-cyan-950 to-blue-900 p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="flex items-center justify-between z-10">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
+            Fintech &amp; Banking
+          </span>
+          <span className="text-white/40 text-xs font-mono">Case #06</span>
+        </div>
+        <div className="z-10">
+          <div className="text-xs text-cyan-200 font-semibold">Digital Investment &amp; Banking App</div>
+          <div className="text-white font-bold text-base leading-tight">Product Launch Acquisition Engine</div>
+        </div>
+        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Bank</div>
+      </div>
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="text-3xl font-extrabold text-[#1A56DB] mb-2 tracking-tight">+120%</div>
+          <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            Constructed regulated YMYL content clusters and digital PR authority to make organic search the #1 acquisition source for verified funded depository accounts from day one.
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">YMYL SEO</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Digital PR</span>
+            <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-slate-100 text-slate-700">Funded Funnels</span>
+          </div>
+        </div>
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#1A56DB] group-hover:text-blue-700">
+          <span>Read Full Case Study</span>
+          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Bottom Portfolio CTA */}
+  <div className="mt-12 p-6 sm:p-8 bg-slate-50 border border-slate-200/80 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+    <div>
+      <div className="text-slate-900 font-bold text-base sm:text-lg">Want to see more verified client results?</div>
+      <p className="text-xs sm:text-sm text-slate-500 mt-1">
+        Explore case studies across gaming, SaaS, local retail, education, and enterprise tech.
+      </p>
+    </div>
+    <div className="flex items-center gap-3 shrink-0">
+      <button
+        className="btn-fill cursor-pointer text-xs sm:text-sm font-bold"
+        onClick={() => router.push('/work')}
+      >
+        View All Case Studies &rarr;
+      </button>
+      <button
+        className="btn-out cursor-pointer text-xs sm:text-sm font-bold"
+        onClick={() => openModal('rfp')}
+      >
+        Request Similar Results
+      </button>
     </div>
   </div>
 </div>

@@ -142,6 +142,169 @@ export default function ServicesPage() {
     </div>
   </div>
 </div>
+
+{/* ══ COMPLETE SERVICES DIRECTORY ══ */}
+<div style={{ background: '#f8fafc', padding: '64px 40px', borderBottom: '1px solid var(--border)' }}>
+  <div className="sec-tag">COMPREHENSIVE CATALOG</div>
+  <h2 className="sec-h2">All services by category.</h2>
+  <div className="aln"></div>
+  <p style={{ fontSize: '14.5px', color: '#475569', lineHeight: '1.8', maxWidth: '720px', marginBottom: '44px' }}>
+    Every single capability we offer is built to operate as an integrated part of your larger growth system. Select any service below to view deliverables, metrics and execution frameworks.
+  </p>
+
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
+    {/* 1. Search & GEO/AEO */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>🔍</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Search &amp; GEO/AEO</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/seo" className="mc-a hover:text-blue-600">SEO Optimization</Link>
+        <Link href="/services/geo" className="mc-a hover:text-blue-600">GEO / AEO — AI Search</Link>
+        <Link href="/services/localseo" className="mc-a hover:text-blue-600">Local SEO</Link>
+        <Link href="/services/techseo" className="mc-a hover:text-blue-600">Technical SEO</Link>
+        <Link href="/services/ecoseo" className="mc-a hover:text-blue-600">E-Commerce SEO</Link>
+        <Link href="/services/videoseo" className="mc-a hover:text-blue-600">Video SEO</Link>
+        <Link href="/services/sem" className="mc-a hover:text-blue-600">SEM &amp; Google Ads</Link>
+        <Link href="/services/redditmarketing" className="mc-a hover:text-blue-600">Reddit Marketing &amp; SEO</Link>
+        <Link href="/services/gbp" className="mc-a hover:text-blue-600">Google Business Profile</Link>
+        <Link href="/services/amazonseo" className="mc-a hover:text-blue-600">Amazon SEO &amp; Marketplace</Link>
+        <Link href="/services/pinterestseo" className="mc-a hover:text-blue-600">Pinterest SEO</Link>
+      </div>
+    </div>
+
+    {/* 2. Social & Paid Ads */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>💰</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Social &amp; Paid Ads</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/smm" className="mc-a hover:text-blue-600">Social Media Marketing</Link>
+        <Link href="/services/smmanage" className="mc-a hover:text-blue-600">Social Media Management</Link>
+        <Link href="/services/socialcommerce" className="mc-a hover:text-blue-600">Social Commerce</Link>
+        <Link href="/services/fbads" className="mc-a hover:text-blue-600">Facebook &amp; Instagram Ads</Link>
+        <Link href="/services/tiktok" className="mc-a hover:text-blue-600">TikTok Ads &amp; Shop</Link>
+        <Link href="/services/ytads" className="mc-a hover:text-blue-600">YouTube Ads</Link>
+        <Link href="/services/influencer" className="mc-a hover:text-blue-600">Influencer Marketing</Link>
+        <Link href="/services/display" className="mc-a hover:text-blue-600">Display Advertising</Link>
+        <Link href="/services/linkedinads" className="mc-a hover:text-blue-600">LinkedIn Ads &amp; B2B Lead Gen</Link>
+        <Link href="/services/quoraads" className="mc-a hover:text-blue-600">Quora Ads</Link>
+        <Link href="/services/redditads" className="mc-a hover:text-blue-600">Reddit Ads</Link>
+        <Link href="/services/amazonads" className="mc-a hover:text-blue-600">Amazon Ads Management</Link>
+        <Link href="/services/pinterestbiz" className="mc-a hover:text-blue-600">Pinterest Business Optimization</Link>
+      </div>
+    </div>
+
+    {/* 3. AI Marketing */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>🤖</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>AI Marketing</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/aiprompt" className="mc-a hover:text-blue-600">AI Marketing Prompt Strategy</Link>
+        <Link href="/services/brandai" className="mc-a hover:text-blue-600">Brand Personality Design</Link>
+        <Link href="/services/emailai" className="mc-a hover:text-blue-600">Email Marketing Personalization</Link>
+        <Link href="/services/aicampaign" className="mc-a hover:text-blue-600">AI-Powered Campaign Mgmt</Link>
+        <Link href="/services/aiads" className="mc-a hover:text-blue-600">AI-Powered Ad Bidding</Link>
+      </div>
+    </div>
+
+    {/* 4. Content & Strategy */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>✍️</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Content &amp; Strategy</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/content" className="mc-a hover:text-blue-600">Content Marketing</Link>
+        <Link href="/services/email" className="mc-a hover:text-blue-600">Email Marketing</Link>
+        <Link href="/services/emailauto" className="mc-a hover:text-blue-600">Email Automations</Link>
+        <Link href="/services/digitalpr" className="mc-a hover:text-blue-600">Digital PR</Link>
+        <Link href="/services/strategy" className="mc-a hover:text-blue-600">Marketing Strategy &amp; Planning</Link>
+        <Link href="/services/cro" className="mc-a hover:text-blue-600">Conversion Rate Optimization</Link>
+        <Link href="/services/affiliate" className="mc-a hover:text-blue-600 font-semibold text-blue-600">Affiliate Marketing</Link>
+        <Link href="/services/sms" className="mc-a hover:text-blue-600">Text Message Marketing</Link>
+        <Link href="/services/copywriting" className="mc-a hover:text-blue-600">Conversion Copywriting</Link>
+        <Link href="/services/crm" className="mc-a hover:text-blue-600 font-semibold text-blue-600">CRM Setup &amp; Marketing Automation</Link>
+        <Link href="/services/marketinganalytics" className="mc-a hover:text-blue-600">Marketing Analytics &amp; Data Studio</Link>
+      </div>
+    </div>
+
+    {/* 5. Niche & Growth */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>🎮</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Niche &amp; Growth</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/game" className="mc-a hover:text-blue-600">Game Marketing</Link>
+        <Link href="/services/steam" className="mc-a hover:text-blue-600">Steam Marketing</Link>
+        <Link href="/services/appmarketing" className="mc-a hover:text-blue-600">Mobile App Marketing</Link>
+        <Link href="/services/course" className="mc-a hover:text-blue-600">Course Promotion</Link>
+        <Link href="/services/music" className="mc-a hover:text-blue-600">Music Promotion</Link>
+        <Link href="/services/podcast" className="mc-a hover:text-blue-600">Podcast Marketing</Link>
+        <Link href="/services/book" className="mc-a hover:text-blue-600">Book &amp; eBook Marketing</Link>
+        <Link href="/services/crypto" className="mc-a hover:text-blue-600">Cryptocurrency Marketing</Link>
+        <Link href="/services/africa" className="mc-a hover:text-blue-600 flex items-center justify-between">
+          <span>Africa Market Services</span>
+          <span className="mc-af">AFRICA</span>
+        </Link>
+      </div>
+    </div>
+
+    {/* 6. Analytics & Strategy */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>📊</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Analytics &amp; Strategy</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/analytics" className="mc-a hover:text-blue-600">Web Analytics</Link>
+        <Link href="/services/pr" className="mc-a hover:text-blue-600">Public Relations</Link>
+        <Link href="/services/crowdfund" className="mc-a hover:text-blue-600 font-semibold text-blue-600">Crowdfunding Marketing</Link>
+        <Link href="/services/guestpost" className="mc-a hover:text-blue-600 font-semibold text-blue-600">Guest Posting &amp; Link Building</Link>
+        <Link href="/services/brandstrategy" className="mc-a hover:text-blue-600">Brand Strategy</Link>
+      </div>
+    </div>
+
+    {/* 7. Web & Tech */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>💻</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Web &amp; Tech</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/webdev" className="mc-a hover:text-blue-600">Website Development</Link>
+        <Link href="/services/ecomdev" className="mc-a hover:text-blue-600">E-Commerce Development</Link>
+        <Link href="/services/customweb" className="mc-a hover:text-blue-600">Custom Websites</Link>
+        <Link href="/services/landing" className="mc-a hover:text-blue-600">Landing Pages</Link>
+        <Link href="/services/dropship" className="mc-a hover:text-blue-600">Dropshipping Websites</Link>
+      </div>
+    </div>
+
+    {/* 8. AI Development */}
+    <div style={{ background: '#fff', borderRadius: '12px', border: '1.5px solid var(--border)', padding: '24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <span style={{ fontSize: '20px' }}>⚡</span>
+        <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>AI Development</h3>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <Link href="/services/aidev" className="mc-a hover:text-blue-600">AI Development</Link>
+        <Link href="/services/aiwebsoft" className="mc-a hover:text-blue-600">AI Websites &amp; Software</Link>
+        <Link href="/services/aimobile" className="mc-a hover:text-blue-600">AI Mobile Apps</Link>
+        <Link href="/services/aiintegrate" className="mc-a hover:text-blue-600">AI Integrations</Link>
+        <Link href="/services/aiagents" className="mc-a hover:text-blue-600">AI Agents</Link>
+        <Link href="/services/aiconsult" className="mc-a hover:text-blue-600 font-semibold text-blue-600">AI Technology Consulting</Link>
+        <Link href="/services/chatbot" className="mc-a hover:text-blue-600">AI Chatbot Development</Link>
+        <Link href="/services/mobileapp" className="mc-a hover:text-blue-600 font-semibold text-blue-600">Mobile App Development</Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div className="s-dark">
   <div className="sec-tag wh">DELIVERY MODEL</div>
   <h2 className="sec-h2 wh">End-to-end digital marketing solutions.</h2>

@@ -28,13 +28,39 @@ export default function Footer() {
               Premium global digital marketing and technology agency — delivering integrated marketing, technology and AI for ambitious businesses worldwide.
             </p>
             <p className="fb-contact">hello@amplipath.com</p>
-            <p className="fb-contact">sales@amplipath.com</p>
-            <div className="socials" style={{ marginTop: '14px' }}>
-              <a href="https://facebook.com/amplipath" target="_blank" rel="noopener noreferrer" className="soc">f</a>
-              <a href="https://instagram.com/amplipath" target="_blank" rel="noopener noreferrer" className="soc">ig</a>
-              <a href="https://twitter.com/amplipath" target="_blank" rel="noopener noreferrer" className="soc">𝕏</a>
-              <a href="https://linkedin.com/company/amplipath" target="_blank" rel="noopener noreferrer" className="soc">in</a>
-              <a href="https://youtube.com/@amplipath" target="_blank" rel="noopener noreferrer" className="soc">yt</a>
+            <div style={{ marginTop: '20px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '.08em', textTransform: 'uppercase', color: '#94a3b8', fontWeight: 700, marginBottom: '10px' }}>
+                SOCIAL
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <a href="https://facebook.com/amplipath" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: '#cbd5e1', transition: 'color .18s' }} className="hover:text-white">
+                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a href="https://instagram.com/amplipath" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: '#cbd5e1', transition: 'color .18s' }} className="hover:text-white">
+                  <svg className="w-5 h-5 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/amplipath" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" style={{ color: '#cbd5e1', transition: 'color .18s' }} className="hover:text-white">
+                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com/company/amplipath" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: '#cbd5e1', transition: 'color .18s' }} className="hover:text-white">
+                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.763z"/>
+                  </svg>
+                </a>
+                <a href="https://youtube.com/@amplipath" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={{ color: '#cbd5e1', transition: 'color .18s' }} className="hover:text-white">
+                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -53,16 +79,14 @@ export default function Footer() {
             <Link href="/about" className="fl">About us</Link>
             <Link href="/services" className="fl">Services</Link>
             <Link href="/work" className="fl">Our work</Link>
-            <Link href="/blog" className="fl">Blog & Insights</Link>
-            <Link href="/careers" className="fl">Careers</Link>
-            <div style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-              <Link href="/careers" style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', background: '#1A56DB', color: '#fff', padding: '7px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, textDecoration: 'none' }}>
-                <span style={{ width: '7px', height: '7px', background: '#4ade80', borderRadius: '50%', display: 'inline-block' }}></span>
-                We are Hiring
-              </Link>
-              <p style={{ fontSize: '11px', color: '#94a3b8', marginTop: '8px', lineHeight: 1.5 }}>9 roles · Remote · Worldwide</p>
-            </div>
-            <Link href="/ai" className="fl">AI & Technology</Link>
+            <Link href="/blog" className="fl">Blog &amp; Insights</Link>
+            <Link href="/careers" className="fl" style={{ display: 'inline-flex', alignItems: 'center' }}>
+              <span>Careers</span>
+              <span style={{ fontSize: '10px', fontWeight: 600, padding: '2px 8px', borderRadius: '10px', background: 'rgba(34, 197, 94, 0.15)', color: '#4ade80', border: '1px solid rgba(34, 197, 94, 0.3)', marginLeft: '10px', whiteSpace: 'nowrap' }}>
+                We&apos;re hiring
+              </span>
+            </Link>
+            <Link href="/ai" className="fl">AI &amp; Technology</Link>
             <Link href="/contact" className="fl">Contact</Link>
           </div>
 

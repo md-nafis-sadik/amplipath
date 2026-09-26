@@ -1182,14 +1182,125 @@ html {
   border-color: #fff;
 }
 
-/* Responsive */
-@media(max-width: 900px) {
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE HEADER & FOOTER (DESKTOP >= 1024px STRICTLY UNTOUCHED)
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 1023px) {
+  .nx-nav {
+    padding: 0 20px;
+  }
+  .mega {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 24px 20px !important;
+    gap: 20px !important;
+  }
+  .footer {
+    padding: 48px 24px 0;
+  }
+  .fg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+  .fg > div:first-child {
+    grid-column: span 2;
+    max-width: 520px;
+  }
+  .fb-desc {
+    max-width: 100%;
+  }
+  .footer-bottom {
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
+  }
+  .fb-links {
+    justify-content: center;
+  }
+  .fb-logo-strip {
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
   .pillars { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .audience-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: 1fr; }
 }
-@media(max-width: 650px) {
+
+@media (max-width: 640px) {
+  .nx-nav {
+    padding: 0 16px;
+    height: 60px;
+  }
+  .nx-rfp {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .nx-talk {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  .mega {
+    grid-template-columns: 1fr !important;
+    padding: 16px !important;
+  }
+  .footer {
+    padding: 36px 16px 0;
+  }
+  .fg {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .fg > div:first-child {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+  .footer-bottom {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+  .fb-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .fb-logo-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 8px;
+    width: 100%;
+    justify-items: center;
+  }
+  .cta-band {
+    padding: 40px 16px;
+  }
+  .cta-band h2 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+  .cta-band p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .cta-row {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .cta-row .btn-cw,
+  .cta-row .btn-co {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+  }
   .sp-hero, .section { padding-left: 22px; padding-right: 22px; }
   .sp-h1 { font-size: 35px; }
   .sec-h2 { font-size: 28px; }
@@ -1201,5 +1312,4 @@ html {
   .cap-grid,
   .audience-grid,
   .related-grid { grid-template-columns: 1fr; }
-  .cta-band { padding: 48px 22px; }
 }

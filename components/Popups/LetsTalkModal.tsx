@@ -56,14 +56,14 @@ export default function LetsTalkModal() {
       <div className="pop-box">
         <div className="pop-top">
           <button className="pop-close" onClick={closeModal}>✕</button>
-          <div className="pop-logo-row">
-            <svg width="20" height="20" viewBox="0 0 44 44" fill="none">
-              <circle cx="22" cy="22" r="19" stroke="#1A56DB" strokeWidth="2.5" />
-              <circle cx="22" cy="22" r="12" stroke="#1A56DB" strokeWidth="1" opacity="0.28" />
-              <circle cx="22" cy="5" r="4.5" fill="#1A56DB" />
-              <circle cx="22" cy="22" r="4.5" fill="#1A56DB" opacity="0.65" />
-            </svg>
-            <span className="pop-logo-t">Ampli<em>path</em></span>
+          <div className="pop-logo-row" style={{ marginBottom: '16px' }}>
+            <div style={{ background: '#ffffff', padding: '5px 12px', borderRadius: '8px', display: 'inline-flex', alignItems: 'center' }}>
+              <img
+                src="/images/logo-horizontal.jpg"
+                alt="AMPLIPATH"
+                style={{ height: '26px', width: 'auto', objectFit: 'contain', display: 'block' }}
+              />
+            </div>
           </div>
           <div className="pop-h">Tell Us About Your Project</div>
           <div className="pop-sub">Have a project in mind? Tell us what you need help with and we’ll point you in the right direction.</div>
