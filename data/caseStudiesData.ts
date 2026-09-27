@@ -13,6 +13,8 @@ export interface CaseStudy {
   bgGradient: string;
   accentColor: string;
   watermark: string;
+  websiteUrl: string;
+  websiteDisplay: string;
   // Detail page content
   heroTitle: string;
   heroSub: string;
@@ -40,6 +42,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #3a2a1a 0%, #c9862e 100%)',
     accentColor: '#c9862e',
     watermark: 'Beauty',
+    websiteUrl: 'https://amberseternal.com/',
+    websiteDisplay: 'amberseternal.com',
     heroTitle: 'A beauty store built for discovery and purchase.',
     heroSub: 'A complete ecommerce experience that brings Amber’s Eternal’s 132+ botanical product range together and supports how shoppers find what they need.',
     keyStats: [
@@ -85,6 +89,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #10243f 0%, #0f766e 100%)',
     accentColor: '#0f766e',
     watermark: '3D Print',
+    websiteUrl: 'https://printin3d.co/',
+    websiteDisplay: 'printin3d.co',
     heroTitle: 'Making specialist 3D printing equipment easier to find and shop.',
     heroSub: 'A full Shopify store build, dropship catalogue setup, social commerce integration, and technical SEO for a specialist retailer.',
     keyStats: [
@@ -129,6 +135,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #331021 0%, #be185d 100%)',
     accentColor: '#be185d',
     watermark: 'Pet Care',
+    websiteUrl: 'https://furryfiesta.shop/',
+    websiteDisplay: 'furryfiesta.shop',
     heroTitle: 'A clearer shopping journey with measurable commercial impact.',
     heroSub: 'A pet store redesign focused on making products easier to explore and the buying experience seamless to complete.',
     keyStats: [
@@ -173,6 +181,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #0f2a4a 0%, #0369a1 100%)',
     accentColor: '#0369a1',
     watermark: 'Property',
+    websiteUrl: 'https://www.olakunleandpartnersltd.com/',
+    websiteDisplay: 'olakunleandpartnersltd.com',
     heroTitle: 'A digital home for property discovery and qualified consultations.',
     heroSub: 'An end-to-end real estate web platform designed to introduce the company, showcase listings, and convert visitors into active leads.',
     keyStats: [
@@ -217,6 +227,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)',
     accentColor: '#4338ca',
     watermark: 'Wellness',
+    websiteUrl: 'http://forbiddentouch.net/',
+    websiteDisplay: 'forbiddentouch.net',
     heroTitle: 'High-speed technical SEO and premium wellness experience.',
     heroSub: 'Strengthening the website’s technical foundation, search readiness and overall user experience for a wellness spa brand.',
     keyStats: [
@@ -262,6 +274,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #064e3b 0%, #059669 100%)',
     accentColor: '#059669',
     watermark: 'Accessory',
+    websiteUrl: 'https://savajay.com/',
+    websiteDisplay: 'savajay.com',
     heroTitle: 'Specialist product search architecture with 96/100 health.',
     heroSub: 'Building a stronger technical and on-page search foundation around a specialized extinguisher and storage product.',
     keyStats: [
@@ -306,6 +320,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #1e293b 0%, #475569 100%)',
     accentColor: '#475569',
     watermark: 'Funnel',
+    websiteUrl: 'https://aceofcoins.club/',
+    websiteDisplay: 'aceofcoins.club',
     heroTitle: 'High-converting sales funnels for specialist educational offers.',
     heroSub: 'Dedicated, conversion-engineered landing pages and student enrollment journeys built for John Jay’s digital courses.',
     keyStats: [
@@ -349,6 +365,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #581c87 0%, #7e22ce 100%)',
     accentColor: '#7e22ce',
     watermark: 'Gaming',
+    websiteUrl: 'https://www.actorpassgame.com/',
+    websiteDisplay: 'actorpassgame.com',
     heroTitle: 'Interactive party game launch across viral video and community channels.',
     heroSub: 'A coordinated online promotion strategy combining community outreach, classified advertising, and video marketing to drive product awareness and sales.',
     keyStats: [
@@ -394,6 +412,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%)',
     accentColor: '#2563eb',
     watermark: 'Video',
+    websiteUrl: 'https://www.udemy.com/course/davinci-resolve-training-course/?couponCode=KEEPLEARNING',
+    websiteDisplay: 'udemy.com (DaVinci Bootcamp)',
     heroTitle: 'Scaling creative video education into a marketplace category leader.',
     heroSub: 'Expanding student reach, accelerating enrolment velocity, and cementing marketplace authority for a premier video editing bootcamp.',
     keyStats: [
@@ -438,6 +458,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #831843 0%, #db2777 100%)',
     accentColor: '#db2777',
     watermark: 'Pitch',
+    websiteUrl: 'https://www.udemy.com/course/market-your-message-ignite-curiosity-inspire-action/?couponCode=KEEPLEARNING',
+    websiteDisplay: 'udemy.com (Pitch Yourself!)',
     heroTitle: 'Transforming communication coaching into a global course powerhouse.',
     heroSub: 'A targeted promotional campaign focused on increasing course discovery, attracting relevant learners and building stronger social proof.',
     keyStats: [
@@ -481,6 +503,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     bgGradient: 'linear-gradient(135deg, #0f172a 0%, #3b82f6 100%)',
     accentColor: '#3b82f6',
     watermark: 'AI Video',
+    websiteUrl: 'https://wefunder.com/novellaai',
+    websiteDisplay: 'wefunder.com/novellaai',
     heroTitle: 'Scaling an AI video SaaS community round on Wefunder.',
     heroSub: 'Multichannel promotional outreach that expanded investor reach, added $233,000 in capital, and nearly doubled Novella AI’s backing community.',
     keyStats: [
