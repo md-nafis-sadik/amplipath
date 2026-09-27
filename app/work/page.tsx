@@ -46,27 +46,33 @@ function WorkPageContent() {
       {selectedCase ? (
         <div className="animate-in fade-in duration-200">
           {/* Hero Banner */}
-          <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-14 sm:py-20 relative overflow-hidden">
+          <div
+            className="text-white py-14 sm:py-20 relative overflow-hidden"
+            style={{ background: selectedCase.bgGradient }}
+          >
+            <div className="absolute -bottom-10 -right-6 text-white/10 text-9xl font-extrabold select-none pointer-events-none">
+              {selectedCase.watermark}
+            </div>
             <div className="max-w-[1180px] mx-auto px-4 sm:px-6 relative z-10">
               <button
                 type="button"
                 onClick={handleCloseCase}
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-blue-300 hover:text-white transition-colors mb-6 cursor-pointer bg-transparent border-none p-0"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white/80 hover:text-white transition-colors mb-6 cursor-pointer bg-transparent border-none p-0"
               >
                 &larr; Back to all projects
               </button>
 
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+              <div className="flex items-center gap-2 text-xs font-bold text-white/70 uppercase tracking-wider mb-2">
                 <span>{selectedCase.name}</span>
                 <span>/</span>
-                <span className="text-blue-400">{selectedCase.category}</span>
+                <span className="text-white font-extrabold">{selectedCase.category}</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight max-w-3xl leading-tight mb-4">
                 {selectedCase.heroTitle}
               </h1>
 
-              <p className="text-sm sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-lg text-white/90 max-w-2xl leading-relaxed">
                 {selectedCase.heroSub}
               </p>
             </div>
@@ -327,7 +333,10 @@ function WorkPageContent() {
                     className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
                   >
                     {/* Visual Card Header */}
-                    <div className={`h-36 bg-gradient-to-br ${cs.gradient} p-5 flex flex-col justify-between relative overflow-hidden text-white`}>
+                    <div
+                      className="h-36 p-5 flex flex-col justify-between relative overflow-hidden text-white"
+                      style={{ background: cs.bgGradient }}
+                    >
                       <div className="flex items-center justify-between z-10">
                         <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
                           {cs.category}
