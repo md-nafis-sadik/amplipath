@@ -52,63 +52,71 @@ export default function LetsTalkModal() {
       onClick={(e) => {
         if ((e.target as HTMLElement).classList.contains('pop-wrap')) closeModal();
       }}
+      style={{
+        scrollbarWidth: 'none',
+        msOverflowStyle: 'none'
+      }}
     >
-      <div className="pop-box">
-        <div className="pop-top">
+      <div
+        className="pop-box"
+        style={{
+          maxHeight: 'calc(100vh - 32px)',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none'
+        }}
+      >
+        <div className="pop-top" style={{ padding: '18px 24px 14px' }}>
           <button className="pop-close" onClick={closeModal}>✕</button>
-          <div className="pop-logo-row" style={{ marginBottom: '16px' }}>
-            <div style={{ background: '#ffffff', padding: '5px 12px', borderRadius: '8px', display: 'inline-flex', alignItems: 'center' }}>
+          <div className="pop-logo-row" style={{ marginBottom: '10px' }}>
+            <div style={{ background: '#ffffff', padding: '4px 10px', borderRadius: '6px', display: 'inline-flex', alignItems: 'center' }}>
               <img
                 src="/images/logo-horizontal.jpg"
                 alt="AMPLIPATH"
-                style={{ height: '26px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                style={{ height: '22px', width: 'auto', objectFit: 'contain', display: 'block' }}
               />
             </div>
           </div>
-          <div className="pop-h">Tell Us About Your Project</div>
-          <div className="pop-sub">Have a project in mind? Tell us what you need help with and we’ll point you in the right direction.</div>
-          <div className="pop-cards">
-            <div className="pop-card">
+          <div className="pop-h" style={{ fontSize: '19px', marginBottom: '4px' }}>Tell Us About Your Project</div>
+          <div className="pop-sub" style={{ fontSize: '12px', lineHeight: 1.45 }}>Have a project in mind? Tell us what you need help with and we’ll point you in the right direction.</div>
+          <div className="pop-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', marginTop: '10px' }}>
+            <div className="pop-card" style={{ height: 'auto', padding: '8px 10px', minHeight: 'auto', textAlign: 'center' }}>
               <div className="pc-tag">Marketing</div>
-              <div className="pc-t">SEO, GEO/AEO, paid ads, social media, content and email — all channels, one team</div>
-              <div className="pc-bar"></div>
+              <div className="pc-t">SEO, Ads &amp; Social</div>
             </div>
-            <div className="pop-card">
+            <div className="pop-card" style={{ height: 'auto', padding: '8px 10px', minHeight: 'auto', textAlign: 'center' }}>
               <div className="pc-tag">Technology</div>
-              <div className="pc-t">Websites, apps, AI chatbots, automation and ecommerce — built in-house</div>
-              <div className="pc-bar" style={{ width: '80%' }}></div>
+              <div className="pc-t">Web, AI &amp; Apps</div>
             </div>
-            <div className="pop-card">
+            <div className="pop-card" style={{ height: 'auto', padding: '8px 10px', minHeight: 'auto', textAlign: 'center' }}>
               <div className="pc-tag">Africa</div>
-              <div className="pc-t">WhatsApp marketing, local SEO, Paystack/Flutterwave and Africa market entry</div>
-              <div className="pc-bar" style={{ width: '60%' }}></div>
+              <div className="pc-t">Local &amp; Pan-African</div>
             </div>
           </div>
         </div>
-        <div className="pop-bot">
+        <div className="pop-bot" style={{ padding: '16px 24px 18px' }}>
           {status === 'success' ? (
-            <div style={{ textAlign: 'center', padding: '30px 10px' }}>
-              <div style={{ fontSize: '36px', marginBottom: '12px' }}>✅</div>
-              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>Thank You!</h3>
-              <p style={{ fontSize: '13px', color: '#64748b', lineHeight: 1.6, marginBottom: '20px' }}>
-                We have received your project details and will get back to you within 12 hours.
+            <div style={{ textAlign: 'center', padding: '24px 10px' }}>
+              <div style={{ fontSize: '36px', marginBottom: '10px' }}>✅</div>
+              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', marginBottom: '6px' }}>Thank You!</h3>
+              <p style={{ fontSize: '13px', color: '#64748b', lineHeight: 1.5, marginBottom: '16px' }}>
+                We have received your project details and will get back to you within 5 hours.
               </p>
               <button className="pop-btn" onClick={closeModal} style={{ width: '100%' }}>Close</button>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
               {status === 'error' && (
-                <div style={{ padding: '10px', background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '8px', color: '#dc2626', fontSize: '12.5px', marginBottom: '12px' }}>
+                <div style={{ padding: '8px 12px', background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '6px', color: '#dc2626', fontSize: '12px', marginBottom: '10px' }}>
                   {errorMsg}
                 </div>
               )}
-              <div className="p2">
+              <div className="p2" style={{ marginBottom: '8px' }}>
                 <input className="pinp" type="text" name="firstName" placeholder="First name" required />
                 <input className="pinp" type="text" name="lastName" placeholder="Last name" required />
               </div>
-              <div className="p2">
+              <div className="p2" style={{ marginBottom: '8px' }}>
                 <input className="pinp" type="email" name="email" placeholder="Business email" required />
-                <input className="pinp" type="text" name="website" placeholder="Website URL" />
+                <input className="pinp" type="text" name="website" placeholder="Website URL (optional)" />
               </div>
               <select className="pinp" name="discussionTopic" style={{ marginBottom: '8px' }}>
                 <option value="">What would you like to discuss?</option>
@@ -118,34 +126,33 @@ export default function LetsTalkModal() {
                 <option>Marketing + technology together</option>
                 <option>Not sure yet</option>
               </select>
-              <select className="pinp" name="monthlyBudget" style={{ marginBottom: '8px' }}>
-                <option value="">Monthly marketing budget (optional)</option>
-                <option>Not sure yet</option>
-                <option>Under $1,000</option>
-                <option>$1,000 – $2,500</option>
-                <option>$2,500 – $5,000</option>
-                <option>$5,000 – $10,000</option>
-                <option>$10,000 – $25,000</option>
-                <option>$25,000+</option>
-                <option>Prefer to discuss on a call</option>
-              </select>
-              <select className="pinp" name="projectBudget" style={{ marginBottom: '8px' }}>
-                <option value="">One-time project budget (optional)</option>
-                <option>Not sure yet</option>
-                <option>Under $2,500</option>
-                <option>$2,500 – $5,000</option>
-                <option>$5,000 – $10,000</option>
-                <option>$10,000 – $25,000</option>
-                <option>$25,000 – $50,000</option>
-                <option>$50,000 – $100,000</option>
-                <option>Above $100,000</option>
-                <option>Prefer to discuss on a call</option>
-              </select>
+              <div className="p2" style={{ marginBottom: '8px' }}>
+                <select className="pinp" name="monthlyBudget">
+                  <option value="">Monthly budget (optional)</option>
+                  <option>Not sure yet</option>
+                  <option>Under $1,000/mo</option>
+                  <option>$1,000 – $2,500/mo</option>
+                  <option>$2,500 – $5,000/mo</option>
+                  <option>$5,000 – $10,000/mo</option>
+                  <option>$10,000+/mo</option>
+                  <option>Discuss on call</option>
+                </select>
+                <select className="pinp" name="projectBudget">
+                  <option value="">Project budget (optional)</option>
+                  <option>Not sure yet</option>
+                  <option>Under $5,000</option>
+                  <option>$5,000 – $10,000</option>
+                  <option>$10,000 – $25,000</option>
+                  <option>$25,000 – $50,000</option>
+                  <option>$50,000+</option>
+                  <option>Discuss on call</option>
+                </select>
+              </div>
               <button className="pop-btn" type="submit" disabled={status === 'loading'}>
                 {status === 'loading' ? 'Submitting...' : "Let's Talk →"}
               </button>
-              <div className="pop-legal">
-                By submitting you agree to receive marketing emails from Amplipath. Unsubscribe anytime. We never share your data with third parties.
+              <div className="pop-legal" style={{ fontSize: '10px', color: '#94a3b8', textAlign: 'center', marginTop: '8px', lineHeight: 1.45 }}>
+                By submitting you agree to receive marketing emails from Amplipath. Unsubscribe anytime.
               </div>
             </form>
           )}

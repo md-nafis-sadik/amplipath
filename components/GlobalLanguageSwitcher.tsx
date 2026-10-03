@@ -84,6 +84,51 @@ export const cleanGoogleTranslateBanner = () => {
   });
 };
 
+export const switchWebsiteLanguage = (code: string) => {
+  if (typeof window === 'undefined') return;
+
+  localStorage.setItem('amplipath_lang', code);
+  const hostname = window.location.hostname;
+
+  if (code === 'en') {
+    // Reset back to English
+    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${hostname};`;
+    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${hostname};`;
+
+    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement | null;
+    if (select) {
+      select.value = 'en';
+      select.dispatchEvent(new Event('change'));
+    }
+    cleanGoogleTranslateBanner();
+    window.location.reload();
+    return;
+  }
+
+  // Set cookie for target language
+  document.cookie = `googtrans=/en/${code}; path=/;`;
+  document.cookie = `googtrans=/en/${code}; path=/; domain=${hostname};`;
+  document.cookie = `googtrans=/en/${code}; path=/; domain=.${hostname};`;
+
+  const select = document.querySelector('.goog-te-combo') as HTMLSelectElement | null;
+  if (select) {
+    select.value = code;
+    select.dispatchEvent(new Event('change'));
+
+    // Suppress any Google banner attempts immediately and smoothly
+    cleanGoogleTranslateBanner();
+    setTimeout(cleanGoogleTranslateBanner, 30);
+    setTimeout(cleanGoogleTranslateBanner, 100);
+    setTimeout(cleanGoogleTranslateBanner, 250);
+    setTimeout(cleanGoogleTranslateBanner, 500);
+    setTimeout(cleanGoogleTranslateBanner, 1000);
+  } else {
+    // If widget not initialized in DOM yet, reload with cookie to trigger translation
+    window.location.reload();
+  }
+};
+
 interface GlobalLanguageSwitcherProps {
   isMobile?: boolean;
   onSelectMobile?: () => void;
@@ -162,55 +207,12 @@ export default function GlobalLanguageSwitcher({ isMobile = false, onSelectMobil
 
   // Handle switching language
   const handleSelectLanguage = (lang: LanguageOption) => {
-    const code = lang.code;
-    setCurrentLangCode(code);
+    setCurrentLangCode(lang.code);
     setCurrentLabel(lang.name.split(' ')[0]);
     setCurrentFlag(lang.flag);
     setIsOpen(false);
     if (onSelectMobile) onSelectMobile();
-
-    localStorage.setItem('amplipath_lang', code);
-
-    const hostname = window.location.hostname;
-
-    if (code === 'en') {
-      // Reset back to English
-      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${hostname};`;
-      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${hostname};`;
-
-      const select = document.querySelector('.goog-te-combo') as HTMLSelectElement | null;
-      if (select) {
-        select.value = 'en';
-        select.dispatchEvent(new Event('change'));
-      }
-      cleanGoogleTranslateBanner();
-      // Reload page to return to pristine English state
-      window.location.reload();
-      return;
-    }
-
-    // Set cookie for target language
-    document.cookie = `googtrans=/en/${code}; path=/;`;
-    document.cookie = `googtrans=/en/${code}; path=/; domain=${hostname};`;
-    document.cookie = `googtrans=/en/${code}; path=/; domain=.${hostname};`;
-
-    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement | null;
-    if (select) {
-      select.value = code;
-      select.dispatchEvent(new Event('change'));
-
-      // Suppress any Google banner attempts immediately and smoothly
-      cleanGoogleTranslateBanner();
-      setTimeout(cleanGoogleTranslateBanner, 30);
-      setTimeout(cleanGoogleTranslateBanner, 100);
-      setTimeout(cleanGoogleTranslateBanner, 250);
-      setTimeout(cleanGoogleTranslateBanner, 500);
-      setTimeout(cleanGoogleTranslateBanner, 1000);
-    } else {
-      // If widget not initialized in DOM yet, reload with cookie to trigger translation
-      window.location.reload();
-    }
+    switchWebsiteLanguage(lang.code);
   };
 
   // Hover handlers with debounce for desktop

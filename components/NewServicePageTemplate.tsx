@@ -263,7 +263,7 @@ export default function NewServicePageTemplate({ service: s }: NewServicePageTem
                     onClick={() => toggleFaq(idx)}
                   >
                     <span>{q}</span>
-                    <span className="faq-plus">+</span>
+                    <span className="faq-plus">{isOpen ? '−' : '+'}</span>
                   </button>
                   <div className="faq-a" id={`faq-${idx}`}>
                     <div className="faq-a-inner">{a}</div>
@@ -312,7 +312,7 @@ export default function NewServicePageTemplate({ service: s }: NewServicePageTem
               className="cta-outline cursor-pointer"
               onClick={() => openModal('lead')}
             >
-              info@amplipath.com
+              Talk to a Specialist
             </button>
           </div>
         </div>

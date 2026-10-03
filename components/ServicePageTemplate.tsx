@@ -467,7 +467,7 @@ export default function ServicePageTemplate({ data, serviceId, parentCategory }:
       <section className="cta-band">
         <div className="container">
           <h2>{data.ctaTitle || 'Ready to unlock measurable growth?'}</h2>
-          <p>{data.ctaText || 'Tell us about your business — we’ll build a custom growth plan within 12 hours.'}</p>
+          <p>{data.ctaText || 'Tell us about your business — we’ll build a custom growth plan within 5 hours.'}</p>
           <div className="cta-buttons">
             <button className="cta-white cursor-pointer" onClick={() => openModal('rfp')}>
               Request a Custom Proposal

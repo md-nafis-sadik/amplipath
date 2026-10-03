@@ -202,50 +202,54 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Looker Studio"
     ],
     "faqs": [
-      {
-        "q": "How long before SEO delivers results for my business?",
-        "a": "Most businesses see measurable organic traffic improvements within 3–6 months. Competitive industries — finance, legal, SaaS — may take 6–12 months for significant ranking gains. We set honest, specific timelines based on your market during onboarding and hold ourselves accountable to them with monthly reporting."
-      },
-      {
-        "q": "Do you guarantee first-page Google rankings?",
-        "a": "No ethical SEO agency can guarantee specific rankings — Google's algorithm is not controlled by any third party. We guarantee a transparent, data-driven process, consistent execution of proven strategies and measurable month-on-month improvement. Our month-to-month model means clients stay because of results, not contracts."
-      },
-      {
-        "q": "What is included in a full-service SEO retainer?",
-        "a": "A full-service Amplipath SEO retainer includes: monthly technical audit review, keyword tracking and reporting, on-page optimization of priority pages, content production or briefing, link acquisition outreach, GEO/AEO monitoring, monthly performance report and a strategy call. Specific deliverable volumes depend on your plan level."
-      },
-      {
-        "q": "How does Amplipath's SEO service differ from other agencies?",
-        "a": "Four key differences: (1) GEO/AEO integration — every SEO campaign includes AI search optimization. (2) Africa market expertise — real local data for 15 African countries. (3) Niche channel specialists — game marketing, course promotion and more. (4) No lock-in contracts — we earn your business through results every month."
-      },
-      {
-        "q": "Do you write the content or just optimize it?",
-        "a": "Both are available — we can produce fully written, SEO-briefed content, or work alongside your in-house writers using detailed content briefs built from our keyword research."
-      },
-      {
-        "q": "How is GEO/AEO different from this service?",
-        "a": "Standard SEO targets traditional Google rankings; GEO/AEO specifically optimizes for citation inside AI-generated answers from ChatGPT, Gemini and Perplexity. Every Amplipath SEO engagement includes core GEO/AEO fundamentals, with a dedicated GEO/AEO service available for brands prioritizing AI search specifically."
-      },
-      {
-        "q": "Do you work with small businesses or only larger brands?",
-        "a": "We work with businesses of every size, from local service businesses to international e-commerce brands — strategy and deliverable volume scale to match your budget and market."
-      },
-      {
-        "q": "What happens if our rankings drop after a Google algorithm update?",
-        "a": "We monitor ranking volatility continuously, diagnose the specific cause of any drop and adjust strategy quickly — proactive monitoring is built into every retained engagement, not an extra add-on."
-      },
-      {
-        "q": "Can you work alongside our existing in-house marketing team?",
-        "a": "Yes — we frequently work as an extension of an in-house team, handling technical SEO and content strategy while your team manages other channels, with clear handoff points defined upfront."
-      },
-      {
-        "q": "Do you offer SEO as a one-time project or only ongoing retainers?",
-        "a": "SEO compounds over time and is best delivered as an ongoing engagement, though one-time technical audits and keyword research projects are available as standalone services."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for search Engine Optimization Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "What is included in Amplipath’s full-service SEO services?",
+                "a": "A full-service SEO engagement may include website auditing, search-intent and competitor research, technical SEO, keyword mapping, on-page optimization, internal linking, content creation or improvement, structured data where appropriate, digital authority development, analytics and performance reporting. The final scope depends on your website, market, objectives and available internal resources."
+          },
+          {
+                "q": "How long does SEO take to produce results?",
+                "a": "SEO does not have one guaranteed timeline. Some technical changes may be discovered and reflected relatively quickly, while meaningful growth in rankings, qualified traffic and conversions often requires several months of consistent work. Timing depends on competition, website condition, content quality, authority, indexation and implementation speed. Amplipath establishes a baseline and reports early indicators while longer-term performance develops."
+          },
+          {
+                "q": "Does Amplipath guarantee first-page Google rankings?",
+                "a": "No responsible SEO company can guarantee a specific Google ranking. Search positions are influenced by competition, search intent, location, algorithm changes and factors outside an agency’s control. Amplipath instead commits to an agreed scope, evidence-based recommendations, transparent reporting and continuous improvement toward qualified visibility, traffic and business results."
+          },
+          {
+                "q": "How much do SEO services cost?",
+                "a": "SEO pricing depends on website size, technical condition, market competition, target locations, content requirements and the amount of implementation required. A small service website and a multinational ecommerce store require very different levels of work. After reviewing the opportunity, Amplipath provides a custom proposal explaining the deliverables, fees, timeline and performance measures."
+          },
+          {
+                "q": "Does my website need technical SEO, content SEO or link building?",
+                "a": "Many websites require a combination of all three. Technical SEO helps search engines access and understand the site. Content SEO aligns pages with customer questions and search intent. Authority development earns credible external signals and mentions. An initial audit determines which areas present the greatest risks and opportunities so resources are not spent on unnecessary activity."
+          },
+          {
+                "q": "Does Amplipath write new content or only optimize existing pages?",
+                "a": "Amplipath can do both. Existing pages may be consolidated, expanded, rewritten or repositioned when they have useful authority but no longer satisfy search intent. New service pages, category pages, guides or supporting content can be created where genuine gaps exist. Content should be accurate, useful, original and reviewed with the client’s subject knowledge."
+          },
+          {
+                "q": "What makes Amplipath’s SEO approach different?",
+                "a": "Amplipath connects SEO with technology, analytics, conversion optimization and AI search visibility. We can address technical website problems, improve content, implement measurement and strengthen conversion paths rather than delivering only an audit or ranking report. The strategy is built around business outcomes such as qualified enquiries, sales and revenue not traffic alone."
+          },
+          {
+                "q": "How is SEO different from GEO and AEO?",
+                "a": "SEO improves visibility across conventional and AI-enhanced search experiences. AEO and GEO are industry terms used for work focused on direct answers, AI-generated summaries, brand mentions and citations. They do not replace SEO. Crawlability, indexation, useful content, clear entities, credible evidence and authority remain important foundations across all three approaches."
+          },
+          {
+                "q": "Do you offer SEO as a one-time project or an ongoing service?",
+                "a": "Both options are available. A one-time engagement may cover an audit, migration, website redesign, technical remediation or content strategy. Ongoing SEO is more suitable when the business needs continuous content development, technical monitoring, authority building and competitive improvement. The recommended model depends on the scope and business objective."
+          },
+          {
+                "q": "What happens if our rankings drop after a Google update?",
+                "a": "Amplipath first determines whether the change came from an algorithm update, website modification, technical fault, tracking problem, competitor improvement or normal demand fluctuation. We examine affected pages, queries, conversions and site sections before recommending changes. The response should focus on improving usefulness and correcting genuine weaknesses rather than reacting with untested “quick fixes.”"
+          },
+          {
+                "q": "How does Amplipath measure SEO performance?",
+                "a": "Measurement may include qualified organic traffic, non-branded search visibility, conversions, enquiries, revenue, indexed pages, technical health and engagement with important landing pages. Rankings are monitored, but they are not treated as the only measure of success. KPIs are selected according to the website’s commercial or organizational objective."
+          },
+          {
+                "q": "Can Amplipath work with our internal marketing or development team?",
+                "a": "Yes. Amplipath can provide complete implementation or work alongside internal marketers, writers, developers and other specialists. Responsibilities, approvals, communication and implementation ownership are defined before the engagement begins so recommendations do not remain unfinished and duplicated work is avoided."
+          }
     ]
   },
   "geo": {
@@ -403,50 +407,66 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Bing Copilot"
     ],
     "faqs": [
-      {
-        "q": "What is the difference between GEO and AEO?",
-        "a": "GEO (Generative Engine Optimization) focuses on optimizing content to be cited in AI-generated responses across ChatGPT, Gemini and similar LLM-based search tools. AEO (Answer Engine Optimization) focuses specifically on appearing as the direct, featured answer in question-based searches — including Google's AI Overview. Amplipath delivers both as a single integrated service."
-      },
-      {
-        "q": "How quickly does GEO/AEO produce results?",
-        "a": "Most clients see measurable improvements in AI search citation within 2–4 months of beginning a GEO/AEO engagement. AI citation can improve faster than traditional SEO because it depends primarily on content quality, authority signals and structural optimization — rather than domain age or historical link profiles."
-      },
-      {
-        "q": "Which AI search engines do you optimize for?",
-        "a": "We optimize for all major AI search engines and LLM-based tools including: ChatGPT (OpenAI), Google AI Overviews, Google SGE, Gemini, Perplexity, Claude (Anthropic) and Bing Copilot. Each platform retrieves and cites content differently — our strategy accounts for the distinct ranking signals of each engine."
-      },
-      {
-        "q": "How do I know if my brand is currently appearing in AI search?",
-        "a": "Most businesses have no idea how they appear in AI-generated answers — and many are shocked to discover they are either absent or misrepresented. Amplipath provides a free AI search presence audit as part of our initial strategy session. Book a call to find out exactly where your brand stands in ChatGPT, Gemini and Perplexity today."
-      },
-      {
-        "q": "Which AI engines matter most for my industry?",
-        "a": "It varies — B2B and technical industries see disproportionate ChatGPT and Perplexity usage, while consumer queries increasingly route through Google AI Overviews. We benchmark which engines your specific audience actually uses during the initial audit."
-      },
-      {
-        "q": "Can a brand appear in AI answers without ranking #1 on Google?",
-        "a": "Yes — AI citation criteria overlap with but aren't identical to traditional ranking factors; a page with strong topical authority, clear structure and citable data can be cited even from a lower traditional ranking position."
-      },
-      {
-        "q": "How do you measure success for GEO/AEO specifically?",
-        "a": "We track citation frequency across monitored AI engines, share-of-voice versus named competitors in AI-generated answers, and referral traffic specifically attributable to AI search sessions."
-      },
-      {
-        "q": "Is GEO/AEO relevant if most of our traffic is still from Google search?",
-        "a": "Increasingly yes — AI Overviews now appear directly inside standard Google search results for a growing share of queries, meaning GEO/AEO and traditional SEO overlap more than most brands realize."
-      },
-      {
-        "q": "Do you guarantee citation in ChatGPT or Gemini answers?",
-        "a": "No — no agency can guarantee placement inside a third-party AI model's generated answer, since model behavior isn't controlled by any outside party. We guarantee a rigorous, transparent optimization process and measurable citation tracking."
-      },
-      {
-        "q": "How long before GEO/AEO efforts show measurable AI citation improvement?",
-        "a": "Most clients see initial citation movement within 8-12 weeks as new content and schema get indexed and ingested by AI model retrieval systems, with continued compounding over 6+ months."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      }
+          {
+                "q": "What are GEO and AEO, and how are they different from SEO?",
+                "a": "Generative Engine Optimization, or GEO, focuses on how brands and information are understood, represented and cited in generative AI answers. Answer Engine Optimization, or AEO, focuses on providing clear answers for conversational and question-based searches. Both build on SEO foundations such as indexation, useful content, authority and technical accessibility rather than replacing traditional SEO."
+          },
+          {
+                "q": "What is included in Amplipath’s GEO and AEO service?",
+                "a": "The service may include an AI-visibility baseline, audience-question research, competitor analysis, technical indexation review, entity clarification, content-gap analysis, answer-focused content, original evidence development, structured data validation, digital PR and third-party authority building. Monitoring is then used to identify changes in mentions, citations, accuracy, sentiment and referral traffic."
+          },
+          {
+                "q": "Which AI search platforms does Amplipath optimize for?",
+                "a": "Depending on the client’s audience, Amplipath may evaluate visibility across Google AI Overviews and AI Mode, ChatGPT search, Perplexity, Microsoft Copilot, Gemini and other relevant answer platforms. Each system retrieves and presents information differently, so the strategy prioritizes the environments most likely to influence the client’s customers rather than treating every AI platform equally."
+          },
+          {
+                "q": "How can I determine whether my brand currently appears in AI answers?",
+                "a": "Amplipath can build a representative set of prompts covering discovery, comparison, recommendation and purchase intent. Those prompts are tested across selected AI platforms to determine whether the brand is mentioned, accurately described or cited. Competitor presence, source URLs, sentiment and response variation are documented to establish a baseline for future measurement."
+          },
+          {
+                "q": "Can a brand appear in AI answers without ranking number one on Google?",
+                "a": "Yes. AI systems can consult and cite sources beyond the first traditional organic result. However, being crawlable, indexed, relevant and supported by credible information across the web still improves eligibility. GEO/AEO should therefore strengthen traditional search foundations while increasing the clarity and authority of the brand’s wider digital presence."
+          },
+          {
+                "q": "How long does GEO/AEO take to show results?",
+                "a": "There is no universal timeline. New or updated information must first be discovered, indexed and trusted, while third-party authority and brand consistency develop over time. AI answers can also vary by platform, prompt, user and date. Amplipath measures progress through repeated prompt testing and search-performance data rather than promising a fixed date."
+          },
+          {
+                "q": "Can Amplipath guarantee citations in ChatGPT, Gemini or Google AI answers?",
+                "a": "No. AI systems independently decide which sources and brands to use, and their responses change frequently. No agency controls their models or can guarantee inclusion for a specific prompt. Amplipath can improve eligibility, clarity, corroboration and authority while transparently reporting where the brand gains or loses visibility."
+          },
+          {
+                "q": "How is GEO/AEO performance measured?",
+                "a": "Relevant measurements include brand-mention rate, citation frequency, cited URLs, accuracy of brand descriptions, competitor share of voice, sentiment, prompt coverage, AI referral traffic and conversions from AI-assisted discovery. Where search engines provide dedicated generative-search reporting, that information can be combined with website analytics and repeated platform testing."
+          },
+          {
+                "q": "Which AI search engine matters most for my industry?",
+                "a": "There is no universal answer. The right priority depends on customer behaviour, geography, research complexity and whether buyers use AI for discovery, comparison or technical evaluation. Amplipath examines real audience journeys and platform visibility before recommending where the strongest opportunity exists."
+          },
+          {
+                "q": "Is GEO/AEO still relevant when most of our traffic comes from Google?",
+                "a": "Yes. Google now includes generative features within its search experience, while customers may use several platforms during one purchase journey. Strengthening content quality, entities and authority can support conventional search and AI-driven discovery simultaneously. GEO/AEO should complement the channels already producing customers rather than diverting resources without evidence."
+          },
+          {
+                "q": "What content performs best in AI-generated answers?",
+                "a": "Content is more useful when it provides direct explanations, verifiable facts, original examples, expert experience, clear comparisons and transparent authorship. Case studies, research, definitions, methodologies and current first-party data are generally more distinctive than generic articles. Content should be written for people first and structured so important information can be understood without ambiguity."
+          },
+          {
+                "q": "Do FAQ schema, structured data or an llms.txt file guarantee AI visibility?",
+                "a": "No. Structured data can help systems understand page information when it accurately matches visible content, but it does not guarantee ranking or citation. Google has stated that no special AI schema or AI text file is required for its generative search features. Technical accessibility, content quality and authority remain more important."
+          },
+          {
+                "q": "Does GEO/AEO include digital PR and third-party brand mentions?",
+                "a": "It can. AI systems may consult information published outside a company’s website, so relevant editorial coverage, trusted directories, expert contributions, reviews and industry references can strengthen brand corroboration. Amplipath focuses on authentic, useful placements and avoids fabricated mentions or mass submissions created solely to manipulate AI answers."
+          },
+          {
+                "q": "How much do GEO and AEO services cost?",
+                "a": "Pricing depends on the number of markets, products, audience segments, AI platforms, prompts, content requirements and authority-building work involved. A focused visibility audit differs from a complete ongoing program. Amplipath reviews the current situation and provides a proposal covering research, implementation, monitoring and reporting."
+          },
+          {
+                "q": "How does an AI search optimization engagement begin?",
+                "a": "The engagement begins with the brand, audience, competitors, website, priority services and customer questions. Amplipath then creates a baseline across relevant prompts and platforms, assesses technical and content gaps, and develops a prioritized roadmap. The scope may begin with an audit or continue into implementation and ongoing measurement."
+          }
     ]
   },
   "game": {
@@ -593,50 +613,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Twitch"
     ],
     "faqs": [
-      {
-        "q": "Do you work with indie developers or only large studios?",
-        "a": "Both. We have worked with solo indie developers, small studios and major publishers — and our approach scales accordingly. An indie developer's launch needs a very different strategy to a AAA publisher's campaign, and we have deep experience across the full spectrum of game marketing budgets and ambitions."
-      },
-      {
-        "q": "Can you help market mobile games specifically?",
-        "a": "Yes — mobile game marketing (iOS App Store and Google Play) is a core Amplipath specialisation. We cover ASO (App Store Optimization), paid user acquisition campaigns, TikTok creative strategy, influencer seeding and lifecycle marketing for user retention and reactivation."
-      },
-      {
-        "q": "How early should we engage a game marketing agency before launch?",
-        "a": "We recommend engaging at minimum 8–12 weeks before launch for indie titles and 6+ months before launch for larger budget games. Early wishlist campaigns dramatically increase your launch-day audience size and signal quality to Steam's algorithm — which determines your placement in New Release and Recommended sections."
-      },
-      {
-        "q": "Do you have experience marketing games to African audiences?",
-        "a": "Yes — mobile gaming in Nigeria, Ghana, Kenya and South Africa is one of the fastest-growing gaming markets globally. Amplipath has dedicated Africa market expertise and influencer networks that allow us to reach African gaming audiences authentically and cost-effectively."
-      },
-      {
-        "q": "How early should we start a pre-launch campaign?",
-        "a": "We recommend starting wishlist and community-building campaigns at least 12 weeks before launch — earlier for titles without an existing following, since wishlist accumulation compounds the closer you get to release."
-      },
-      {
-        "q": "Do you work with indie developers on small budgets?",
-        "a": "Yes — indie titles make up a significant share of our game marketing clients, and campaign scope is built to match realistic indie budgets rather than assuming AAA marketing spend."
-      },
-      {
-        "q": "Can you market both mobile and PC/console games?",
-        "a": "Yes — though the channel mix differs significantly: mobile leans heavily on ASO and paid UA, while PC/console leans on Steam page optimization, press and creator seeding."
-      },
-      {
-        "q": "Do you work directly with Discord community management?",
-        "a": "Yes — Discord server setup, moderation guidance and community growth tactics are part of our broader game marketing engagement when relevant to your title."
-      },
-      {
-        "q": "How do you choose which streamers or YouTubers to seed our game to?",
-        "a": "We match creators to your specific genre and audience based on past coverage of comparable titles, real audience engagement (not just subscriber count), and content style fit."
-      },
-      {
-        "q": "What if our game doesn't have a marketing budget for paid ads?",
-        "a": "Organic-first strategies — community building, press outreach, creator seeding and Steam algorithm optimization — can drive meaningful wishlist growth even with minimal or no paid spend."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      }
+          {
+                "q": "What does a game marketing agency do?",
+                "a": "A game marketing agency helps developers position, launch and grow their games through audience research, store-page optimization, content strategy, creator outreach, community building, public relations and paid advertising. Amplipath develops the channel mix around the game’s platform, genre, audience, development stage and commercial objectives."
+          },
+          {
+                "q": "Do you market indie, mobile, PC and console games?",
+                "a": "Yes. Our strategy can be adapted for independent games, mobile apps, PC releases and console titles. However, each platform requires a different approach to discovery, store optimization, community development, creator partnerships, paid acquisition and performance measurement."
+          },
+          {
+                "q": "How early should game marketing begin before launch?",
+                "a": "Marketing should ideally begin before the store page, demo and launch materials are finalized. Starting early provides time to validate positioning, build a community, collect wishlists or pre-registrations, test creative concepts and establish relationships with creators. We can also support games that are already live."
+          },
+          {
+                "q": "Which channels do you use to promote games?",
+                "a": "The channel mix may include Steam or app-store optimization, Discord and community development, social media, YouTube and streamer outreach, gaming publications, email marketing, search visibility and paid advertising. We select channels according to where the game’s likely players already discover new titles."
+          },
+          {
+                "q": "How do you select streamers and gaming creators?",
+                "a": "We assess genre relevance, audience location, engagement quality, previous game coverage, content style, reputation and expected campaign value. A smaller creator with a highly relevant audience may be more valuable than a large creator whose followers have little interest in the game."
+          },
+          {
+                "q": "Can you market a game with a limited advertising budget?",
+                "a": "Yes, but the strategy must prioritize the highest-impact activities. This may include positioning, store-page optimization, short-form content, community building, demo promotion, targeted creator outreach and relevant gaming events. A limited budget may restrict reach, so realistic expectations are established before launch."
+          },
+          {
+                "q": "How do you measure game-marketing performance?",
+                "a": "Depending on the platform and campaign stage, we track store-page visits, wishlists, demo downloads, pre-registrations, installs, acquisition cost, conversion rate, community growth, creator coverage, sales and player retention. Success metrics are agreed upon before the campaign begins."
+          }
     ]
   },
   "africa": {
@@ -780,50 +784,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "M-Pesa"
     ],
     "faqs": [
-      {
-        "q": "Which African countries does Amplipath cover?",
-        "a": "We cover 15 African countries with dedicated market intelligence and campaign capability: Nigeria, Ghana, Kenya, South Africa, Tanzania, Uganda, Rwanda, Senegal, Egypt, Morocco, Ethiopia, Cameroon, Côte d'Ivoire, Zambia and Zimbabwe. We are actively expanding coverage to additional markets."
-      },
-      {
-        "q": "Is WhatsApp marketing legal and compliant in Africa?",
-        "a": "Yes — with proper opt-in consent processes, WhatsApp Business marketing is fully legal across all African markets and significantly more effective than email in most. Open rates are typically 4x higher than email, and direct message conversion rates frequently exceed 20% for well-targeted campaigns."
-      },
-      {
-        "q": "Can you help international brands enter African markets?",
-        "a": "Absolutely. Many of our Africa market clients are US, UK and European brands expanding into African markets for the first time. We handle market research, regulatory review, strategy development, creative localisation, platform selection, influencer matching and full campaign execution — end to end."
-      },
-      {
-        "q": "What makes Amplipath's Africa services genuinely different?",
-        "a": "Most global agencies claim Africa coverage but deliver generic global campaigns with African targeting applied as an afterthought. Amplipath has built actual local market infrastructure: real keyword data from local sources, vetted local influencer networks, integrated local payment processor connections and dedicated in-country team members for our core African markets."
-      },
-      {
-        "q": "Which African countries do you cover?",
-        "a": "We have active local market expertise across 15+ countries including Nigeria, Ghana, Kenya, South Africa, Tanzania, Uganda, Rwanda, Senegal, Egypt, Morocco, Ethiopia, Cameroon, Côte d'Ivoire, Zambia and Zimbabwe — with our Ondo, Nigeria office providing genuine on-the-ground presence."
-      },
-      {
-        "q": "Is WhatsApp marketing compliant across Africa?",
-        "a": "WhatsApp Business API usage requires opt-in consent similar to email and SMS regulations elsewhere — we configure compliant opt-in flows specific to each market's requirements."
-      },
-      {
-        "q": "Do you only work with businesses already based in Africa?",
-        "a": "No — a significant share of our Africa Market Services clients are international brands entering African markets for the first time, alongside local businesses scaling regionally."
-      },
-      {
-        "q": "Why do payment integrations matter for African market marketing?",
-        "a": "Card payment penetration is lower across many African markets than mobile money and local payment rails — campaigns driving traffic to a checkout without Paystack, Flutterwave or M-Pesa integration lose a meaningful share of otherwise-converting customers."
-      },
-      {
-        "q": "Can you help with both marketing and the underlying website or store build?",
-        "a": "Yes — we frequently combine Africa Market Services with Website Development or E-Commerce Development to ensure the destination experience matches local payment and connectivity realities, not just the marketing campaign."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      }
+          {
+                "q": "Which African countries can Amplipath help us target?",
+                "a": "Amplipath develops country-specific growth strategies across African markets, with core market capability spanning Nigeria, Ghana, Kenya and South Africa. Additional countries can be assessed according to audience demand, language, competition, advertising access, payment infrastructure and local execution requirements. We do not treat Africa as one identical audience."
+          },
+          {
+                "q": "Can Amplipath help an international company enter an African market?",
+                "a": "Yes. We help international companies identify suitable entry markets, understand local customer behaviour, adapt their positioning, localize the digital buying journey and select appropriate channels. We generally recommend proving demand in one or two priority markets before expanding across the continent."
+          },
+          {
+                "q": "What is included in Amplipath’s Africa Market Services?",
+                "a": "Depending on the engagement, services can include market research, opportunity assessment, entry strategy, localized websites and e-commerce, search and local SEO, AI-search visibility, paid media, content, creator campaigns, WhatsApp and CRM journeys, analytics and practical AI automation. The final scope is built around your commercial objectives and current market stage."
+          },
+          {
+                "q": "Can you localize our website, e-commerce store, WhatsApp journey and payment system?",
+                "a": "Yes. We can build or adapt landing pages, websites and e-commerce journeys for local audiences, including relevant language, currency, offers, contact methods and mobile experiences. We can also support WhatsApp and CRM journeys and assess integrations such as Paystack, Flutterwave or M-PESA where the provider supports the country, business type and account."
+          },
+          {
+                "q": "What do SEO, AEO and GEO mean within your Africa market service?",
+                "a": "SEO helps your business appear in traditional and local search results. AEO structures content so search and answer platforms can understand and answer customer questions clearly, while GEO focuses on visibility within generative AI experiences. We combine these practices through technical SEO, local business information, structured content and useful market-specific answers without promising guaranteed placement."
+          },
+          {
+                "q": "Do you run paid advertising, content and influencer campaigns across Africa?",
+                "a": "Yes. We can manage search and social advertising, localized campaign content and relevant creator or influencer partnerships. Before launch, we evaluate platform availability, industry restrictions, audience behaviour and media economics in each target country. Creators are selected using audience relevance, credibility and engagement quality—not follower count alone."
+          },
+          {
+                "q": "How will we measure whether an African market campaign is working?",
+                "a": "We establish the measurement framework before launch and connect relevant advertising, website, CRM, commerce and lead-journey data. Depending on the objective, reporting may cover qualified traffic, enquiries, WhatsApp conversations, leads, sales, conversion rate, acquisition cost and return on advertising spend. We use these results to decide whether to improve, expand or stop an activity."
+          }
     ]
   },
   "webdev": {
@@ -979,50 +967,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Figma"
     ],
     "faqs": [
-      {
-        "q": "Which platforms do you build websites on?",
-        "a": "We match the platform to your specific needs and goals. Shopify for e-commerce, WordPress for content-heavy sites, Webflow for design-led marketing sites and Next.js or React for high-performance custom applications. We recommend the right platform for your situation — not the platform that is easiest for us to build on."
-      },
-      {
-        "q": "How long does a website build take?",
-        "a": "A standard business website takes 4–6 weeks from kickoff to launch. E-commerce builds typically take 6–10 weeks. Complex custom applications take 3–6 months. Every project begins with a detailed timeline with clear milestones and delivery dates."
-      },
-      {
-        "q": "Will my website be SEO-optimized from launch?",
-        "a": "Yes — SEO implementation is included in every website build. This covers semantic HTML structure, proper heading hierarchy, XML sitemap, robots.txt configuration, page speed optimization, Core Web Vitals compliance, schema markup and meta tag framework. We do not build sites and hand over SEO as a separate engagement."
-      },
-      {
-        "q": "Can you redesign our existing website without losing our SEO rankings?",
-        "a": "Yes — website migrations and redesigns are a core Amplipath specialisation. We audit your existing site, identify and preserve all strong-performing pages, migrate all content correctly and implement a comprehensive 301 redirect strategy to protect your existing search rankings throughout the transition."
-      },
-      {
-        "q": "Which platform is right for my business — WordPress or custom?",
-        "a": "WordPress suits businesses wanting easy self-editing and a large plugin ecosystem; a custom React/Next.js build suits businesses needing speed, unique functionality or tighter design control. We recommend based on your content update needs and technical resources."
-      },
-      {
-        "q": "How long does a website build take?",
-        "a": "A standard business website typically takes 4-8 weeks from discovery through launch; larger multi-language or membership sites take longer. We give a specific timeline based on your exact scope during discovery."
-      },
-      {
-        "q": "Will my new site keep our existing SEO rankings?",
-        "a": "Yes — we run a full 301 redirect map from old URLs to new ones, preserve existing meta data and verify rankings post-launch specifically to avoid the traffic loss common with poorly executed redesigns."
-      },
-      {
-        "q": "Do you provide ongoing website maintenance after launch?",
-        "a": "Yes — maintenance retainers covering updates, security patching and content changes are available beyond the included 30-day post-launch support window."
-      },
-      {
-        "q": "Can I edit the website content myself after it launches?",
-        "a": "Yes — every site we build includes CMS training so your team can update text, images and basic content without needing a developer for routine changes."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for website Development Services?",
-        "a": "Our team works primarily with Shopify alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for website Development Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "What is included in Amplipath’s website development service?",
+                "a": "Our website development service can include strategy, information architecture, UX/UI design, responsive development, content integration, technical SEO foundations, analytics setup, quality assurance and launch support. The exact scope is tailored to your objectives, audience and required functionality."
+          },
+          {
+                "q": "How do you choose the right website platform for a business?",
+                "a": "We evaluate your content needs, required integrations, internal resources, growth plans and budget before recommending a platform. WordPress may suit content-led businesses, Webflow supports design-focused marketing sites, Shopify serves online stores, while custom frameworks suit specialised functionality."
+          },
+          {
+                "q": "How long does it take to design and develop a business website?",
+                "a": "A standard business website typically takes two to four weeks, while larger or more complex projects may require additional time. The final schedule depends on page count, content readiness, approval speed, integrations and custom features."
+          },
+          {
+                "q": "Will my new website be SEO-ready when it launches?",
+                "a": "Yes. We build with crawlable site architecture, responsive layouts, clean URLs, metadata controls, internal linking, performance optimisation and appropriate structured-data opportunities. These foundations support search visibility, although no agency can guarantee specific rankings."
+          },
+          {
+                "q": "Can Amplipath redesign my website without losing existing search visibility?",
+                "a": "Yes. We review important URLs, rankings, backlinks, metadata and analytics before migration. Redirect mapping, content preservation, staging checks and post-launch monitoring help minimise traffic and ranking disruption."
+          },
+          {
+                "q": "Will the website work properly on mobile phones and tablets?",
+                "a": "Every website is developed with responsive behaviour across common screen sizes and browsers. We also check navigation, readability, forms, tap targets and important user journeys so mobile visitors can use the site effectively."
+          },
+          {
+                "q": "Can you connect the website to our existing business systems?",
+                "a": "Depending on available integrations, we can connect websites with CRM platforms, email tools, booking systems, payment providers, analytics platforms and other business applications. Custom API work is scoped separately when a ready-made integration is unavailable."
+          },
+          {
+                "q": "What testing is completed before a website goes live?",
+                "a": "Before launch, we review forms, links, layouts, browser compatibility, mobile behaviour, redirects, tracking, basic accessibility and key performance issues. We also confirm that essential pages can be crawled and indexed correctly."
+          },
+          {
+                "q": "Will we own the website and be able to update it ourselves?",
+                "a": "Ownership and access rights are defined clearly in the project agreement. For content-managed websites, we can provide administrator access and training so your team can update approved content without depending on a developer for routine changes."
+          }
     ]
   },
   "aidev": {
@@ -1165,50 +1145,26 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Vercel AI SDK"
     ],
     "faqs": [
-      {
-        "q": "What types of AI systems does Amplipath build?",
-        "a": "We build a wide range of AI systems including: LLM-powered chatbots for sales and customer service, AI content generation pipelines, autonomous agents for workflow automation, custom AI applications and SaaS products, API integrations connecting existing tools to AI models, computer vision applications and predictive analytics systems. Every system is custom-built — we do not use generic templates."
-      },
-      {
-        "q": "How much does AI development cost?",
-        "a": "Cost depends heavily on scope — a rules-based chatbot integration is a much smaller investment than a custom AI application or complex multi-step agent system. We scope your exact requirements during a free strategy session and provide a detailed, fixed-price quote before any work begins, so there are no surprises."
-      },
-      {
-        "q": "What is the difference between a rules-based chatbot and an AI chatbot?",
-        "a": "A rules-based chatbot follows predefined conversation flows and can only respond to questions it has been explicitly programmed to handle. An AI chatbot uses a large language model (like ChatGPT or Claude) and can handle open-ended, nuanced conversations — understanding context, answering novel questions and adapting its responses in real time. We build both, and recommend the right type based on your specific use case and budget."
-      },
-      {
-        "q": "Can you integrate AI into our existing business systems?",
-        "a": "Yes — AI integration with existing systems is one of our most common project types. We have integrated AI capabilities into CRM systems (Salesforce, HubSpot), CMS platforms (WordPress, Webflow), e-commerce stores (Shopify, WooCommerce), communication tools (Slack, Teams) and custom-built business applications. Our integration-first approach ensures AI genuinely improves workflows rather than creating new administrative complexity."
-      },
-      {
-        "q": "Which AI model is right for our use case?",
-        "a": "It depends on the task — GPT-4/5 and Claude both perform strongly on reasoning and content generation, Gemini integrates tightly with Google Cloud, and open-source/local models suit cases with strict data-residency requirements. We recommend based on your specific data sensitivity and use case during the readiness audit."
-      },
-      {
-        "q": "How do you handle data privacy and security?",
-        "a": "We follow each AI provider's data handling policies, avoid sending unnecessary sensitive data to third-party APIs, and can architect on-premise or local-model solutions for use cases with strict compliance requirements."
-      },
-      {
-        "q": "What does a typical AI development project cost?",
-        "a": "Cost depends heavily on scope and complexity — from a focused single-feature integration to a full custom pipeline. We provide a specific estimate after the AI readiness audit rather than a generic price range."
-      },
-      {
-        "q": "Do you build with open-source models, or only commercial APIs like OpenAI?",
-        "a": "Both — commercial APIs (OpenAI, Anthropic, Google) suit most use cases for speed and capability; open-source/local models are recommended specifically where data residency, cost-at-scale or offline operation matter."
-      },
-      {
-        "q": "How do you measure ROI on an AI development project?",
-        "a": "We define specific success metrics during the readiness audit — time saved, error rate reduction, revenue lift or cost reduction — tied to the exact workflow the AI system is replacing or augmenting."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI Development & Consulting Services?",
-        "a": "Our team works primarily with OpenAI GPT-4 alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI Development & Consulting Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "Which business problems are suitable for custom AI development?",
+                "a": "Custom AI is suitable for repeatable problems involving large amounts of information, prediction, classification, content processing or decision support. Before recommending development, Amplipath determines whether AI provides a meaningful advantage over conventional software or process improvement."
+          },
+          {
+                "q": "What happens during AI discovery and feasibility assessment?",
+                "a": "We examine the proposed use case, available data, required accuracy, affected users, technical systems and operational risks. This determines whether the idea is technically achievable, commercially valuable and appropriate for a prototype."
+          },
+          {
+                "q": "What is the difference between an AI proof of concept and a production system?",
+                "a": "A proof of concept tests whether the central idea can work using a limited scope. A production system requires stronger security, monitoring, integrations, testing, user controls, documentation and infrastructure capable of supporting real operations."
+          },
+          {
+                "q": "What determines the cost of an AI development project?",
+                "a": "Cost depends on workflow complexity, data preparation, integrations, interface requirements, expected usage, security controls and whether specialised model work is required. We define the initial scope before providing a project estimate."
+          },
+          {
+                "q": "How do you establish the business value of an AI solution?",
+                "a": "We define measurable outcomes before development, such as reduced processing time, improved response speed, fewer manual errors or increased operational capacity. These baseline measures make it possible to evaluate whether the completed system creates sufficient value."
+          }
     ]
   },
   "course": {
@@ -1345,50 +1301,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "ActiveCampaign"
     ],
     "faqs": [
-      {
-        "q": "Do you work with instructors on any course platform?",
-        "a": "We work with instructors on all major platforms including Udemy, Teachable, Kajabi, Coursera, Skillshare, Thinkific, Podia and self-hosted platforms. Core marketing strategies are similar across platforms but the specific platform tactics differ significantly — and we have direct experience with each."
-      },
-      {
-        "q": "Do I need an existing audience to work with you?",
-        "a": "No. We have helped many instructors go from zero existing audience to thousands of enrolled students. Having some existing content — a YouTube channel, email list or social following — makes initial growth faster and cheaper, but it is not a prerequisite for working with us."
-      },
-      {
-        "q": "How important is YouTube for course marketing?",
-        "a": "YouTube is the single most important long-term marketing channel for most course creators. It is where the majority of online learners discover new topics and instructors, and YouTube SEO-driven traffic compounds over time — becoming more valuable and less expensive per student acquired each month. Every Amplipath course promotion engagement includes a YouTube strategy."
-      },
-      {
-        "q": "How quickly will we see enrolment growth?",
-        "a": "Paid campaigns (YouTube Ads, Facebook Ads) can drive enrolments within days of launch. Organic SEO and YouTube content strategies typically take 3–6 months to build consistent enrolment volume. We recommend combining both approaches — paid for immediate results and cashflow, organic for sustainable long-term growth."
-      },
-      {
-        "q": "Do I need an existing audience to start?",
-        "a": "No — though an existing audience accelerates results, we build acquisition strategy (YouTube SEO, paid ads, affiliate partnerships) specifically designed to generate enrollments for creators starting from zero."
-      },
-      {
-        "q": "How important is YouTube for course marketing?",
-        "a": "Very — YouTube functions as both a search engine for discovery and a trust-building channel where prospective students evaluate your teaching style before enrolling, making it one of the highest-leverage channels for course creators."
-      },
-      {
-        "q": "Which platform is best for hosting my course — Udemy or self-hosted?",
-        "a": "Udemy and similar marketplaces offer built-in discovery traffic at the cost of lower margins and pricing control; self-hosted platforms like Kajabi or Teachable offer full pricing control and customer relationship ownership. We recommend based on your existing audience size and pricing strategy."
-      },
-      {
-        "q": "Do you help with course content creation, or just marketing?",
-        "a": "Our focus is acquisition and enrollment marketing — positioning, funnel building and paid/organic traffic — we coordinate with your content creation but do not produce the course curriculum itself."
-      },
-      {
-        "q": "Do you offer course Promotion Services as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine course Promotion Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What does an online course promotion service include?",
+                "a": "Course promotion can include audience research, offer positioning, sales-page optimization, funnel development, email marketing, content strategy, YouTube promotion, paid advertising, creator partnerships, retargeting and conversion tracking."
+          },
+          {
+                "q": "Which online course platforms can you support?",
+                "a": "The strategy can be adapted to platforms such as Udemy, Teachable, Thinkific, Kajabi, Podia and self-hosted course websites. Available marketing controls differ by platform, so we review account access, checkout ownership, analytics and advertising restrictions before recommending a campaign."
+          },
+          {
+                "q": "Do I need an existing audience before promoting my course?",
+                "a": "No, but an established audience can shorten the customer-acquisition process. If you are starting without one, we may recommend building a waitlist through useful content, lead magnets, email marketing, webinars, YouTube, partnerships or paid campaigns before expecting consistent enrolments."
+          },
+          {
+                "q": "Which marketing channels work best for selling online courses?",
+                "a": "The most effective channels depend on the course topic, price, audience and buying journey. Potential channels include search marketing, educational content, YouTube, email sequences, webinars, social advertising, retargeting, affiliates and relevant online communities."
+          },
+          {
+                "q": "Should I sell my course through a marketplace or my own website?",
+                "a": "Marketplaces can provide existing traffic but generally offer less control over pricing, customer relationships and branding. A self-hosted course provides greater control but requires you to generate demand. We evaluate audience access, budget, technology and long-term goals before recommending either option."
+          },
+          {
+                "q": "How do you measure course-promotion results?",
+                "a": "We measure relevant indicators such as qualified traffic, leads, webinar registrations, email engagement, checkout conversion, enrolments, customer-acquisition cost, revenue and return on advertising spend. Where available, refund rates, course completion and student quality can provide additional insight."
+          }
     ]
   },
   "gbp": {
@@ -1524,50 +1460,50 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Whitespark"
     ],
     "faqs": [
-      {
-        "q": "Do I need Google Business Profile even if I have a website?",
-        "a": "Yes — for any local business, your GBP is often more important than your website. Google Maps results appear above organic listings for local searches, and 76% of people who search for a local business visit within 24 hours."
-      },
-      {
-        "q": "How long does it take to see results?",
-        "a": "Most clients see improvement in profile views and clicks within 30–60 days. Local pack rankings typically improve within 60–90 days. Review generation impact compounds over 3–6 months."
-      },
-      {
-        "q": "Can you manage multiple locations?",
-        "a": "Yes — we manage GBP for multi-location businesses from 2 to 200+ locations, with consistent optimization standards and location-level performance tracking."
-      },
-      {
-        "q": "What is the difference between GBP optimization and Local SEO?",
-        "a": "GBP optimization focuses on your Google Business Profile specifically. Local SEO is broader — covering your website's local keyword optimization, local citations, backlinks and on-site technical elements. Both work together, and we offer both."
-      },
-      {
-        "q": "Who is eligible for a Google Business Profile?",
-        "a": "Any business with a public-facing location or that serves customers at their location (service-area businesses) is eligible — online-only businesses without customer-facing service generally are not."
-      },
-      {
-        "q": "How do reviews affect visibility?",
-        "a": "Review quantity, recency and average rating are among the strongest local ranking signals Google uses, alongside directly influencing the click-through and conversion decisions of people viewing your profile."
-      },
-      {
-        "q": "Can online-only businesses use GBP?",
-        "a": "Generally no — Google Business Profile is designed for businesses with a physical location or a defined service area where customers are served in person; purely online businesses without local service typically aren't eligible."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for google Business Profile Optimization & Management?",
-        "a": "Our team works primarily with Google Business Profile alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for google Business Profile Optimization & Management who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "Do I need a Google Business Profile if I already have a website?",
+                "a": "Yes, if your business is eligible and serves customers in person. Your website explains your services in depth, while your Google Business Profile helps customers find your location, hours, contact information, reviews and services across Google Search and Maps. The two should support one another."
+          },
+          {
+                "q": "Who is eligible for a Google Business Profile?",
+                "a": "Eligible businesses generally make in-person contact with customers during their stated operating hours. This includes qualifying storefront, hybrid and service-area businesses. Eligibility can vary for certain categories, practitioners, departments and institutions."
+          },
+          {
+                "q": "Can an online-only business create a Google Business Profile?",
+                "a": "Generally, no. A business that operates entirely online and does not make qualifying in-person contact with customers is normally ineligible. Such businesses should focus on website SEO, content, digital PR, paid advertising and other suitable acquisition channels."
+          },
+          {
+                "q": "What is the difference between Google Business Profile optimization and local SEO?",
+                "a": "Profile optimization improves one important Google property. Local SEO is broader and can include the website, location pages, reviews, business citations, local content, structured data and authority signals. Strong local visibility usually requires both."
+          },
+          {
+                "q": "What does Google Business Profile optimization include?",
+                "a": "It may include claiming and verification support, categories, business details, services, products, hours, service areas, photos, descriptions, review processes, tracking links and ongoing updates. The exact work depends on the business type and profile condition."
+          },
+          {
+                "q": "What determines Google Maps and local-search rankings?",
+                "a": "Google primarily evaluates relevance, distance and popularity or prominence. Accurate information, appropriate categories, a trustworthy website, legitimate reviews and a complete profile can help, but distance and competition mean no agency can control every search result."
+          },
+          {
+                "q": "How do Google reviews affect a Business Profile?",
+                "a": "Reviews can influence customer confidence and contribute to local prominence. We help create policy-compliant review-request and response processes, but we do not purchase reviews, generate fake reviews or offer incentives that violate platform rules."
+          },
+          {
+                "q": "Can Amplipath manage multiple business locations?",
+                "a": "Yes. Each legitimate location needs accurate information and must meet Google’s requirements. For larger location groups, we can help organise ownership, naming, categories, store codes, website URLs, reporting and scalable profile-management procedures."
+          },
+          {
+                "q": "Can you manage a service-area business that does not display its address?",
+                "a": "Yes, provided the business is eligible. We configure accurate service areas and hide the address where Google’s rules require it. Adding distant or false service areas does not guarantee rankings and can create compliance problems."
+          },
+          {
+                "q": "How long does Google Business Profile optimization take to work?",
+                "a": "Profile corrections can appear relatively quickly, while verification, review growth and ranking changes may take longer. Results depend on the starting condition, market competition, location, eligibility, website authority and Google’s processing times."
+          },
+          {
+                "q": "Can Amplipath guarantee a top-three Google Maps ranking?",
+                "a": "No. Google does not sell or guarantee better local rankings, and distance varies from one searcher to another. We focus on eligibility, accuracy, relevance, reputation and measurable actions such as calls, website visits, bookings and direction requests."
+          }
     ]
   },
   "amazonseo": {
@@ -1705,50 +1641,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Amazon Ads"
     ],
     "faqs": [
-      {
-        "q": "Do I need to be brand-registered to benefit?",
-        "a": "No — listing optimization and keyword research are available to all sellers. However, brand registration unlocks A+ Content and additional formats that significantly improve conversion. We help with both."
-      },
-      {
-        "q": "How long does it take to rank on Amazon?",
-        "a": "Listing optimization impacts click-through and conversion rate within days. Search ranking improvements typically take 4–8 weeks as Amazon's algorithm responds to improved relevancy and sales velocity."
-      },
-      {
-        "q": "Do you also manage Amazon Ads (PPC)?",
-        "a": "Yes — Amazon Ads management is a separate service that complements Amazon SEO. Running Sponsored Products alongside listing optimization creates a flywheel that reduces paid dependence over time."
-      },
-      {
-        "q": "Can you help expand to international Amazon marketplaces?",
-        "a": "Yes — we manage Amazon marketplace expansion across US, UK, Germany, France, Canada, Australia and more. Each marketplace requires separate keyword research and listing localization."
-      },
-      {
-        "q": "Do you write listings? Can you manage Amazon Ads too?",
-        "a": "Yes to both — listing copywriting is included, and Amazon Ads (Sponsored Products/Brands/Display) management is available as a complementary service that compounds with organic listing optimization."
-      },
-      {
-        "q": "Can you help with Jumia or Konga listings specifically?",
-        "a": "Yes — Jumia and Konga listing optimization follows similar principles to Amazon but with marketplace-specific keyword and category structures, which we handle as part of broader marketplace SEO."
-      },
-      {
-        "q": "Do you support non-Amazon marketplaces?",
-        "a": "Yes — Etsy, Walmart Marketplace, Jumia and Konga optimization are all part of our marketplace SEO service alongside Amazon."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine amazon SEO & Marketplace Marketing with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for amazon SEO & Marketplace Marketing — and report against them monthly rather than relying on vanity metrics."
-      }
+          {
+                "q": "What is Amazon SEO?",
+                "a": "Amazon SEO improves how accurately and competitively products appear for relevant searches within Amazon. It includes product classification, keyword research, listing content, search terms, attributes, images and conversion-focused merchandising."
+          },
+          {
+                "q": "Do I need Amazon Brand Registry to benefit from Amazon SEO?",
+                "a": "No. Basic listing research and optimization can benefit eligible sellers without Brand Registry. However, Brand Registry can unlock additional brand-protection, reporting and content features, including A+ Content for qualifying brands and authorised users."
+          },
+          {
+                "q": "What parts of an Amazon product listing do you optimize?",
+                "a": "We can optimize titles, bullet points, descriptions, attributes, search terms, images, product classification and A+ Content where available. All recommendations must remain accurate and comply with the requirements for the product category and marketplace."
+          },
+          {
+                "q": "How is Amazon SEO different from Amazon Ads?",
+                "a": "Amazon SEO improves organic product discoverability and conversion potential. Amazon Ads provide paid visibility through placements such as Sponsored Products and Sponsored Brands. Advertising can generate demand and data, but it does not replace a relevant, persuasive and compliant listing."
+          },
+          {
+                "q": "How long does it take to rank on Amazon?",
+                "a": "There is no fixed ranking period. Listing changes may be processed quickly, but performance depends on relevance, competition, price, availability, sales history, customer response and other marketplace factors. We monitor progress and refine listings using available data."
+          },
+          {
+                "q": "Does Amplipath manage Amazon Ads?",
+                "a": "Yes, when included in the engagement. We can manage campaign structure, product targeting, keyword targeting, bids, budgets, negative targeting and search-term analysis across eligible Amazon Ads formats."
+          },
+          {
+                "q": "How do you measure Amazon SEO and advertising success?",
+                "a": "We evaluate impressions, sessions, click-through rate, conversion rate, sales, organic keyword visibility and advertising performance. Paid-media reporting may include cost per click, advertising cost of sales, return on ad spend and total advertising cost of sales."
+          },
+          {
+                "q": "Can you help brands expand into international Amazon marketplaces?",
+                "a": "Yes. International expansion may require localised keyword research, language adaptation, units, product information, imagery and compliance checks. Clients remain responsible for legal, tax, product-safety and marketplace approvals in each country."
+          },
+          {
+                "q": "Can you optimize listings on Jumia, Konga and other marketplaces?",
+                "a": "Yes, subject to marketplace and country availability. We adapt the product content, categorisation, merchandising and advertising strategy to each platform rather than copying an Amazon listing unchanged."
+          }
     ]
   },
   "pinterestseo": {
@@ -1884,50 +1812,46 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Search Console"
     ],
     "faqs": [
-      {
-        "q": "Is Pinterest SEO worth it for my business?",
-        "a": "Pinterest is particularly effective for e-commerce, home decor, fashion, food, beauty, travel, education, finance and DIY niches. If your target audience includes women 25–54 and you have visual products, Pinterest SEO is almost certainly underutilized by your competitors."
-      },
-      {
-        "q": "How long before Pinterest SEO produces results?",
-        "a": "Initial improvements in impressions appear within 30–60 days. Meaningful traffic growth develops over 3–6 months. After 6 months, well-optimized accounts typically see consistent month-on-month growth."
-      },
-      {
-        "q": "Do you also manage Pinterest Ads?",
-        "a": "Yes — Pinterest Ads can dramatically accelerate organic Pinterest SEO by immediately testing which pin concepts perform best. We recommend combining both for the fastest results."
-      },
-      {
-        "q": "How does Pinterest SEO relate to regular Google SEO?",
-        "a": "Pinterest pins frequently rank on Google Image search — particularly for visual, informational and product-related queries. A strong Pinterest SEO strategy effectively creates an additional Google SEO channel."
-      },
-      {
-        "q": "Is Pinterest right for ecommerce?",
-        "a": "Particularly so — Pinterest users have demonstrably higher average order values and stronger purchase intent than most social platforms for visual product categories like fashion, home and beauty."
-      },
-      {
-        "q": "How long does Pinterest SEO take to show results?",
-        "a": "Initial impression growth typically appears within 30-60 days; meaningful compounding traffic growth usually takes 3-6 months as pins accumulate saves and search relevance."
-      },
-      {
-        "q": "Do you design the pins themselves?",
-        "a": "Yes — pin design (static, carousel and Idea Pins) is included, built around tested Pinterest-specific design conventions rather than repurposed Instagram graphics."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine pinterest SEO Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for pinterest SEO Services — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including pinterest SEO Services, because we believe results should earn your continued business, not a binding agreement."
-      }
+          {
+                "q": "What is Pinterest SEO?",
+                "a": "Pinterest SEO improves the likelihood that relevant Pins, boards and products will be discovered through Pinterest search and recommendations. It combines keyword research, visual content, profile organization, board relevance, Pin metadata, destination pages and seasonal planning."
+          },
+          {
+                "q": "Is Pinterest SEO suitable for my business?",
+                "a": "It can be valuable when customers use visual inspiration or planning during their buying journey. Common opportunities include ecommerce, home, beauty, fashion, food, travel, education, events and design, but suitability should be based on actual audience behaviour rather than demographics alone."
+          },
+          {
+                "q": "What does Amplipath optimize on Pinterest?",
+                "a": "We can optimize the business profile, boards, Pin titles, descriptions, destination links, visual formats, topic alignment, publishing plan and product feeds. We also use Pinterest Trends and performance data to identify relevant seasonal and evergreen opportunities."
+          },
+          {
+                "q": "How is Pinterest SEO different from Google SEO?",
+                "a": "Pinterest SEO focuses on discovery inside Pinterest’s visual-search ecosystem. Google SEO focuses primarily on visibility in Google Search. They can support one another because Pins and destination pages may receive referral traffic and may sometimes appear in external search results."
+          },
+          {
+                "q": "Is Pinterest SEO useful for ecommerce businesses?",
+                "a": "Yes. Eligible retailers can use catalogs, product Pins and product groups to display current product information and support organic discovery or shopping campaigns. Strong product feeds and optimized destination pages are essential."
+          },
+          {
+                "q": "Does Amplipath design the Pins?",
+                "a": "Pin design can be included in the project scope. We create or adapt visual assets for Pinterest formats while maintaining brand consistency, mobile readability and a clear connection between the creative, search intent and destination page."
+          },
+          {
+                "q": "Do you also manage Pinterest Ads?",
+                "a": "Yes, when paid promotion is appropriate. Organic Pinterest SEO and advertising can work together, with paid campaigns expanding reach while organic content builds a longer-term library of discoverable Pins."
+          },
+          {
+                "q": "How long does Pinterest SEO take to produce results?",
+                "a": "There is no guaranteed timeline. Performance depends on account history, content quality, publishing consistency, search demand, seasonality and website experience. We evaluate trends over time rather than promising immediate rankings from a small number of Pins."
+          },
+          {
+                "q": "How do you measure Pinterest performance?",
+                "a": "We monitor impressions, saves, Pin clicks, outbound clicks, engaged audiences, conversions and revenue where tracking is available. Pinterest Analytics, the Pinterest Tag, Conversions API and website analytics can provide a more complete performance picture."
+          },
+          {
+                "q": "What do you need before starting Pinterest SEO?",
+                "a": "We normally need access to the Pinterest business account, website analytics, brand assets, product information and priority customer segments. Ecommerce projects may also require access to the product catalog, feed or relevant store integration."
+          }
     ]
   },
   "redditmarketing": {
@@ -2051,50 +1975,46 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Ahrefs"
     ],
     "faqs": [
-      {
-        "q": "Is Reddit marketing suitable for all businesses?",
-        "a": "Reddit is particularly effective for B2B SaaS, gaming, technology, finance, fitness, education and developer tools. It is less effective for highly local businesses or industries with no natural Reddit presence. We always assess fit before recommending it."
-      },
-      {
-        "q": "Why do most Reddit marketing attempts fail?",
-        "a": "Most brands post promotional content and links. Reddit communities see through this immediately and downvote or ban the account. Effective Reddit marketing requires genuine participation and content that provides real value first."
-      },
-      {
-        "q": "Can I advertise on Reddit rather than doing organic marketing?",
-        "a": "Yes — Reddit Ads is a separate service. Organic Reddit marketing and Reddit Ads work well together: organic builds credibility, ads extend reach. We manage both as integrated or standalone services."
-      },
-      {
-        "q": "How do you measure Reddit marketing ROI?",
-        "a": "We track Reddit-driven traffic via UTM parameters, monitor brand mention sentiment and attribute downstream conversions to Reddit traffic sources in GA4."
-      },
-      {
-        "q": "Won't Reddit users reject obvious marketing?",
-        "a": "Yes, if it's obvious — which is exactly why our approach prioritizes genuine, non-promotional participation and transparency over disguised marketing, since Reddit communities are quick to call out and penalize inauthentic brand behavior."
-      },
-      {
-        "q": "Can Reddit content actually rank on Google?",
-        "a": "Yes — Reddit threads frequently rank highly on Google for product comparison and review-style queries, and Google has visibly increased weighting of Reddit content in search results in recent years."
-      },
-      {
-        "q": "Is this safe for sensitive industries?",
-        "a": "We assess subreddit rules and community norms carefully per industry — some sensitive categories require a more conservative engagement approach, which we scope honestly during strategy rather than risking a ban."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine reddit Marketing & SEO with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for reddit Marketing & SEO — and report against them monthly rather than relying on vanity metrics."
-      }
+          {
+                "q": "What are Reddit marketing and Reddit SEO?",
+                "a": "Reddit marketing helps a brand participate in relevant communities, publish useful content and run targeted Reddit Ads. Reddit SEO focuses on creating clear, valuable discussions that people can discover through Reddit search, traditional search engines and, potentially, AI-powered search experiences."
+          },
+          {
+                "q": "Is Reddit marketing suitable for every business?",
+                "a": "No. It works best when active Reddit communities already discuss your industry, customer problem or product category. Before recommending Reddit, we evaluate community relevance, audience behaviour, subreddit rules, advertising eligibility and realistic opportunities for participation."
+          },
+          {
+                "q": "What is the difference between organic Reddit marketing and Reddit Ads?",
+                "a": "Organic marketing earns attention through useful posts, comments and community participation. Reddit Ads provide paid distribution through audience, community, interest and keyword targeting. Amplipath may recommend one or combine both, depending on the objective and brand readiness."
+          },
+          {
+                "q": "Why do many Reddit marketing campaigns fail?",
+                "a": "Most fail because the brand publishes obvious promotions, ignores subreddit rules or treats Reddit like a conventional social network. Successful participation begins with listening, understanding each community and contributing information that is genuinely useful before requesting attention or action."
+          },
+          {
+                "q": "How do you prevent Reddit marketing from becoming spam?",
+                "a": "We research individual community rules, disclose brand relationships when appropriate and avoid automated posting, fake engagement, vote manipulation and repetitive links. Every contribution must make sense within the discussion even if the promotional link is removed."
+          },
+          {
+                "q": "Will Reddit users reject branded content?",
+                "a": "They may reject content that feels deceptive, irrelevant or overly promotional. Brands can still succeed by being transparent, speaking naturally, answering real questions and demonstrating expertise. The objective is to contribute to the community rather than disguise an advertisement as an independent recommendation."
+          },
+          {
+                "q": "Can Reddit posts rank on Google or appear in AI answers?",
+                "a": "Public Reddit discussions can be discovered by search engines and may be referenced by AI systems, but neither indexing, ranking nor citation is guaranteed. We improve discoverability through descriptive titles, clear answers, original expertise and natural language—not keyword stuffing or artificial backlinks."
+          },
+          {
+                "q": "How do you measure Reddit marketing performance?",
+                "a": "We track relevant reach, engagement quality, brand mentions, community growth, referral traffic, leads, assisted conversions and sales. Paid campaigns can also use the Reddit Pixel, Conversions API, UTMs and website analytics to improve attribution."
+          },
+          {
+                "q": "Is Reddit marketing suitable for regulated or sensitive industries?",
+                "a": "Suitability depends on Reddit’s advertising policies, local laws and the rules of individual communities. We assess eligibility before launching and will not recommend tactics that require policy violations, undisclosed promotion or misleading claims."
+          },
+          {
+                "q": "What does Amplipath’s Reddit marketing service include?",
+                "a": "Depending on the engagement, it can include audience and subreddit research, listening, content strategy, post and comment development, brand-account guidance, Reddit Ads, conversion tracking, moderation support and performance reporting."
+          }
     ]
   },
   "linkedinads": {
@@ -2231,50 +2151,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Dux-Soup"
     ],
     "faqs": [
-      {
-        "q": "Is LinkedIn Ads too expensive for small businesses?",
-        "a": "LinkedIn's cost-per-click runs meaningfully higher than most other platforms for B2B audiences. However, lead quality is significantly higher. For B2B companies with strong average deal values, LinkedIn Ads typically delivers stronger ROI than cheaper platforms with lower-quality leads — we assess fit for your specific business during strategy."
-      },
-      {
-        "q": "What budget do I need to start?",
-        "a": "LinkedIn's platform minimums are low, but meaningful results generally require a more substantial monthly budget so the algorithm has enough data to optimize effectively. We recommend a specific starting budget based on your industry and goals during onboarding rather than a generic figure."
-      },
-      {
-        "q": "What types of LinkedIn ads perform best for B2B?",
-        "a": "Lead Gen Form ads consistently deliver the highest conversion rates — removing the friction of landing page forms by pre-filling with LinkedIn profile data. Document Ads perform well for MQL generation."
-      },
-      {
-        "q": "Can you run LinkedIn Ads alongside organic content?",
-        "a": "Absolutely — and we strongly recommend it. Organic content builds credibility and warms audiences; paid distribution amplifies your best content to targeted decision-maker audiences. The combination consistently outperforms either channel alone."
-      },
-      {
-        "q": "Why is LinkedIn advertising more expensive than Meta?",
-        "a": "LinkedIn's targeting precision on professional attributes (job title, company, seniority) commands a premium CPC, but typically delivers a much higher-quality, more sales-ready B2B audience than broader social platforms."
-      },
-      {
-        "q": "What is account-based marketing (ABM)?",
-        "a": "ABM targets a specific, pre-defined list of high-value accounts rather than a broad audience defined by demographics alone — LinkedIn's native account targeting makes it one of the strongest channels for executing ABM at scale."
-      },
-      {
-        "q": "Can you connect leads directly to our CRM?",
-        "a": "Yes — Lead Gen Form to CRM sync (HubSpot, Salesforce and others) is configured as a standard part of setup so leads route directly to your sales team without manual export."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for linkedIn Ads & B2B Lead Generation?",
-        "a": "Our team works primarily with LinkedIn Campaign Manager alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for linkedIn Ads & B2B Lead Generation who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "What are LinkedIn Ads and how can they generate B2B leads?",
+                "a": "LinkedIn Ads allow businesses to reach professional audiences using company, industry, role, seniority and related targeting signals. Amplipath combines audience strategy, relevant offers, advertising creative, landing pages or native Lead Gen Forms, and conversion tracking to create measurable B2B lead-generation campaigns."
+          },
+          {
+                "q": "Which businesses benefit most from LinkedIn advertising?",
+                "a": "LinkedIn is generally best suited to B2B companies selling high-consideration services or products to identifiable professional decision-makers. This can include SaaS companies, professional services, technology providers, consultancies, training companies and enterprise vendors. Suitability ultimately depends on deal value, sales cycle and target-market clarity."
+          },
+          {
+                "q": "Can you target specific companies or decision-makers?",
+                "a": "Yes. Campaigns can use professional targeting attributes and, where eligible, uploaded company or contact lists, website retargeting and engagement audiences. For account-based marketing, we align the target-account list, buying roles, messaging and offers with your sales strategy."
+          },
+          {
+                "q": "Which LinkedIn ad formats work best for B2B lead generation?",
+                "a": "The best format depends on the objective and stage of the buying journey. We may test single-image ads, video, document-based content and native Lead Gen Forms. Lead Gen Forms reduce friction by allowing prospects to submit pre-filled information without leaving LinkedIn."
+          },
+          {
+                "q": "How much should we budget for LinkedIn Ads?",
+                "a": "LinkedIn uses an auction system, so costs vary by audience, competition, geography and campaign objective. We recommend a budget large enough to test multiple messages and audience segments instead of relying on one advertisement. The final recommendation is based on expected lead value and sales economics."
+          },
+          {
+                "q": "Can LinkedIn leads be connected to our CRM?",
+                "a": "Yes. Leads can be exported or transferred to compatible CRM and automation systems through supported integrations. We can also implement conversion tracking, campaign parameters and lead-source mapping so your team can connect advertising activity to qualified leads, meetings, opportunities and revenue."
+          },
+          {
+                "q": "How long does LinkedIn lead generation take to produce results?",
+                "a": "Initial advertising data may appear within the first few weeks, but meaningful B2B results should be evaluated across the complete sales cycle. We measure qualified-lead rate, meeting rate, opportunity value, pipeline and revenue—not only clicks or form submissions. Results cannot be guaranteed before testing."
+          }
     ]
   },
   "quoraads": {
@@ -2397,50 +2301,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "GA4"
     ],
     "faqs": [
-      {
-        "q": "Who should consider Quora Ads?",
-        "a": "Quora Ads works particularly well for B2B SaaS, professional services, financial products, education and technology companies. Any business where prospects research solutions thoroughly before buying is a strong fit."
-      },
-      {
-        "q": "How does Quora Ads compare to LinkedIn Ads for B2B?",
-        "a": "Quora typically delivers lower CPCs — often 50–70% lower than LinkedIn — making it more cost-effective for top-of-funnel awareness. LinkedIn delivers higher conversion rates for bottom-of-funnel lead generation. We typically recommend both as complementary channels."
-      },
-      {
-        "q": "Do I need to write Quora answers myself?",
-        "a": "Not necessarily. We can structure promoted answer campaigns using your team's expertise, with our copywriters drafting answers for your review and approval."
-      },
-      {
-        "q": "What budget is needed for Quora Ads?",
-        "a": "Quora Ads generally carry lower CPCs than most other platforms, making it accessible to test with a modest monthly budget. We recommend a 60–90 day test period with a budget tailored to your industry before making a final assessment of channel fit."
-      },
-      {
-        "q": "Is Quora advertising worth it for niche B2B products?",
-        "a": "Often yes — Quora's question-targeting lets you reach people actively researching a specific problem your product solves, which tends to perform well for considered B2B and technical purchases."
-      },
-      {
-        "q": "How does Quora targeting compare to Google Ads?",
-        "a": "Quora targets based on the specific questions and topics someone engages with, capturing research-stage intent; Google Ads targets explicit search queries with typically higher purchase intent and cost."
-      },
-      {
-        "q": "Do you offer quora Ads Management as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine quora Ads Management with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for quora Ads Management — and report against them monthly rather than relying on vanity metrics."
-      }
+          {
+                "q": "What are Quora Ads and which businesses should use them?",
+                "a": "Quora Ads allow businesses to reach people while they research questions, topics and potential solutions. They can be useful for B2B, SaaS, technology, education, financial services and other businesses whose customers conduct detailed research before making a decision."
+          },
+          {
+                "q": "How does Quora Ads targeting work?",
+                "a": "Depending on campaign availability and objectives, audiences may be reached through questions, topics, keywords, interests, website activity and customer-based audience signals. We select targeting according to the buyer’s problem, research behaviour, level of awareness and likelihood of converting."
+          },
+          {
+                "q": "How are Quora Ads different from Google Ads and LinkedIn Ads?",
+                "a": "Google Search captures people actively searching particular terms, while LinkedIn primarily reaches users through professional attributes. Quora provides contextual access to people reading questions and answers about relevant problems. It can complement these platforms rather than replace them."
+          },
+          {
+                "q": "Do we need to publish Quora answers before advertising?",
+                "a": "Not necessarily. Standard Quora campaigns can run without an extensive organic publishing programme. However, useful and credible answers can strengthen authority and may support formats such as Promoted Answers. Any organic content should genuinely answer the question rather than function as disguised advertising."
+          },
+          {
+                "q": "What does Quora Ads management include?",
+                "a": "Our service can include audience and question research, campaign planning, account setup, advertising copy and creative guidance, Quora Pixel implementation, retargeting, conversion-event configuration, testing, optimization and reporting. The final scope depends on your objective and existing marketing systems."
+          },
+          {
+                "q": "What budget and testing period should we plan for?",
+                "a": "Budget requirements depend on audience size, location, competition and conversion value. We normally recommend a controlled testing phase covering multiple targeting groups and advertisements. Campaigns should be judged only after enough relevant traffic and conversion data have been collected."
+          },
+          {
+                "q": "How do you measure Quora Ads performance?",
+                "a": "We can track impressions, clicks, engaged visits, assisted conversions, direct conversions, cost per lead, lead quality and return on ad spend. The Quora Pixel, conversion events and campaign parameters should be configured before launch so performance can be evaluated beyond traffic alone."
+          }
     ]
   },
   "redditads": {
@@ -2564,50 +2452,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Meta Ads"
     ],
     "faqs": [
-      {
-        "q": "What types of businesses benefit most from Reddit Ads?",
-        "a": "Reddit Ads perform particularly well for gaming, technology, cryptocurrency, personal finance, fitness, education, developer tools and consumer electronics. Any brand with a passionate enthusiast community on Reddit has strong advertising potential."
-      },
-      {
-        "q": "How is Reddit Ads different from organic Reddit marketing?",
-        "a": "Reddit Ads are paid placements that appear as promoted posts. Organic Reddit marketing involves building community presence through genuine participation. Both can work independently, but combined they significantly outperform either alone."
-      },
-      {
-        "q": "Do Reddit Ads work for B2B companies?",
-        "a": "Yes — but with more nuance. For B2B companies targeting technical audiences like developers, data scientists or founders, Reddit is highly effective. For general enterprise B2B targeting, LinkedIn is typically more efficient."
-      },
-      {
-        "q": "How much budget do I need?",
-        "a": "Reddit Ads has a low platform minimum, making it accessible to test even with a modest budget. For gaming or tech brands with clear subreddit targeting, we have seen strong results from relatively lean test campaigns — we recommend a specific starting budget based on your category during onboarding."
-      },
-      {
-        "q": "Do Reddit ads need to look different from other platforms?",
-        "a": "Yes — Reddit's community-driven culture rewards native, non-corporate creative that fits the tone of the specific subreddit it appears in, rather than polished traditional ad creative repurposed from other platforms."
-      },
-      {
-        "q": "What industries perform best on Reddit Ads?",
-        "a": "Tech, gaming, finance, B2B/SaaS and hobbyist/niche consumer products tend to perform particularly well, given Reddit's engaged, topic-specific community structure."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for reddit Ads Management — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including reddit Ads Management, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for reddit Ads Management?",
-        "a": "Our team works primarily with Reddit Ads Manager alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      }
+          {
+                "q": "What types of businesses benefit from Reddit Ads?",
+                "a": "Reddit Ads can suit businesses whose customers participate in active interest-based communities, including technology, gaming, SaaS, education, consumer products, finance and specialist B2B markets. We first confirm that relevant communities and audience signals exist before recommending the platform."
+          },
+          {
+                "q": "How are Reddit Ads different from organic Reddit marketing?",
+                "a": "Reddit Ads provide paid reach, targeting and campaign reporting. Organic marketing involves participating in communities according to their individual rules and expectations. We keep the two approaches clearly separated and do not present promotional content as an independent user recommendation."
+          },
+          {
+                "q": "Can Reddit Ads work for B2B companies?",
+                "a": "Yes, particularly when professionals use Reddit to research technical problems, software, business tools or specialist subjects. Successful B2B campaigns normally require precise audience selection, useful messaging and a landing page that addresses the buyer’s problem rather than relying on broad corporate advertising."
+          },
+          {
+                "q": "How can audiences be targeted on Reddit?",
+                "a": "Targeting options can include communities, interests, keywords, location, device and custom or retargeting audiences, subject to account and market availability. We combine relevant signals carefully so the campaign reaches qualified users without making the audience unnecessarily narrow."
+          },
+          {
+                "q": "Should Reddit advertising creative look different from other platforms?",
+                "a": "yes. Reddit users tend to respond better to clear, direct and context-aware communication than generic corporate advertising. We adapt the headline, creative and landing-page message to the audience while keeping the advertiser’s identity and commercial intention transparent."
+          },
+          {
+                "q": "How do you track and measure Reddit Ads?",
+                "a": "We can use the Reddit Pixel, Conversions API where appropriate, campaign parameters and analytics platforms to measure actions after an ad interaction. Reporting may include clicks, engaged visits, conversions, cost per acquisition, qualified leads and return on ad spend."
+          }
     ]
   },
   "amazonads": {
@@ -2740,50 +2608,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Amazon Brand Analytics"
     ],
     "faqs": [
-      {
-        "q": "Do I need to be an established seller to use Amazon Ads?",
-        "a": "No — Amazon Ads can be effective from launch day, especially for new product introductions. However, campaigns perform significantly better with at least 10+ reviews and competitive pricing."
-      },
-      {
-        "q": "What is ACoS and what is a good target?",
-        "a": "ACoS is ad spend divided by ad revenue. A good ACoS depends on your product margin. If your gross margin is 40%, an ACoS below 40% is profitable. We target an ACoS that maximizes total profit, not simply the lowest possible ACoS."
-      },
-      {
-        "q": "How is Amazon Ads different from Google Ads?",
-        "a": "Amazon Ads operates within a closed purchase ecosystem — users are already in buying mode with credit cards saved. This produces significantly higher conversion rates (often 10–15%) than Google Ads (typically 2–5%)."
-      },
-      {
-        "q": "Can you manage Amazon Ads if we also use Seller Central for fulfillment?",
-        "a": "Yes — we manage Amazon Ads independently of fulfillment strategy. Whether you use FBA, FBM or a hybrid approach does not affect our advertising management."
-      },
-      {
-        "q": "What is a good ACoS target?",
-        "a": "Target ACoS depends on your product margin and category — we set a specific target during onboarding based on your actual profitability, not a generic industry benchmark."
-      },
-      {
-        "q": "Do Amazon Ads improve organic ranking too?",
-        "a": "Yes — sales velocity generated from Sponsored Products campaigns is itself a factor in Amazon's organic ranking algorithm, meaning well-run ad campaigns frequently lift organic position as a byproduct."
-      },
-      {
-        "q": "Can you manage Amazon Ads and Amazon SEO together?",
-        "a": "Yes — running both together is our standard recommendation, since ad-driven sales velocity directly feeds organic ranking improvement, creating a compounding effect neither service achieves alone."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for amazon Ads Management?",
-        "a": "Our team works primarily with Amazon Seller Central alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for amazon Ads Management who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "Do I need an established Amazon store or a specific number of reviews to advertise?",
+                "a": "A universal minimum of ten reviews does not apply to every Amazon advertising campaign. Eligibility depends on the advertising product, account, marketplace and listing status. However, complete listings, competitive pricing, available inventory, strong product content and credible reviews can materially improve conversion performance."
+          },
+          {
+                "q": "Which types of Amazon Ads can Amplipath manage?",
+                "a": "Depending on your eligibility and objectives, campaigns can include Sponsored Products, Sponsored Brands and Sponsored Display. Broader Amazon advertising or DSP options may also be considered where suitable. We select formats according to product visibility, brand awareness, retargeting and sales objectives."
+          },
+          {
+                "q": "What is Amazon ACoS, and what is considered a good ACoS?",
+                "a": "Advertising cost of sales, or ACoS, is calculated by dividing ad spend by attributed advertising sales and multiplying by 100. A good target depends on product margin, operating costs, customer lifetime value and campaign objective. A launch campaign may accept a higher ACoS than a mature profitability campaign."
+          },
+          {
+                "q": "How are Amazon Ads different from Google Ads?",
+                "a": "Amazon Ads reach shoppers within or around Amazon’s commerce environment, where product and purchasing signals are especially important. Google Ads can capture demand across search, websites and other Google properties. The most appropriate platform depends on where customers discover and purchase the product."
+          },
+          {
+                "q": "Can Amazon Ads improve organic product rankings?",
+                "a": "Advertising can increase relevant product visibility and sales activity, which may support broader marketplace performance. However, paying for advertisements does not purchase an organic ranking, and ranking improvements cannot be guaranteed. Product relevance, availability, pricing, reviews and listing conversion remain important."
+          },
+          {
+                "q": "Can you manage Amazon Ads alongside Seller Central, FBA and Amazon SEO?",
+                "a": "Yes. Advertising management can be coordinated with listing optimization, keyword strategy and Seller Central reporting. FBA is Amazon’s fulfillment service and remains operationally separate from advertising. We request appropriate user permissions rather than requiring the owner’s personal password."
+          },
+          {
+                "q": "How much should we spend, and how will performance be evaluated?",
+                "a": "Budget recommendations consider product margin, price, competition, inventory and growth targets. We assess ACoS, ROAS, attributed sales, conversion rate, total sales, new-to-brand performance where available and overall profitability. The goal is sustainable growth—not simply the lowest possible ACoS."
+          }
     ]
   },
   "pinterestbiz": {
@@ -2907,50 +2759,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "WooCommerce"
     ],
     "faqs": [
-      {
-        "q": "Is Pinterest Business worth it for e-commerce brands?",
-        "a": "Yes — particularly for lifestyle, home, fashion, food, beauty, fitness and gift product categories. Pinterest users have higher average order values than most social platforms and the visual shopping experience is native to how Pinterest works."
-      },
-      {
-        "q": "What is the difference between Pinterest SEO and Pinterest Business Management?",
-        "a": "Pinterest SEO focuses on organic discoverability — keyword optimization, board strategy and pin metadata. Pinterest Business Management is broader — covering SEO plus account management, content creation, Pinterest Ads and Shopping catalogue management."
-      },
-      {
-        "q": "How long does it take to see results?",
-        "a": "Pinterest Ads can drive traffic and sales within days of launch. Organic Pinterest strategy typically takes 3–6 months to build meaningful compounding traffic. Combining both is our recommended approach."
-      },
-      {
-        "q": "Do you integrate Pinterest with Shopify or WooCommerce?",
-        "a": "Yes — Pinterest Shopping catalogue integration with Shopify, WooCommerce and other major e-commerce platforms is included in our Pinterest Business management service."
-      },
-      {
-        "q": "How many pins should we publish weekly?",
-        "a": "We recommend a consistent weekly cadence based on your content production capacity and category — consistency matters more to Pinterest's algorithm than sheer volume."
-      },
-      {
-        "q": "Does Pinterest work for service businesses?",
-        "a": "Yes, particularly for visually-oriented services (interior design, photography, events) — though Pinterest generally performs best for visually demonstrable products and inspiration-driven categories."
-      },
-      {
-        "q": "Do you offer pinterest Business Optimization & Management as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine pinterest Business Optimization & Management with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for pinterest Business Optimization & Management — and report against them monthly rather than relying on vanity metrics."
-      }
+          {
+                "q": "Is Pinterest Business suitable for my brand?",
+                "a": "Pinterest can suit businesses whose customers use visual discovery to plan, compare or purchase. It is commonly relevant to e-commerce, home, fashion, food, beauty, travel, fitness, education and other visually explainable services. We assess audience demand and content potential before recommending it."
+          },
+          {
+                "q": "What is the difference between Pinterest SEO and Pinterest management?",
+                "a": "Pinterest SEO improves how profiles, boards, Pins and linked pages are understood and discovered. Pinterest management is broader and can include strategy, publishing, creative coordination, community activity, catalog management, analytics and ongoing optimization. Effective management incorporates SEO throughout the programme."
+          },
+          {
+                "q": "What does Pinterest optimization and management include?",
+                "a": "Depending on scope, we can provide account audits, profile and board optimization, keyword research, content planning, Pin recommendations, publishing, website claiming, catalog support, conversion tracking and performance reporting. Paid Pinterest advertising can be added as a separate or combined service."
+          },
+          {
+                "q": "Can Pinterest be integrated with Shopify or WooCommerce?",
+                "a": "Pinterest supports product catalogs and conversion-tracking integrations for compatible e-commerce platforms, subject to account, country and merchant eligibility. We can assess the store, connect supported data sources and implement the Pinterest Tag or Conversions API where appropriate."
+          },
+          {
+                "q": "How long does Pinterest optimization take to produce results?",
+                "a": "Pinterest is both a discovery platform and a longer-term content channel. Technical improvements may be implemented quickly, while organic visibility and conversions can take longer to develop. Timing depends on account history, competition, content quality, publishing consistency and buying cycle."
+          },
+          {
+                "q": "How do you measure Pinterest performance?",
+                "a": "Relevant metrics may include impressions, saves, outbound clicks, engaged audiences, product activity, assisted conversions, direct conversions and revenue. When paid campaigns are included, we also evaluate cost per acquisition and return on ad spend using properly configured conversion tracking."
+          }
     ]
   },
   "copywriting": {
@@ -3075,50 +2907,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "ActiveCampaign"
     ],
     "faqs": [
-      {
-        "q": "What types of copy do you write?",
-        "a": "We write landing pages, sales pages, email sequences, ad copy for Google, Meta and LinkedIn, product descriptions, website copy, case studies and video scripts. All copy is conversion-focused — written to generate a specific action, not just communicate information."
-      },
-      {
-        "q": "How is conversion copywriting different from regular content writing?",
-        "a": "Content writing informs and educates. Conversion copywriting persuades and drives action. The approach, research process, structure and language are fundamentally different. The conversion rate difference between generic content and expert conversion copy is typically 50–200%."
-      },
-      {
-        "q": "Do you write copy for both B2B and B2C businesses?",
-        "a": "Yes — the psychological principles of persuasion apply to all audiences, but tone, evidence types and conversion mechanisms differ significantly. Our copywriters have specific experience in both."
-      },
-      {
-        "q": "How long does a copywriting project take?",
-        "a": "A single landing page typically takes 7–10 business days. An email sequence of 5–7 emails takes 10–14 business days. Full website copy projects take 3–6 weeks depending on scope."
-      },
-      {
-        "q": "Do you write copy for ads, or just web pages?",
-        "a": "Both — landing pages, sales pages, email sequences and ad copy across Google, Meta and LinkedIn are all part of conversion copywriting."
-      },
-      {
-        "q": "How many revision rounds are included?",
-        "a": "Two rounds of revision are included as standard, based on client feedback and any new performance data available since the first draft."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine conversion Copywriting Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for conversion Copywriting Services — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including conversion Copywriting Services, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      }
+          {
+                "q": "What is conversion copywriting, and how is it different from content writing?",
+                "a": "Conversion copywriting is written to move a specific audience towards an action, such as requesting a proposal, booking a consultation, subscribing or purchasing. We combine persuasive messaging, audience research, offer positioning and clear calls to action, while content writing primarily focuses on educating or informing readers."
+          },
+          {
+                "q": "How do you research our customers before writing the copy?",
+                "a": "We study customer reviews, sales conversations, website analytics, competitor messaging, search behaviour and any available customer research. This helps us identify the language, motivations, objections and decision triggers that should shape the copy."
+          },
+          {
+                "q": "Can you improve an existing landing page without redesigning the entire page?",
+                "a": "Yes. We can audit and rewrite the headline, value proposition, offer explanation, proof points, objections and calls to action while retaining the current page structure. If the layout is limiting conversions, we will also recommend focused design or content-hierarchy changes."
+          },
+          {
+                "q": "Do you write conversion copy for both B2B and B2C businesses?",
+                "a": "Yes. For B2B audiences, we typically address longer sales cycles, multiple decision-makers, risk and business value. For B2C audiences, we may place greater emphasis on immediate relevance, emotional motivation, product benefits and purchasing confidence."
+          },
+          {
+                "q": "How do you handle brand voice and claims in regulated industries?",
+                "a": "We follow an approved brand voice and distinguish verified facts from claims that require evidence or legal review. We will flag unsupported language, but the client remains responsible for supplying accurate information and approving industry-specific claims before publication."
+          },
+          {
+                "q": "Can the new copy be tested against our current version?",
+                "a": "Yes. We can develop testable messaging hypotheses and alternative headlines, offers or calls to action for controlled experiments. Where traffic volume supports reliable testing, the results can show which version produces stronger engagement, leads or sales."
+          }
     ]
   },
   "crm": {
@@ -3244,50 +3056,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Mailchimp"
     ],
     "faqs": [
-      {
-        "q": "Which CRM platforms do you work with?",
-        "a": "We work with HubSpot (our primary recommendation for most SMBs), Salesforce, ActiveCampaign, Klaviyo, Pipedrive, Zoho and Mailchimp. We recommend the right platform based on your business size, budget and specific use case."
-      },
-      {
-        "q": "Do you help migrate data from an existing CRM?",
-        "a": "Yes — CRM migration is a core part of our setup service. We plan and execute data migration including contact data, deal history and custom properties — with a validation process to ensure data integrity."
-      },
-      {
-        "q": "How long does a CRM setup take?",
-        "a": "A basic HubSpot setup with core pipelines and automation takes 3–4 weeks. A full enterprise CRM build with complex automation, integrations and data migration takes 8–12 weeks."
-      },
-      {
-        "q": "Can you help our team actually use the CRM after setup?",
-        "a": "Yes — adoption is as important as setup. Our delivery includes live team training sessions, recorded training videos, a written admin guide and a 30-day post-launch support period."
-      },
-      {
-        "q": "Can you migrate us from one CRM to another?",
-        "a": "Yes — full data migration, including contacts, deal history and custom fields, is a standard part of CRM setup when switching platforms."
-      },
-      {
-        "q": "Does this integrate with our existing marketing tools?",
-        "a": "Yes — integration with your email platform, ad accounts and website forms is configured as part of the setup, so lead data flows into the CRM automatically rather than requiring manual entry."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer cRM Setup & Marketing Automation as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine cRM Setup & Marketing Automation with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What is included in a CRM setup and marketing automation project?",
+                "a": "We can configure contact and company records, sales pipelines, lifecycle stages, custom fields, forms, lead routing, automated workflows, permissions and performance reports. The final scope is based on how your sales and marketing teams currently manage prospects and customers."
+          },
+          {
+                "q": "How do you choose the right CRM for a business?",
+                "a": "We compare the number of users, sales process, automation requirements, integrations, reporting needs, expected growth and total operating cost. We then recommend a platform that supports the business without introducing unnecessary complexity."
+          },
+          {
+                "q": "Can you migrate and clean data from our current system?",
+                "a": "Yes. We can map fields, remove duplicates, standardise records and migrate relevant contacts, companies, deals and activity data. Before importing, we establish validation rules and preserve a backup so that migration errors can be identified and corrected."
+          },
+          {
+                "q": "Which sales and marketing workflows should be automated first?",
+                "a": "We normally prioritise repetitive processes with clear business value, such as lead capture, qualification, assignment, follow-up reminders, nurture sequences and re-engagement. High-risk or judgement-heavy decisions usually retain human approval steps."
+          },
+          {
+                "q": "How do you prevent contacts from receiving incorrect or duplicate messages?",
+                "a": "We build entry conditions, suppression rules, exit criteria, frequency limits and lifecycle checks into each automation. We also test workflows with sample records before launch and monitor early activity for unexpected behaviour."
+          },
+          {
+                "q": "What will our team receive when the CRM is handed over?",
+                "a": "We provide a configured system, workflow documentation, field definitions, user permissions and practical team training where included in the scope. This gives your staff a clear process for operating, reviewing and updating the CRM after launch."
+          }
     ]
   },
   "marketinganalytics": {
@@ -3411,50 +3203,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Supermetrics"
     ],
     "faqs": [
-      {
-        "q": "Do you fix existing GA4 setups or only build new ones?",
-        "a": "Both. Many businesses have GA4 installed but incorrectly configured — missing events, duplicate transactions or incorrect cross-domain tracking. We audit first, then fix existing setups or rebuild from scratch depending on what is more efficient."
-      },
-      {
-        "q": "What is the difference between GA4 and Looker Studio?",
-        "a": "GA4 is the analytics data collection platform — it captures user behaviour. Looker Studio is a data visualization tool that connects to GA4 and other sources to create custom dashboards. GA4 is where data lives; Looker Studio is where it becomes a clear, shareable report."
-      },
-      {
-        "q": "Can you connect our CRM data to our marketing analytics?",
-        "a": "Yes — connecting CRM revenue data to GA4 and Looker Studio is one of the most valuable analytics projects we undertake. It allows you to see not just which campaigns drive leads, but which campaigns drive customers who actually pay."
-      },
-      {
-        "q": "Do you offer ongoing analytics management or just one-time setup?",
-        "a": "Both. We offer project-based setup and ongoing monthly analytics management covering data quality monitoring, dashboard updates, monthly analysis and recommendations."
-      },
-      {
-        "q": "Can you combine data from Google, Meta and TikTok in one dashboard?",
-        "a": "Yes — connecting GA4, Google Ads, Meta Ads, TikTok Ads and other platforms into a single Looker Studio dashboard is a core part of this service."
-      },
-      {
-        "q": "Do we need a developer to maintain this after handoff?",
-        "a": "No — Looker Studio dashboards are built to update automatically once configured, and we include a training session so your team can edit and extend the dashboard without developer involvement."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer marketing Analytics & Data Studio as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine marketing Analytics & Data Studio with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What business questions can a marketing analytics dashboard answer?",
+                "a": "A properly structured dashboard can show which channels generate traffic, qualified leads, customers and revenue. We design reports around actual decisions—such as where to increase spending, where prospects abandon the journey and which campaigns attract the most valuable customers."
+          },
+          {
+                "q": "How do you create one source of truth when our platforms report different numbers?",
+                "a": "We define each metric, establish an agreed reporting hierarchy and standardise items such as time zones, currencies, attribution windows and campaign naming. Differences that cannot be eliminated are documented so decision-makers understand what each figure represents."
+          },
+          {
+                "q": "Can you track the customer journey from the first visit to closed revenue?",
+                "a": "Yes, where the required identifiers, integrations and user consent are available. We can connect campaign parameters, website events, form submissions, CRM stages and offline outcomes to provide a more complete view of the customer journey."
+          },
+          {
+                "q": "How do you measure marketing when cookies or tracking data are incomplete?",
+                "a": "We combine available first-party data, platform records, CRM outcomes and appropriate attribution models instead of treating one platform as perfectly accurate. We also explain the limitations of the data so estimates are not presented as certainty."
+          },
+          {
+                "q": "Can the dashboard alert us when performance changes unexpectedly?",
+                "a": "Depending on the data sources and reporting system, we can configure scheduled summaries, thresholds or anomaly alerts for important changes. These may include sudden spending increases, tracking failures, conversion declines or unusual lead volumes."
+          },
+          {
+                "q": "How do you protect sensitive information in marketing dashboards?",
+                "a": "We apply least-privilege access, role-based sharing and client-controlled accounts wherever possible. We also avoid displaying unnecessary personal information and document who can view, edit or manage each data source and report."
+          }
     ]
   },
   "crypto": {
@@ -3598,50 +3370,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Etherscan"
     ],
     "faqs": [
-      {
-        "q": "Is crypto marketing legal and compliant with advertising platforms?",
-        "a": "Yes — when done correctly. Google, Meta and other platforms have specific policies for cryptocurrency advertising that require certification and compliance. We navigate these requirements to keep campaigns running without account suspension risk. We do not work with projects that show signs of being scams or rug-pulls."
-      },
-      {
-        "q": "Do you only work with token launches, or established crypto projects too?",
-        "a": "Both. We work with pre-launch token projects, established exchanges, NFT platforms, DeFi protocols and Web3 SaaS products. The strategy differs significantly based on project stage — we tailor our approach accordingly."
-      },
-      {
-        "q": "How do you measure success for a crypto marketing campaign?",
-        "a": "We track community growth and engagement quality, wallet/holder counts where applicable, website traffic and conversion to whitelist or waitlist signups, social sentiment, and press/PR placements. We avoid vanity metrics like raw follower counts that don't reflect real project health."
-      },
-      {
-        "q": "Can you help with both marketing and community moderation?",
-        "a": "Yes — we offer both strategic marketing campaigns and ongoing Discord/Telegram community moderation as either a combined service or standalone engagements, depending on what your project needs."
-      },
-      {
-        "q": "Do you guarantee exchange listings?",
-        "a": "No — listing decisions rest entirely with each exchange's independent review process. We prepare and support a strong application and introduction, but cannot guarantee any specific exchange's outcome."
-      },
-      {
-        "q": "Can you market a token before it launches?",
-        "a": "Yes — pre-launch community building (Discord/Telegram), positioning and a coordinated TGE campaign are core parts of crypto marketing, ideally starting 6-8 weeks before launch."
-      },
-      {
-        "q": "Do you work with NFT projects too?",
-        "a": "Yes — NFT and broader Web3 project marketing follows a similar community-first playbook to token marketing, adapted to the specific drop mechanics and platform (OpenSea, Magic Eden, etc.)."
-      },
-      {
-        "q": "How do you handle regulatory caution around crypto marketing claims?",
-        "a": "We deliberately avoid unverified price predictions, guaranteed-return language or claims that could be read as financial advice, keeping messaging focused on product, utility and community rather than speculative promises."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for cryptocurrency Marketing — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including cryptocurrency Marketing, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      }
+          {
+                "q": "Is cryptocurrency marketing legal and permitted by advertising platforms?",
+                "a": "Some cryptocurrency services require licences, registrations or platform certification, while other products may be restricted entirely. Amplipath reviews campaign eligibility and platform policies, but clients should obtain qualified legal advice regarding regulatory compliance."
+          },
+          {
+                "q": "What types of cryptocurrency and Web3 projects can you market?",
+                "a": "Subject to compliance review, we may support established blockchain businesses, wallets, exchanges, infrastructure providers, educational platforms, Web3 applications, token projects and NFT-related brands. We do not work with projects showing signs of fraud, misleading investment claims, impersonation, artificial activity or pump-and-dump promotion."
+          },
+          {
+                "q": "Can you market a cryptocurrency token before it launches?",
+                "a": "Potentially, but the project’s legal status, offering structure, target countries and promotional claims must be reviewed first. Pre-launch activity may include education, community development, waitlists and product awareness. We will not market an unverified investment opportunity or promise future token value."
+          },
+          {
+                "q": "Which strategies can be used for cryptocurrency marketing?",
+                "a": "A compliant strategy may combine educational content, social media, community development, public relations, email, creator outreach, landing-page optimization and paid advertising where permitted. The channel mix depends on the project category, audience, jurisdiction and platform eligibility."
+          },
+          {
+                "q": "Can you manage crypto communities on Telegram, Discord or other platforms?",
+                "a": "Community strategy and moderation can be included where agreed. This may cover onboarding information, content schedules, moderation guidelines, frequently asked questions, escalation procedures and reporting. Community members must not be misled by fake accounts, fabricated activity or undisclosed promotional claims."
+          },
+          {
+                "q": "Can you guarantee an exchange listing, token sales or price growth?",
+                "a": "No. Amplipath cannot guarantee exchange acceptance, investment volume, token price, liquidity or financial returns. Listing decisions belong to exchanges, while market performance depends on numerous external factors. Any agency guaranteeing these outcomes should be treated cautiously."
+          },
+          {
+                "q": "How do you measure cryptocurrency marketing performance?",
+                "a": "We define metrics around the project’s legitimate business objective. These may include qualified traffic, verified community growth, waitlist registrations, wallet connections, product users, leads, content engagement and customer-acquisition cost. We do not use token-price movement or artificial community activity as proof of marketing success."
+          }
     ]
   },
   "brandstrategy": {
@@ -3774,50 +3530,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Canva"
     ],
     "faqs": [
-      {
-        "q": "How is brand strategy different from a logo or visual rebrand?",
-        "a": "A logo or visual rebrand changes how your brand looks. Brand strategy defines how your brand thinks, talks and differentiates itself — the positioning and messaging that should inform any visual identity work, not the other way around. We focus on the strategic layer; visual execution can follow through our design and web development services."
-      },
-      {
-        "q": "Do I need brand strategy if I am a small or early-stage business?",
-        "a": "Especially if you are small or early-stage. Larger competitors often win on brand recognition alone — a sharp, differentiated brand strategy is one of the most cost-effective ways for smaller businesses to compete without matching big-budget ad spend."
-      },
-      {
-        "q": "How long does a brand strategy engagement take?",
-        "a": "A focused brand strategy engagement typically takes 3–5 weeks from discovery through final documentation, depending on the number of stakeholders involved and how much existing research is available."
-      },
-      {
-        "q": "Will you apply the brand strategy to our actual marketing, or just hand us a document?",
-        "a": "Both options are available. We can deliver the strategic framework alone, or combine it with hands-on execution across your website, ad campaigns and content — using our other services to apply the new positioning directly into your live marketing."
-      },
-      {
-        "q": "Do I need brand strategy if I am a small or early-stage business?",
-        "a": "Especially if you are small or early-stage. Larger competitors often win on brand recognition alone — a sharp, differentiated brand strategy is one of the most cost-effective ways for smaller businesses to compete without matching big-budget ad spend."
-      },
-      {
-        "q": "How long does a brand strategy engagement take?",
-        "a": "A focused brand strategy engagement typically takes 3-5 weeks from discovery through final documentation, depending on the number of stakeholders involved and how much existing research is available."
-      },
-      {
-        "q": "Will you apply the brand strategy to our actual marketing, or just hand us a document?",
-        "a": "Both options are available. We can deliver the strategic framework alone, or combine it with hands-on execution across your website, ad campaigns and content — using our other services to apply the new positioning directly into your live marketing."
-      },
-      {
-        "q": "How is this different from Brand Personality Design?",
-        "a": "Brand Strategy covers the full positioning foundation — differentiation, audience, messaging pillars. Brand Personality Design focuses specifically on tone of voice and translating that voice into an AI-usable system prompt. Many clients use Brand Strategy first, then Brand Personality Design to operationalize the voice."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine brand Strategy Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      }
+          {
+                "q": "What is included in a professional brand strategy?",
+                "a": "A brand strategy can define positioning, target audiences, value proposition, competitive differentiation, messaging pillars and communication priorities. It provides the strategic foundation that guides identity, campaigns, content and customer experience."
+          },
+          {
+                "q": "How is brand strategy different from creating a logo?",
+                "a": "A logo represents the brand visually, while brand strategy defines what the business should represent and why customers should choose it. Strategic decisions should normally guide the visual identity rather than being created after the logo."
+          },
+          {
+                "q": "Does an early-stage business need a formal brand strategy?",
+                "a": "A practical strategy can help an early-stage company clarify its audience, offer and market position before investing heavily in design or advertising. The scope can be scaled to the company’s maturity instead of creating unnecessary complexity."
+          },
+          {
+                "q": "What research is used to develop the strategy?",
+                "a": "Research may include stakeholder interviews, customer insights, competitor analysis, existing performance data and reviews of current messaging. The purpose is to base the strategy on evidence instead of founder preference alone."
+          },
+          {
+                "q": "How do you develop a clear brand positioning statement?",
+                "a": "We identify the target audience, relevant market category, meaningful customer need, distinctive value and credible reasons to believe the promise. The resulting positioning should be specific enough to guide decisions and simple enough for the organisation to use."
+          },
+          {
+                "q": "Can one brand serve several different customer groups?",
+                "a": "Yes, provided the central brand promise remains coherent. Audience segments can receive different messages and proof points without making the company appear to have a completely different identity for every customer group."
+          },
+          {
+                "q": "How does brand strategy differ from brand personality design?",
+                "a": "Brand strategy defines the market position, audience, promise and competitive direction. Brand personality design determines the character, voice and behaviour used to communicate that strategy consistently."
+          },
+          {
+                "q": "Will Amplipath apply the strategy to our actual marketing?",
+                "a": "Implementation can extend into website messaging, content, advertising, campaigns, sales materials and AI communication systems. This turns the strategy into an operational growth tool rather than leaving it as an unused presentation."
+          },
+          {
+                "q": "When should a company revisit its brand strategy?",
+                "a": "A review is appropriate when the company enters a new market, changes its services, targets a different audience, completes a merger or experiences persistent customer confusion. Routine reviews can confirm whether the existing direction remains relevant without forcing an unnecessary rebrand."
+          }
     ]
   },
   "affiliate": {
@@ -3912,50 +3660,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Refersion"
     ],
     "faqs": [
-      {
-        "q": "What commission rate is typical for our industry?",
-        "a": "Rates vary significantly by industry and margin structure — physical products typically run 5-20%, digital products and SaaS often 15-40%+ given lower fulfillment cost. We benchmark against your specific category during program design."
-      },
-      {
-        "q": "How do you prevent affiliate fraud?",
-        "a": "Tracking platform fraud detection, traffic source review, cookie-stuffing monitoring and manual auditing of unusually high-converting affiliates are all part of standard program management."
-      },
-      {
-        "q": "Do you recruit the affiliates or do we provide them?",
-        "a": "We actively recruit relevant affiliates and partners as part of program management, though we also onboard and structure terms for any existing partners you already have relationships with."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine affiliate Marketing with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for affiliate Marketing — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including affiliate Marketing, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for affiliate Marketing?",
-        "a": "Our team works primarily with ShareASale alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      }
+          {
+                "q": "What must be prepared before launching an affiliate programme?",
+                "a": "We assess product margins, conversion performance, tracking, commission economics, programme terms and promotional materials. A programme cannot succeed sustainably when the underlying offer does not convert or support partner compensation."
+          },
+          {
+                "q": "How do you recruit relevant affiliates?",
+                "a": "We identify publishers, creators, educators and communities whose audiences align with the product. Outreach is personalised around the programme’s relevance rather than sending the same invitation to an unqualified list."
+          },
+          {
+                "q": "How should affiliate commission rates be determined?",
+                "a": "We calculate rates from gross margin, average order value, repeat purchases, refund risk and the contribution expected from the partner. The structure must motivate affiliates without making each acquired customer unprofitable."
+          },
+          {
+                "q": "How are affiliate sales and leads attributed correctly?",
+                "a": "Tracking can combine unique links, referral parameters, cookies, coupon codes and platform records. We document attribution windows and rules so partners understand when a conversion qualifies for commission."
+          },
+          {
+                "q": "How do you reduce affiliate fraud?",
+                "a": "We monitor suspicious traffic, unusual conversion patterns, self-referrals, duplicate customers and refunded transactions. Commissions can be held for a validation period before approval where appropriate."
+          },
+          {
+                "q": "Must affiliates disclose that they may earn a commission?",
+                "a": "Yes, applicable advertising rules generally require material commercial relationships to be disclosed clearly. We incorporate disclosure expectations into programme terms, while the business should obtain legal advice for every market in which it operates."
+          }
     ],
     "related": [
       "influencer",
@@ -4055,50 +3783,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Conversions API"
     ],
     "faqs": [
-      {
-        "q": "Is automated bidding better than manual bidding for small budgets?",
-        "a": "Smart bidding generally needs a baseline volume of conversion data to optimize effectively — for very small budgets we sometimes recommend starting with manual or semi-automated bidding until enough data accumulates."
-      },
-      {
-        "q": "How much data does smart bidding need to work well?",
-        "a": "Most platforms recommend at least 15-30 conversions in the prior 30 days per campaign for smart bidding algorithms to optimize reliably — below that threshold, performance can be inconsistent."
-      },
-      {
-        "q": "Do you guarantee a specific ROAS improvement?",
-        "a": "No — automated bidding performance depends on your account history, market and conversion volume. We set a realistic testing period and report transparently on actual ROAS movement versus your prior baseline."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer aI-Powered Ad Bidding as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI-Powered Ad Bidding with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for aI-Powered Ad Bidding — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including aI-Powered Ad Bidding, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      }
+          {
+                "q": "What is AI-powered ad bidding?",
+                "a": "AI-powered bidding uses machine-learning systems to adjust bids according to the likelihood or expected value of a conversion. Depending on the advertising platform, decisions may consider multiple auction-time signals that would be difficult to evaluate manually."
+          },
+          {
+                "q": "Is automated bidding suitable for campaigns with small budgets?",
+                "a": "It can be, but budget size is not the only consideration. Campaigns with limited or inconsistent conversion activity may require simpler objectives, consolidated structures or a controlled transition while useful performance data accumulates."
+          },
+          {
+                "q": "How much conversion data does automated bidding require?",
+                "a": "There is no reliable universal number for every platform, industry or strategy. What matters is having accurate conversion tracking and enough recent, representative activity for the system to distinguish valuable outcomes from ordinary clicks."
+          },
+          {
+                "q": "How do you choose between conversions, CPA and ROAS bidding objectives?",
+                "a": "The choice depends on whether the business needs maximum conversion volume, a target acquisition cost or a target return on advertising spend. Revenue-based bidding is most useful when conversion values accurately represent commercial value."
+          },
+          {
+                "q": "What happens during an automated bidding learning period?",
+                "a": "The system evaluates recent auction and conversion signals while adapting to the selected objective. Frequent structural changes during this stage can make performance harder to interpret, so campaigns should be monitored without unnecessary daily interference."
+          },
+          {
+                "q": "Can bidding algorithms optimise for qualified leads instead of form submissions?",
+                "a": "Yes, when reliable CRM or offline-conversion data can be returned to the advertising platform. Feeding back qualified leads or completed sales helps the system distinguish meaningful prospects from low-quality form activity."
+          },
+          {
+                "q": "How should automated bidding handle promotions or seasonal demand?",
+                "a": "Campaign budgets, targets and promotional schedules should be planned around expected changes in conversion behaviour. Adjustments must account for conversion delays and should not be made solely because of a short-term fluctuation."
+          },
+          {
+                "q": "Can Amplipath guarantee that automated bidding will improve ROAS?",
+                "a": "No we cannot guarantee a specific return because results also depend on the offer, competition, tracking, creative quality, landing experience and market demand. Automation improves decision capacity but cannot repair every weakness in a campaign."
+          },
+          {
+                "q": "How is the performance of an AI bidding strategy evaluated?",
+                "a": "We review conversion volume, cost per acquisition, conversion value, ROAS and budget utilisation over a meaningful period that accounts for conversion delay. Where possible, controlled experiments provide stronger evidence than simple before-and-after comparisons."
+          }
     ],
     "related": [
       "aicampaign",
@@ -4208,50 +3928,26 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Zapier"
     ],
     "faqs": [
-      {
-        "q": "How much human oversight does an AI agent need?",
-        "a": "It depends on the task's risk level — low-stakes tasks like data summarization can run with minimal oversight, while anything involving customer communication, spend or irreversible actions is built with explicit human-approval checkpoints."
-      },
-      {
-        "q": "What happens if the agent makes a mistake?",
-        "a": "Guardrails, scope limits and approval checkpoints are designed specifically to contain mistakes before they compound, and every agent action is logged in the monitoring dashboard so issues are visible and traceable immediately."
-      },
-      {
-        "q": "What kinds of tasks are realistic for an AI agent today?",
-        "a": "Well-defined, repeatable multi-step workflows — research and summarization, data pulls and reporting, structured outreach sequences — are currently the most reliable agent use cases; fully autonomous, open-ended decision-making is still an area we approach conservatively."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI Agents & Automation who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer aI Agents & Automation as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI Agents & Automation with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for aI Agents & Automation — and report against them monthly rather than relying on vanity metrics."
-      }
+          {
+                "q": "How is an AI agent different from traditional workflow automation?",
+                "a": "Traditional automation follows predefined rules and paths. An AI agent can interpret information, select from permitted actions and adapt its next step within established objectives and restrictions."
+          },
+          {
+                "q": "Which business tasks are realistic for AI agents?",
+                "a": "Suitable tasks can include document classification, information retrieval, meeting preparation, lead research, request routing and drafting routine responses. Financial commitments, sensitive decisions and irreversible actions require stronger controls."
+          },
+          {
+                "q": "How much independence should an AI agent receive?",
+                "a": "The appropriate autonomy depends on the potential consequence of an error. Low-risk activities may run automatically, while customer communication, account changes or spending decisions should include approval checkpoints."
+          },
+          {
+                "q": "What happens when an AI agent makes a mistake?",
+                "a": "The system should record its actions, stop unsafe sequences and provide a clear route for human correction. Reversible workflows, limited permissions and approval stages reduce the effect of an incorrect decision."
+          },
+          {
+                "q": "How are AI agents monitored after deployment?",
+                "a": "Monitoring can examine task completion, error frequency, escalation rates, processing cost and unauthorised actions. Human reviewers should regularly inspect performance and adjust instructions, permissions or source information."
+          }
     ],
     "related": [
       "aidev",
@@ -4352,50 +4048,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "GA4"
     ],
     "faqs": [
-      {
-        "q": "Does AI fully replace a human media buyer?",
-        "a": "No — AI handles repetitive, data-heavy tasks like bid pacing and anomaly detection extremely well, but strategic decisions, creative direction and account-level judgment calls still require a specialist reviewing the data."
-      },
-      {
-        "q": "Which platforms support this level of automation?",
-        "a": "Google Ads, Meta Ads and TikTok Ads all offer native automation and bidding APIs we build on top of — we layer custom rules and monitoring on top of each platform's built-in automation."
-      },
-      {
-        "q": "Will automation make sudden, unexplained changes to my budget?",
-        "a": "No — every automated rule operates within boundaries we set together upfront, and any significant change triggers a specialist review before it compounds across the account."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI-Powered Campaign Management?",
-        "a": "Our team works primarily with Google Ads alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI-Powered Campaign Management who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer aI-Powered Campaign Management as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI-Powered Campaign Management with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What is AI-powered campaign management?",
+                "a": "AI-powered campaign management combines marketing expertise with systems that analyse performance data, identify patterns and automate selected actions. It is designed to improve monitoring and decision speed while keeping strategy and accountability under human control."
+          },
+          {
+                "q": "Does AI completely replace a campaign manager or media buyer?",
+                "a": "No. AI can support data-heavy activities, but specialists are still needed to interpret business context, direct creative strategy, assess lead quality and make decisions that algorithms cannot evaluate independently."
+          },
+          {
+                "q": "Which campaign-management activities can be automated?",
+                "a": "Suitable activities may include budget pacing, anomaly alerts, audience analysis, reporting, workflow triggers and routine performance checks. Automation is selected according to the reliability of the data and the financial risk of each action."
+          },
+          {
+                "q": "How are campaign objectives translated into AI rules?",
+                "a": "We convert commercial goals into measurable conversion events, performance targets, spending limits and decision thresholds. The system must understand what constitutes a valuable result before it can optimise activity responsibly."
+          },
+          {
+                "q": "Can one system coordinate campaigns across several marketing channels?",
+                "a": "Where integrations permit, data from search, social, email and website activity can be brought into a shared reporting or automation environment. Because platforms calculate metrics differently, the information must be normalised before comparisons are made."
+          },
+          {
+                "q": "Will automation make unexpected changes to campaign budgets?",
+                "a": "Budget caps, change limits, approval rules and alerts can be established before automation is activated. Higher-risk decisions may remain recommendation-only until an authorised person reviews them."
+          },
+          {
+                "q": "What happens when campaign tracking data is incomplete or incorrect?",
+                "a": "Automation can optimize towards the wrong outcome when its inputs are unreliable. We therefore review conversion events, attribution settings and data quality before allowing important decisions to depend on the system."
+          }
     ],
     "related": [
       "aiads",
@@ -4495,50 +4175,26 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Airtable"
     ],
     "faqs": [
-      {
-        "q": "Do you implement the recommendations or just advise?",
-        "a": "Both — the consulting engagement delivers the roadmap and prioritization; implementation can be handled by our AI Development team directly, or handed to your internal engineering team with full documentation."
-      },
-      {
-        "q": "How is this different from AI Development as a service?",
-        "a": "AI Technology Consulting is the strategic, advisory layer — auditing, opportunity mapping and roadmapping. AI Development is the hands-on build phase. Many clients start with consulting, then move into development for the highest-priority initiatives identified."
-      },
-      {
-        "q": "Do we need a large team or budget to benefit from AI consulting?",
-        "a": "No — the roadmap is built around your actual team size, data maturity and budget, and frequently surfaces smaller, low-cost initial wins rather than assuming enterprise-scale resources."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI Technology Consulting with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for aI Technology Consulting — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including aI Technology Consulting, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI Technology Consulting?",
-        "a": "Our team works primarily with ChatGPT Enterprise alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI Technology Consulting who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "When should a business hire an AI technology consultant?",
+                "a": "Consulting is valuable when an organisation sees potential AI opportunities but lacks clarity about feasibility, priorities, architecture or risk. It can prevent premature investment in unsuitable tools or disconnected experiments."
+          },
+          {
+                "q": "What is examined during an AI readiness assessment?",
+                "a": "The assessment reviews business processes, data availability, existing technology, employee capability, governance requirements and expected value. It identifies what must be improved before responsible implementation begins."
+          },
+          {
+                "q": "How do you decide whether to build, buy or integrate an AI solution?",
+                "a": "We compare functional requirements, implementation speed, ownership, customisation, vendor dependency, security and total operating cost. The recommendation may combine existing software with custom components instead of choosing only one approach."
+          },
+          {
+                "q": "What should an AI implementation roadmap contain?",
+                "a": "A useful roadmap identifies prioritised use cases, dependencies, project stages, responsible teams, expected costs, risk controls and measurable outcomes. Early projects should provide achievable value while preparing the organisation for more advanced capabilities."
+          },
+          {
+                "q": "Does Amplipath only provide recommendations, or can it implement them?",
+                "a": "Amplipath can deliver an advisory roadmap and work with your existing technical team, or continue into design, integration and development. The implementation scope is agreed separately from the strategic assessment."
+          }
     ],
     "related": [
       "aidev",
@@ -4648,50 +4304,26 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "HubSpot"
     ],
     "faqs": [
-      {
-        "q": "Can you integrate AI into a CRM we already use?",
-        "a": "Yes — Salesforce, HubSpot and most modern CRMs expose APIs that support AI integration for tasks like lead scoring, automated summarization or AI-drafted follow-ups, built around your existing CRM rather than replacing it."
-      },
-      {
-        "q": "What happens if the AI model provider changes their API?",
-        "a": "We build integrations with abstraction layers where practical, so switching underlying models requires updating configuration rather than rebuilding the entire integration from scratch."
-      },
-      {
-        "q": "Is our data secure when connected to an AI model?",
-        "a": "We follow each AI provider's data handling and privacy policies, configure API calls to avoid sending unnecessary sensitive data, and can discuss specific compliance requirements (GDPR, HIPAA-adjacent needs) during scoping."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for aI Integration Services — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including aI Integration Services, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI Integration Services?",
-        "a": "Our team works primarily with OpenAI API alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI Integration Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      }
+          {
+                "q": "How do you determine whether our current software can support AI integration?",
+                "a": "We review available APIs, webhooks, authentication methods, data access and vendor restrictions. Where a direct connection is unavailable, secure middleware or another approved exchange method may be considered."
+          },
+          {
+                "q": "Can AI be added without replacing our existing CRM or business platform?",
+                "a": "yes. AI can operate as an additional layer that summarises records, categorises information or assists users while the existing platform remains the official system of record."
+          },
+          {
+                "q": "What happens if an AI provider changes or retires its API?",
+                "a": "We use documented interfaces, version controls and separation between the business workflow and provider-specific code. This reduces the effort required to update the connection or migrate an appropriate function to another provider."
+          },
+          {
+                "q": "How do you prevent integration errors from creating duplicate or incorrect records?",
+                "a": "The workflow can include record identifiers, validation rules, duplicate checks and controlled retry behaviour. High-impact updates can also be placed in a review queue before they are written permanently to another system."
+          },
+          {
+                "q": "How are failed AI integrations detected and investigated?",
+                "a": "Production integrations can record requests, errors, processing times and failed workflow steps without unnecessarily exposing sensitive content. Alerts and diagnostic logs help the technical team identify interrupted processes and restore them."
+          }
     ],
     "related": [
       "aidev",
@@ -4798,50 +4430,26 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Firebase"
     ],
     "faqs": [
-      {
-        "q": "Should AI processing happen on-device or in the cloud?",
-        "a": "It depends on latency requirements, privacy sensitivity and cost — on-device models (Core ML, TensorFlow Lite) offer speed and offline capability with a smaller feature set; cloud APIs offer more powerful models at the cost of latency and ongoing API spend."
-      },
-      {
-        "q": "Does adding AI features slow down the app?",
-        "a": "Cloud-based AI calls add network latency that needs careful UX handling (loading states, streaming responses); on-device models avoid network latency but require careful optimization to avoid impacting app performance."
-      },
-      {
-        "q": "Can the chatbot or AI assistant work offline?",
-        "a": "On-device models can work fully offline; cloud-API-powered features require connectivity. We architect a fallback experience for offline scenarios when cloud AI features are part of the build."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI Mobile App Development?",
-        "a": "Our team works primarily with Flutter alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI Mobile App Development who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer aI Mobile App Development as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI Mobile App Development with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "Should mobile AI processing happen on the device or in the cloud?",
+                "a": "On-device processing can offer lower latency, stronger offline capability and greater control over certain data. Cloud processing supports more powerful models but requires connectivity and may introduce ongoing API costs, so some applications use a hybrid architecture."
+          },
+          {
+                "q": "Can an AI mobile app function without an internet connection?",
+                "a": "Selected features can work offline when an appropriate model and required data can be stored safely on the device. More demanding generative features may require cloud access, with the app providing limited offline functions when connectivity is unavailable."
+          },
+          {
+                "q": "How do AI features affect battery use, speed and application size?",
+                "a": "Large local models can increase storage, memory and energy consumption, while cloud requests can introduce network delays. We test representative devices and optimise model size, request frequency and background activity around acceptable performance limits."
+          },
+          {
+                "q": "How are AI API credentials protected inside a mobile application?",
+                "a": "Sensitive provider credentials should not be embedded directly inside the downloadable app. Requests are normally routed through a secured backend that manages authentication, usage limits, permissions and monitoring."
+          },
+          {
+                "q": "Can the AI model or its behaviour be updated after the app is released?",
+                "a": "Cloud-based models and server-controlled instructions can often be updated without releasing a new application version. Changes to bundled on-device models may require a managed model download or a new app-store release."
+          }
     ],
     "related": [
       "mobileapp",
@@ -4953,50 +4561,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Custom GPTs"
     ],
     "faqs": [
-      {
-        "q": "Will AI-generated content sound generic?",
-        "a": "Not with a properly built prompt system — generic output comes from generic prompts. We encode your actual brand voice, vocabulary and examples directly into the prompt framework so output requires light editing, not a rewrite."
-      },
-      {
-        "q": "Which AI model is best for our use case?",
-        "a": "It depends on the content type — ChatGPT and Claude both excel at long-form writing with the right prompting, Gemini integrates tightly with Google Workspace, and some use cases benefit from a custom fine-tuned model. We recommend based on your specific content volume and workflow."
-      },
-      {
-        "q": "Do you write the prompts or do we?",
-        "a": "We build, test and document the initial prompt library, then train your team to adapt and extend it independently — you are never dependent on us to generate every piece of content."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for aI Marketing Prompt Strategy — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including aI Marketing Prompt Strategy, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI Marketing Prompt Strategy?",
-        "a": "Our team works primarily with ChatGPT alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI Marketing Prompt Strategy who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      }
+          {
+                "q": "What is an AI marketing prompt strategy?",
+                "a": "An AI marketing prompt strategy is a structured system for instructing AI tools to produce accurate, consistent and brand-aligned marketing content. It goes beyond individual prompts by defining context, objectives, audiences, approved claims, output formats and quality standards."
+          },
+          {
+                "q": "Will AI-generated marketing content sound generic?",
+                "a": "Not when the system is properly designed. We incorporate your brand voice, customer language, product information, examples and prohibited expressions so the AI produces content that reflects your business instead of generic internet language."
+          },
+          {
+                "q": "What does an AI marketing prompt framework include?",
+                "a": "A framework may include master instructions, channel-specific templates, reusable variables, output structures, example responses, fact-checking steps and approval criteria. These components make successful outputs easier to reproduce across campaigns and team members."
+          },
+          {
+                "q": "Which AI model should we use for our marketing activities?",
+                "a": "The right model depends on the task, required integrations, privacy considerations, output quality and operating cost. We evaluate the workflow first and then recommend suitable models rather than designing the entire system around one provider."
+          },
+          {
+                "q": "How is prompt strategy different from marketing automation?",
+                "a": "Prompt strategy controls how an AI system interprets a request and generates an output. Marketing automation determines when information moves, which action occurs next and where the resulting content or data is sent."
+          },
+          {
+                "q": "How do you reduce inaccurate information in AI-generated content?",
+                "a": "We define approved source material, restrict unsupported claims and add verification instructions and human-review checkpoints. High-risk information such as prices, statistics, legal statements and product specifications should be checked before publication."
+          },
+          {
+                "q": "Can one prompt system create content for several marketing channels?",
+                "a": "Yes, but the output rules should change by channel. A strong system preserves the same brand identity while adapting length, structure, call to action and tone for websites, advertising, email, social media and sales communication."
+          },
+          {
+                "q": "Can our internal team learn to use the prompt system?",
+                "a": "Yes. We can document the workflow, demonstrate how variables should be completed and train employees to review and improve outputs. The objective is to make the system repeatable without requiring advanced prompt-engineering knowledge."
+          },
+          {
+                "q": "How can we evaluate whether the prompt strategy is working?",
+                "a": "We assess output consistency, factual accuracy, revision time, approval rate and suitability for the intended channel. For published content, performance indicators such as engagement, lead quality or conversions can provide additional evidence."
+          }
     ],
     "related": [
       "brandai",
@@ -5097,50 +4697,26 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Vercel"
     ],
     "faqs": [
-      {
-        "q": "Will AI features increase our hosting/API costs significantly?",
-        "a": "API costs scale with usage and the model chosen — we scope expected usage volume during planning and build cost-monitoring dashboards so spend is visible and predictable, not a surprise."
-      },
-      {
-        "q": "Can you add AI features to an existing website?",
-        "a": "Yes — retrofitting AI search, recommendations or content generation onto an existing platform is common, though the integration approach depends heavily on your current tech stack."
-      },
-      {
-        "q": "Which AI model should we use for our platform?",
-        "a": "It depends on the use case — OpenAI and Claude both excel at content generation and reasoning tasks, Gemini integrates tightly with Google Cloud infrastructure. We recommend based on your specific feature requirements and budget."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer aI Websites & Software Development as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI Websites & Software Development with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for aI Websites & Software Development — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including aI Websites & Software Development, because we believe results should earn your continued business, not a binding agreement."
-      }
+          {
+                "q": "Which AI features can be added to a website or software platform?",
+                "a": "Practical features include intelligent search, product recommendations, document analysis, content assistance, lead qualification, natural-language reporting and personalised user experiences. Features are selected according to genuine user needs rather than adding AI solely for appearance."
+          },
+          {
+                "q": "How can an AI website answer questions using our company information?",
+                "a": "Approved website content, documents or database records can be connected to a retrieval system that supplies relevant information when a user asks a question. Access rules and source controls determine what information the system is permitted to use."
+          },
+          {
+                "q": "Will AI features significantly increase website operating costs?",
+                "a": "Operating costs depend on usage volume, model selection, response length, hosting and the number of automated processes. Usage limits, caching, efficient model routing and cost-monitoring dashboards can keep spending visible and controlled."
+          },
+          {
+                "q": "How do you keep AI-powered software available when an AI provider is temporarily unavailable?",
+                "a": "The application can use timeouts, retries, queues, cached responses and carefully selected fallback behaviour. Critical business functions should not become completely unusable solely because an external AI service experiences an outage."
+          },
+          {
+                "q": "Can AI functionality affect website SEO or accessibility?",
+                "a": "It can if essential content or navigation depends entirely on an interactive AI interface. Important information should remain crawlable and accessible through conventional page structures, while AI features provide an enhancement rather than replacing the entire experience."
+          }
     ],
     "related": [
       "aidev",
@@ -5250,50 +4826,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Microsoft Clarity"
     ],
     "faqs": [
-      {
-        "q": "Do you fix existing broken GA4 tracking?",
-        "a": "Yes — auditing and fixing an existing GA4/GTM implementation, including missing or duplicated events, is one of the most common starting points for this engagement."
-      },
-      {
-        "q": "Can you build a dashboard combining multiple ad platforms?",
-        "a": "Yes — Looker Studio dashboards combining GA4, Google Ads, Meta Ads, TikTok Ads and other connected sources into a single cross-channel view are a standard deliverable."
-      },
-      {
-        "q": "What events should we be tracking beyond pageviews?",
-        "a": "It depends on your business model — typically form submissions, purchases, key button clicks, scroll depth on important pages and any micro-conversions specific to your funnel. We define the exact event list during the audit."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for web Analytics & Reporting — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including web Analytics & Reporting, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for web Analytics & Reporting?",
-        "a": "Our team works primarily with Google Analytics 4 alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for web Analytics & Reporting who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      }
+          {
+                "q": "What is included in web analytics and reporting services?",
+                "a": "The service can include measurement planning, GA4 and Google Tag Manager configuration, conversion tracking, dashboard development, data-quality testing and performance reporting. The final setup is based on the business decisions your data needs to support."
+          },
+          {
+                "q": "Can Amplipath repair an incorrect GA4 or Google Tag Manager setup?",
+                "a": "Yes. We can audit existing tags, duplicated events, missing parameters, referral problems and incorrectly configured key events. Corrections are tested before reporting is used for marketing decisions."
+          },
+          {
+                "q": "Which website activities should be tracked beyond page views?",
+                "a": "Useful events may include form submissions, phone clicks, bookings, account registrations, video engagement, downloads, checkout steps and completed purchases. We prioritise actions that represent genuine movement towards a business objective."
+          },
+          {
+                "q": "Can website analytics be connected with CRM or offline sales data?",
+                "a": "Where compatible systems and identifiers are available, website leads can be connected with CRM stages, qualified opportunities or completed sales. This provides a better understanding of lead quality than counting form submissions alone."
+          },
+          {
+                "q": "Can you create one dashboard for several marketing platforms?",
+                "a": "Yes. Data from website analytics, advertising platforms, search tools, e-commerce systems and CRMs can be combined in a reporting dashboard. Metric definitions must be standardised because different platforms may calculate results differently."
+          },
+          {
+                "q": "What is the difference between an event and a key event in GA4?",
+                "a": "An event records a specific user interaction, such as a click, form submission or purchase. A key event is an event identified as especially important to the business and used for evaluating marketing performance."
+          },
+          {
+                "q": "Can analytics identify exactly which channel caused every sale?",
+                "a": "Not always. Cross-device activity, privacy controls, offline interactions and different attribution models can prevent a perfect customer journey from being reconstructed. Reporting should therefore explain uncertainty instead of presenting attribution estimates as absolute facts."
+          },
+          {
+                "q": "How do you protect customer privacy when configuring analytics?",
+                "a": "We follow data-minimisation principles, avoid sending unnecessary personal information and configure available consent controls where required. Businesses should also obtain legal advice concerning the privacy and consent rules applicable to their markets."
+          },
+          {
+                "q": "What will we receive after an analytics implementation?",
+                "a": "Deliverables can include a measurement plan, configured events, tag documentation, a dashboard, testing records and recommendations. The aim is to leave your organisation with understandable data rather than an unexplained collection of reports."
+          }
     ],
     "related": [
       "marketinganalytics",
@@ -5405,50 +4973,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Apple Search Ads"
     ],
     "faqs": [
-      {
-        "q": "What is a good cost-per-install benchmark?",
-        "a": "CPI varies enormously by category, geography and platform — we benchmark against your specific app category and target markets during strategy rather than quoting an industry-wide average that won't reflect your real costs."
-      },
-      {
-        "q": "How is ASO different from regular SEO?",
-        "a": "ASO optimizes for app store search algorithms specifically — keyword density in title/subtitle, conversion rate from listing views, and rating/review velocity all weigh differently than Google's web ranking factors."
-      },
-      {
-        "q": "Do you handle both iOS and Android optimization?",
-        "a": "Yes — App Store and Google Play have meaningfully different ranking algorithms and listing requirements, and we optimize each platform's listing separately rather than applying one strategy to both."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine mobile App Marketing & ASO with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for mobile App Marketing & ASO — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including mobile App Marketing & ASO, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for mobile App Marketing & ASO?",
-        "a": "Our team works primarily with App Store Connect alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      }
+          {
+                "q": "What is app store optimization, and how is it different from SEO?",
+                "a": "App store optimization or ASO improves an app’s visibility and conversion within stores such as Apple’s App Store and Google Play. SEO focuses primarily on websites and search engines. ASO concentrates on app metadata, keywords, screenshots, preview videos, ratings, localization and product-page conversion."
+          },
+          {
+                "q": "Do you optimize apps for both iOS and Android?",
+                "a": "Yes. We can optimize applications for Apple’s App Store and Google Play. The stores have different metadata fields, policies, creative requirements, testing tools and ranking environments, so we develop platform-specific recommendations rather than using identical listings for both."
+          },
+          {
+                "q": "What does mobile app marketing and ASO include?",
+                "a": "Depending on scope, the service can include app and competitor research, keyword analysis, metadata optimization, creative recommendations, localization planning, store-listing experiments, conversion analysis, review-strategy guidance, paid user acquisition and retention measurement."
+          },
+          {
+                "q": "Can ASO increase downloads without paid advertising?",
+                "a": "ASO can improve organic discoverability and the percentage of store visitors who install the app, but it cannot guarantee a specific number of downloads. Results depend on existing demand, competition, app quality, reviews, creative assets and continued testing. Paid acquisition can provide additional traffic and testing data."
+          },
+          {
+                "q": "How long does app store optimization take to work?",
+                "a": "Initial metadata and creative improvements can be implemented relatively quickly, but meaningful evaluation requires sufficient store traffic and performance data. ASO is an iterative process involving monitoring, experiments and refinements rather than a one-time update with guaranteed rankings."
+          },
+          {
+                "q": "How do you measure mobile app marketing success?",
+                "a": "We measure store impressions, product-page visits, conversion rate, organic and paid installs, cost per install, activation, retention, subscriptions, in-app revenue and customer lifetime value where data is available. The selected metrics depend on the app’s monetization model and growth objectives."
+          }
     ],
     "related": [
       "mobileapp",
@@ -5549,50 +5097,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Mailchimp"
     ],
     "faqs": [
-      {
-        "q": "How important are early reviews for a book launch?",
-        "a": "Very — Amazon's algorithm and reader trust both respond strongly to early review volume and quality, which is why a structured, compliant ARC (advance reader copy) review campaign is a core part of most launch strategies."
-      },
-      {
-        "q": "Do you help with both fiction and non-fiction?",
-        "a": "Yes — category and keyword strategy differ meaningfully between fiction and non-fiction on Amazon, and we tailor the approach to your specific genre and comparable titles."
-      },
-      {
-        "q": "Can you help authors who are publishing for the first time?",
-        "a": "Yes — first-time and debut authors make up a significant share of our book marketing clients, and we adjust scope and platform recommendations to match an author building a platform from zero."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer book & eBook Marketing as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine book & eBook Marketing with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for book & eBook Marketing — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including book & eBook Marketing, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      }
+          {
+                "q": "What does book and eBook marketing include?",
+                "a": "Book marketing can include audience and genre research, launch strategy, Amazon or retailer-page optimization, promotional content, email campaigns, advertising, reviewer outreach, creator partnerships, media outreach and performance reporting. Recommendations depend on the book, author platform, distribution and commercial goal."
+          },
+          {
+                "q": "Do you promote fiction, nonfiction and first-time authors?",
+                "a": "Yes. The strategy can be adapted for fiction, nonfiction, professional books and first-time authors. Fiction campaigns often emphasize genre communities and reader discovery, while nonfiction campaigns may use the author’s expertise, search demand, media opportunities and professional audience."
+          },
+          {
+                "q": "How early should book marketing begin before publication?",
+                "a": "Marketing should ideally begin before publication so there is time to clarify positioning, prepare retailer pages, develop launch materials, build an email list and arrange compliant review outreach. We can also develop campaigns for books that have already been published."
+          },
+          {
+                "q": "Can you help obtain early reviews through advance reader copies?",
+                "a": "We can support a compliant advance-reader-copy strategy. Readers may receive a free or discounted copy, but they must not be required to leave a review or pressured to write a positive one. We do not purchase fake reviews or manipulate retailer ratings."
+          },
+          {
+                "q": "Can you guarantee sales, reviews or bestseller status?",
+                "a": "No. Sales, independent reviews, retailer rankings and bestseller-list placement depend on factors beyond an agency’s control. We can strengthen the launch strategy, increase qualified visibility and improve campaign measurement, but we will not make unsupported bestseller or guaranteed-sales claims."
+          },
+          {
+                "q": "Which channels can be used to market a book?",
+                "a": "Potential channels include Amazon Ads, search advertising, social media, email, reader communities, book reviewers, creators, podcasts, media outreach and the author’s website. The channel mix depends on genre, audience, format, geography, available distribution and budget."
+          },
+          {
+                "q": "How do you measure book-marketing performance?",
+                "a": "We can track retailer-page visits, advertising clicks, sales, eBook downloads, page reads where available, email growth, website conversions, review activity and return on advertising spend. We distinguish between marketing-attributed results and wider retailer activity that cannot be attributed reliably."
+          }
     ],
     "related": [
       "amazonseo",
@@ -5694,50 +5226,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Brand Voice Matrix"
     ],
     "faqs": [
-      {
-        "q": "How is this different from a standard brand style guide?",
-        "a": "A traditional style guide covers visual identity — logo, color, typography. Brand Personality Design is specifically about voice and tone, written in a format that translates directly into an AI system prompt, which most style guides are never built to do."
-      },
-      {
-        "q": "Can this work with any AI tool?",
-        "a": "Yes — the system prompt is written in a model-agnostic format that works across ChatGPT, Claude, Gemini and most AI writing tools, so you are not locked into a single platform."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine brand Personality Design with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for brand Personality Design — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including brand Personality Design, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for brand Personality Design?",
-        "a": "Our team works primarily with ChatGPT alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for brand Personality Design who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      }
+          {
+                "q": "What is brand personality design?",
+                "a": "Brand personality design defines the human characteristics a business should express through its words, behaviour and customer interactions. It helps audiences recognise whether a brand is authoritative, innovative, approachable, bold or guided by another distinct combination of traits."
+          },
+          {
+                "q": "How is brand personality different from visual identity?",
+                "a": "Visual identity covers elements such as the logo, colours, typography and imagery. Brand personality governs how the organisation sounds, responds, explains ideas and builds emotional recognition across human-written and AI-generated communication."
+          },
+          {
+                "q": "How does Amplipath determine the right personality for a brand?",
+                "a": "We examine the company’s positioning, values, audience expectations, competitors and existing communication. Stakeholder interviews and content reviews help distinguish authentic qualities from traits that merely sound attractive on paper."
+          },
+          {
+                "q": "What is the difference between brand voice and tone?",
+                "a": "Brand voice is the consistent character behind all communication, while tone changes with the situation. For example, the same confident brand may sound energetic in an advertisement and reassuring when responding to a customer complaint."
+          },
+          {
+                "q": "Can an established company change its brand personality?",
+                "a": "Yes, particularly when its audience, market position or services have changed. We identify which familiar characteristics should remain and introduce new traits gradually so the brand evolves without becoming unrecognisable."
+          },
+          {
+                "q": "How is brand personality converted into instructions for AI?",
+                "a": "Abstract traits are translated into practical language rules, vocabulary preferences, sentence patterns, examples and boundaries. This gives AI systems clearer guidance than simply telling them to sound “professional,” “friendly” or “innovative.”"
+          },
+          {
+                "q": "How can a brand stay consistent while communicating in different countries?",
+                "a": "The central identity should remain stable while expressions, references and levels of formality are adapted for local audiences. Localisation must preserve the intended character without translating phrases so literally that they become unnatural."
+          },
+          {
+                "q": "What deliverables are included in a brand personality system?",
+                "a": "Deliverables can include defined personality traits, voice principles, tone guidance, preferred and prohibited language, message examples and channel-specific applications. AI-ready projects may also include reusable system instructions and review checklists."
+          },
+          {
+                "q": "How do you confirm that the personality connects with the intended audience?",
+                "a": "We compare sample messages against the brand’s positioning and audience expectations, then gather stakeholder or customer feedback where appropriate. The final personality must be distinctive, believable and practical for everyday communication."
+          }
     ],
     "related": [
       "aiprompt",
@@ -5855,50 +5379,26 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Intercom"
     ],
     "faqs": [
-      {
-        "q": "What is the difference between a rules-based and AI chatbot?",
-        "a": "Rules-based chatbots follow a fixed decision tree and only handle anticipated paths; LLM-powered chatbots understand natural language and can handle a much wider range of phrasing and questions. A hybrid approach combines structured flows for common tasks with AI fallback for everything else."
-      },
-      {
-        "q": "Can the chatbot work on WhatsApp specifically?",
-        "a": "Yes — WhatsApp Business API deployment is a standard channel option alongside website widget, Facebook Messenger and Instagram DM integration."
-      },
-      {
-        "q": "How do you prevent the chatbot from giving wrong information?",
-        "a": "The chatbot is trained and constrained to your actual documentation and content rather than open-ended general knowledge, with confidence thresholds that trigger a human handoff when the bot isn't confident in an answer."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI Chatbot Development with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for aI Chatbot Development — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including aI Chatbot Development, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI Chatbot Development?",
-        "a": "Our team works primarily with OpenAI API alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      }
+          {
+                "q": "How does an AI chatbot learn about our products and policies?",
+                "a": "The chatbot can retrieve information from approved website pages, documents, product records or knowledge-base articles. Content ownership and update procedures must be established so obsolete information does not remain available to customers."
+          },
+          {
+                "q": "How do you reduce incorrect answers from an AI chatbot?",
+                "a": "We restrict the chatbot to approved sources, define subjects it must not answer and instruct it to acknowledge uncertainty. Testing, citations and escalation rules provide additional safeguards for important customer questions."
+          },
+          {
+                "q": "Can one chatbot operate across our website, WhatsApp and other channels?",
+                "a": "Potentially, provided each channel offers an appropriate integration and permits the intended functionality. The central knowledge source can remain consistent while message length, menus and user experience are adapted for each channel."
+          },
+          {
+                "q": "Can a customer be transferred from the chatbot to a human employee?",
+                "a": "Yes. A handoff can be triggered by customer request, low answer confidence, sensitive language or a defined support condition. Relevant conversation context can be supplied to the employee so the customer does not need to start again."
+          },
+          {
+                "q": "Can an AI chatbot complete actions instead of only answering questions?",
+                "a": "With authorised integrations, a chatbot may schedule appointments, check order status, collect lead information or initiate approved workflows. Authentication and permissions are required before it can access personal records or execute account-specific actions."
+          }
     ],
     "related": [
       "aiintegrate",
@@ -6011,50 +5511,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "WordPress"
     ],
     "faqs": [
-      {
-        "q": "Do you write the content or just strategize?",
-        "a": "We do both — full-service content production from brief through publication, or strategy-only engagements where your in-house writers handle production against our briefs."
-      },
-      {
-        "q": "How many articles per month are typical?",
-        "a": "Volume depends on your keyword opportunity and competitive landscape — we recommend a specific monthly cadence during strategy rather than a fixed default number."
-      },
-      {
-        "q": "How is this different from copywriting?",
-        "a": "Content marketing builds organic search traffic and authority over time through informational and educational content. Copywriting is direct-response — written specifically to convert a reader into a lead or sale on a single page. Many engagements combine both."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine content Marketing Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for content Marketing Services — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including content Marketing Services, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for content Marketing Services?",
-        "a": "Our team works primarily with Ahrefs alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for content Marketing Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "How is content marketing different from copywriting?",
+                "a": "Content marketing builds sustained demand by educating, informing or guiding an audience across its buying journey. Copywriting is more directly persuasive and focuses on encouraging a specific action, such as purchasing, booking or submitting an enquiry."
+          },
+          {
+                "q": "How do you decide which content topics we should create?",
+                "a": "We study customer questions, search behaviour, sales objections, competitor coverage and gaps in the existing website. Topics are then prioritised according to audience relevance, commercial value and the role they play in the customer journey."
+          },
+          {
+                "q": "Do you develop the strategy and produce the content?",
+                "a": "Yes. We can provide research, editorial planning, content briefs, writing, editing and publishing support. We can also prepare the strategy and briefs for organisations that already have internal writers."
+          },
+          {
+                "q": "How do you keep specialist or technical content accurate?",
+                "a": "We use approved source materials, subject-matter interviews and client review checkpoints. Claims, statistics and regulated information are verified before publication rather than generated from assumptions."
+          },
+          {
+                "q": "Can one piece of content be reused across several channels?",
+                "a": "Yes. We can adapt a substantial article, report or interview into social posts, email content, video scripts, short explanations and sales materials while preserving the core message."
+          },
+          {
+                "q": "Which signals show that content is becoming valuable?",
+                "a": "We examine relevant search visibility, qualified visits, engagement, assisted conversions, enquiries and content usage by sales teams. We evaluate performance according to each content asset’s intended purpose rather than treating every page as a direct sales page."
+          }
     ],
     "related": [
       "seo",
@@ -6164,50 +5644,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Optimize"
     ],
     "faqs": [
-      {
-        "q": "How long does a CRO test need to run for valid results?",
-        "a": "It depends on your traffic volume and baseline conversion rate — we calculate the required sample size before launching each test rather than calling a winner based on early, statistically insignificant results."
-      },
-      {
-        "q": "What is a realistic conversion rate improvement to expect?",
-        "a": "Results vary widely by starting point and industry — sites with significant existing friction typically see larger early gains than already well-optimized pages. We set expectations based on your specific audit findings."
-      },
-      {
-        "q": "Do I need a minimum amount of traffic to run CRO?",
-        "a": "Meaningful A/B testing generally requires reasonable traffic volume to reach statistical significance in a practical timeframe — for lower-traffic sites we focus more heavily on qualitative analysis (heatmaps, session recordings, user testing) ahead of formal split tests."
-      },
-      {
-        "q": "Do you offer conversion Rate Optimization as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine conversion Rate Optimization with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for conversion Rate Optimization — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including conversion Rate Optimization, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      }
+          {
+                "q": "What does conversion rate optimization improve besides page design?",
+                "a": "CRO can address the offer, messaging, navigation, forms, checkout process, trust signals and technical friction. Visual changes are useful only when they solve a documented customer problem."
+          },
+          {
+                "q": "How do you identify where visitors are abandoning the conversion journey?",
+                "a": "We combine analytics, funnel reports, form behaviour, session evidence and customer feedback. This helps us separate genuine obstacles from design opinions."
+          },
+          {
+                "q": "When should we use A/B testing instead of making a direct improvement?",
+                "a": "We use A/B testing when there is sufficient traffic and genuine uncertainty between alternatives. Clear errors, accessibility problems and broken functionality should normally be corrected directly."
+          },
+          {
+                "q": "Can CRO work on a website with limited traffic?",
+                "a": "Yes, but conventional split testing may not produce dependable results quickly. We can use research, usability testing, customer interviews and carefully monitored changes until traffic supports controlled experiments."
+          },
+          {
+                "q": "How do you choose the primary conversion action for a page?",
+                "a": "We identify the action that best reflects the visitor’s intent and creates meaningful business value. Secondary actions can support visitors who are not ready for the primary commitment without competing with it."
+          },
+          {
+                "q": "When is a business not ready for conversion optimization?",
+                "a": "CRO should not begin with unreliable tracking, a fundamentally uncompetitive offer or insufficient understanding of the target customer. We address those foundations before interpreting small page changes as meaningful progress."
+          }
     ],
     "related": [
       "landing",
@@ -6326,50 +5786,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "secondaryUrl": "https://backers.boostfunders.com"
     },
     "faqs": [
-      {
-        "q": "How important is the first 48 hours of a campaign?",
-        "a": "Critical — Kickstarter's own algorithm surfaces campaigns gaining early momentum to a much wider audience, meaning a strong opening 48 hours compounds into significantly more organic platform-driven traffic for the rest of the campaign."
-      },
-      {
-        "q": "Do you only help with pre-launch, or do you support the live campaign too?",
-        "a": "Both — pre-launch audience building gets you to a strong opening, but we stay hands-on for the entire live campaign window with daily monitoring, backer engagement, PR push and momentum tactics through to fulfillment."
-      },
-      {
-        "q": "Do you help with reward tier strategy?",
-        "a": "Yes — reward tier structure directly affects average pledge value and conversion rate, and we advise on tier pricing and structure as part of campaign page development."
-      },
-      {
-        "q": "When should crowdfunding marketing start relative to launch date?",
-        "a": "We recommend starting pre-launch audience building at least 6-8 weeks before the campaign goes live — shorter timelines are possible but reduce the size of the email list ready to convert on day one."
-      },
-      {
-        "q": "Can you help get my campaign in front of more potential backers directly?",
-        "a": "Yes — beyond paid and organic marketing, our sister platform Boostfunders runs a dedicated crowdfunding newsletter at backers.boostfunders.com reaching 100,000+ engaged backers, used to promote vetted Kickstarter and Indiegogo campaigns directly to an audience actively looking to back new projects."
-      },
-      {
-        "q": "Do you offer a dedicated, full-service crowdfunding agency option?",
-        "a": "Yes — Boostfunders.com is our dedicated crowdfunding marketing platform, built specifically for end-to-end Kickstarter, Indiegogo and GoFundMe campaign management from pre-launch through fulfillment."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with creators and businesses of every size — scope and deliverable volume are tailored to your campaign goal and budget rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, campaign-relevant KPIs during onboarding — wishlist/follow growth, pledge velocity, conversion rate — and report against them throughout the live campaign rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — campaign engagements are scoped around your specific launch timeline, from pre-launch through fulfillment, with no ongoing lock-in required once the campaign concludes."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing — earlier is better, since pre-launch audience building needs lead time to compound before your launch date."
-      },
-      {
-        "q": "Do you work with crowdfunding creators outside the US and Nigeria?",
-        "a": "Yes — Amplipath and Boostfunders support campaign creators worldwide across all markets, with platforms like Kickstarter, Indiegogo and GoFundMe all supporting international creators and backers."
-      }
+          {
+                "q": "What is crowdfunding marketing?",
+                "a": "Crowdfunding marketing is the process of building awareness, attracting relevant potential backers and maintaining campaign momentum before, during and after launch. It can combine campaign strategy, email, advertising, content, PR, community engagement and direct outreach."
+          },
+          {
+                "q": "When should marketing begin before a crowdfunding campaign launches?",
+                "a": "Promotion should begin during campaign planning rather than after the page goes live. The available preparation period is used to validate messaging, create campaign assets, build an audience and organise the first wave of outreach."
+          },
+          {
+                "q": "Why are the first 48 hours important for a crowdfunding campaign?",
+                "a": "Early support can create visible social proof, reveal whether the campaign message is connecting and provide initial data for marketing decisions. A strong opening is valuable, but it does not automatically guarantee platform promotion or eventual funding success."
+          },
+          {
+                "q": "Do you support both pre-launch and live crowdfunding campaigns?",
+                "a": "Yes. Pre-launch support may include audience building, landing pages, email preparation and campaign strategy. Live-campaign support can include promotion, monitoring, backer communication, retargeting and mid-campaign momentum activities."
+          },
+          {
+                "q": "Which crowdfunding platforms and campaign types can you promote?",
+                "a": "We support reward-based, equity and charitable campaigns across platforms such as Kickstarter, Indiegogo, Gamefound, Wefunder, Republic, GoFundMe and more. The strategy and compliance requirements vary according to the campaign type and platform."
+          },
+          {
+                "q": "Which marketing channels can be used to reach potential backers?",
+                "a": "Depending on the campaign, the strategy may combine email promotion, Meta and Google advertising, PR, influencer outreach, Reddit and forum engagement, social media, retargeting and direct investor outreach. Channels are selected according to the product and audience."
+          },
+          {
+                "q": "Can you help structure crowdfunding rewards and add-ons?",
+                "a": "Yes. We can review reward clarity, pricing, perceived value, production implications and upgrade opportunities. The final structure must remain realistic enough for the creator to manufacture, deliver and fulfil."
+          },
+          {
+                "q": "Which crowdfunding performance indicators will be reported?",
+                "a": "Reporting may cover traffic, email engagement, advertising results, conversion rate, cost per pledge, funding generated and backer growth. Equity campaigns may also track investor reservations, completed investments and qualified investor responses."
+          },
+          {
+                "q": "Why does Amplipath direct crowdfunding clients to Boostfunders?",
+                "a": "Boostfunders is Amplipath’s dedicated crowdfunding marketing platform. Specialised campaign services, crowdfunding resources, promotion options and campaign enquiries are managed through Boostfunders, while Amplipath remains available for wider marketing, technology and AI requirements."
+          }
     ],
     "related": [
       "pr",
@@ -6490,50 +5942,38 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Vercel"
     ],
     "faqs": [
-      {
-        "q": "When do we need a custom build instead of WordPress/Shopify?",
-        "a": "When your application logic goes beyond what a CMS or e-commerce platform was designed for — custom workflows, proprietary business logic, real-time features or integrations that off-the-shelf platforms can't support natively."
-      },
-      {
-        "q": "What ongoing maintenance does a custom app need?",
-        "a": "Dependency updates, security patching, hosting/infrastructure monitoring and feature iteration — we offer ongoing maintenance retainers, or full documentation if your internal team will take over maintenance directly."
-      },
-      {
-        "q": "Can I edit content myself after launch, or do I need a developer?",
-        "a": "We can build in a CMS layer or admin panel for any content that needs non-technical editing — pure application logic typically still requires developer involvement for changes."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine custom Website Development with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for custom Website Development — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including custom Website Development, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for custom Website Development?",
-        "a": "Our team works primarily with React alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      }
+          {
+                "q": "When does a business need custom website development?",
+                "a": "A custom build is appropriate when standard platforms cannot support your required workflows, permissions, calculations, real-time features or proprietary business logic. We first determine whether configuration or an existing solution can meet the need before recommending custom development."
+          },
+          {
+                "q": "How do you select the technology stack for a custom website?",
+                "a": "The decision is based on functionality, expected traffic, security requirements, hosting environment, integration needs and long-term maintainability. We favour established technologies that another qualified development team can understand and support."
+          },
+          {
+                "q": "Can a custom website integrate with legacy or proprietary software?",
+                "a": "Potentially, provided the external system offers a usable API, database interface or approved connection method. A technical discovery phase identifies authentication requirements, data formats, limitations and risks before development begins."
+          },
+          {
+                "q": "Can non-technical employees manage content in a custom-built system?",
+                "a": "Yes. We can develop an administrative dashboard or connect an appropriate content management system so authorised employees can manage selected information. Editing permissions are designed around each user’s responsibilities."
+          },
+          {
+                "q": "How do you prepare custom applications for future growth?",
+                "a": "We plan modular architecture, efficient data handling, caching and suitable infrastructure around realistic usage expectations. Performance monitoring then helps identify when individual components or hosting resources need to scale."
+          },
+          {
+                "q": "What quality-assurance process is used for custom development?",
+                "a": "Testing may cover core functions, user journeys, integrations, permissions, responsive behaviour and supported browsers. More complex systems can also require automated tests, user-acceptance testing and controlled staging deployments."
+          },
+          {
+                "q": "Who owns the source code and intellectual property after completion?",
+                "a": "The client owns the custom-developed source code and intellectual property upon completion of the project and fulfillment of the agreed payment terms. We provide the source code and relevant project files, while third-party tools, commercial software, and open-source libraries remain subject to their respective licensing terms."
+          },
+          {
+                "q": "How are updates and new features released after the original build?",
+                "a": "Changes are planned, developed and tested in a controlled environment before production release. Support can be arranged through a maintenance plan, scheduled development phases or separately approved feature projects."
+          }
     ],
     "related": [
       "webdev",
@@ -6634,50 +6074,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Sheets"
     ],
     "faqs": [
-      {
-        "q": "How long does a digital PR campaign take to land coverage?",
-        "a": "Most campaigns see initial coverage within 2-6 weeks of launch, though timing depends heavily on news cycle relevance and the strength of the underlying story or data."
-      },
-      {
-        "q": "What makes a story newsworthy for journalists?",
-        "a": "Original data, a genuinely surprising finding, timely relevance to current events, or expert commentary on a trending topic — journalists need a reason a story matters now, not a generic company update."
-      },
-      {
-        "q": "Is digital PR the same as link building?",
-        "a": "Related but distinct — digital PR earns coverage and links as a byproduct of genuine media interest; traditional link building is a more direct, outreach-driven process. We use both depending on your authority goals."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for digital PR?",
-        "a": "Our team works primarily with HARO alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for digital PR who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer digital PR as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine digital PR with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What can a digital PR campaign be built around?",
+                "a": "We can develop campaigns around original research, expert commentary, industry data, useful tools, timely business insights or genuinely distinctive company developments. The concept must provide editorial value beyond promoting the company."
+          },
+          {
+                "q": "How do you select publications for digital PR outreach?",
+                "a": "We prioritise audience relevance, editorial fit, credibility and the journalist’s demonstrated subject interests. A smaller specialist publication can be more valuable than a larger outlet whose readers have little connection to the story."
+          },
+          {
+                "q": "Is an online brand mention useful if it does not include a backlink?",
+                "a": "Yes. A relevant mention can still build recognition, support reputation, generate branded searches and introduce the company to a new audience. We report linked and unlinked coverage separately."
+          },
+          {
+                "q": "What must a company prepare before journalists are contacted?",
+                "a": "We confirm the facts, spokesperson availability, supporting evidence, approved quotations, visual assets and response process. Being prepared allows us to answer media questions accurately and quickly."
+          },
+          {
+                "q": "What happens to the research or campaign asset after outreach ends?",
+                "a": "We can repurpose it into website content, social posts, sales material, presentations and follow-up commentary. This extends the value of the original work beyond the initial pitching period."
+          },
+          {
+                "q": "Can digital PR improve visibility in AI-generated search answers?",
+                "a": "Credible third-party mentions can expand the public evidence that search engines and AI systems may discover when evaluating a brand or subject. However, no agency can guarantee that a specific AI platform will cite a particular placement."
+          }
     ],
     "related": [
       "guestpost",
@@ -6787,50 +6207,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Tag Manager"
     ],
     "faqs": [
-      {
-        "q": "Is display advertising still effective in 2026?",
-        "a": "Yes, primarily for retargeting and brand-awareness layered alongside search and social — display rarely performs as a standalone direct-response channel for cold audiences, and we set expectations accordingly."
-      },
-      {
-        "q": "What is the difference between display and programmatic?",
-        "a": "Display typically refers to the Google Display Network specifically; programmatic refers to automated, real-time-bid ad buying across a much broader range of publisher inventory via a demand-side platform (DSP). We use both depending on goals."
-      },
-      {
-        "q": "Can display ads retarget website visitors?",
-        "a": "Yes — retargeting website visitors is the single most effective use case for display advertising, with significantly higher conversion rates than cold-audience display campaigns."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for display Advertising who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer display Advertising as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine display Advertising with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for display Advertising — and report against them monthly rather than relying on vanity metrics."
-      }
+          {
+                "q": "What is display advertising and how does it work?",
+                "a": "Display advertising uses visual ads—such as images, responsive creatives and video—to reach audiences across websites, apps and digital properties. Campaigns can target people using contextual signals, audience interests, selected placements, customer data and previous website activity."
+          },
+          {
+                "q": "Is display advertising suitable for my business?",
+                "a": "Display advertising is particularly useful for brand awareness, product launches, retargeting and supporting customers through longer buying journeys. Its suitability depends on your audience, offer, conversion path, creative assets and ability to measure results. We assess these factors before recommending it."
+          },
+          {
+                "q": "Can display ads retarget people who visited our website?",
+                "a": "Yes. With appropriate conversion tags, audience settings and consent controls, display campaigns can reconnect with previous visitors based on actions such as viewing a product or abandoning an enquiry. Retargeting is implemented in accordance with applicable privacy laws and advertising-platform policies."
+          },
+          {
+                "q": "What does Amplipath’s display advertising service include?",
+                "a": "Depending on scope, our service can include campaign strategy, audience research, placement planning, creative recommendations, campaign setup, conversion tracking, remarketing, exclusion controls, optimization and performance reporting. Creative production requirements are confirmed before the engagement begins."
+          },
+          {
+                "q": "How much should we budget for display advertising?",
+                "a": "We recommend a starting testing budget of $1,500, which is enough to generate the data needed to evaluate audiences, placements and creative combinations properly."
+          },
+          {
+                "q": "How do you measure display advertising performance?",
+                "a": "We measure performance using metrics aligned with the campaign objective, including reach, viewable impressions, frequency, engaged visits, assisted conversions, direct conversions, cost per acquisition and return on ad spend. Display campaigns should not be evaluated using click-through rate alone."
+          }
     ],
     "related": [
       "fbads",
@@ -6939,50 +6339,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "DSers"
     ],
     "faqs": [
-      {
-        "q": "Which supplier network do you recommend?",
-        "a": "It depends on your product category and target shipping markets — AliExpress offers the broadest catalog, Spocket and CJ Dropshipping often provide faster shipping for US/EU customers. We recommend based on your specific niche during setup."
-      },
-      {
-        "q": "How do you handle shipping time expectations for customers?",
-        "a": "Clear shipping-time messaging on product pages and order-confirmation emails is built in from the start, since unmanaged expectations around dropshipping fulfillment times are one of the most common causes of customer complaints."
-      },
-      {
-        "q": "Do you also help with marketing after the store launches?",
-        "a": "Yes — Facebook/TikTok Ads, social commerce setup and SEO are available as follow-on services once your store is live and ready for traffic."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine dropshipping Website Development with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for dropshipping Website Development — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including dropshipping Website Development, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for dropshipping Website Development?",
-        "a": "Our team works primarily with Shopify alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for dropshipping Website Development who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "What is included in a dropshipping website setup?",
+                "a": "A typical setup can include store design, product organisation, supplier integration, payment configuration, shipping rules, policy pages, analytics and launch testing. Product sourcing, advertising and ongoing operations are included only when specified in the agreed scope."
+          },
+          {
+                "q": "How do you select a suitable dropshipping supplier?",
+                "a": "Supplier selection considers product quality, warehouse location, delivery estimates, inventory reliability, communication and return procedures."
+          },
+          {
+                "q": "Can you help evaluate products before they are added to the store?",
+                "a": "We can assess search interest, competition, pricing, margins, fulfilment limitations and likely customer concerns. This reduces avoidable risk, but product research cannot guarantee demand or profitability."
+          },
+          {
+                "q": "How are orders and inventory synchronised with suppliers?",
+                "a": "Supported supplier applications can transmit orders, update stock levels and return fulfilment information to the store. The automation level depends on the supplier’s system, so exceptions and failed synchronisations still require monitoring."
+          },
+          {
+                "q": "How should long delivery times be communicated to customers?",
+                "a": "Realistic delivery estimates should appear before checkout and inside order communications. Transparent tracking, delay notifications and accessible support help manage expectations and reduce disputes."
+          },
+          {
+                "q": "Who is responsible for returns, refunds and customer complaints?",
+                "a": "The store owner remains responsible to the customer, even when a supplier ships the product. We help structure policy pages and workflows, but those policies must align with supplier terms and the consumer laws of each sales market."
+          },
+          {
+                "q": "Can a dropshipping store have its own branding?",
+                "a": "Yes. A store can use a custom domain, visual identity, original product descriptions and branded customer communications. Packaging and product customisation depend on the supplier and may require minimum order quantities."
+          },
+          {
+                "q": "Which payment gateways can be added to a dropshipping store?",
+                "a": "Gateway availability depends on the company’s registration country, target markets, product category and platform. We assess compatible options such as Stripe, PayPal, Paystack or Flutterwave without promising approval by any provider."
+          },
+          {
+                "q": "Can you market the dropshipping store after it launches?",
+                "a": "Amplipath can provide separate SEO, content, paid-advertising and conversion services after launch. Campaigns are developed around verified products, realistic margins and measurable customer-acquisition targets rather than guaranteed sales."
+          }
     ],
     "related": [
       "ecomdev",
@@ -7102,50 +6494,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Paystack"
     ],
     "faqs": [
-      {
-        "q": "Shopify vs. WooCommerce — which is right for us?",
-        "a": "Shopify suits brands that want a managed, fast-to-launch platform with predictable hosting costs; WooCommerce suits businesses wanting full code-level control and lower platform fees, at the cost of more hands-on maintenance. We recommend based on your catalog size, technical resources and growth plans."
-      },
-      {
-        "q": "Can you migrate our existing store without losing data?",
-        "a": "Yes — product, customer, order history and SEO redirect migration is a core part of any e-commerce platform move, planned specifically to preserve existing search rankings and customer data."
-      },
-      {
-        "q": "Do you support African payment gateways?",
-        "a": "Yes — Paystack and Flutterwave integration alongside standard Stripe/PayPal is a standard part of our e-commerce builds for businesses operating in or serving African markets."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including e-Commerce Development, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for e-Commerce Development?",
-        "a": "Our team works primarily with Shopify alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for e-Commerce Development who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer e-Commerce Development as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      }
+          {
+                "q": "Should my online store use Shopify, WooCommerce or another e-commerce platform?",
+                "a": "Shopify is often suitable for businesses seeking managed hosting and simpler maintenance, while WooCommerce offers greater WordPress flexibility and control. We recommend a platform after assessing your catalogue, sales markets, fulfilment process, integrations and growth plans."
+          },
+          {
+                "q": "Can you migrate an existing online store without losing products or customer data?",
+                "a": "We can migrate supported product records, customer information, order history, categories and selected content after reviewing the source platform. Backups, field mapping and test imports are used to reduce errors, although certain data—such as customer passwords—may require a reset."
+          },
+          {
+                "q": "How will payments, shipping and taxes work on the new store?",
+                "a": "We configure compatible payment gateways, shipping rules and available tax settings for your target markets. Your business should still confirm tax, consumer-protection and financial obligations with qualified advisers in each jurisdiction."
+          },
+          {
+                "q": "Can the store support product variations, subscriptions and wholesale pricing?",
+                "a": "Yes, where the chosen platform or approved applications support those features. We can scope variations, bundles, recurring payments, customer groups, tiered pricing and other purchasing models around your commercial requirements."
+          },
+          {
+                "q": "How do you improve an e-commerce website’s conversion rate?",
+                "a": "We reduce purchasing friction through clear navigation, persuasive product pages, useful search and filtering, visible trust information and a streamlined checkout journey. Conversion decisions are guided by analytics, customer behaviour and controlled testing rather than assumptions."
+          },
+          {
+                "q": "Can the store connect with inventory, fulfilment or accounting software?",
+                "a": "Many stores can integrate with inventory systems, fulfilment providers, accounting tools, CRMs and marketplaces through native applications or APIs. We verify data flow, update frequency and platform limitations before confirming an integration."
+          },
+          {
+                "q": "How do you protect payment information on an online store?",
+                "a": "We use reputable payment providers so sensitive card information is processed within their secure environments whenever possible. SSL, controlled permissions, software updates and secure configuration provide additional protection, while formal compliance obligations remain shared with the merchant."
+          },
+          {
+                "q": "Which e-commerce metrics should we monitor after launch?",
+                "a": "Important metrics include revenue, conversion rate, average order value, cart abandonment, repeat purchase rate and product-level performance. Where advertising is involved, customer acquisition cost and return on ad spend should also be evaluated."
+          },
+          {
+                "q": "Can an e-commerce store be expanded into new countries later?",
+                "a": "Yes, if international growth is considered during planning. Expansion may require local currencies, payment methods, translated content, regional shipping, duties, privacy controls and country-specific search optimisation."
+          }
     ],
     "related": [
       "webdev",
@@ -7269,50 +6653,62 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Search Console"
     ],
     "faqs": [
-      {
-        "q": "How do you handle thousands of product pages at scale?",
-        "a": "We work at the template level — fixing the underlying product and category page templates so the optimization rolls out across the entire catalog at once, supplemented by bulk schema and meta-data scripts rather than manual page-by-page edits."
-      },
-      {
-        "q": "Can you optimize our Amazon listings too?",
-        "a": "Yes — Amazon, Jumia, Konga and Etsy listing optimization is included as part of e-commerce SEO when you sell across marketplaces, ensuring your own site and your marketplace listings aren't cannibalizing the same keywords."
-      },
-      {
-        "q": "Does e-commerce SEO work differently from regular SEO?",
-        "a": "Significantly. Faceted navigation, pagination, out-of-stock handling, duplicate content across variants and product schema are e-commerce-specific challenges that a generalist SEO approach typically misses entirely."
-      },
-      {
-        "q": "Will SEO fixes slow down my store or affect checkout?",
-        "a": "No — technical and on-page SEO changes are isolated to crawlable content, metadata and schema. We never touch checkout, cart or payment logic as part of an SEO engagement."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine e-Commerce SEO Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for e-Commerce SEO Services — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including e-Commerce SEO Services, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for e-Commerce SEO Services?",
-        "a": "Our team works primarily with Shopify alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      }
+          {
+                "q": "How is ecommerce SEO different from regular SEO?",
+                "a": "Ecommerce SEO must manage products, categories, variants, filters, inventory changes, internal search and potentially thousands of URLs. It combines technical SEO, product information, category strategy, structured data, Merchant Center integration and conversion measurement. The objective is not simply more traffic but greater visibility for commercial searches that can generate transactions and revenue."
+          },
+          {
+                "q": "Which ecommerce platforms can Amplipath optimize?",
+                "a": "Amplipath can work with platforms such as Shopify, WooCommerce and appropriately supported custom stores, depending on the required access and technical environment. Each platform has different controls for templates, navigation, structured data, apps, JavaScript and server performance, so recommendations are adapted to the actual store rather than applied universally."
+          },
+          {
+                "q": "How do you optimize thousands of product pages efficiently?",
+                "a": "Large catalogues are addressed through scalable templates, category architecture, internal linking, product data, structured fields and automated quality checks. Amplipath can improve shared elements across the catalogue while identifying high-value products that need individual attention. Automation should not generate duplicate, inaccurate or low-value content across every page."
+          },
+          {
+                "q": "Do product and category pages need unique content?",
+                "a": "Important product and category pages should provide enough original information to help customers make decisions. Useful content may include specifications, use cases, comparisons, sizing, materials, compatibility, shipping information, FAQs and authentic reviews. Category pages should explain the product group and support navigation without forcing excessive text ahead of the products."
+          },
+          {
+                "q": "How do you handle product variants, filters and duplicate URLs?",
+                "a": "The correct solution depends on how the store creates size, colour, currency, sorting and filtering URLs. Amplipath may use canonicalization, crawl controls, deliberate indexation rules, clean internal links and product-variant structured data. The objective is to preserve useful customer choices while preventing unnecessary duplicate URLs from consuming search-engine resources."
+          },
+          {
+                "q": "What should happen to out-of-stock or discontinued product pages?",
+                "a": "Temporarily unavailable product pages can usually remain live with accurate availability information and useful alternatives. Permanently discontinued products may remain when the page still serves customers, redirect to a genuinely equivalent replacement or return an appropriate unavailable status. Redirecting every discontinued product to an unrelated category or homepage should be avoided."
+          },
+          {
+                "q": "Do you implement Product schema and Google Merchant Center optimization?",
+                "a": "Where appropriate, Amplipath can help align Product and Offer structured data with visible price, availability, shipping and product information. Merchant Center feeds may also be improved so Google receives consistent product data. Structured data and feeds improve understanding and eligibility but do not guarantee a particular shopping or rich-result appearance."
+          },
+          {
+                "q": "Will SEO changes slow down my store or interfere with checkout?",
+                "a": "SEO implementation should protect the customer journey. Changes are tested for mobile usability, page speed, analytics, product selection, basket functions and checkout behaviour. Heavy scripts, unnecessary applications and poorly implemented templates can create performance problems, so technical changes should be tested in a controlled environment before broad deployment."
+          },
+          {
+                "q": "Can Amplipath optimize Amazon or other marketplace listings?",
+                "a": "Marketplace optimization is different from optimizing an owned ecommerce website. It may include product titles, attributes, images, descriptions, category selection and marketplace-specific search behaviour. Amazon or other marketplace work should be defined as a separate deliverable because Amplipath does not control the marketplace’s technical platform or ranking system."
+          },
+          {
+                "q": "How long does ecommerce SEO take to produce results?",
+                "a": "There is no fixed timeline. Technical corrections, improved feeds and updated product information may be processed relatively quickly, while category authority, content growth and competitive commercial rankings usually take longer. Catalogue size, website history, competition, development resources and crawlability all affect how quickly changes are discovered and produce measurable business results."
+          },
+          {
+                "q": "How is ecommerce SEO performance measured?",
+                "a": "Performance may be measured through non-branded organic revenue, transactions, conversion rate, product and category visibility, Merchant Center impressions, indexed product coverage and revenue from newly optimized landing pages. Traffic is evaluated alongside inventory, promotions, seasonality and conversion behaviour so growth is not attributed incorrectly."
+          },
+          {
+                "q": "Is ecommerce SEO suitable for a small online store?",
+                "a": "Yes. A smaller store can begin with technical foundations, priority categories and its most commercially important products. The strategy should match available inventory, demand, competition and resources. A focused program is usually more useful than attempting to optimize every page before the store has enough product information or operational capacity."
+          },
+          {
+                "q": "How much do ecommerce SEO services cost?",
+                "a": "Pricing depends on the platform, catalogue size, number of markets, technical condition, content requirements, product-feed complexity and development work. After reviewing the store, Amplipath provides a custom scope explaining which improvements will be completed and how performance will be measured."
+          },
+          {
+                "q": "Can ecommerce SEO be combined with website development, paid advertising and conversion optimization?",
+                "a": "Yes. Search data can help improve store architecture, landing pages, paid campaigns and product merchandising. Combining technical development, SEO, analytics, advertising and conversion optimization can create a more coordinated growth system, provided each channel has clearly defined responsibilities and measurement."
+          }
     ],
     "related": [
       "ecomdev",
@@ -7424,50 +6820,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Litmus"
     ],
     "faqs": [
-      {
-        "q": "What is a good email open rate benchmark?",
-        "a": "Benchmarks vary significantly by industry and list health, typically 20-35% for engaged B2C lists and somewhat lower for larger B2B lists — we set a realistic baseline from your own historical data rather than an industry-wide average."
-      },
-      {
-        "q": "Do you design the email templates too?",
-        "a": "Yes — template design, copywriting and the build-out inside your ESP are all included; we also work with templates you already have if a redesign isn't needed."
-      },
-      {
-        "q": "How often should we be emailing our list?",
-        "a": "It depends on your content volume and audience tolerance — too infrequent loses mindshare, too frequent drives unsubscribes. We recommend a specific cadence based on your list engagement data during onboarding."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer email Marketing Services as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine email Marketing Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for email Marketing Services — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including email Marketing Services, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      }
+          {
+                "q": "What is included in your email marketing service?",
+                "a": "We can provide campaign planning, audience segmentation, copywriting, template design, scheduling, testing and performance analysis. The scope is based on whether the business needs occasional campaigns or coordinated ongoing communication."
+          },
+          {
+                "q": "Are email open rates still a reliable performance measure?",
+                "a": "Open rates can provide directional information, but privacy protections and automated image loading can make them unreliable. We place greater emphasis on clicks, conversions, replies, revenue and unsubscribe behaviour."
+          },
+          {
+                "q": "How frequently should a business email its subscribers?",
+                "a": "We determine frequency from audience expectations, content value, engagement patterns and the length of the buying cycle, then adjust it when fatigue or reduced interest appears."
+          },
+          {
+                "q": "Can you send campaigns to a purchased email list?",
+                "a": "We do not recommend purchased or unverified lists because they can create consent, reputation and deliverability problems. We prefer audiences built through legitimate subscriptions, customer relationships and clearly documented permissions."
+          },
+          {
+                "q": "Do you design emails for mobile devices and accessibility?",
+                "a": "Yes. We use responsive layouts, readable typography, clear hierarchy, useful alternative text and prominent calls to action. Templates are tested across common screen sizes before sending."
+          },
+          {
+                "q": "What helps marketing emails reach the inbox?",
+                "a": "We review consent practices, list hygiene, sender reputation, domain authentication, complaint levels and message quality. Deliverability is an ongoing discipline; no provider can guarantee placement in every recipient’s inbox."
+          }
     ],
     "related": [
       "emailauto",
@@ -7569,50 +6945,38 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Segment"
     ],
     "faqs": [
-      {
-        "q": "What customer data do you need access to?",
-        "a": "At minimum, email engagement history and purchase or conversion data from your store or CRM. The more behavioral data available — browse history, cart activity, product category interest — the more precise the personalization can be."
-      },
-      {
-        "q": "Which ESP works best with AI personalization?",
-        "a": "Klaviyo and HubSpot currently offer the deepest native behavioral data and dynamic content capability, but we build effective personalization on Mailchimp and ActiveCampaign too — the strategy matters more than the platform."
-      },
-      {
-        "q": "Can you personalize without much existing customer data?",
-        "a": "Yes — we can start with simpler segmentation (purchase recency, engagement level) and layer in deeper personalization as more behavioral data accumulates over the first few months."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for aI Email Marketing Personalization?",
-        "a": "Our team works primarily with Klaviyo alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for aI Email Marketing Personalization who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer aI Email Marketing Personalization as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine aI Email Marketing Personalization with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What is AI email personalisation?",
+                "a": "AI email personalisation uses customer information and behavioural signals to make emails more relevant to individual recipients or audience segments. It can influence content, product recommendations, timing, subject lines and lifecycle messaging—not merely insert a first name."
+          },
+          {
+                "q": "What customer data is needed to personalise email campaigns?",
+                "a": "Useful information may include subscription source, engagement history, purchases, website activity, product interests and CRM lifecycle stage. We recommend using only data that is relevant, lawfully collected and suitable for the intended communication."
+          },
+          {
+                "q": "Can email personalisation work when a business has limited customer data?",
+                "a": "Yes, but the initial system will rely on broader signals such as location, signup source, stated interests or recent engagement. Personalisation can become more precise as customers interact and provide additional reliable information."
+          },
+          {
+                "q": "Which email platforms can support AI-driven personalisation?",
+                "a": "Capabilities vary, but platforms such as Klaviyo, HubSpot, Mailchimp and compatible CRM systems may support segmentation, conditional content, automation or predictive features. We assess the existing technology before recommending migration or additional software."
+          },
+          {
+                "q": "Which email campaigns benefit most from personalisation?",
+                "a": "Welcome sequences, abandoned-cart emails, product recommendations, post-purchase communication, renewal reminders and re-engagement campaigns are strong candidates. The selected use case should reflect the customer journey and available data."
+          },
+          {
+                "q": "How do you prevent personalisation from feeling intrusive?",
+                "a": "We avoid exposing sensitive assumptions or referencing behaviours in a way that could make recipients uncomfortable. Personalisation should be useful and proportionate, with clear consent, preference and unsubscribe controls where required."
+          },
+          {
+                "q": "Can AI write and send emails without human approval?",
+                "a": "Automation can generate or assemble approved content, but sensitive claims, major promotions and unfamiliar outputs should remain subject to human review. Approval rules can vary according to campaign risk and the maturity of the system."
+          },
+          {
+                "q": "Does personalisation improve email deliverability?",
+                "a": "Relevant messaging may improve engagement, but personalisation alone does not guarantee inbox placement. Authentication, consent, list hygiene, complaint levels, sending reputation and unsubscribe handling remain essential."
+          }
     ],
     "related": [
       "email",
@@ -7714,50 +7078,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "WooCommerce"
     ],
     "faqs": [
-      {
-        "q": "How much revenue can abandoned cart flows typically recover?",
-        "a": "Abandoned cart sequences are typically among the highest-converting automated emails any e-commerce brand sends — actual recovery rates depend heavily on your average order value, product category and existing checkout friction."
-      },
-      {
-        "q": "Do automations need to be rebuilt for each new product launch?",
-        "a": "Core flows like welcome series and abandoned cart rarely need rebuilding — we update specific content blocks for new launches rather than rebuilding flow logic from scratch each time."
-      },
-      {
-        "q": "Which flow should we build first if we are starting from zero?",
-        "a": "Welcome series and abandoned cart are almost always the highest-leverage starting point — they capture revenue you are likely already losing today with no automation in place."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for email Automations?",
-        "a": "Our team works primarily with Klaviyo alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for email Automations who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer email Automations as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine email Automations with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      }
+          {
+                "q": "Which email automation should we build first?",
+                "a": "We prioritise the flow closest to the business’s immediate opportunity. That may be a welcome sequence, abandoned-cart flow, lead-nurture sequence, post-purchase journey or renewal reminder."
+          },
+          {
+                "q": "Which stages of the customer lifecycle can email automation support?",
+                "a": "Automation can support onboarding, education, purchase recovery, customer activation, cross-selling, retention, renewal and re-engagement. We build only the journeys that correspond with identifiable customer behaviour."
+          },
+          {
+                "q": "Must automations be rebuilt whenever we launch a new product?",
+                "a": "Not necessarily. We can create reusable structures with adaptable content blocks, product variables and audience rules, allowing future campaigns to be updated without rebuilding the entire workflow."
+          },
+          {
+                "q": "How do you stop customers from entering conflicting automations?",
+                "a": "We define entry conditions, exclusions, priorities and exit rules for each flow. Suppression logic can pause less important messages when a customer enters a higher-priority journey."
+          },
+          {
+                "q": "How are automated emails tested before activation?",
+                "a": "We test triggers, timing, personalisation fields, links, conditional branches and exit behaviour with controlled records. This confirms that customers receive the correct message and do not become trapped in an unintended sequence."
+          },
+          {
+                "q": "How do you prevent email automation from overwhelming subscribers?",
+                "a": "We establish frequency limits, campaign exclusions and suppression rules across active workflows. Engagement and opt-out patterns are monitored so message volume can be adjusted before fatigue damages the audience relationship."
+          }
     ],
     "related": [
       "email",
@@ -7882,50 +7226,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Canva"
     ],
     "faqs": [
-      {
-        "q": "What is a good starting budget for Meta Ads?",
-        "a": "It depends on your average order value and industry CPMs — we recommend a minimum testing budget during onboarding based on your specific market so we can gather statistically meaningful data within the first few weeks."
-      },
-      {
-        "q": "Do you create the ad creative/video too?",
-        "a": "Yes — we develop creative briefs, copy and can produce or coordinate video and static creative production, or work with creative your team already has."
-      },
-      {
-        "q": "How does iOS 14+ privacy affect targeting?",
-        "a": "Apple's tracking restrictions reduced the granularity of pixel-based targeting and attribution. We mitigate this with server-side Conversions API tracking, first-party data and broader audience strategies that rely less on granular individual-level tracking."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer facebook & Instagram Ads as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine facebook & Instagram Ads with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for facebook & Instagram Ads — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including facebook & Instagram Ads, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      }
+          {
+                "q": "What are Facebook and Instagram Ads?",
+                "a": "Facebook and Instagram Ads are paid campaigns delivered through Meta’s advertising system. They can support awareness, traffic, engagement, leads, app activity, ecommerce sales and retargeting across eligible Meta placements."
+          },
+          {
+                "q": "What is a realistic starting budget for Meta Ads?",
+                "a": "The right budget depends on the type and size of the business, the main campaign objective, audience size, country, competition, expected acquisition cost, average order value, sales cycle and the amount of data needed to evaluate performance. As an overall recommendation, we suggest a starting point of at least $1,000 to $2,000 per month, which gives campaigns enough data to be tested and optimised properly."
+          },
+          {
+                "q": "Is advertising spend separate from Amplipath’s management fee?",
+                "a": "Yes. Strategy, creative and campaign-management fees are separate and defined in the proposal."
+          },
+          {
+                "q": "How do privacy changes and reduced tracking signals affect Meta Ads?",
+                "a": "Privacy settings, browser restrictions, consent choices and cross-device behaviour can reduce observable conversion data. We improve measurement through appropriate Pixel, Conversions API, analytics and first-party data configurations while respecting applicable privacy requirements."
+          },
+          {
+                "q": "What is the difference between the Meta Pixel and Conversions API?",
+                "a": "The Meta Pixel collects eligible browser-based website events. Conversions API can send permitted event information through a more direct server or platform connection. When configured together correctly, they can improve measurement coverage and campaign optimization."
+          },
+          {
+                "q": "How long does it take Meta Ads to optimize?",
+                "a": "Campaigns may begin delivering after review, but meaningful evaluation requires sufficient impressions, clicks and conversion events. Frequent major changes can interrupt the learning process, so we use controlled tests and avoid judging performance prematurely."
+          },
+          {
+                "q": "How do you target the right audience?",
+                "a": "Depending on eligibility and available data, targeting may use location, demographics, interests, broad audiences, customer lists, website activity, engagement, lookalike audiences and retargeting. We test rather than assume one targeting method will always win."
+          },
+          {
+                "q": "How do you measure Facebook and Instagram Ads results?",
+                "a": "We assess qualified leads, purchases, conversion rate, cost per acquisition, customer-acquisition cost, revenue and return on ad spend. Meta reporting may be compared with website analytics, ecommerce data and CRM records."
+          },
+          {
+                "q": "Who owns the Meta advertising account and campaign data?",
+                "a": "The client should retain ownership of the business portfolio, Page, Instagram account, Pixel, catalog and advertising account. Amplipath should receive appropriate partner access rather than becoming the permanent owner of client assets."
+          }
     ],
     "related": [
       "display",
@@ -8026,50 +7362,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Hunter.io"
     ],
     "faqs": [
-      {
-        "q": "How do you avoid spammy or penalized link sources?",
-        "a": "Every target publication is vetted on real organic traffic, topical relevance, editorial standards and domain history before outreach — we deliberately avoid link farms, PBNs and any site whose primary business model is selling links."
-      },
-      {
-        "q": "How many backlinks per month is realistic?",
-        "a": "It depends heavily on your niche and the quality bar we're holding placements to — quality and relevance matter far more than raw volume, and we report on both the number and the authority of each placement."
-      },
-      {
-        "q": "Will guest posting get my site penalized by Google?",
-        "a": "Not when done correctly — the risk comes from low-quality, irrelevant or clearly paid link schemes. Genuinely relevant, editorially-earned guest content on real publications is a long-standing, safe link building practice."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for guest Posting & Link Building?",
-        "a": "Our team works primarily with Ahrefs alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for guest Posting & Link Building who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer guest Posting & Link Building as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine guest Posting & Link Building with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What is guest posting and link building?",
+                "a": "Guest posting involves creating useful content for relevant third-party publications, while link building covers broader methods of earning or securing appropriate references to your website. Both should support audience discovery and topical authority—not exist solely to manipulate rankings."
+          },
+          {
+                "q": "How does Amplipath evaluate potential publication websites?",
+                "a": "We assess topical relevance, editorial quality, real audience signals, publishing history and the nature of existing content. Publications that appear built mainly to sell links or publish unrelated material are avoided."
+          },
+          {
+                "q": "Are paid guest-post links allowed under Google’s guidelines?",
+                "a": "Compensated placements must be handled transparently. Google recommends identifying paid links with rel=\"sponsored\" or rel=\"nofollow\" rather than using payment to manipulate search rankings."
+          },
+          {
+                "q": "How is anchor text selected for a backlink?",
+                "a": "Anchor text should fit naturally within the surrounding sentence and help readers understand the destination. We avoid forcing the same commercial keyword across multiple placements because unnatural repetition can create risk."
+          },
+          {
+                "q": "Who reviews guest-post content before publication?",
+                "a": "Amplipath reviews content for relevance, originality, factual accuracy and brand alignment before submission. The publication may make additional editorial changes, which should be checked before the final placement is accepted."
+          },
+          {
+                "q": "How many backlinks should a business build each month?",
+                "a": "A realistic pace depends on industry relevance, content quality, existing authority and genuine placement opportunities; a small number of credible links may be more valuable than many low-quality submissions."
+          },
+          {
+                "q": "How will the quality of acquired links be reported?",
+                "a": "Reports can document the referring page, publication relevance, destination URL, anchor text, link attribute and placement status. Referral visits and broader visibility may also be reviewed instead of relying on a single third-party authority score."
+          }
     ],
     "related": [
       "digitalpr",
@@ -8193,50 +7513,42 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Upfluence"
     ],
     "faqs": [
-      {
-        "q": "How do you vet influencers for fake followers?",
-        "a": "We analyze engagement rate against follower count, audience geography/demographics, comment authenticity and follower growth patterns — sudden spikes or engagement ratios well below platform norms are immediate red flags."
-      },
-      {
-        "q": "What is a typical influencer campaign budget?",
-        "a": "Budgets scale heavily by tier — nano and micro influencers often work on a product-seeding or low-cash-plus-product basis, while macro and mega creators command significant flat fees. We recommend the right tier mix based on your budget and goals."
-      },
-      {
-        "q": "Do you have a network of African influencers specifically?",
-        "a": "Yes — Amplipath maintains an active vetted network of creators across Nigeria, Ghana, Kenya, South Africa and other key African markets, a genuine differentiator versus agencies without regional presence."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for influencer Marketing — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including influencer Marketing, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for influencer Marketing?",
-        "a": "Our team works primarily with Instagram alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for influencer Marketing who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      }
+          {
+                "q": "What is influencer marketing?",
+                "a": "Influencer marketing involves collaborating with creators whose content, audience and credibility align with a brand’s objectives. Campaigns may include sponsored posts, product demonstrations, reviews, livestreams, affiliate promotions, event coverage or reusable creator-generated content."
+          },
+          {
+                "q": "How do you identify the right influencers for a brand?",
+                "a": "We assess audience relevance, content quality, geography, engagement authenticity, brand alignment, past partnerships, reputation and commercial suitability. Follower count alone is not enough to determine whether a creator is valuable."
+          },
+          {
+                "q": "How do you check influencers for fake followers or engagement?",
+                "a": "We review follower-growth patterns, audience location, engagement consistency, comment quality, suspicious activity, content history and previous campaign performance where available. No single score provides complete certainty, so vetting combines data with manual review."
+          },
+          {
+                "q": "Are micro-influencers better than larger influencers?",
+                "a": "Not automatically. Micro-influencers may offer specialised audiences and stronger community relationships, while larger creators can provide greater reach. The right choice depends on the objective, market, budget, content requirements and audience quality."
+          },
+          {
+                "q": "What is a typical influencer-marketing budget?",
+                "a": "Budgets vary according to the creator’s audience, platform, deliverables, production effort, exclusivity, usage rights, campaign duration and paid-media permissions. We develop estimates after defining the audience and required content."
+          },
+          {
+                "q": "Does Amplipath work with African influencers?",
+                "a": "Yes. We can research, vet and recruit relevant creators across selected African countries and audience segments. We do not claim that every creator belongs to a fixed proprietary network; selection is based on the requirements of each campaign."
+          },
+          {
+                "q": "What should an influencer agreement include?",
+                "a": "It should clearly define deliverables, deadlines, approvals, compensation, disclosure requirements, prohibited claims, usage rights, exclusivity, revision limits, content-removal terms and performance reporting. Legal review may be appropriate for larger or regulated campaigns."
+          },
+          {
+                "q": "Must influencers disclose paid partnerships and gifted products?",
+                "a": "Material relationships should be disclosed clearly and in accordance with applicable laws and platform rules. This can include cash payments, free products, discounts, affiliate commissions or other benefits that may influence an endorsement."
+          },
+          {
+                "q": "How do you measure influencer-marketing performance?",
+                "a": "Depending on the objective, we can track qualified reach, views, engagement, clicks, promotional-code use, affiliate sales, leads, conversions, cost per acquisition and revenue. UTMs, dedicated landing pages and platform partnership tools can improve attribution."
+          }
     ],
     "related": [
       "smm",
@@ -8346,50 +7658,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Hotjar"
     ],
     "faqs": [
-      {
-        "q": "How is a landing page different from a regular web page?",
-        "a": "A landing page is built around a single, focused conversion goal with no navigation distractions, matched directly to one specific campaign or offer — a regular web page typically serves multiple purposes and includes full site navigation."
-      },
-      {
-        "q": "Do you build the page to match our existing ad creative?",
-        "a": "Yes — message match between your ad and the landing page it sends traffic to is one of the strongest predictors of conversion rate, and we build pages specifically aligned to your active creative."
-      },
-      {
-        "q": "How fast can a landing page be built and launched?",
-        "a": "Most single landing pages can be designed, built and launched within 5-10 business days depending on copy and design complexity and review cycles."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer landing Page Development as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine landing Page Development with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for landing Page Development — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including landing Page Development, because we believe results should earn your continued business, not a binding agreement."
-      }
+          {
+                "q": "How is a landing page different from a regular website page?",
+                "a": "A landing page is designed around one campaign, audience and conversion action, such as requesting a quote or purchasing an offer. A standard website page usually supports broader information needs and provides multiple navigation paths."
+          },
+          {
+                "q": "When should a business create a dedicated landing page?",
+                "a": "A dedicated page is useful when running paid advertising, promoting an event, launching a product, collecting leads or targeting a defined audience. It creates a more focused journey than sending every visitor to the homepage."
+          },
+          {
+                "q": "Should the landing page match the message used in our advertisement?",
+                "a": "Yes. The promise, language and visual direction should remain consistent from the advertisement to the page. Strong message alignment reassures visitors that they arrived at the correct destination and reduces unnecessary confusion."
+          },
+          {
+                "q": "Can Amplipath write the landing-page copy and design the layout?",
+                "a": "Yes. We can structure the offer, headlines, benefits, proof elements, calls to action and page flow around the intended audience. Final claims, prices and regulated statements require client approval before publication."
+          },
+          {
+                "q": "Can forms be connected to our CRM or appointment system?",
+                "a": "Forms can often send leads to a CRM, email platform, calendar, spreadsheet or automation workflow. We also define confirmation messages and follow-up actions so enquiries are captured and handled correctly."
+          },
+          {
+                "q": "How do you track leads and sales generated by a landing page?",
+                "a": "We configure relevant events for form submissions, purchases, phone clicks, bookings or other valuable actions. Where possible, campaign parameters and advertising-platform tracking are used to connect conversions with their traffic sources."
+          },
+          {
+                "q": "How do you make a landing page load quickly?",
+                "a": "We control image sizes, scripts, fonts, page structure and third-party tools that can delay rendering. Performance is reviewed on mobile devices because speed problems often affect mobile campaign visitors most severely."
+          }
     ],
     "related": [
       "cro",
@@ -8516,50 +7812,54 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Search Console"
     ],
     "faqs": [
-      {
-        "q": "How do I rank in the Google Maps 3-pack?",
-        "a": "Map pack ranking is driven by proximity, relevance and prominence — meaning an optimized Google Business Profile, consistent NAP citations, review velocity/score and locally-relevant on-page content. We address all four factors simultaneously rather than optimizing one in isolation."
-      },
-      {
-        "q": "Do I need a physical address to rank locally?",
-        "a": "No — service-area businesses without a public-facing storefront can still rank using Google's service-area business setting, paired with location-specific landing pages and citations for each area served."
-      },
-      {
-        "q": "How many reviews do I need to compete?",
-        "a": "It depends on your local competition — we benchmark your top 3 map-pack competitors and set a realistic review velocity target to close the gap, rather than chasing an arbitrary number."
-      },
-      {
-        "q": "Can you manage multiple locations?",
-        "a": "Yes — we manage local SEO for multi-location businesses from 2 to 200+ locations, with location-level tracking and consistent optimization standards across every profile."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for local SEO Services?",
-        "a": "Our team works primarily with Google Business Profile alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for local SEO Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer local SEO Services as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      }
+          {
+                "q": "What is included in Amplipath’s local SEO services?",
+                "a": "Local SEO may include Google Business Profile optimization, local keyword and competitor research, location-page improvement, citation auditing, business-information consistency, review strategy, local content, technical SEO, LocalBusiness structured data and performance reporting. The scope depends on whether the business serves customers from one location, multiple locations or a defined service area."
+          },
+          {
+                "q": "How can my business rank in the Google Maps local 3-pack?",
+                "a": "Google states that local results are mainly determined by relevance, distance and prominence. Amplipath can improve relevance and prominence through accurate categories, complete business information, locally relevant pages, authentic reviews, consistent information and a strong website. Distance depends on the searcher’s location and cannot be manipulated or guaranteed."
+          },
+          {
+                "q": "Do I need a physical address to appear in local search?",
+                "a": "A storefront business normally needs a genuine customer-facing location that complies with Google’s guidelines. A service-area business that visits customers can create an eligible profile and hide its address from the public. Virtual offices, mailboxes and locations where the business does not genuinely operate should not be used simply to obtain additional profiles."
+          },
+          {
+                "q": "How many Google reviews does my business need?",
+                "a": "There is no fixed number that guarantees better rankings. The appropriate benchmark depends on the market and competitors. Review quality, authenticity, recency, rating and consistent acquisition all matter. Businesses should request reviews honestly from genuine customers, avoid incentives or review gating, and respond professionally to positive and negative feedback."
+          },
+          {
+                "q": "Are local citations and consistent NAP information still important?",
+                "a": "Accurate business names, addresses and phone numbers help customers and platforms confirm a business’s identity and location. Amplipath prioritizes relevant, reputable directories and corrects important inconsistencies. Large quantities of low-quality or duplicate listings are less valuable than accurate information across platforms customers and search engines genuinely use."
+          },
+          {
+                "q": "Can Amplipath manage local SEO for multiple business locations?",
+                "a": "Yes. Each genuine location should have an eligible Business Profile, accurate details and a useful location page containing information specific to that branch. Amplipath can create a consistent management system while preserving each location’s services, hours, reviews and local relevance. Duplicate profiles and near-identical doorway pages should be avoided."
+          },
+          {
+                "q": "Does every business location need a separate landing page?",
+                "a": "A separate page is usually appropriate when each location genuinely serves customers and has distinct information such as an address, service area, telephone number, staff, hours or local offerings. Each page should provide meaningful customer value rather than changing only the city name across otherwise identical content."
+          },
+          {
+                "q": "How long does local SEO take to produce results?",
+                "a": "Profile corrections and updates may appear relatively quickly, while sustained improvements in Maps visibility, organic rankings, reviews and enquiries normally take longer. Timing depends on market competition, location, profile history, website condition and implementation. Because distance influences local results, rankings should be evaluated across relevant areas rather than from one search location."
+          },
+          {
+                "q": "Can you guarantee a top-three Google Maps ranking?",
+                "a": "No. Google does not allow businesses to pay for better local rankings, and no agency controls distance, competition or Google’s ranking systems. Amplipath can improve eligibility, accuracy, relevance and prominence while reporting progress transparently, but a particular Maps position cannot be guaranteed."
+          },
+          {
+                "q": "How is local SEO performance measured?",
+                "a": "Relevant measurements may include Business Profile visibility, calls, website visits, direction requests, bookings, enquiries, local organic conversions, review growth and visibility across important service areas. Rankings provide useful context, but business actions and qualified local customers are the primary measures."
+          },
+          {
+                "q": "Do you provide local SEO outside United States?",
+                "a": "Amplipath can support eligible businesses in different markets where the relevant search and listing platforms are available. The strategy must reflect local language, customer behaviour, directories, regulations and search platforms. Every physical location or service-area profile must comply with the applicable platform’s eligibility requirements."
+          },
+          {
+                "q": "Is local SEO a one-time service or an ongoing engagement?",
+                "a": "Both options are possible. A one-time project may address profile setup, citation cleanup, location-page optimization or a local audit. Ongoing service is more appropriate for review development, content, listing monitoring, competitor changes and continuous performance improvement. Pricing depends on the number of locations and required work."
+          }
     ],
     "related": [
       "gbp",
@@ -8717,50 +8017,46 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Xcode"
     ],
     "faqs": [
-      {
-        "q": "Should I build a native app or a cross-platform app?",
-        "a": "Native apps (Swift for iOS, Kotlin for Android) offer the best performance and deepest platform integration but require separate codebases. Cross-platform frameworks like Flutter or React Native let you ship to both platforms from a single codebase, typically at lower cost and faster timeline. We recommend based on your budget, performance needs and timeline."
-      },
-      {
-        "q": "How long does it take to build a mobile app?",
-        "a": "A focused MVP typically takes 8-14 weeks from discovery through launch; more complex apps with custom backend, payments and multiple integrations can take 4-6 months. We give a specific timeline based on your exact feature scope during discovery."
-      },
-      {
-        "q": "Do you handle App Store and Play Store submission?",
-        "a": "Yes — store listing preparation, screenshots, metadata and the submission process itself for both Apple App Store and Google Play are included as part of every build."
-      },
-      {
-        "q": "What happens if Apple or Google rejects our app?",
-        "a": "App Store and Play Store reviews occasionally flag issues on first submission — we handle the resubmission process directly, addressing the specific rejection reason, which is a normal and expected part of the launch process."
-      },
-      {
-        "q": "Can you add a backend (database, user accounts, payments) to the app?",
-        "a": "Yes — Firebase integration, custom backend development, user authentication and payment gateway integration (Stripe, Paystack, Flutterwave) are all standard parts of our mobile app development service."
-      },
-      {
-        "q": "Do we own the source code after the project is delivered?",
-        "a": "Yes — full, documented source code ownership transfers to you on project completion, with no ongoing licensing dependency on Amplipath."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for mobile App Development?",
-        "a": "Our team works primarily with Flutter alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for mobile App Development who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer mobile App Development as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      }
+          {
+                "q": "Should we build a native or cross-platform mobile application?",
+                "a": "Native development offers deep access to each operating system and may suit highly specialised performance requirements. Cross-platform development can share more code between iOS and Android, making it suitable for many business applications with standard functionality."
+          },
+          {
+                "q": "Should the first release be an MVP or a complete application?",
+                "a": "A minimum viable product focuses on the smallest feature set needed to solve the primary user problem and test demand. Additional functions can be prioritised after genuine users reveal what creates value."
+          },
+          {
+                "q": "Which factors determine a mobile app’s delivery schedule?",
+                "a": "The schedule depends on screen count, platform choice, backend development, integrations, user roles, device features, design approvals and testing requirements. App-store preparation and review should also be included in launch planning."
+          },
+          {
+                "q": "Can the application include user accounts, payments and a database?",
+                "a": "Yes. A secured backend can manage authentication, profiles, subscriptions, transactions, content and application data. The architecture depends on expected usage, compliance obligations and required integrations."
+          },
+          {
+                "q": "How is a mobile application tested before public release?",
+                "a": "Testing can cover functionality, navigation, different screen sizes, supported operating-system versions, permissions, network interruptions and backend communication. Controlled beta testing helps identify problems that internal testing may not reveal."
+          },
+          {
+                "q": "Does Amplipath handle Apple App Store and Google Play submission?",
+                "a": "Yes we do. The client should own the developer accounts, and final approval remains under Apple’s and Google’s control."
+          },
+          {
+                "q": "What happens if Apple or Google rejects the application?",
+                "a": "We review the stated rejection reason, correct issues within the agreed scope and prepare a revised submission or response. Approval cannot be guaranteed because store policies and review decisions are controlled by the platform."
+          },
+          {
+                "q": "Can a mobile application use push notifications, GPS, cameras or other device features?",
+                "a": "Yes, where the device and operating system provide supported access. The app should request only necessary permissions and clearly explain why sensitive features or information are required."
+          },
+          {
+                "q": "Who should own the application’s store accounts and publishing credentials?",
+                "a": "The client should normally create and control its Apple and Google developer accounts. Amplipath can receive appropriate technical access without becoming the permanent owner of the application’s publishing identity."
+          },
+          {
+                "q": "What maintenance is required after a mobile app launches?",
+                "a": "Post-launch work may include crash monitoring, security updates, operating-system compatibility, store-policy changes, backend maintenance and planned feature releases. Maintenance priorities should be guided by user feedback and application performance data."
+          }
     ],
     "related": [
       "aimobile",
@@ -8872,50 +8168,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Chartmetric"
     ],
     "faqs": [
-      {
-        "q": "Can you guarantee playlist placement?",
-        "a": "No ethical music promotion service can guarantee editorial playlist placement — curator decisions are entirely independent. We build a pitch strategy that maximizes genuine consideration, not paid or fake placements."
-      },
-      {
-        "q": "How important is TikTok for music discovery now?",
-        "a": "Extremely — a meaningful share of breakout tracks in recent years gained initial traction through TikTok sound usage before crossing over to streaming charts, making TikTok seeding a core part of most release strategies today."
-      },
-      {
-        "q": "Do you work with unsigned/independent artists?",
-        "a": "Yes — independent artists and small labels make up a significant share of our music promotion clients, and campaign scope is tailored to budget realistically rather than assuming a major-label promotional budget."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine music Promotion Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for music Promotion Services — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including music Promotion Services, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for music Promotion Services?",
-        "a": "Our team works primarily with Spotify for Artists alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for music Promotion Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "What does Amplipath’s music promotion service include?",
+                "a": "Our service can include release strategy, artist positioning, audience research, social content planning, YouTube promotion, advertising, creator outreach, press outreach, artist-profile optimization and campaign reporting. The final plan depends on the artist’s genre, career stage, audience and release objective."
+          },
+          {
+                "q": "Do you work with unsigned and independent artists?",
+                "a": "Yes. Music promotion can be adapted for independent artists, labels and established performers. Independent campaigns are prioritized according to the available budget, release schedule, creative assets and most realistic opportunities for reaching genuine listeners."
+          },
+          {
+                "q": "Can you guarantee Spotify editorial playlist placement or a specific number of streams?",
+                "a": "Editorial decisions remain with the platform. Amplipath does not use bots, artificial streaming or paid-placement schemes that violate streaming-platform policies."
+          },
+          {
+                "q": "Which platforms and channels can you use to promote music?",
+                "a": "Depending on the campaign, promotion may involve Spotify, Apple Music, YouTube, TikTok, Instagram, music publications, email, creator outreach and paid advertising. Music distribution to streaming platforms is separate from marketing unless it is specifically included in the agreed scope."
+          },
+          {
+                "q": "How important is TikTok for promoting a new song?",
+                "a": "TikTok can be valuable when a song has a suitable creative angle and the artist can support consistent content. However, it is not essential for every release. We select platforms according to the music, audience and content potential instead of forcing every artist into the same trend-based strategy."
+          },
+          {
+                "q": "How long should a music-promotion campaign run?",
+                "a": "Campaign length depends on the release schedule, objectives, audience and budget. Promotion often begins before release and continues through launch and post-release activity. Sustainable audience growth normally requires consistent releases and engagement rather than one short promotional push."
+          },
+          {
+                "q": "How do you measure music-promotion performance?",
+                "a": "We can track qualified streams, listeners, saves, followers, playlist additions, video views, social engagement, audience growth, website visits, email subscribers and advertising conversions. We prioritize genuine audience activity and long-term fan development over inflated vanity metrics."
+          }
     ],
     "related": [
       "podcast",
@@ -9016,50 +8296,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Riverside"
     ],
     "faqs": [
-      {
-        "q": "How do you find good podcast guests?",
-        "a": "Through a combination of targeted outreach to relevant experts/creators in your niche, guest-swap arrangements with comparable shows, and leveraging existing network connections — quality and audience fit matter more than guest follower count."
-      },
-      {
-        "q": "Does podcast content help SEO too?",
-        "a": "Yes — transcribed episodes and accompanying show notes published on a website can rank in regular Google search, effectively creating an additional content channel from material you've already recorded."
-      },
-      {
-        "q": "How long does it take to grow a new podcast?",
-        "a": "Meaningful download growth typically takes several months of consistent publishing and promotion — we set realistic milestones during onboarding based on your niche and publishing cadence."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer podcast Marketing as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine podcast Marketing with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for podcast Marketing — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including podcast Marketing, because we believe results should earn your continued business, not a binding agreement."
-      }
+          {
+                "q": "What does podcast marketing include?",
+                "a": "Podcast marketing can include positioning, audience research, show and episode optimization, launch planning, short-form content, video distribution, guest outreach, social promotion, email marketing, paid campaigns, cross-promotion and analytics. The exact strategy depends on the podcast format, audience and business objective."
+          },
+          {
+                "q": "Can you promote both new and established podcasts?",
+                "a": "Yes. For a new podcast, we focus on positioning, launch assets, distribution readiness and initial audience development. For an established show, we analyse episode performance, audience retention, discovery sources and conversion opportunities before recommending improvements."
+          },
+          {
+                "q": "How do you help a podcast attract more listeners?",
+                "a": "We combine platform optimization with external discovery. This can include stronger titles and descriptions, episode clips, video versions, search-focused content, guest collaborations, newsletters, creator cross-promotions and targeted advertising. The selected channels depend on where the intended listeners spend time."
+          },
+          {
+                "q": "Can podcast episodes and transcripts improve SEO?",
+                "a": "Yes, when episodes have accessible webpages containing useful titles, summaries, transcripts and related resources. These pages can help search engines understand and surface the content. Publishing an unedited transcript alone does not guarantee rankings; it should be structured around genuine listener and search intent."
+          },
+          {
+                "q": "How do you find relevant podcast guests?",
+                "a": "We evaluate subject relevance, expertise, audience alignment, credibility and the value the guest can bring to the episode. Outreach can include experts, creators, customers and complementary podcast hosts. We prioritize audience fit over follower count and cannot guarantee that every invited guest will accept."
+          },
+          {
+                "q": "How long does it take to grow a podcast?",
+                "a": "Podcast growth is usually cumulative rather than immediate. Timing depends on topic demand, publishing consistency, episode quality, existing audience and promotional investment. We establish early indicators, but avoid promising a specific listener total within an unsupported timeframe."
+          },
+          {
+                "q": "How do you measure podcast-marketing success?",
+                "a": "We can measure listeners, downloads, followers, completion and retention, traffic sources, video views, social engagement, email growth, website actions and qualified leads. Apple Podcasts, Spotify, YouTube and the hosting provider may report different metrics, so results should be interpreted together."
+          }
     ],
     "related": [
       "music",
@@ -9159,50 +8423,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Alerts"
     ],
     "faqs": [
-      {
-        "q": "How is PR different from digital PR/link building?",
-        "a": "Traditional PR focuses on brand reputation, credibility and media relationships, often without a primary SEO objective. Digital PR specifically targets backlink acquisition and search authority as the core goal. We offer both and frequently combine them."
-      },
-      {
-        "q": "Can you help during a reputation crisis?",
-        "a": "Yes — crisis communication support, including response messaging and coordinated outreach to manage a developing story, is part of our PR service for active clients."
-      },
-      {
-        "q": "Do you guarantee media coverage?",
-        "a": "No — no ethical PR agency can guarantee coverage, as publication decisions rest entirely with independent journalists and editors. We guarantee a professional pitch process and transparent reporting on results."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for public Relations — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including public Relations, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for public Relations?",
-        "a": "Our team works primarily with Muck Rack alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for public Relations who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      }
+          {
+                "q": "What does a public relations service do for a business?",
+                "a": "Public relations helps a business shape credible stories, communicate with relevant audiences and build relationships with journalists, publications and industry communities. It supports reputation and visibility through earned attention rather than advertising alone."
+          },
+          {
+                "q": "How is traditional PR different from digital PR and link building?",
+                "a": "Traditional PR prioritises reputation, media relationships and public awareness. Digital PR can also pursue online citations, referral traffic and editorial links, while link building focuses more directly on gaining relevant website authority."
+          },
+          {
+                "q": "What makes a company story newsworthy?",
+                "a": "Strong stories usually contain a timely development, credible data, a meaningful business milestone, expert insight, community impact or a clear connection to a current issue. A promotional announcement without wider relevance is less likely to earn editorial attention."
+          },
+          {
+                "q": "Is distributing a press release the same as pitching journalists?",
+                "a": "No. A press release provides a standard announcement that can be published or distributed widely, while media pitching presents a tailored story to a specific journalist or publication. Effective PR may use either approach depending on the objective."
+          },
+          {
+                "q": "Can Amplipath guarantee publication by a particular media outlet?",
+                "a": "Earned editorial coverage cannot be guaranteed because independent publications control what they accept and publish. Guaranteed placements should be clearly identified as sponsored, contributed or paid opportunities rather than presented as earned media."
+          },
+          {
+                "q": "Can you assist a business during a reputation crisis?",
+                "a": "We can help assess the situation, organise factual information, develop response messaging and coordinate digital communication. Serious legal, regulatory or public-safety matters may also require qualified legal and crisis-management specialists."
+          },
+          {
+                "q": "Does media coverage automatically increase sales or search rankings?",
+                "a": "No. Coverage can improve awareness, credibility, referral demand and the possibility of earning authoritative mentions, but commercial results depend on audience relevance and the customer journey that follows the exposure."
+          }
     ],
     "related": [
       "digitalpr",
@@ -9328,50 +8576,50 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Keyword Planner"
     ],
     "faqs": [
-      {
-        "q": "What is a realistic Google Ads budget to start?",
-        "a": "It depends heavily on your industry's cost-per-click and sales cycle — we run a competitive and keyword-cost analysis during onboarding and recommend a realistic starting budget based on your specific market, not a generic minimum."
-      },
-      {
-        "q": "Do you require a minimum ad spend?",
-        "a": "We work with a range of budgets and scale strategy to match — smaller budgets are typically focused on a narrower set of high-intent keywords rather than broad coverage."
-      },
-      {
-        "q": "How is SEM different from SEO?",
-        "a": "SEM (Google Ads) delivers paid, immediate visibility at the top of search results that stops the moment you stop paying. SEO builds organic, compounding visibility that takes longer to build but continues working without ongoing ad spend. Most businesses benefit from running both in parallel."
-      },
-      {
-        "q": "Do you manage the landing pages too, or just the ad campaigns?",
-        "a": "We can build and optimize conversion-focused landing pages as part of the engagement, or work with your existing pages — either way, we audit landing page-to-ad message match as a core part of every campaign launch."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for sEM & Google Ads Management?",
-        "a": "Our team works primarily with Google Ads alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for sEM & Google Ads Management who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer sEM & Google Ads Management as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      }
+          {
+                "q": "What are SEM and Google Ads management?",
+                "a": "Search engine marketing, or SEM, uses paid advertising to reach people actively searching for products and services. Amplipath plans, builds and manages Google Ads campaigns, including targeting, creative assets, bidding, budgets, conversion tracking, landing-page alignment and ongoing optimization."
+          },
+          {
+                "q": "How is SEM different from SEO?",
+                "a": "SEM generates visibility through paid placements, while SEO improves unpaid organic visibility. Google Ads can begin attracting traffic once a campaign is approved, whereas SEO normally develops over a longer period. Using both can provide immediate demand capture alongside sustainable organic growth."
+          },
+          {
+                "q": "What is a realistic Google Ads budget to start with?",
+                "a": "There is no universal starting budget. The right amount depends on your location, competition, average cost per click, sales value, margins and the number of conversions required to make reliable decisions. We research your market and recommend a practical test budget before launch."
+          },
+          {
+                "q": "Does Amplipath require a minimum advertising spend?",
+                "a": "We do not apply one arbitrary minimum to every business. However, a budget must be sufficient to generate meaningful traffic and conversion data. If the available budget is too limited, we may recommend narrowing the location, service, product or campaign objective."
+          },
+          {
+                "q": "Which types of Google Ads campaigns do you manage?",
+                "a": "Depending on your objectives and eligibility, we can manage Search, Shopping, Performance Max, Display, remarketing and YouTube campaigns. We only recommend formats that fit the offer, customer journey, available creative assets and measurement capabilities."
+          },
+          {
+                "q": "Do you manage landing pages or only the advertising campaigns?",
+                "a": "We assess both the campaign and the landing experience. This includes message alignment, page speed, mobile usability, calls to action, forms and conversion barriers. Landing-page optimization or development can be included within the agreed project scope."
+          },
+          {
+                "q": "How do you track Google Ads leads and sales?",
+                "a": "We configure meaningful conversion actions such as purchases, qualified forms, calls, bookings and completed applications. Depending on the business, measurement may use Google Ads, Google Analytics 4, Google Tag Manager, call tracking, enhanced conversions and CRM or offline-sales data."
+          },
+          {
+                "q": "Which Google Ads metrics matter most?",
+                "a": "We prioritise qualified leads, sales, conversion rate, cost per acquisition, return on ad spend and revenue—not clicks alone. Supporting metrics such as impression share, click-through rate, search terms and landing-page performance help us diagnose and improve results."
+          },
+          {
+                "q": "How long does it take for Google Ads to produce results?",
+                "a": "Campaigns can begin receiving impressions and clicks after approval, but dependable optimization requires enough data. The timeline depends on search demand, budget, conversion volume, competition and sales cycle. We do not judge performance from a handful of clicks or promise a fixed result date."
+          },
+          {
+                "q": "Can Amplipath guarantee a particular ROAS or number-one ad position?",
+                "a": "No responsible agency can guarantee a specific return or permanent position because auctions, competitors, user behaviour and market conditions continually change. We provide transparent tracking, disciplined testing and documented recommendations focused on improving measurable business outcomes."
+          },
+          {
+                "q": "Can you improve an existing Google Ads account?",
+                "a": "Yes. We audit account structure, search terms, targeting, budgets, bidding, creative assets, tracking and landing pages. We preserve useful historical data and rebuild only the parts that are limiting performance."
+          }
     ],
     "related": [
       "display",
@@ -9488,50 +8736,50 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Sprout Social"
     ],
     "faqs": [
-      {
-        "q": "How is this different from Social Media Management?",
-        "a": "Social Media Marketing is the strategic layer — pillars, voice, growth strategy and campaign concepts. Social Media Management is the done-for-you execution layer — daily posting, comment replies and scheduling. Most clients use both together."
-      },
-      {
-        "q": "Which platforms should my business focus on?",
-        "a": "It depends entirely on where your actual audience spends time and your content production capacity — we recommend 2-3 priority platforms based on audience research rather than spreading thin across every channel."
-      },
-      {
-        "q": "Do you create the content or just strategize?",
-        "a": "Both — strategy without execution doesn't move metrics. We build the strategy and produce the content, or work alongside your in-house content team depending on what you need."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for social Media Marketing who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer social Media Marketing as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine social Media Marketing with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for social Media Marketing — and report against them monthly rather than relying on vanity metrics."
-      }
+          {
+                "q": "What is social media marketing?",
+                "a": "Social media marketing is the practice of promoting a business on social media platforms through platform-specific content, campaigns, communities and advertising. Its goal is to build awareness, generate demand and influence measurable business outcomes. It includes audience research, channel strategy, content direction, campaign planning, distribution and performance analysis, and it is carried out across platforms such as Meta (Facebook, Instagram and Threads), LinkedIn, X and more."
+          },
+          {
+                "q": "How is social media marketing different from social media management?",
+                "a": "Social media marketing is the strategic layer across platforms such as Meta (Facebook, Instagram and Threads), LinkedIn and X: positioning, audience development, campaign concepts, content pillars and growth planning. Social media management handles ongoing execution, such as scheduling posts, publishing content, monitoring accounts and responding to audiences."
+          },
+          {
+                "q": "Which social media platforms should my business use?",
+                "a": "The right platforms depend on your customers, offer, industry, content resources and objectives. We evaluate audience behaviour and commercial opportunity before recommending channels such as LinkedIn, Facebook, Instagram, TikTok, YouTube, Reddit, Pinterest or X."
+          },
+          {
+                "q": "Do you manage both organic social media and paid campaigns?",
+                "a": "Yes, when both are included in the engagement. Organic content develops audience trust and brand presence, while paid distribution can expand reach, support retargeting and accelerate lead or sales acquisition."
+          },
+          {
+                "q": "Does Amplipath create the content or only develop the strategy?",
+                "a": "We can provide strategy alone or support content planning, copywriting, design, short-form video direction and campaign execution. The precise deliverables, formats and publishing frequency are defined in the project scope."
+          },
+          {
+                "q": "How do you create a social media strategy?",
+                "a": "We examine your business objectives, audience, competitors, customer journey, brand voice, current accounts and available content. We then develop channel roles, content pillars, campaign themes, publishing priorities, calls to action and performance measurements."
+          },
+          {
+                "q": "How long does social media marketing take to produce results?",
+                "a": "Paid campaigns can generate reach and traffic after launch, while organic growth normally develops over a longer period. Timelines depend on account history, content quality, publishing consistency, budget, competition and the strength of the offer."
+          },
+          {
+                "q": "How do you measure social media marketing ROI?",
+                "a": "We connect platform activity to relevant business outcomes. Depending on the objective, this may include qualified reach, engagement, website traffic, leads, cost per acquisition, sales, revenue, customer-acquisition cost and assisted conversions."
+          },
+          {
+                "q": "Is social media marketing suitable for B2B companies?",
+                "a": "Yes. B2B marketing may use educational content, executive expertise, case studies, webinars, industry conversations and lead-generation campaigns. Platform selection should reflect where decision-makers research problems and evaluate providers."
+          },
+          {
+                "q": "Can social media content support SEO and AI-search visibility?",
+                "a": "It can support wider brand discovery, branded searches, content distribution and consistent entity information. Public profiles and credible conversations may also help search and AI systems understand a brand, but social posting cannot guarantee rankings, mentions or AI citations."
+          },
+          {
+                "q": "What information do you need before developing our strategy?",
+                "a": "We normally request your business objectives, customer profiles, priority services, geographic markets, existing analytics, brand guidelines, past campaign results, competitors, available creative assets and internal approval process."
+          }
     ],
     "related": [
       "smmanage",
@@ -9795,50 +9043,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "SimpleTexting"
     ],
     "faqs": [
-      {
-        "q": "Is SMS marketing legally compliant everywhere?",
-        "a": "Requirements vary by country and region — TCPA in the US and equivalent regulations elsewhere require explicit opt-in consent and clear opt-out mechanisms. We configure compliant flows for whichever markets you operate in."
-      },
-      {
-        "q": "How often is too often to text customers?",
-        "a": "SMS tolerance is generally lower than email — we recommend a conservative frequency (often 2-4 messages per month outside of automated transactional alerts) and monitor opt-out rates closely to calibrate."
-      },
-      {
-        "q": "Can SMS work alongside our existing email marketing?",
-        "a": "Yes — SMS and email work best as complementary channels, with SMS reserved for time-sensitive or high-priority messages and email carrying the bulk of regular content."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer text Message Marketing as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine text Message Marketing with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for text Message Marketing — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including text Message Marketing, because we believe results should earn your continued business, not a binding agreement."
-      }
+          {
+                "q": "What permission is required before sending marketing text messages?",
+                "a": "Consent requirements vary by country and message type. We build campaigns around recorded permission, clear sender identification and accessible opt-out instructions, while clients remain responsible for obtaining jurisdiction-specific legal advice."
+          },
+          {
+                "q": "Which marketing messages work well through SMS?",
+                "a": "SMS is most useful for concise and timely communication such as appointment reminders, delivery updates, limited promotions, event notices and abandoned-checkout follow-ups. Messages should provide immediate relevance rather than repeat every email campaign."
+          },
+          {
+                "q": "How frequently should customers receive promotional texts?",
+                "a": "We set expectations when subscribers opt in and adjust frequency according to urgency, value and response behaviour. Opt-outs, complaints and declining engagement indicate that the sending schedule needs attention."
+          },
+          {
+                "q": "Can text messaging and email marketing work together?",
+                "a": "Yes. We use email for detailed communication and SMS for shorter, time-sensitive moments. Coordination prevents customers from receiving an identical promotion through both channels at the same time."
+          },
+          {
+                "q": "How should SMS links and landing pages be designed?",
+                "a": "We use concise links with campaign tracking and send recipients to fast, mobile-friendly pages that continue the message clearly. Forms and checkout journeys should require minimal effort on a phone."
+          },
+          {
+                "q": "Which metrics should be monitored for SMS marketing?",
+                "a": "We monitor delivery, clicks, conversions, revenue attribution, replies and opt-out rates. A campaign that produces clicks but also generates excessive opt-outs may damage the list despite its immediate results."
+          }
     ],
     "related": [
       "email",
@@ -9948,50 +9176,50 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Meta Commerce Manager"
     ],
     "faqs": [
-      {
-        "q": "Is TikTok Shop available in my country?",
-        "a": "TikTok Shop availability varies by market and is expanding regularly — we confirm current eligibility for your country during onboarding and recommend Instagram/Facebook Shopping as an alternative where TikTok Shop isn't yet live."
-      },
-      {
-        "q": "Do I need a certain follower count to use Shopping features?",
-        "a": "No — Instagram Shopping, Facebook Shops and TikTok Shop are available to business accounts regardless of follower count, though commerce-eligible creator and affiliate features sometimes carry minimum thresholds."
-      },
-      {
-        "q": "How do affiliate programs on TikTok Shop work?",
-        "a": "Brands set a commission rate and creators apply or get invited to promote products in exchange for a percentage of resulting sales — we structure the commission rate and recruit relevant creators as part of program setup."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer social Commerce as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine social Commerce with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for social Commerce — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including social Commerce, because we believe results should earn your continued business, not a binding agreement."
-      }
+          {
+                "q": "What is social commerce?",
+                "a": "Social commerce allows customers to discover, evaluate and purchase products through social-media content and shopping features. It can include product catalogs, shoppable posts, creator promotions, livestream shopping and platform-connected advertising."
+          },
+          {
+                "q": "Which social commerce platforms does Amplipath support?",
+                "a": "Depending on regional and business eligibility, we can support TikTok Shop, Facebook and Instagram shopping, Pinterest product catalogs and other suitable social-sales channels. Availability and checkout experiences vary by country and platform."
+          },
+          {
+                "q": "Is TikTok Shop available in every country?",
+                "a": "No. TikTok Shop is available only in supported markets, and seller eligibility requirements vary. It currently lives across North America (United States), Europe (United Kingdom, Ireland, Germany, France, Italy, Spain, Austria, Belgium, the Netherlands, Poland and Portugal), Southeast Asia and a few other countries. The list keeps growing, so we confirm availability, business-document requirements, permitted product categories and integration options before recommending setup."
+          },
+          {
+                "q": "Do I need a particular follower count to use social shopping features?",
+                "a": "No. Requirements depend on the platform, market, account type and feature. For example, TikTok Shop requirements can differ for merchants, official shop accounts, marketing accounts and independent affiliate creators."
+          },
+          {
+                "q": "What is included in social commerce setup?",
+                "a": "A project may include account configuration, catalog or product-feed setup, product mapping, shopping tags, tracking, store policies, creative planning and integration with the main ecommerce platform. Fulfilment and customer-service processes must also be reviewed."
+          },
+          {
+                "q": "How does the TikTok Shop affiliate programme work?",
+                "a": "Eligible sellers can make products available to creators, establish commission terms and invite selected creators through available collaboration tools. Creators promote approved products through videos, livestreams or showcases and earn commission on attributed sales."
+          },
+          {
+                "q": "Can you connect social commerce platforms to Shopify or WooCommerce?",
+                "a": "Where supported, we can help connect the ecommerce store, synchronize product data and configure tracking. Available functions may include catalog synchronisation, inventory updates and centralized order fulfilment, depending on the platform and integration."
+          },
+          {
+                "q": "What is the difference between social commerce and social media advertising?",
+                "a": "Social advertising promotes content or offers to targeted audiences. Social commerce adds shopping infrastructure such as catalogs, tagged products, creator storefronts and connected checkout journeys. Advertising may support social commerce, but they are not the same service."
+          },
+          {
+                "q": "Who handles inventory, fulfilment, returns and customer service?",
+                "a": "The merchant normally remains responsible for accurate inventory, fulfilment, returns, taxes, customer service and platform compliance unless operational support is explicitly included. These processes should be ready before a store is promoted at scale."
+          },
+          {
+                "q": "Can products be rejected by a social commerce platform?",
+                "a": "Yes. Platforms review product categories, claims, images, business information and catalog quality against their commerce policies. Amplipath can help identify and correct eligible issues, but the platform makes the final approval decision."
+          },
+          {
+                "q": "How do you measure social commerce performance?",
+                "a": "We can monitor product views, clicks, add-to-cart activity, checkout initiation, conversion rate, orders, revenue, average order value, affiliate sales, advertising cost and return on ad spend."
+          }
     ],
     "related": [
       "tiktok",
@@ -10092,50 +9320,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "SteamDB"
     ],
     "faqs": [
-      {
-        "q": "How does Steam's algorithm decide visibility?",
-        "a": "Steam weighs wishlist velocity, conversion rate, tag relevance and review quality heavily — a page with strong conversion from a smaller traffic source can outperform a page getting more raw views but converting poorly."
-      },
-      {
-        "q": "Is Steam Next Fest worth participating in?",
-        "a": "For most titles, yes — Next Fest delivers a concentrated visibility spike to an audience actively looking for new games to wishlist, particularly valuable for titles without an existing following."
-      },
-      {
-        "q": "How many wishlists do we need before launch?",
-        "a": "There is no universal number — wishlist targets depend on genre, price point and comparable title performance; we benchmark against similar games during strategy rather than quoting a generic figure."
-      },
-      {
-        "q": "Do you offer steam Marketing as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine steam Marketing with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for steam Marketing — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including steam Marketing, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      }
+          {
+                "q": "What is Steam marketing, and what does the service include?",
+                "a": "Steam marketing helps a game attract relevant players before, during and after release. Our service can include store-page positioning, tag and metadata recommendations, wishlist strategy, demo promotion, creator outreach, community campaigns, Steam-event planning, paid-media support and performance analysis."
+          },
+          {
+                "q": "How does Steam determine which games receive visibility?",
+                "a": "Steam states that game visibility depends on numerous factors and placements across the store. There is no specific formula that allows marketers to guarantee visibility. We focus on controllable factors such as accurate positioning, relevant tags, effective creative assets, qualified traffic and genuine player interest."
+          },
+          {
+                "q": "How important are Steam wishlists, and how many do we need?",
+                "a": "Wishlists are an important indicator of pre-launch interest, but there is no universal number that guarantees a successful release. The required volume depends on genre, price, conversion potential, audience quality and sales objective. We evaluate wishlist growth alongside traffic sources and engagement rather than treating it as an isolated number."
+          },
+          {
+                "q": "Is participating in Steam Next Fest worthwhile?",
+                "a": "It can be valuable for an eligible upcoming game with a playable, polished demo. Steam Next Fest can help developers generate feedback, attract potential players and build awareness. Participation should be supported by a strong store page, tested demo, creator outreach and follow-up marketing."
+          },
+          {
+                "q": "When should we begin marketing a Steam game?",
+                "a": "Marketing should begin as early as practical—preferably when the store page and a credible visual presentation are ready. This provides time to collect wishlists, test messaging, promote development milestones, reach creators and prepare for demos, festivals and the release window."
+          },
+          {
+                "q": "Can a Steam game be marketed without paid advertising?",
+                "a": "Yes. Organic opportunities include store-page optimization, creator outreach, community development, demos, Steam events, public relations and social content. Paid campaigns can accelerate discovery, but they should support an effective store page and game proposition rather than compensate for weak positioning."
+          },
+          {
+                "q": "How do you measure Steam marketing results?",
+                "a": "We evaluate qualified store traffic, wishlists, followers, demo activations, traffic sources, store-page conversion, creator coverage, launch sales and post-launch performance. We also review player feedback and review sentiment while avoiding claims that reviews alone guarantee algorithmic visibility."
+          }
     ],
     "related": [
       "game",
@@ -10236,50 +9448,30 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Sheets"
     ],
     "faqs": [
-      {
-        "q": "Do you implement the strategy or just create it?",
-        "a": "Both options are available — a standalone strategic document, or a combined engagement where we implement the recommendations using our other services directly."
-      },
-      {
-        "q": "How often should marketing strategy be revisited?",
-        "a": "We recommend a full quarterly review at minimum, with the underlying roadmap adjusted monthly based on real performance data rather than rebuilt from scratch."
-      },
-      {
-        "q": "What information do you need from us to build a strategy?",
-        "a": "Access to current marketing performance data (analytics, ad accounts, CRM), your sales numbers or unit economics where relevant, and a clear conversation about your actual growth goals and constraints."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine marketing Strategy & Planning with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for marketing Strategy & Planning — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including marketing Strategy & Planning, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for marketing Strategy & Planning?",
-        "a": "Our team works primarily with GA4 alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for marketing Strategy & Planning who manages execution and reporting directly, rather than rotating through a generic support queue."
-      }
+          {
+                "q": "What business problems should a marketing strategy solve?",
+                "a": "A useful strategy clarifies the target audience, market position, customer journey, channel priorities and method of converting attention into revenue. It should resolve conflicting activities rather than simply produce a calendar of campaigns."
+          },
+          {
+                "q": "What do you analyse before recommending a marketing direction?",
+                "a": "We review the offer, customers, competitors, sales process, previous campaign results, website journey, available resources and commercial objectives. This prevents the plan from being built around assumptions alone."
+          },
+          {
+                "q": "How do you choose the right combination of marketing channels?",
+                "a": "We consider where customers research, compare and purchase, alongside the cost and role of each channel. We then assign channels to specific tasks such as demand creation, lead capture, conversion or retention."
+          },
+          {
+                "q": "How should a marketing budget be distributed?",
+                "a": "We allocate resources according to priorities, evidence and expected business impact. The plan can include funding for proven activities, controlled experiments, creative production, technology and measurement."
+          },
+          {
+                "q": "How is the strategy converted into practical action?",
+                "a": "We translate strategic priorities into campaigns, responsibilities, deadlines, dependencies and measurable outcomes. This gives internal teams and external partners a clear sequence for execution."
+          },
+          {
+                "q": "How do you prevent a marketing plan from becoming an unused document?",
+                "a": "We create a decision framework that can guide weekly and monthly activity, not merely a presentation. Progress reviews connect completed actions with performance evidence and determine what should continue, change or stop."
+          }
     ],
     "related": [
       "analytics",
@@ -10567,50 +9759,38 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "CapCut"
     ],
     "faqs": [
-      {
-        "q": "Does TikTok advertising work for B2B?",
-        "a": "It can, particularly for visually demonstrable products and recruiting/employer-branding campaigns, but TikTok is generally strongest for B2C — we assess fit honestly during strategy before recommending budget allocation."
-      },
-      {
-        "q": "How important is native-style creative vs. polished ads?",
-        "a": "Critical — TikTok users actively scroll past anything that looks like a traditional ad. Native, UGC-style creative consistently outperforms polished brand creative on the platform, often by a significant margin."
-      },
-      {
-        "q": "Can you combine TikTok Ads with TikTok Shop?",
-        "a": "Yes — Spark Ads boosting organic or creator content directly into TikTok Shop purchase flows is one of the highest-converting combinations currently available on the platform."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for tikTok Ads & Shop — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including tikTok Ads & Shop, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for tikTok Ads & Shop?",
-        "a": "Our team works primarily with TikTok Ads Manager alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for tikTok Ads & Shop who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      }
+          {
+                "q": "What is the difference between TikTok Ads and TikTok Shop?",
+                "a": "TikTok Ads provide paid distribution for awareness, traffic, leads, app activity or sales. TikTok Shop is a commerce system that allows eligible sellers and creators to promote and sell products through videos, livestreams, showcases and shopping advertisements."
+          },
+          {
+                "q": "Does TikTok advertising work for B2B companies?",
+                "a": "It can, especially for visually demonstrable products, software education, recruitment, professional training and founder-led content. However, TikTok is not automatically the right channel for every B2B company, so we evaluate audience fit before recommending investment."
+          },
+          {
+                "q": "How important is native-style creative on TikTok?",
+                "a": "Very important. TikTok advertising generally performs best when it feels natural to the platform, communicates the value quickly and uses suitable pacing, framing and sound. Professional quality still matters, but excessive corporate polish can weaken authenticity."
+          },
+          {
+                "q": "What are Spark Ads?",
+                "a": "Spark Ads allow authorised organic TikTok posts to be used as advertisements while retaining native post features. A brand may promote its own post or an authorised creator’s post, subject to permissions and advertising policies."
+          },
+          {
+                "q": "Can TikTok Ads and TikTok Shop work together?",
+                "a": "Yes. Eligible businesses can advertise Shop products, promote authorised creator content and direct customers into a shoppable TikTok experience. The exact campaign options depend on the market, account and product eligibility."
+          },
+          {
+                "q": "How do TikTok Shop creator affiliates work?",
+                "a": "Sellers can offer products to eligible creators through open or targeted collaborations and establish commission terms. Creators can then produce shoppable content, while approved content may also be authorised for advertising."
+          },
+          {
+                "q": "How do you track TikTok advertising performance?",
+                "a": "Depending on the campaign, we may use TikTok Ads Manager, TikTok Pixel, Events API, Shop analytics and ecommerce data. Important metrics include qualified views, clicks, leads, sales, cost per acquisition, gross merchandise value and return on ad spend."
+          },
+          {
+                "q": "Will we retain ownership of our TikTok accounts and Shop?",
+                "a": "Yes. The client should own its TikTok business, advertising and seller assets. Amplipath should receive appropriate assigned access, while sensitive owner-only information and financial settings remain under the client’s control."
+          }
     ],
     "related": [
       "socialcommerce",
@@ -10725,50 +9905,54 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Trends"
     ],
     "faqs": [
-      {
-        "q": "Does video SEO help regular Google rankings too?",
-        "a": "Yes — well-optimized videos with VideoObject schema frequently appear as rich results directly inside standard Google search, including in positions above the traditional organic listings for many query types."
-      },
-      {
-        "q": "How important are thumbnails for video SEO?",
-        "a": "Thumbnails are the single biggest driver of click-through rate, which is itself one of YouTube's strongest ranking signals. We run structured A/B tests on thumbnail concepts rather than guessing at what will perform."
-      },
-      {
-        "q": "Can you optimize an existing video library?",
-        "a": "Yes — retroactive optimization of titles, descriptions, tags and chapters on an existing back-catalog is often the fastest win available, since the content already exists and simply needs better metadata."
-      },
-      {
-        "q": "Do you also help with video scripting or production?",
-        "a": "Video SEO covers metadata, structure and discoverability rather than production. We can coordinate with our Content Marketing team if you need scripting support, but video SEO itself focuses on getting existing or planned content found."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for video SEO Services?",
-        "a": "Our team works primarily with YouTube Studio alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      },
-      {
-        "q": "Will we have a dedicated point of contact?",
-        "a": "Yes — every client is assigned a specialist account lead for video SEO Services who manages execution and reporting directly, rather than rotating through a generic support queue."
-      },
-      {
-        "q": "Can you work alongside our existing internal team or other agency?",
-        "a": "Yes — we frequently collaborate alongside in-house marketing teams or other specialist agencies, with clear scope boundaries agreed upfront to avoid duplicated or conflicting work."
-      },
-      {
-        "q": "What happens after the initial engagement ends?",
-        "a": "You retain full ownership of all deliverables, accounts and documentation produced during the engagement — there is no dependency lock-in, whether you continue with us or take everything in-house."
-      },
-      {
-        "q": "Do you offer video SEO Services as a one-off project or an ongoing retainer?",
-        "a": "Both are available — many clients start with a focused initial project and move to an ongoing monthly retainer once the foundation is in place, while others only need a single, well-scoped engagement."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine video SEO Services with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      }
+          {
+                "q": "What is video SEO?",
+                "a": "Video SEO is the process of improving how videos are discovered and understood across YouTube, Google Search and other relevant search experiences. It may involve topic research, titles, descriptions, thumbnails, captions, transcripts, chapters, channel organization, watch-page optimization, internal linking, structured data and performance analysis."
+          },
+          {
+                "q": "Can video SEO help my website’s Google visibility?",
+                "a": "Yes, videos can earn visibility in Google video results and strengthen pages by providing useful information in another format. However, embedding a video does not automatically improve the page’s rankings. The video and page must satisfy the search intent, be accessible to search engines and provide a good user experience."
+          },
+          {
+                "q": "What is included in Amplipath’s video SEO services?",
+                "a": "The service may include video-search research, content mapping, title and description optimization, thumbnail recommendations, reviewed captions, transcripts, chapters, playlists, channel organization, watch-page improvements, VideoObject structured data, video sitemaps and performance reporting. Deliverables depend on whether the focus is YouTube, the client’s website or both."
+          },
+          {
+                "q": "How important are thumbnails for video SEO?",
+                "a": "Thumbnails strongly influence whether users choose to watch a video when it appears in search, suggested content or a video library. They should be clear, relevant, visually distinct and understandable at small sizes. On a website, thumbnail URLs should remain stable and accessible so search engines can process them correctly."
+          },
+          {
+                "q": "Do transcripts and captions improve video visibility?",
+                "a": "Accurate captions improve accessibility and help platforms understand spoken content. Reviewed transcripts can also support website visitors and provide indexable text around a video. Automatically generated transcripts should be checked for errors, especially names, products and technical terminology. Captions and transcripts help understanding but do not guarantee rankings."
+          },
+          {
+                "q": "Do video chapters and timestamps help SEO?",
+                "a": "Chapters make longer videos easier to navigate and can help platforms identify important sections. On YouTube, well-structured timestamps may support Key Moments in search. Chapter labels should accurately describe each section rather than repeat keywords unnaturally. Their appearance in search results remains dependent on the platform."
+          },
+          {
+                "q": "Does every video need VideoObject structured data?",
+                "a": "Video Object markup is appropriate when a webpage contains a video that users can watch. It can communicate details such as the title, description, thumbnail, upload date and duration. For stronger video-search eligibility, the video should be prominent and supported by an accessible watch page. Valid markup does not guarantee a video rich result."
+          },
+          {
+                "q": "Can Amplipath optimize an existing video library?",
+                "a": "Yes. Existing videos can be audited for search intent, titles, descriptions, thumbnails, captions, chapters, playlists, internal links, watch pages and declining performance. Priority should go to videos with demonstrated audience interest, commercial relevance or realistic opportunities rather than changing every video without evidence."
+          },
+          {
+                "q": "Does Amplipath help with video topics, scripts or production?",
+                "a": "Amplipath can support search-led topic research, content briefs, scripts, titles, descriptions, publishing structure and optimization. Filming, animation and full video production can be scoped separately according to the project. SEO input is most valuable before production because it can shape the question, structure and audience the video addresses."
+          },
+          {
+                "q": "Is YouTube SEO different from website video SEO?",
+                "a": "Yes. YouTube optimization considers search discovery, suggested videos, click-through rate, watch behaviour, playlists and channel structure. Website video SEO focuses more on watch pages, crawlability, page relevance, thumbnails, structured data, video sitemaps and conversions. A coordinated strategy can use YouTube for discovery while the website supports deeper information and business actions."
+          },
+          {
+                "q": "How long does video SEO take, and can rankings be guaranteed?",
+                "a": "No video ranking or view count can be guaranteed. Metadata changes may be processed relatively quickly, while sustained discovery depends on topic demand, competition, click-through rate, audience retention, content quality and publishing consistency. Amplipath measures performance over time and improves videos based on actual viewer and search data."
+          },
+          {
+                "q": "How is video SEO success measured?",
+                "a": "Metrics may include YouTube search traffic, Google video impressions, clicks, thumbnail click-through rate, watch time, audience retention, subscribers, website sessions, assisted conversions and enquiries. The most important metrics depend on whether the video is intended to educate, generate awareness, attract leads or support a sale."
+          }
     ],
     "related": [
       "ytads",
@@ -10879,50 +10063,34 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "Google Tag Manager"
     ],
     "faqs": [
-      {
-        "q": "Do you produce the video ads or just run them?",
-        "a": "We brief scripts and storyboards optimized specifically for YouTube's format and can coordinate production, or work with video assets you already have ready to run."
-      },
-      {
-        "q": "What is the difference between skippable and bumper ads?",
-        "a": "Skippable in-stream ads can be skipped after 5 seconds and are billed on view or click; bumper ads are non-skippable 6-second spots billed on impressions, typically used for awareness rather than direct response."
-      },
-      {
-        "q": "Can YouTube Ads work for a small budget?",
-        "a": "Yes — Discovery ads and narrowly targeted in-stream campaigns can run effectively on modest budgets; we recommend a tighter audience and format mix rather than broad reach when budget is limited."
-      },
-      {
-        "q": "What information do you need from us before starting?",
-        "a": "Access to relevant existing accounts and platforms (where applicable), a clear picture of your current goals and metrics, and any brand or compliance guidelines we should work within — we confirm the exact list during onboarding."
-      },
-      {
-        "q": "Can this be combined with other Amplipath services?",
-        "a": "Yes — most clients combine youTube Ads with at least one other service, and we coordinate strategy across the full engagement so channels reinforce each other rather than operating in isolation."
-      },
-      {
-        "q": "Is this suitable for small businesses, or only larger brands?",
-        "a": "We work with businesses of every size — scope and deliverable volume are tailored to your budget and goals rather than assuming an enterprise-scale engagement by default."
-      },
-      {
-        "q": "How do you measure success for this service?",
-        "a": "We agree specific, business-relevant KPIs during onboarding — tied to the metrics that actually matter for youTube Ads — and report against them monthly rather than relying on vanity metrics."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — we operate month-to-month with no lock-in contract across every service, including youTube Ads, because we believe results should earn your continued business, not a binding agreement."
-      },
-      {
-        "q": "How quickly can you get started?",
-        "a": "Most engagements begin within 1-2 weeks of signing, depending on access setup and the current state of your existing accounts or assets."
-      },
-      {
-        "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
-      },
-      {
-        "q": "What tools or platforms do you rely on most for youTube Ads?",
-        "a": "Our team works primarily with Google Ads alongside other category-leading platforms named on this page, selected based on what actually fits your specific setup rather than a single default stack."
-      }
+          {
+                "q": "What are YouTube Ads?",
+                "a": "YouTube Ads are paid video campaigns managed through Google Ads or eligible YouTube promotion tools. They can support awareness, video views, website traffic, leads, sales and continued engagement with a YouTube channel."
+          },
+          {
+                "q": "Which YouTube advertising formats are available?",
+                "a": "Available formats can include skippable and non-skippable in-stream ads, six-second bumper ads, in-feed video ads and Shorts placements. Format availability depends on the campaign objective, creative assets and Google Ads configuration."
+          },
+          {
+                "q": "What is the difference between skippable and bumper ads?",
+                "a": "Viewers can skip a skippable in-stream advertisement after five seconds. Bumper advertisements are short, non-skippable videos of up to six seconds designed mainly for concise reach and message reinforcement."
+          },
+          {
+                "q": "Can YouTube Ads work with a small budget?",
+                "a": "They can, provided the audience and objective are focused realistically. Smaller budgets require disciplined geographic targeting, a clear offer and suitable creative. Certain advanced measurement features may require more campaign scale."
+          },
+          {
+                "q": "How does YouTube Ads targeting work?",
+                "a": "Campaigns may use audience interests, purchase intent, customer data, demographics, topics, placements, keywords, website activity and geographic targeting. Availability depends on the campaign type and applicable advertising policies."
+          },
+          {
+                "q": "What is an engaged-view conversion?",
+                "a": "An engaged-view conversion can record when someone watches or meaningfully engages with a video advertisement and later completes a conversion without first clicking the ad. It helps measure video influence beyond direct clicks."
+          },
+          {
+                "q": "Do you need our YouTube password to run advertisements?",
+                "a": "No. The channel can be linked to the appropriate Google Ads account and access can be granted through supported permissions. The client should retain ownership and control of both the channel and advertising account."
+          }
     ],
     "related": [
       "videoseo",

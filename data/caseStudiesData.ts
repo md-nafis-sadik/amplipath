@@ -9,6 +9,7 @@ export interface CaseStudy {
   metricLabel: string;
   summary: string;
   tags: string[];
+  image: string;
   gradient: string;
   bgGradient: string;
   accentColor: string;
@@ -38,6 +39,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Increase in organic website traffic',
     summary: 'A complete ecommerce website and SEO foundation for a growing health and beauty brand, restructuring product discovery across 132+ items with a +90% conversion lift.',
     tags: ['Ecommerce Build', 'Technical SEO', 'On-Page SEO', 'CRO'],
+    image: '/images/portfolio/amber.jpg',
     gradient: 'from-[#3a2a1a] to-[#c9862e]',
     bgGradient: 'linear-gradient(135deg, #3a2a1a 0%, #c9862e 100%)',
     accentColor: '#c9862e',
@@ -85,6 +87,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Increase in organic search traffic',
     summary: 'A Shopify, TikTok Shop and SEO ecosystem for a specialist 3D-printing retailer—generating more than 50% early sales growth while building a stronger foundation for organic discovery.',
     tags: ['Shopify', 'TikTok Shop', 'Meta Shop', 'Dropship SEO'],
+    image: '/images/portfolio/print.jpg',
     gradient: 'from-[#10243f] to-[#0f766e]',
     bgGradient: 'linear-gradient(135deg, #10243f 0%, #0f766e 100%)',
     accentColor: '#0f766e',
@@ -131,6 +134,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Increase in ecommerce conversions',
     summary: 'A complete ecommerce redesign that improved product discovery, simplified the buying journey and helped turn more store visitors into customers.',
     tags: ['Store Redesign', 'CRO', 'Mobile Responsiveness', 'UX Design'],
+    image: '/images/portfolio/furry.jpg',
     gradient: 'from-[#331021] to-[#be185d]',
     bgGradient: 'linear-gradient(135deg, #331021 0%, #be185d 100%)',
     accentColor: '#be185d',
@@ -177,6 +181,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Increase in property enquiries',
     summary: 'A complete real estate website that transformed property discovery into a clearer, more credible and conversion-focused enquiry experience.',
     tags: ['Website Build', 'Property Listings', 'Lead Generation', 'WhatsApp Routing'],
+    image: '/images/portfolio/ola.jpg',
     gradient: 'from-[#0f2a4a] to-[#0369a1]',
     bgGradient: 'linear-gradient(135deg, #0f2a4a 0%, #0369a1 100%)',
     accentColor: '#0369a1',
@@ -223,6 +228,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Performance score & Grade A experience',
     summary: 'A complete SEO and website-performance programme that delivered an A-grade experience, 1.2-second main-content loading and excellent visual stability.',
     tags: ['Technical SEO', 'Core Web Vitals', 'PageSpeed', 'On-Page SEO'],
+    image: '/images/portfolio/forbidden.jpg',
     gradient: 'from-[#1e1b4b] to-[#4338ca]',
     bgGradient: 'linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)',
     accentColor: '#4338ca',
@@ -270,6 +276,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Excellent website health score',
     summary: 'Complete technical and on-page SEO for a specialist ecommerce product, resulting in 127 error-free URLs, 130 successful HTTP responses and a search-ready website structure.',
     tags: ['Site Audit', 'Technical SEO', 'Keyword Architecture', 'Indexation'],
+    image: '/images/portfolio/savajay.jpg',
     gradient: 'from-[#064e3b] to-[#059669]',
     bgGradient: 'linear-gradient(135deg, #064e3b 0%, #059669 100%)',
     accentColor: '#059669',
@@ -316,6 +323,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Funnel conversion rate (8,759 page views)',
     summary: 'Two purpose-built course funnels designed to turn specialised educational offers into focused, measurable conversion journeys.',
     tags: ['Sales Funnels', 'Landing Pages', 'Conversion Strategy', 'Analytics'],
+    image: '/images/portfolio/aceofcoins.jpg',
     gradient: 'from-[#1e293b] to-[#475569]',
     bgGradient: 'linear-gradient(135deg, #1e293b 0%, #475569 100%)',
     accentColor: '#475569',
@@ -361,6 +369,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Website traffic growth & 19K+ video views',
     summary: 'A multichannel promotional campaign combining Reddit, forums, classified advertising, social media and YouTube to generate 24,845 impressions and a reported conversion rate above 75%.',
     tags: ['Reddit Marketing', 'YouTube Marketing', 'Social Media', 'Community Seeding'],
+    image: '/images/portfolio/actorpass.jpg',
     gradient: 'from-[#581c87] to-[#7e22ce]',
     bgGradient: 'linear-gradient(135deg, #581c87 0%, #7e22ce 100%)',
     accentColor: '#7e22ce',
@@ -408,6 +417,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Student growth (564 to 51,373 enrolled)',
     summary: 'A targeted course promotion campaign that scaled student enrolment from 564 to 51,373 and grew ratings to 9,533 while sustaining a strong 4.6-star rating.',
     tags: ['Course Promotion', 'Marketplace SEO', 'Paid Acquisition', 'Social Proof'],
+    image: '/images/portfolio/davinci.jpg',
     gradient: 'from-[#1e3a8a] to-[#2563eb]',
     bgGradient: 'linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%)',
     accentColor: '#2563eb',
@@ -454,6 +464,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Student growth (834 to 36,834 enrolled)',
     summary: 'A targeted growth campaign that increased course discovery, attracted 36,000+ relevant learners, and generated over 10,000 positive ratings while maintaining a 4.5-star rating.',
     tags: ['Course Growth', 'Audience Expansion', 'Marketplace SEO', 'Reviews'],
+    image: '/images/portfolio/alexafischer.jpg',
     gradient: 'from-[#831843] to-[#db2777]',
     bgGradient: 'linear-gradient(135deg, #831843 0%, #db2777 100%)',
     accentColor: '#db2777',
@@ -499,6 +510,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     metricLabel: 'Raised on Wefunder (+200% funding growth)',
     summary: 'A multichannel investor-acquisition campaign delivered through Boostfunders that helped Novella AI progress from $116,509 to $349,494 and grow its investor community from 83 to 162.',
     tags: ['Equity Crowdfunding', 'Investor Outreach', 'Social Promotion', 'PR'],
+    image: '/images/portfolio/novella.jpg',
     gradient: 'from-[#0f172a] to-[#3b82f6]',
     bgGradient: 'linear-gradient(135deg, #0f172a 0%, #3b82f6 100%)',
     accentColor: '#3b82f6',

@@ -1,13 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useModal } from '@/components/ModalContext';
 
 export default function ContactPage() {
-  const router = useRouter();
-  const { openModal } = useModal();
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -54,69 +49,89 @@ export default function ContactPage() {
         <div className="hero-bar"></div>
         <div className="h-tag"><div className="h-dot"></div>CONTACT US</div>
         <h1 className="h-h1" style={{ fontSize: '38px' }}>Contact Amplipath.</h1>
-        <p className="h-sub">General enquiries, support, partnerships, media and careers — send us a message and our team will respond within 12 hours.</p>
+        <p className="h-sub">General enquiries, support, partnerships, media and careers — send us a message and our team will respond within 5 hours.</p>
       </div>
-      <div className="s-white">
+      <div className="s-white" style={{ minHeight: '600px', display: 'flex', alignItems: 'center' }}>
         <div className="con-split">
-          <div>
-            <h2 className="ci-h">Get in touch</h2>
-            <p className="ci-sub">Whether you need SEO, paid ads, a new website, game marketing or a full-service agency partner — our team responds within 24 hours with clear, honest recommendations for your specific situation.</p>
-            <div className="ci-row"><div className="ci-ico">📧</div><div><strong>General enquiries:</strong> hello@amplipath.com</div></div>
-            <div className="ci-row"><div className="ci-ico">💼</div><div><strong>New business &amp; RFP:</strong> sales@amplipath.com</div></div>
-            <div className="ci-row"><div className="ci-ico">🤝</div><div><strong>Partnerships:</strong> partners@amplipath.com</div></div>
-            <div style={{ marginTop: '16px', padding: '16px', background: '#E8F0FE', borderRadius: '10px', borderLeft: '4px solid #1A56DB' }}>
-              <div style={{ fontSize: '13px', fontWeight: '700', color: '#1A56DB', marginBottom: '5px' }}>📋 Submitting an RFP?</div>
-              <div style={{ fontSize: '13px', color: '#475569', lineHeight: '1.6' }}>Email our sales team directly at <strong>sales@amplipath.com</strong> or click the RFP button in the navigation bar. We respond to all RFP submissions within 12 hours.</div>
+          <div style={{ maxWidth: '460px' }}>
+            <h2 className="ci-h" style={{ fontSize: '26px', color: '#0f172a', marginBottom: '12px' }}>Get in touch</h2>
+            <p className="ci-sub" style={{ fontSize: '14.5px', color: '#475569', lineHeight: '1.7', marginBottom: '22px' }}>
+              Whether you need SEO, paid ads, a new website, game marketing or a full-service agency partner — our team responds within 5 hours with clear, honest recommendations for your specific situation.
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px 16px', background: '#f8fafc', borderRadius: '10px', border: '1.5px solid #e2e8f0', marginBottom: '24px' }}>
+              <div className="ci-ico" style={{ width: '36px', height: '36px', borderRadius: '8px', background: 'var(--acl)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', flexShrink: 0 }}>📧</div>
+              <div>
+                <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#64748b', fontWeight: 700 }}>General Enquiries</div>
+                <a href="mailto:hello@amplipath.com" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--ac)', textDecoration: 'none' }}>hello@amplipath.com</a>
+              </div>
             </div>
-            <div style={{ marginTop: '24px' }}>
-              <button className="btn-fill" onClick={() => openModal('rfp')}>Submit RFP Online →</button>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#22c55e', fontSize: '16px', lineHeight: 1.2 }}>✓</span>
+                <span style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5 }}><strong style={{ color: '#0f172a' }}>Rapid Response:</strong> Dedicated marketing specialist answers within 5 hours</span>
+              </div>
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#22c55e', fontSize: '16px', lineHeight: 1.2 }}>✓</span>
+                <span style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5 }}><strong style={{ color: '#0f172a' }}>Tailored Advice:</strong> Honest recommendations for your specific growth stage</span>
+              </div>
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#22c55e', fontSize: '16px', lineHeight: 1.2 }}>✓</span>
+                <span style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5 }}><strong style={{ color: '#0f172a' }}>Zero Lock-in:</strong> Transparent, agile month-to-month contracts</span>
+              </div>
             </div>
           </div>
-          <div className="con-form">
+          <div className="cf" style={{ maxWidth: '480px', width: '100%', marginLeft: 'auto' }}>
             {submitted ? (
-              <div style={{ padding: '30px', textAlign: 'center', background: '#f0fdf4', borderRadius: '12px', border: '1.5px solid #86efac' }}>
+              <div style={{ padding: '30px', textAlign: 'center', background: '#1e293b', borderRadius: '12px', border: '1.5px solid #22c55e' }}>
                 <div style={{ fontSize: '36px', marginBottom: '12px' }}>✅</div>
-                <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#166534', marginBottom: '8px' }}>Message Sent Successfully!</h3>
-                <p style={{ fontSize: '14px', color: '#15803d', lineHeight: '1.6' }}>Thank you for reaching out. Our team will review your message and respond within 12 hours.</p>
+                <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#fff', marginBottom: '8px' }}>Message Sent Successfully!</h3>
+                <p style={{ fontSize: '14px', color: '#94a3b8', lineHeight: '1.6' }}>Thank you for reaching out. Our team will review your message and respond within 5 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <div className="p2">
-                  <div>
-                    <label style={{ fontSize: '12px', fontWeight: '600', color: '#334155', display: 'block', marginBottom: '4px' }}>First name *</label>
-                    <input className="cinp" type="text" placeholder="John" required value={formData.firstName} onChange={e => setFormData({ ...formData, firstName: e.target.value })} />
+                <div className="cf-h">Get in Touch.</div>
+                <div className="cf-sub">Questions, support, partnerships, media or careers — send us a message and we’ll get back to you within 5 hours.</div>
+                <div className="cf2">
+                  <div className="cf-f">
+                    <label>First name *</label>
+                    <input type="text" placeholder="John" required value={formData.firstName} onChange={e => setFormData({ ...formData, firstName: e.target.value })} />
                   </div>
-                  <div>
-                    <label style={{ fontSize: '12px', fontWeight: '600', color: '#334155', display: 'block', marginBottom: '4px' }}>Last name *</label>
-                    <input className="cinp" type="text" placeholder="Smith" required value={formData.lastName} onChange={e => setFormData({ ...formData, lastName: e.target.value })} />
+                  <div className="cf-f">
+                    <label>Last name *</label>
+                    <input type="text" placeholder="Smith" required value={formData.lastName} onChange={e => setFormData({ ...formData, lastName: e.target.value })} />
                   </div>
                 </div>
-                <div>
-                  <label style={{ fontSize: '12px', fontWeight: '600', color: '#334155', display: 'block', marginBottom: '4px' }}>Business email *</label>
-                  <input className="cinp" type="email" placeholder="john@company.com" required value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} />
+                <div className="cf-f">
+                  <label>Business email *</label>
+                  <input type="email" placeholder="john@company.com" required value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} />
                 </div>
-                <div>
-                  <label style={{ fontSize: '12px', fontWeight: '600', color: '#334155', display: 'block', marginBottom: '4px' }}>Subject</label>
-                  <input className="cinp" type="text" placeholder="e.g. Partnership inquiry" value={formData.subject} onChange={e => setFormData({ ...formData, subject: e.target.value })} />
+                <div className="cf-f">
+                  <label>Subject</label>
+                  <input type="text" placeholder="e.g. Partnership inquiry" value={formData.subject} onChange={e => setFormData({ ...formData, subject: e.target.value })} />
                 </div>
-                <div>
-                  <label style={{ fontSize: '12px', fontWeight: '600', color: '#334155', display: 'block', marginBottom: '4px' }}>Enquiry type</label>
-                  <select className="cinp" name="enquiry_type" value={formData.enquiryType} onChange={e => setFormData({ ...formData, enquiryType: e.target.value })}>
-                    <option>General Enquiry</option>
-                    <option>New Business / RFP</option>
-                    <option>Partnership</option>
-                    <option>Careers</option>
-                    <option>Media &amp; Press</option>
+                <div className="cf-f">
+                  <label>What is this about?</label>
+                  <select name="enquiry_type" value={formData.enquiryType} onChange={e => setFormData({ ...formData, enquiryType: e.target.value })}>
+                    <option value="General Enquiry">General question</option>
+                    <option value="New Project">New project inquiry</option>
+                    <option value="Support">Existing client support</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Careers">Careers</option>
+                    <option value="Press">Press / media</option>
                   </select>
                 </div>
-                <div>
-                  <label style={{ fontSize: '12px', fontWeight: '600', color: '#334155', display: 'block', marginBottom: '4px' }}>Message *</label>
-                  <textarea className="cinp" placeholder="Tell us how we can help..." style={{ minHeight: '120px' }} required value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })}></textarea>
+                <div className="cf-f">
+                  <label>Message *</label>
+                  <textarea placeholder="Tell us how we can help..." style={{ minHeight: '85px' }} required value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })}></textarea>
                 </div>
                 {error && <div style={{ color: '#ef4444', fontSize: '13px', marginBottom: '10px' }}>{error}</div>}
-                <button className="cbtn" type="submit" disabled={submitting}>
+                <button className="cf-btn" type="submit" disabled={submitting}>
                   {submitting ? 'Sending...' : 'Send Message →'}
                 </button>
+                <div className="cf-trust">
+                  <span className="cf-st">★★★★★</span>
+                  <span className="cf-tt">Trusted by businesses worldwide · No lock-in contracts · Response within 5 hours</span>
+                </div>
               </form>
             )}
           </div>

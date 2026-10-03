@@ -154,18 +154,18 @@ export default function IndustryPageTemplate({ data, industryKey }: IndustryPage
             {data.faqs.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               return (
-                <div key={idx} className="faq-item">
+                <div key={idx} className={`faq-item ${isOpen ? 'open' : ''}`}>
                   <button
                     type="button"
                     className="faq-q"
                     onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                   >
                     <span>{faq.q}</span>
-                    <span style={{ fontSize: '18px', fontWeight: 'bold' }}>{isOpen ? '−' : '+'}</span>
+                    <span className="faq-plus">{isOpen ? '−' : '+'}</span>
                   </button>
                   {isOpen && (
                     <div className="faq-a open">
-                      {faq.a}
+                      <div className="faq-a-inner">{faq.a}</div>
                     </div>
                   )}
                 </div>

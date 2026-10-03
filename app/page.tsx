@@ -36,31 +36,21 @@ export default function HomePage() {
 <div className="stats-strip">
   <div className="stat-box"><div className="stat-n">🌍</div><div className="stat-l">Global clients — every market</div></div>
   <div className="stat-box"><div className="stat-n">50+</div><div className="stat-l">Services offered</div></div>
-  <div className="stat-box"><div className="stat-n">15</div><div className="stat-l">African markets</div></div>
+  <div className="stat-box"><div className="stat-n">🔒</div><div className="stat-l">No Lock-In Contracts</div></div>
   <div className="stat-box"><div className="stat-n">13</div><div className="stat-l">Tech &amp; AI Services: Websites, Apps, Chatbots &amp; AI Systems</div></div>
-</div>
-
-{/*  TRUST SIGNALS  */}
-<div className="trust-strip">
-  <div className="trust-item"><span className="trust-icon">🏆</span>GEO/AEO First-Mover Agency</div>
-  <div className="trust-item"><span className="trust-icon">⭐</span>Highly Rated by Our Clients</div>
-  <div className="trust-item"><span className="trust-icon">🌍</span>Global Clients — Every Market</div>
-  <div className="trust-item"><span className="trust-icon">📈</span>Results from Day 30</div>
-  <div className="trust-item"><span className="trust-icon">🔒</span>No Lock-In Contracts</div>
-  <div className="trust-item"><span className="trust-icon">⚙️</span>Marketing + Development — One Team</div>
 </div>
 
 {/*  Internal linking hub - Section 1.3  */}
 <div style={{"background":"var(--acl)","borderTop":"1px solid #c7d7f9","borderBottom":"1px solid #c7d7f9","padding":"16px 40px"}}>
   <div style={{"display":"flex","alignItems":"center","gap":"12px","flexWrap":"wrap","justifyContent":"center"}}>
     <span style={{"fontSize":"11px","fontWeight":"700","color":"var(--ac)","textTransform":"uppercase","letterSpacing":".1em","whiteSpace":"nowrap"}}>Explore services:</span>
-    <button onClick={() => router.push('/services')} style={{"fontSize":"12px","color":"var(--ac)","background":"#fff","border":"1.5px solid var(--ac)","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🔍 Search & SEO</button>
-    <button onClick={() => router.push('/services')} style={{"fontSize":"12px","color":"#7C3AED","background":"#fff","border":"1.5px solid #7C3AED","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>💰 Paid Media</button>
-    <button onClick={() => router.push('/services')} style={{"fontSize":"12px","color":"#0284c7","background":"#fff","border":"1.5px solid #0284c7","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>📱 Social Media</button>
-    <button onClick={() => router.push('/services')} style={{"fontSize":"12px","color":"#15803d","background":"#fff","border":"1.5px solid #15803d","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>✍️ Content & PR</button>
-    <button onClick={() => router.push('/services')} style={{"fontSize":"12px","color":"#0f172a","background":"#fff","border":"1.5px solid #0f172a","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>💻 Web & Tech</button>
-    <button onClick={() => router.push('/services')} style={{"fontSize":"12px","color":"#b91c1c","background":"#fff","border":"1.5px solid #b91c1c","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🎮 Niche & Growth</button>
-    <button onClick={() => router.push('/services')} style={{"fontSize":"12px","color":"#15803d","background":"#fff","border":"1.5px solid #166534","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🌍 Africa Market</button>
+    <button onClick={() => router.push('/services/search-seo')} style={{"fontSize":"12px","color":"var(--ac)","background":"#fff","border":"1.5px solid var(--ac)","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🔍 Search & SEO</button>
+    <button onClick={() => router.push('/services/paid-ads')} style={{"fontSize":"12px","color":"#7C3AED","background":"#fff","border":"1.5px solid #7C3AED","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>💰 Paid Media</button>
+    <button onClick={() => router.push('/services/social-media')} style={{"fontSize":"12px","color":"#0284c7","background":"#fff","border":"1.5px solid #0284c7","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>📱 Social Media</button>
+    <button onClick={() => router.push('/services/content-strategy')} style={{"fontSize":"12px","color":"#15803d","background":"#fff","border":"1.5px solid #15803d","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>✍️ Content & PR</button>
+    <button onClick={() => router.push('/services/web-development')} style={{"fontSize":"12px","color":"#0f172a","background":"#fff","border":"1.5px solid #0f172a","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>💻 Web & Tech</button>
+    <button onClick={() => router.push('/services/niche-services')} style={{"fontSize":"12px","color":"#b91c1c","background":"#fff","border":"1.5px solid #b91c1c","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🎮 Niche & Growth</button>
+    <button onClick={() => router.push('/services/africa-market')} style={{"fontSize":"12px","color":"#15803d","background":"#fff","border":"1.5px solid #166534","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🌍 Africa Market</button>
     <button onClick={() => router.push('/ai')} style={{"fontSize":"12px","color":"#d97706","background":"#fff","border":"1.5px solid #d97706","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🤖 AI & Tech</button>
   </div>
 </div>
@@ -73,7 +63,7 @@ export default function HomePage() {
   <p className="sec-sub" style={{"marginBottom":"32px"}}>Most agencies only handle traffic. Amplipath connects the full growth journey — search visibility, paid acquisition, content, social media, websites, apps, automation, analytics and AI systems — so every campaign has the digital infrastructure needed to convert.</p>
   <div className="sg">
     <div className="scard" onClick={() => router.push('/services/search-seo')}><div className="sc-ico">🔍</div><div className="sc-n">SEO Services</div><div className="sc-d">Rank higher on Google and Bing. On-page, off-page and technical SEO strategies that deliver first-page rankings and sustainable organic traffic growth.</div><div className="sc-more">Learn more →</div></div>
-    <div className="scard" onClick={() => router.push('/services/ai-marketing')}><div className="sc-ico">🤖</div><div className="sc-n">GEO / AEO — AI Search</div><div className="sc-d">Get your brand cited in ChatGPT, Gemini and Google AI Overviews. The fastest-growing traffic source in 2026 — most agencies don\'t offer this yet.</div><div className="sc-more">Learn more →</div></div>
+    <div className="scard" onClick={() => router.push('/services/ai-marketing')}><div className="sc-ico">🤖</div><div className="sc-n">GEO / AEO — AI Search</div><div className="sc-d">Get your brand cited in ChatGPT, Gemini and Google AI Overviews. The fastest-growing traffic source in 2026 — most agencies don't offer this yet.</div><div className="sc-more">Learn more →</div></div>
     <div className="scard" onClick={() => router.push('/services/paid-ads')}><div className="sc-ico">📣</div><div className="sc-n">Paid Advertising (PPC)</div><div className="sc-d">Google Ads, Meta, TikTok, YouTube — full-funnel paid campaigns managed by certified specialists with transparent ROI reporting every month.</div><div className="sc-more">Learn more →</div></div>
     <div className="scard" onClick={() => router.push('/services/niche-services')}><div className="sc-ico">🎮</div><div className="sc-n">Game & Course Marketing</div><div className="sc-d">Steam wishlist campaigns, mobile app growth, Udemy instructor marketing — niche expertise that specialist agencies charge 3x more for.</div><div className="sc-more">Learn more →</div></div>
     <div className="scard" onClick={() => router.push('/services/africa-market')}><div className="sc-ico">🌍</div><div className="sc-n">Africa Market Services</div><div className="sc-d">The only global agency with dedicated African market expertise. Real local data for 15 countries. WhatsApp marketing, Jumia SEO and pan-African campaigns.</div><div className="sc-more">Learn more →</div></div>
@@ -103,7 +93,7 @@ export default function HomePage() {
     <div className="why-card">
       <div className="why-ico">🌍</div>
       <div className="why-title">Africa expertise no one else has</div>
-      <div className="why-desc">While competitors ignore Africa, we\'ve built dedicated infrastructure, real local keyword data and specialist teams for 15 African markets — a $4.2B digital ad market growing at 67% annually.</div>
+      <div className="why-desc">While competitors ignore Africa, we've built dedicated infrastructure, real local keyword data and specialist teams for 15 African markets — a $4.2B digital ad market growing at 67% annually.</div>
     </div>
     <div className="why-card">
       <div className="why-ico">⚙️</div>
@@ -113,12 +103,12 @@ export default function HomePage() {
     <div className="why-card">
       <div className="why-ico">🔒</div>
       <div className="why-title">No lock-in contracts</div>
-      <div className="why-desc">We don\'t hide behind 12-month lock-ins. Month-to-month engagements available for all services. We earn your business every month through results, not contracts.</div>
+      <div className="why-desc">We don't hide behind 12-month lock-ins. Month-to-month engagements available for all services. We earn your business every month through results, not contracts.</div>
     </div>
     <div className="why-card">
       <div className="why-ico">⚡</div>
-      <div className="why-title">Results within 90 days</div>
-      <div className="why-desc">Our 90-day rapid growth framework delivers measurable improvements in traffic, leads and conversions within the first quarter — not the first year.</div>
+      <div className="why-title">Results within 30 days</div>
+      <div className="why-desc">Our 30-day rapid growth framework delivers measurable improvements in traffic, leads and conversions within the first month — not the first year.</div>
     </div>
   </div>
 </div>
@@ -550,18 +540,26 @@ export default function HomePage() {
       className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
       onClick={() => router.push('/work?case=amber')}
     >
-      <div className="h-32 bg-gradient-to-br from-[#3a2a1a] to-[#c9862e] p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            Health &amp; Beauty
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #01</span>
+      <div className="h-44 relative overflow-hidden text-white bg-slate-900">
+        <img
+          src="/images/portfolio/amber.jpg"
+          alt="Amber's Eternal"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-slate-950/30" />
+        <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between z-10">
+          <div className="flex items-center justify-between">
+            <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md shadow-xs border border-white/15">
+              Health &amp; Beauty
+            </span>
+            <span className="text-white/70 text-xs font-mono">Case #01</span>
+          </div>
+          <div>
+            <div className="text-xs text-white/80 font-medium tracking-wide drop-shadow-sm">Amber’s Eternal</div>
+            <div className="text-white font-bold text-base leading-tight mt-0.5 drop-shadow-sm">Ecommerce Rebuild &amp; SEO</div>
+          </div>
         </div>
-        <div className="z-10">
-          <div className="text-xs text-amber-200 font-semibold">Amber’s Eternal</div>
-          <div className="text-white font-bold text-base leading-tight">Ecommerce Rebuild &amp; SEO</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Shop</div>
       </div>
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
@@ -587,18 +585,26 @@ export default function HomePage() {
       className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
       onClick={() => router.push('/work?case=print')}
     >
-      <div className="h-32 bg-gradient-to-br from-[#10243f] to-[#0f766e] p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            3D Printing &amp; Hardware
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #02</span>
+      <div className="h-44 relative overflow-hidden text-white bg-slate-900">
+        <img
+          src="/images/portfolio/print.jpg"
+          alt="Printin3D"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-slate-950/30" />
+        <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between z-10">
+          <div className="flex items-center justify-between">
+            <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md shadow-xs border border-white/15">
+              3D Printing &amp; Hardware
+            </span>
+            <span className="text-white/70 text-xs font-mono">Case #02</span>
+          </div>
+          <div>
+            <div className="text-xs text-white/80 font-medium tracking-wide drop-shadow-sm">Printin3D</div>
+            <div className="text-white font-bold text-base leading-tight mt-0.5 drop-shadow-sm">Shopify &amp; TikTok Shop Launch</div>
+          </div>
         </div>
-        <div className="z-10">
-          <div className="text-xs text-teal-200 font-semibold">Printin3D</div>
-          <div className="text-white font-bold text-base leading-tight">Shopify &amp; TikTok Shop Launch</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">3D</div>
       </div>
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
@@ -624,18 +630,26 @@ export default function HomePage() {
       className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
       onClick={() => router.push('/work?case=furry')}
     >
-      <div className="h-32 bg-gradient-to-br from-[#331021] to-[#be185d] p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            Pet Ecommerce
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #03</span>
+      <div className="h-44 relative overflow-hidden text-white bg-slate-900">
+        <img
+          src="/images/portfolio/furry.jpg"
+          alt="Furry Fiesta"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-slate-950/30" />
+        <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between z-10">
+          <div className="flex items-center justify-between">
+            <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md shadow-xs border border-white/15">
+              Pet Ecommerce
+            </span>
+            <span className="text-white/70 text-xs font-mono">Case #03</span>
+          </div>
+          <div>
+            <div className="text-xs text-white/80 font-medium tracking-wide drop-shadow-sm">Furry Fiesta</div>
+            <div className="text-white font-bold text-base leading-tight mt-0.5 drop-shadow-sm">Storefront Redesign &amp; CRO</div>
+          </div>
         </div>
-        <div className="z-10">
-          <div className="text-xs text-pink-200 font-semibold">Furry Fiesta</div>
-          <div className="text-white font-bold text-base leading-tight">Storefront Redesign &amp; CRO</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Pet</div>
       </div>
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
@@ -661,18 +675,26 @@ export default function HomePage() {
       className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
       onClick={() => router.push('/work?case=ola')}
     >
-      <div className="h-32 bg-gradient-to-br from-[#0f2a4a] to-[#0369a1] p-5 flex flex-col justify-between relative overflow-hidden">
-        <div className="flex items-center justify-between z-10">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-            Real Estate &amp; Property
-          </span>
-          <span className="text-white/40 text-xs font-mono">Case #04</span>
+      <div className="h-44 relative overflow-hidden text-white bg-slate-900">
+        <img
+          src="/images/portfolio/ola.jpg"
+          alt="Olakunle &amp; Partners"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-slate-950/30" />
+        <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between z-10">
+          <div className="flex items-center justify-between">
+            <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md shadow-xs border border-white/15">
+              Real Estate &amp; Property
+            </span>
+            <span className="text-white/70 text-xs font-mono">Case #04</span>
+          </div>
+          <div>
+            <div className="text-xs text-white/80 font-medium tracking-wide drop-shadow-sm">Olakunle &amp; Partners</div>
+            <div className="text-white font-bold text-base leading-tight mt-0.5 drop-shadow-sm">Property Web Platform &amp; Lead Gen</div>
+          </div>
         </div>
-        <div className="z-10">
-          <div className="text-xs text-sky-200 font-semibold">Olakunle &amp; Partners</div>
-          <div className="text-white font-bold text-base leading-tight">Property Web Platform &amp; Lead Gen</div>
-        </div>
-        <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">Prop</div>
       </div>
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
@@ -731,13 +753,13 @@ export default function HomePage() {
     <div className="ind-card" onClick={() => router.push('/industries/healthcare')} style={{"cursor":"pointer"}}><div className="ind-ico">🏥</div><div className="ind-name">Healthcare & Medical</div><div className="ind-desc">HIPAA-aware marketing, local SEO, patient acquisition</div></div>
     <div className="ind-card" onClick={() => router.push('/industries/law-firms')} style={{"cursor":"pointer"}}><div className="ind-ico">⚖️</div><div className="ind-name">Legal & Professional</div><div className="ind-desc">Attorney marketing, local SEO, lead generation</div></div>
     <div className="ind-card" onClick={() => router.push('/industries/real-estate')} style={{"cursor":"pointer"}}><div className="ind-ico">🏠</div><div className="ind-name">Real Estate</div><div className="ind-desc">Local SEO, PPC, property listing optimization</div></div>
-    <div className="ind-card"><div className="ind-ico">💰</div><div className="ind-name">Finance & Fintech</div><div className="ind-desc">Regulated content, YMYL SEO, paid acquisition</div></div>
+    <div className="ind-card" onClick={() => router.push('/industries/fintech')} style={{"cursor":"pointer"}}><div className="ind-ico">💰</div><div className="ind-name">Finance & Fintech</div><div className="ind-desc">Regulated content, YMYL SEO, paid acquisition</div></div>
     <div className="ind-card" onClick={() => router.push('/industries/education')} style={{"cursor":"pointer"}}><div className="ind-ico">🎓</div><div className="ind-name">Education & Courses</div><div className="ind-desc">Student acquisition, Udemy SEO, YouTube marketing</div></div>
     <div className="ind-card" onClick={() => router.push('/industries/gaming')} style={{"cursor":"pointer"}}><div className="ind-ico">🎮</div><div className="ind-name">Gaming & Entertainment</div><div className="ind-desc">Steam marketing, game launch, influencer seeding</div></div>
-    <div className="ind-card"><div className="ind-ico">🍽️</div><div className="ind-name">Food & Hospitality</div><div className="ind-desc">Local SEO, reputation management, social media</div></div>
-    <div className="ind-card" onClick={() => router.push('/contact')} style={{"cursor":"pointer"}}><div className="ind-ico">🔧</div><div className="ind-name">Home Services</div><div className="ind-desc">Local SEO, Google Maps, lead generation campaigns</div></div>
-    <div className="ind-card"><div className="ind-ico">🎵</div><div className="ind-name">Music & Entertainment</div><div className="ind-desc">Streaming strategy, playlist promotion, social growth</div></div>
-    <div className="ind-card" onClick={() => router.push('/services')} style={{"cursor":"pointer"}}><div className="ind-ico">🌍</div><div className="ind-name">Africa Market</div><div className="ind-desc">Pan-African SEO, WhatsApp marketing, local data</div></div>
+    <div className="ind-card" onClick={() => router.push('/industries/restaurants')} style={{"cursor":"pointer"}}><div className="ind-ico">🍽️</div><div className="ind-name">Food & Hospitality</div><div className="ind-desc">Local SEO, reputation management, social media</div></div>
+    <div className="ind-card" onClick={() => router.push('/industries/home-services')} style={{"cursor":"pointer"}}><div className="ind-ico">🔧</div><div className="ind-name">Home Services</div><div className="ind-desc">Local SEO, Google Maps, lead generation campaigns</div></div>
+    <div className="ind-card" onClick={() => router.push('/industries/nonprofits')} style={{"cursor":"pointer"}}><div className="ind-ico">🤝</div><div className="ind-name">Non-Profit & NGO</div><div className="ind-desc">Donor acquisition, cause marketing, grants & visibility</div></div>
+    <div className="ind-card" onClick={() => router.push('/services/africa-market')} style={{"cursor":"pointer"}}><div className="ind-ico">🌍</div><div className="ind-name">Africa Market</div><div className="ind-desc">Pan-African SEO, WhatsApp marketing, local data</div></div>
   </div>
 </div>
 
@@ -756,7 +778,7 @@ export default function HomePage() {
     <div className="proc-step">
       <div className="proc-num">2</div>
       <div className="proc-title">Custom Growth Plan</div>
-      <div className="proc-desc">A tailored 90-day plan with clear KPIs, channel recommendations and revenue projections — delivered within 12 hours.</div>
+      <div className="proc-desc">A tailored 90-day plan with clear KPIs, channel recommendations and revenue projections — delivered within 5 hours.</div>
     </div>
     <div className="proc-step">
       <div className="proc-num">3</div>
@@ -766,137 +788,93 @@ export default function HomePage() {
     <div className="proc-step">
       <div className="proc-num">4</div>
       <div className="proc-title">Report & Scale</div>
-      <div className="proc-desc">Monthly reports tied to revenue, not vanity metrics. We identify what\'s working, double down and scale what drives ROI.</div>
+      <div className="proc-desc">Monthly reports tied to revenue, not vanity metrics. We identify what's working, double down and scale what drives ROI.</div>
     </div>
   </div>
 </div>
 
 {/*  HOMEPAGE FAQ — Schema-optimized, objection-handling  */}
-<div className="s-white">
+<div className="s-white" id="faq">
   <div className="sec-tag">FREQUENTLY ASKED QUESTIONS</div>
-  <h2 className="sec-h2">Common questions about hiring a digital marketing agency.</h2>
+  <h2 className="sec-h2">Digital marketing, technology and AI—answered</h2>
   <div className="aln"></div>
+  <p className="sec-sub">Clear answers about Amplipath’s services, pricing, process, SEO, GEO/AEO, web development, AI automation and measurable growth.</p>
+
   <div className="faq-wrap">
-    
-    <div className="faq-item" key={0}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 0 ? null : 0)}>
-        <span>How much does digital marketing cost?</span>
-        <span>{openFaq === 0 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 0 ? 'open' : ''}`}>
-        Digital marketing costs vary significantly based on services, channels and business size. Most small-to-medium businesses invest between $1,500 and $10,000 per month for a full-service digital marketing engagement. Specific services like SEO typically range from $1,000–$5,000/month, PPC management from $500–$3,000/month, and social media management from $800–$3,000/month. At Amplipath we offer transparent, performance-based pricing with no lock-in contracts. Book a free strategy session for a custom quote based on your specific goals and budget.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={1}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}>
-        <span>How long does it take to see results from SEO?</span>
-        <span>{openFaq === 1 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 1 ? 'open' : ''}`}>
-        Most businesses see measurable SEO improvements within 3–6 months. Competitive industries may take 6–12 months for significant ranking gains. However, our 90-day rapid growth framework typically delivers measurable improvements in organic traffic, rankings and lead quality within the first quarter. We set honest, specific timelines based on your market and competition during the initial strategy session — and we hold ourselves accountable to those timelines.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={2}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 2 ? null : 2)}>
-        <span>What is GEO/AEO and why does my business need it?</span>
-        <span>{openFaq === 2 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 2 ? 'open' : ''}`}>
-        GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) ensure your brand appears in AI-generated search results from ChatGPT, Gemini, Perplexity and Google AI Overviews. In 2026, AI tools handle millions of daily searches that never result in a traditional Google click. Businesses not optimizing for AI search are already losing visibility to competitors who are. Amplipath is one of the first agencies globally to offer structured GEO/AEO services — making this a significant competitive advantage for our clients.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={3}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 3 ? null : 3)}>
-        <span>Do you work with small businesses and startups?</span>
-        <span>{openFaq === 3 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 3 ? 'open' : ''}`}>
-        Yes — we work with businesses at every stage, from early-stage startups to enterprise companies. We have services and engagement models designed for every budget. A startup with $1,500/month can engage us for focused SEO or social media work. An enterprise with $50,000+/month can engage us as a full-service agency partner. Every client receives the same quality of strategy and execution — we don\'t assign junior staff to smaller accounts.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={4}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 4 ? null : 4)}>
-        <span>What makes Amplipath different from other marketing agencies?</span>
-        <span>{openFaq === 4 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 4 ? 'open' : ''}`}>
-        Three things differentiate Amplipath: (1) GEO/AEO leadership — we\'re one of the only agencies globally offering structured AI search optimization. (2) Africa market expertise — we\'re the first premium global agency with real local data and dedicated teams for 15 African countries. (3) Niche services — game marketing, Steam campaigns, Udemy course promotion, music promotion and more — services most agencies simply don\'t offer. All backed by transparent monthly reporting, no lock-in contracts and a 90-day results commitment.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={5}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 5 ? null : 5)}>
-        <span>Do you offer a free consultation or audit?</span>
-        <span>{openFaq === 5 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 5 ? 'open' : ''}`}>
-        Yes — we offer a free strategy session for every new prospective client. In this session, our team reviews your website, current marketing performance and key competitors, then identifies your biggest growth opportunities. We also offer a free website SEO audit for businesses that want a detailed technical review before committing to a full engagement. Book your free session using the 'Let's talk!' button anywhere on our website.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={6}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 6 ? null : 6)}>
-        <span>How is GEO/AEO different from traditional SEO?</span>
-        <span>{openFaq === 6 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 6 ? 'open' : ''}`}>
-        Traditional SEO targets Google's ten blue links. GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) target the direct answers given by ChatGPT, Google AI Overviews, Perplexity and Gemini. The optimization techniques differ — AI engines favor clearly structured, directly-answerable content with strong entity signals, rather than keyword density. Amplipath runs both as complementary strategies since most buyers now research across both traditional search and AI chat interfaces.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={7}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 7 ? null : 7)}>
-        <span>Can you show me if my brand currently appears in ChatGPT or Google AI answers?</span>
-        <span>{openFaq === 7 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 7 ? 'open' : ''}`}>
-        Yes — an AI search visibility check is part of every free audit we run. We test how your brand, products and key topics currently appear (or fail to appear) across ChatGPT, Google AI Overviews, Perplexity and Gemini, then build a roadmap to improve that visibility through structured content, schema markup and entity optimization.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={8}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 8 ? null : 8)}>
-        <span>Is Amplipath a real company or just a website?</span>
-        <span>{openFaq === 8 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 8 ? 'open' : ''}`}>
-        Amplipath is a fully operational digital marketing and technology agency with offices in Ondo, Nigeria (our primary physical office) and a virtual presence in Tallahassee, Florida, United States. We work with businesses worldwide on a month-to-month basis with no lock-in contracts — book a free strategy session to speak directly with our team.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={9}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 9 ? null : 9)}>
-        <span>What services can I hire Amplipath for without a long-term contract?</span>
-        <span>{openFaq === 9 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 9 ? 'open' : ''}`}>
-        All of them. Every service we offer — including SEO, GEO/AEO, paid advertising, social media management, web development, content marketing, email automation and Africa market services — is available on a flexible month-to-month basis. You can scale up, scale down or pause at any time with 30 days notice.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={10}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 10 ? null : 10)}>
-        <span>Does Amplipath only do marketing, or do you also build websites and apps?</span>
-        <span>{openFaq === 10 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 10 ? 'open' : ''}`}>
-        Amplipath is both a digital marketing agency and a technology company. Alongside SEO, GEO/AEO and paid advertising, our in-house team builds websites, e-commerce stores, mobile apps, AI chatbots and custom AI systems — using the same platforms a dedicated development agency would use: React, Flutter, Firebase, OpenAI, Claude and Gemini APIs. Most clients use us for both: the marketing strategy and the technology that makes it convert.
-      </div>
-    </div>
-    
-    <div className="faq-item" key={11}>
-      <button className="faq-q" onClick={() => setOpenFaq(openFaq === 11 ? null : 11)}>
-        <span>Is Amplipath a digital marketing agency or a technology company?</span>
-        <span>{openFaq === 11 ? '−' : '+'}</span>
-      </button>
-      <div className={`faq-a ${openFaq === 11 ? 'open' : ''}`}>
-        Amplipath is both. We are a full-service marketing and technology agency that helps businesses attract customers through SEO, GEO/AEO, paid ads, social media and content — then convert that traffic using websites, apps, AI chatbots, automation and analytics systems. One team for strategy, traffic and the technology that converts it.
-      </div>
-    </div>
+    {[
+      {
+        q: "What does Amplipath do, and which services does it offer?",
+        a: "Amplipath is an integrated digital marketing, technology and AI company. We help businesses attract demand, convert customers and improve operations by connecting strategy, SEO, GEO/AEO, paid advertising, content, analytics, websites, ecommerce, apps, AI agents and workflow automation. Instead of treating each channel as a separate activity, we build coordinated growth systems around clear business goals and measurable performance."
+      },
+      {
+        q: "What types of businesses and industries does Amplipath work with?",
+        a: "Amplipath works with startups, small and medium-sized businesses, established companies and growing brands. Our experience covers ecommerce, technology, professional services, real estate, education, health and beauty, and other sectors. We support both B2B and B2C growth and can work remotely with clients in Nigeria, across Africa and internationally. Every strategy is adapted to the client’s market, audience, growth stage and internal capacity."
+      },
+      {
+        q: "How much do Amplipath’s digital marketing, web development and AI services cost?",
+        a: "There is no single price that fits every business. Cost depends on the objectives, deliverables, number of channels, target markets, technical complexity, timeline and whether the engagement is a one-time project or an ongoing program. Advertising budgets and third-party software may be charged separately. After discovery, Amplipath provides a custom proposal explaining the scope, timing, fees, responsibilities and success measures."
+      },
+      {
+        q: "Is hiring a digital marketing agency worth it for a small business?",
+        a: "Yes, particularly when a business needs specialist expertise, faster execution or capabilities it cannot efficiently maintain in-house. The right agency should connect its work to outcomes such as qualified leads, sales, organic visibility, improved conversion rates, lower acquisition costs or time saved. Amplipath first evaluates the opportunity, current resources and expected value before recommending an engagement."
+      },
+      {
+        q: "How do I get started, and what happens after I contact Amplipath?",
+        a: "Start by sharing your business goal, current challenge, target audience, website or product, budget range and preferred timeline. Amplipath will assess the opportunity and recommend the most useful next step. A typical engagement moves through discovery, audit, strategy, implementation, measurement and optimization. Before work begins, the agreed proposal defines the scope, timeline, responsibilities, deliverables and performance indicators."
+      },
+      {
+        q: "How long does SEO take to produce results?",
+        a: "SEO does not have one guaranteed timeline. Search engines may reflect some technical changes relatively quickly, while meaningful improvements in rankings, qualified organic traffic and leads usually require sustained work over several months. Timing depends on competition, website health, content quality, authority, crawlability and available resources. Amplipath establishes a baseline and reports early indicators while long-term search visibility develops."
+      },
+      {
+        q: "What are SEO, AEO and GEO, and how are they different?",
+        a: "SEO improves a website’s visibility in traditional search results. Answer Engine Optimization, or AEO, helps content provide clear and useful answers for answer engines, featured results and conversational queries. Generative Engine Optimization, or GEO, improves how a brand and its information can be understood, verified, cited or summarized by generative AI systems. Strong technical SEO, original content, clear brand entities, credible evidence and consistent information support all three."
+      },
+      {
+        q: "Can Amplipath assess and improve my brand’s visibility in AI answers?",
+        a: "Yes. Amplipath can assess how a brand appears for relevant prompts and searches across Google’s AI experiences and selected platforms such as ChatGPT, Perplexity and Claude. We examine competitors, indexation, content coverage, entity signals and third-party references, then prioritize improvements."
+      },
+      {
+        q: "Can Amplipath build my website or app and also handle its SEO?",
+        a: "Yes. Amplipath can plan, design, develop or redesign business websites, ecommerce stores, landing pages and suitable application solutions. Technical SEO, analytics, website performance, conversion paths and search-friendly information architecture can be incorporated from the beginning. The technology stack, functionality, integrations, ownership terms and final deliverables are defined after the business and user requirements have been established."
+      },
+      {
+        q: "What can AI automation and AI agents do for my business?",
+        a: "AI automation can reduce repetitive work and improve processes such as lead qualification, customer-support triage, CRM updates, reporting, document processing, appointment workflows and internal knowledge retrieval. Amplipath maps the business process before recommending an AI agent or automation. Each system is designed with appropriate integrations, permissions, human review and performance measurement so it supports the team rather than creating unnecessary complexity."
+      },
+      {
+        q: "How does Amplipath measure digital marketing performance and ROI?",
+        a: "Amplipath measures the indicators connected to the client’s business objective. Depending on the engagement, these may include qualified leads, conversion rate, revenue, return on ad spend, acquisition cost, organic visibility, AI mentions or citations, pipeline value, engagement and hours saved through automation. We establish a baseline, clarify attribution limits and report against agreed KPIs instead of relying only on impressions or other vanity metrics."
+      },
+      {
+        q: "Does Amplipath guarantee Google rankings, AI citations, leads or sales?",
+        a: "No responsible agency can guarantee a particular Google position, AI citation, number of leads or revenue result. Performance is affected by competition, market demand, platform algorithms, advertising budget, offer quality and other factors outside an agency’s direct control. Amplipath instead commits to an agreed scope, transparent measurement, evidence-based decisions and continuous optimization toward clearly defined business goals."
+      },
+      {
+        q: "What support and handover do we receive after a project or engagement ends?",
+        a: "Depending on the engagement, we can provide documentation, account handover, staff training, quality assurance, technical guidance and post-launch support. Maintenance, campaign optimization or continuing growth support can also be arranged separately. The support period and everything included are defined clearly in the proposal before work begins."
+      }
+    ].map((faq, idx) => {
+      const isOpen = openFaq === idx;
+      return (
+        <div className={`faq-item ${isOpen ? 'open' : ''}`} key={idx}>
+          <button
+            className="faq-q"
+            type="button"
+            onClick={() => setOpenFaq(isOpen ? null : idx)}
+            aria-expanded={isOpen}
+          >
+            <span>{faq.q}</span>
+            <span className="faq-plus">{isOpen ? '−' : '+'}</span>
+          </button>
+          {isOpen && (
+            <div className="faq-a open">
+              <div className="faq-a-inner">{faq.a}</div>
+            </div>
+          )}
+        </div>
+      );
+    })}
   </div>
 </div>
 

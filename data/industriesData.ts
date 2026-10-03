@@ -125,50 +125,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Review volume and rating"
     ],
     "faqs": [
-      {
-        "q": "How can law firms get more consultation requests?",
-        "a": "Consistent consultation growth comes from combining practice-area SEO and Google Business Profile optimization with call/form tracking and fast automated follow-up — visibility alone rarely converts without a tracked intake process behind it."
-      },
-      {
-        "q": "Is SEO important for law firms?",
-        "a": "Yes — most prospective clients search Google before contacting a firm, and practice-area SEO plus local SEO determine whether your firm or a competitor shows up first for high-value searches like \"personal injury lawyer near me\"."
-      },
-      {
-        "q": "Should law firms run Google Ads?",
-        "a": "Google Ads can deliver fast, high-intent consultation leads for urgent legal needs, but only performs well when paired with call/form tracking and conversion-optimized landing pages — without that, ad spend is hard to attribute or improve."
-      },
-      {
-        "q": "Can you build practice area landing pages?",
-        "a": "Yes — dedicated landing pages for each practice area (personal injury, family law, immigration, criminal defense and others) are a core deliverable, built specifically to build trust and convert consultation-intent traffic."
-      },
-      {
-        "q": "How do you track law firm leads?",
-        "a": "Call tracking numbers, form tracking and CRM pipeline integration give a full view of every consultation request by source, so spend can be attributed accurately rather than guessed at."
-      },
-      {
-        "q": "Do you handle Google Business Profile management for multiple office locations?",
-        "a": "Yes — multi-location law firms are managed with location-specific GBP optimization, citation consistency and local landing pages for each office."
-      },
-      {
-        "q": "How do you write legal marketing content without making unverifiable claims?",
-        "a": "We write YMYL-compliant content that demonstrates expertise through process, case-type knowledge and clear explanation of legal concepts — without guaranteeing case outcomes or making claims that could violate bar advertising rules."
-      },
-      {
-        "q": "How long does it take to see results from law firm SEO?",
-        "a": "Local SEO and Google Business Profile improvements often show initial movement within 60-90 days, while competitive practice-area keyword rankings typically take 4-6 months to mature."
-      },
-      {
-        "q": "Do you help with online reviews for law firms?",
-        "a": "Yes — a structured, compliant review request workflow triggered after positive case milestones is part of the reputation management system we build for law firm clients."
-      },
-      {
-        "q": "Can you work with a solo practice as well as a multi-attorney firm?",
-        "a": "Yes — scope and channel mix are tailored to firm size, from solo practitioners focused on one practice area to multi-attorney firms competing across several specialties and locations."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — engagements run month-to-month with no lock-in contract, and we report transparently on consultation requests and pipeline so results, not a contract term, keep you with us."
-      }
+          {
+                "q": "How can a law firm generate more qualified consultation requests?",
+                "a": "We combine practice-area SEO, local search, conversion-focused landing pages, paid search and structured intake follow-up. Success should be measured by qualified enquiries and signed matters—not simply website traffic, impressions or unfiltered lead volume."
+          },
+          {
+                "q": "Should a law firm invest in SEO, Google Ads or Local Services Ads?",
+                "a": "The right combination depends on the practice area, location, competition, budget and eligibility. SEO builds long-term visibility, while Google Ads and eligible Local Services Ads can capture people actively searching for legal assistance. We evaluate each channel according to qualified-case potential."
+          },
+          {
+                "q": "How does local SEO help law firms attract clients?",
+                "a": "Local SEO helps a firm appear when prospective clients search for a lawyer in a specific city or service area. We optimize eligible Google Business Profiles, location pages, directory information, reviews and practice-area content while following Google’s rules for firms, practitioners and multiple offices."
+          },
+          {
+                "q": "How do you create legal marketing content without making misleading claims?",
+                "a": "We create factual, clearly written content that explains services, legal processes and common client questions without promising outcomes. Final legal claims, jurisdiction-specific information, disclaimers and professional-conduct requirements should be reviewed and approved by the law firm."
+          },
+          {
+                "q": "Can digital marketing improve a law firm’s client-intake conversion rate?",
+                "a": "Yes. Marketing performance often depends on what happens after an enquiry is received. We can improve forms, call routing, appointment scheduling, CRM workflows and follow-up automation so prospective clients receive timely responses and are directed to the appropriate practice team."
+          },
+          {
+                "q": "How do you track a legal enquiry from its source to a signed client?",
+                "a": "We can connect call tracking, website forms, advertising platforms, analytics and the firm’s CRM or intake system. This allows the firm to evaluate which campaigns, keywords and practice areas generate qualified enquiries, consultations and signed matters while protecting sensitive client information."
+          },
+          {
+                "q": "Can a law firm appear in ChatGPT, Google AI Overviews and other AI answers?",
+                "a": "Yes and we can improve eligibility by publishing accurate practice-area answers, strengthening the firm’s entity information, building location authority and ensuring important pages are crawlable. Traditional SEO, trustworthy content and consistent business information remain essential."
+          },
+          {
+                "q": "How should law firms manage online reviews ethically?",
+                "a": "We can create a policy-compliant review process that invites genuine clients to share feedback without incentives or pressure. Review requests and responses must protect confidentiality, avoid discussing case details and comply with the professional rules governing the firm’s jurisdiction."
+          },
+          {
+                "q": "How should a law firm determine its digital marketing budget?",
+                "a": "The budget should reflect the firm’s practice areas, target locations, competition, average matter value, growth capacity and intake performance. We assess where opportunities are being lost before recommending how much should go toward advertising, SEO, content, conversion improvements and tracking."
+          },
+          {
+                "q": "How long does law firm SEO take to produce qualified enquiries?",
+                "a": "SEO normally develops gradually because authority, local visibility and content performance must build over time. Paid campaigns may produce faster market data, while organic growth usually compounds over several months. We report early indicators separately from qualified consultations and signed-client outcomes."
+          }
     ],
     "relatedServices": [
       "localseo",
@@ -291,50 +287,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Email revenue"
     ],
     "faqs": [
-      {
-        "q": "Can you help improve ecommerce sales?",
-        "a": "Yes — we combine SEO, paid ads, email/SMS automation and conversion rate optimization into one system, since sales growth rarely comes from a single channel working in isolation."
-      },
-      {
-        "q": "Do you work with Shopify stores?",
-        "a": "Yes — Shopify is one of our most-supported platforms, alongside WooCommerce, BigCommerce and custom-built e-commerce sites."
-      },
-      {
-        "q": "What is the best marketing strategy for ecommerce?",
-        "a": "It depends on your product, margin and current channel mix — but most e-commerce brands benefit from pairing paid acquisition (Meta, Google Shopping) with cart recovery automation and CRO, since acquisition without retention caps long-term growth."
-      },
-      {
-        "q": "Do you handle abandoned cart emails?",
-        "a": "Yes — abandoned cart sequences, alongside welcome series, post-purchase and win-back flows, are a core deliverable for every e-commerce engagement."
-      },
-      {
-        "q": "Can you improve product page conversion rates?",
-        "a": "Yes — product page CRO (imagery, copy, trust signals, checkout flow) is assessed and optimized as part of the engagement, often one of the fastest wins available since it doesn't require new traffic."
-      },
-      {
-        "q": "Do you manage Amazon listings alongside our own website?",
-        "a": "Yes — Amazon SEO and Ads management run alongside your own store's marketing, with strategy coordinated so the two channels don't cannibalize the same keywords."
-      },
-      {
-        "q": "How do you measure ecommerce marketing ROI?",
-        "a": "We track revenue, ROAS, customer acquisition cost and repeat purchase rate as the core metrics, tied directly to GA4 Ecommerce and platform-level attribution rather than vanity traffic numbers."
-      },
-      {
-        "q": "Can you fix our Google Shopping feed?",
-        "a": "Yes — product feed audits and optimization for Google Merchant Center are a standard part of getting Shopping and Performance Max campaigns performing."
-      },
-      {
-        "q": "Do you work with stores outside the US?",
-        "a": "Yes — we support e-commerce brands worldwide across all markets, including Paystack/Flutterwave payment integration for African markets."
-      },
-      {
-        "q": "How quickly can ecommerce marketing show results?",
-        "a": "Paid campaigns can show initial movement within days; SEO and lifecycle email typically take 60-90 days to compound meaningfully — we set a realistic timeline based on your starting point during onboarding."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — engagements are month-to-month with no lock-in contract, reported against revenue and ROAS rather than vanity metrics."
-      }
+          {
+                "q": "How can an ecommerce store increase profitable sales rather than just traffic?",
+                "a": "We connect customer acquisition, conversion optimization and retention instead of treating them as separate campaigns. The strategy focuses on qualified traffic, conversion rate, acquisition cost, product margin, repeat purchases and customer lifetime value—not visits alone."
+          },
+          {
+                "q": "Which marketing channels are best for an ecommerce business?",
+                "a": "The right channels depend on the products, margins, average order value, audience and existing demand. We may combine SEO, Google Shopping, paid social, email, SMS, marketplace marketing and retargeting based on where customers discover and purchase the products."
+          },
+          {
+                "q": "How can product pages and checkout conversion rates be improved?",
+                "a": "We examine product information, images, pricing, trust signals, reviews, page speed, mobile usability, shipping information and checkout friction. We then prioritise and test changes that make it easier for customers to understand the offer and complete a purchase."
+          },
+          {
+                "q": "How can abandoned-cart automation recover lost ecommerce sales?",
+                "a": "Abandoned-cart workflows remind shoppers about unfinished purchases through email, SMS or approved messaging channels. We segment messages according to customer behaviour and use product reminders, support information and appropriate incentives without creating excessive or intrusive communication."
+          },
+          {
+                "q": "Can you fix Google Merchant Center and Shopping-feed problems?",
+                "a": "Yes. We can review product titles, descriptions, identifiers, pricing, availability, images, landing pages and policy-related feed errors. Correct product data helps Google understand the catalogue and reduces inconsistencies between the website, feed and advertising campaigns."
+          },
+          {
+                "q": "Can you market our website alongside Amazon and other marketplaces?",
+                "a": "Yes. We can coordinate the owned ecommerce store with relevant marketplaces and social-commerce channels. The strategy considers inventory, pricing, attribution, fulfilment and customer ownership so the channels support one another rather than competing without a clear plan."
+          },
+          {
+                "q": "How should ecommerce marketing performance be measured?",
+                "a": "We evaluate revenue together with gross margin, customer acquisition cost, conversion rate, average order value, repeat-purchase rate and customer lifetime value. Return on advertising spend is useful, but it should not be considered without product costs, discounts, refunds and fulfilment expenses."
+          },
+          {
+                "q": "How can AI improve ecommerce marketing and personalisation?",
+                "a": "AI can support product recommendations, customer segmentation, search, campaign analysis, forecasting and service automation. We use it where it improves relevance or efficiency while maintaining human review, accurate product information, appropriate consent and responsible use of customer data."
+          },
+          {
+                "q": "How can an online store increase customer retention and repeat purchases?",
+                "a": "We can build post-purchase communication, replenishment reminders, personalised recommendations, loyalty programmes, win-back campaigns and customer-service workflows. Retention begins with the buying and fulfilment experience, so marketing cannot compensate for poor product quality or delivery."
+          },
+          {
+                "q": "How do you scale ecommerce advertising without reducing profitability?",
+                "a": "We scale gradually using product-level margins, audience quality, creative performance, conversion data and inventory availability. Budgets should increase only when the store can maintain an acceptable acquisition cost and fulfil additional orders without damaging the customer experience."
+          }
     ],
     "relatedServices": [
       "ecoseo",
@@ -456,50 +448,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Pipeline value"
     ],
     "faqs": [
-      {
-        "q": "How do SaaS companies get more demo bookings?",
-        "a": "Demo bookings improve most reliably through a combination of clear product-led landing pages, retargeting for engaged visitors and LinkedIn demand gen targeting the specific decision-makers and champions inside target accounts."
-      },
-      {
-        "q": "Do you help early-stage startups?",
-        "a": "Yes — pre-launch and early-stage SaaS companies are a significant share of our clients, with strategy scoped around limited budget and the need to validate positioning before scaling spend."
-      },
-      {
-        "q": "Can you market a SaaS product before launch?",
-        "a": "Yes — pre-launch waitlist funnels, Product Hunt launch support and early content/SEO foundation-building are common starting points before a public launch."
-      },
-      {
-        "q": "Do you build SaaS landing pages?",
-        "a": "Yes — conversion-focused landing pages built specifically around demo or trial conversion, with message match to whichever campaign or channel is driving traffic."
-      },
-      {
-        "q": "How do you reduce customer acquisition cost?",
-        "a": "CAC reduction usually comes from improving conversion at each funnel stage (landing page, demo booking, trial activation) rather than only optimizing ad bids — we address both the acquisition and conversion sides together."
-      },
-      {
-        "q": "What is product-led SEO?",
-        "a": "Product-led SEO targets the specific comparison, integration and use-case searches your ideal buyers run while evaluating tools in your category — content built to convert rather than just rank."
-      },
-      {
-        "q": "Do you help with GEO/AEO so our SaaS product gets recommended by AI tools?",
-        "a": "Yes — GEO/AEO optimization is a growing part of SaaS marketing, since buyers increasingly ask ChatGPT or Perplexity for tool recommendations before ever visiting a search engine."
-      },
-      {
-        "q": "Can you help reduce trial-to-paid churn?",
-        "a": "Trial-to-paid conversion is improved through onboarding automation, activation-focused email sequences and CRO on the upgrade flow itself — addressed as part of marketing automation rather than left to product alone."
-      },
-      {
-        "q": "Do you work with B2B and B2C SaaS differently?",
-        "a": "Yes — B2B SaaS typically leans on LinkedIn, demand gen and longer sales cycles, while B2C SaaS leans more on paid social, SEO and self-serve conversion optimization; strategy is built around your specific buyer."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — month-to-month engagements with no lock-in, reported against pipeline and trial-to-paid metrics rather than vanity traffic."
-      },
-      {
-        "q": "How quickly can SaaS marketing show results?",
-        "a": "Paid demand gen can show pipeline movement within weeks; product-led SEO and content typically take 3-6 months to compound — we set a realistic timeline based on your current organic baseline."
-      }
+          {
+                "q": "How can a SaaS company generate more qualified demos or trial sign-ups?",
+                "a": "We align search, paid acquisition, content, landing pages and retargeting with the problems experienced by the ideal customer. Campaigns are measured by qualified trials, activated users, demos, sales opportunities and paying customers rather than clicks or form submissions alone."
+          },
+          {
+                "q": "Should a SaaS company use a product-led, sales-led or hybrid growth model?",
+                "a": "The appropriate model depends on product complexity, price, target customer and the assistance required before purchase. We help determine whether prospects should begin with self-service access, book a sales demonstration or move through a combination of both experiences."
+          },
+          {
+                "q": "Can you market a SaaS product before it launches?",
+                "a": "Yes. Pre-launch marketing can validate positioning, develop a waitlist, attract beta users and collect feedback before significant acquisition spending begins. We can create landing pages, early-access campaigns, founder content, audience research and nurture sequences around the product roadmap."
+          },
+          {
+                "q": "How can a SaaS company reduce customer acquisition cost without lowering lead quality?",
+                "a": "We examine targeting, positioning, creative, landing-page conversion, sales qualification and activation—not advertising costs in isolation. Reducing wasted demand and improving conversion between each funnel stage can lower acquisition cost without filling the pipeline with unsuitable prospects."
+          },
+          {
+                "q": "What is product-led SEO?",
+                "a": "Product-led SEO creates useful pages around the problems, use cases, integrations, comparisons and workflows the software solves. Instead of attracting unrelated traffic, it connects search intent to product value and directs suitable visitors toward a trial, demo or relevant feature."
+          },
+          {
+                "q": "How can a SaaS product appear in AI-generated recommendations and comparisons?",
+                "a": "We improve the product’s factual web presence through clear use-case pages, comparison content, documentation, customer evidence and consistent company information. No agency controls AI recommendations, but authoritative, crawlable and specific content gives search and AI systems stronger information to evaluate."
+          },
+          {
+                "q": "How can marketing improve trial-to-paid conversion?",
+                "a": "We analyse signup friction, onboarding, activation events, lifecycle communication and the point where users first experience meaningful value. Email, in-app messaging, retargeting and sales assistance can then be aligned with the behaviours that indicate purchase intent or disengagement."
+          },
+          {
+                "q": "How do you connect SaaS marketing with CRM and product analytics?",
+                "a": "We can connect advertising, website analytics, product events and CRM stages so the customer journey is measured beyond the first conversion. This helps identify which channels generate activated users, qualified opportunities, subscriptions and retained revenue."
+          },
+          {
+                "q": "Which metrics matter most in SaaS marketing?",
+                "a": "Relevant metrics may include customer acquisition cost, activation rate, trial-to-paid conversion, qualified pipeline, monthly or annual recurring revenue, payback period, lifetime value and churn. The exact measurement framework depends on whether the product is trial-led, demo-led, self-service or enterprise-focused."
+          },
+          {
+                "q": "Do B2B and B2C SaaS products require different marketing strategies?",
+                "a": "Yes. B2B SaaS often involves longer buying cycles, multiple decision-makers, demonstrations and account-based targeting. B2C SaaS usually requires faster onboarding, scalable acquisition, strong product experience and retention. We adapt the funnel and measurement model to the actual customer journey. ________________"
+          }
     ],
     "relatedServices": [
       "linkedinads",
@@ -622,50 +610,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Launch day traffic"
     ],
     "faqs": [
-      {
-        "q": "Can you help increase Steam wishlists?",
-        "a": "Yes — Steam page optimization, key art and trailer testing, Reddit/Discord community building and a coordinated Steam Next Fest strategy are all part of how we drive wishlist growth before launch."
-      },
-      {
-        "q": "Do you market mobile apps before launch?",
-        "a": "Yes — pre-launch waitlist funnels, organic social seeding and early ASO foundation-building help build an install-ready audience before the app is even live."
-      },
-      {
-        "q": "Do you handle App Store Optimization?",
-        "a": "Yes — ASO covering keyword optimization, title/subtitle, screenshots and rating strategy is a core service for both iOS and Android listings."
-      },
-      {
-        "q": "Can you help with gaming influencers?",
-        "a": "Yes — we maintain a vetted network of gaming creators across YouTube, TikTok and Twitch, matched to your title's genre and audience rather than picked by follower count alone."
-      },
-      {
-        "q": "How do you track app installs and user acquisition?",
-        "a": "Firebase Analytics and AppsFlyer attribution connect ad clicks to installs and in-app events, so spend can be evaluated against actual user behavior rather than install volume alone."
-      },
-      {
-        "q": "Is Steam Next Fest worth participating in for our game?",
-        "a": "For most titles without an existing following, yes — Next Fest delivers a concentrated visibility spike to an audience actively looking for new games to wishlist."
-      },
-      {
-        "q": "Do you help with both indie and larger studio titles?",
-        "a": "Yes — indie developers make up a significant share of our game marketing clients, with campaign scope built to match realistic indie budgets alongside larger publisher engagements."
-      },
-      {
-        "q": "What is a realistic cost-per-install for mobile games?",
-        "a": "CPI varies significantly by genre, platform and geography — we benchmark against your specific category and target markets during strategy rather than quoting an industry-wide average."
-      },
-      {
-        "q": "Can you help with retention after launch, not just acquisition?",
-        "a": "Yes — push notification strategy, re-engagement campaigns and onboarding flow optimization are addressed alongside acquisition, since retention is what actually determines long-term revenue."
-      },
-      {
-        "q": "Do you work with both PC/Steam titles and mobile games?",
-        "a": "Yes — though the channel mix differs: Steam titles lean on wishlist campaigns and community seeding, while mobile games lean more on ASO and paid UA."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — campaign engagements are scoped around your launch timeline, with month-to-month flexibility once the title is live."
-      }
+          {
+                "q": "When should marketing begin for a new app or game?",
+                "a": "Marketing should normally begin before release so positioning, audiences, store pages, tracking and creative assets can be tested. For games, this may include a Steam page, playable demo, wishlist strategy and creator outreach; for mobile apps, it may include pre-registration and beta acquisition."
+          },
+          {
+                "q": "How can a game increase Steam wishlists before launch?",
+                "a": "We combine an optimised Steam page with trailers, screenshots, demos, creator outreach, community activity, events and trackable campaigns. Wishlist growth should be evaluated by traffic source and audience quality rather than treated as a single isolated number."
+          },
+          {
+                "q": "What is App Store Optimisation, and how does it increase installs?",
+                "a": "App Store Optimisation improves how an app or game is discovered and presented in Apple’s App Store and Google Play. It includes keyword research, titles, descriptions, screenshots, preview videos, ratings, localisation and conversion testing within the rules of each store."
+          },
+          {
+                "q": "How do you track app installs and user acquisition accurately?",
+                "a": "We connect store-console data, analytics events, advertising platforms and an appropriate mobile measurement system. Because privacy protections limit user-level tracking, performance should be assessed using approved attribution methods, aggregated reporting and post-install behaviour."
+          },
+          {
+                "q": "What determines a realistic cost per install or cost per Steam wishlist?",
+                "a": "Cost depends on the platform, country, genre, audience, creative quality, store-page conversion and competition. We establish a working benchmark through controlled testing and assess cost alongside retention, engagement and monetisation rather than choosing the cheapest install or wishlist."
+          },
+          {
+                "q": "Can gaming influencers and content creators help promote a launch?",
+                "a": "Yes, when creator audiences and content styles fit the game. We evaluate platform, genre alignment, audience quality, engagement and previous sponsored content before outreach. Performance can be tracked through links, codes, wishlists, installs, engagement and attributable sales where data permits."
+          },
+          {
+                "q": "Is Steam Next Fest suitable for every PC game?",
+                "a": "No. It is most useful when the game has a polished demo, a clear store page and enough marketing activity to bring players into the event. We assess development readiness, timing, genre, wishlist goals and the campaign plan before recommending participation."
+          },
+          {
+                "q": "Should a mobile game use a soft launch before global release?",
+                "a": "A soft launch can test onboarding, technical stability, monetisation, creative performance and player retention in a controlled market. The findings help determine whether the product and acquisition model are ready to scale or require further development."
+          },
+          {
+                "q": "Can marketing improve retention after an app or game launches?",
+                "a": "Yes, although retention also depends heavily on the product experience. We can support onboarding, lifecycle messaging, push notifications, community management, retargeting, content updates and live-operations communication based on how users behave after installation."
+          },
+          {
+                "q": "How does marketing differ for mobile apps, mobile games and PC games?",
+                "a": "Mobile apps often focus on utility, subscriptions and activation; mobile games add creative testing, retention and monetisation; PC games rely more heavily on Steam visibility, wishlists, demos, communities and creators. We build the strategy around the platform and revenue model."
+          }
     ],
     "relatedServices": [
       "game",
@@ -788,50 +772,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Repeat course purchases"
     ],
     "faqs": [
-      {
-        "q": "How can I get more students for my course?",
-        "a": "Consistent enrolment growth comes from combining organic discovery (YouTube SEO, content) with a structured email nurture sequence and a conversion-focused landing page — relying on a single launch spike rarely sustains enrolment month over month."
-      },
-      {
-        "q": "Do you promote Udemy courses?",
-        "a": "Yes — Udemy SEO (title, description, category optimization) alongside off-platform traffic strategies is part of how we help Udemy-hosted courses grow enrolment."
-      },
-      {
-        "q": "Can you build a course sales funnel?",
-        "a": "Yes — from lead magnet through webinar or landing page to email launch sequence, the full funnel is built and automated as a core deliverable."
-      },
-      {
-        "q": "Do YouTube Ads work for courses?",
-        "a": "Yes, particularly when targeted at viewers of competing courses or closely related educational content — in-stream and discovery formats both perform well for course-specific campaigns."
-      },
-      {
-        "q": "Can you help with webinar funnels?",
-        "a": "Yes — webinar registration pages, the live or evergreen webinar funnel itself, and the follow-up email sequence are all part of the funnel system we build."
-      },
-      {
-        "q": "Do you work with course creators on platforms other than Udemy?",
-        "a": "Yes — Teachable, Kajabi, Coursera, Skillshare and self-hosted course platforms are all supported, with strategy adjusted to each platform's specific discovery mechanics."
-      },
-      {
-        "q": "How important is an email list for course creators?",
-        "a": "Very — an owned email list is typically the highest-converting channel for course launches, since it reaches an audience that has already opted in and shown interest."
-      },
-      {
-        "q": "Do I need an existing audience to start?",
-        "a": "No — though an existing audience accelerates results, we build acquisition strategy (YouTube SEO, paid ads) specifically designed to generate enrolments for creators starting from zero."
-      },
-      {
-        "q": "Can you help with an evergreen funnel, not just live launches?",
-        "a": "Yes — an automated evergreen enrolment funnel running continuously, separate from scheduled live launches, is a common setup for course creators wanting consistent monthly revenue."
-      },
-      {
-        "q": "How do you measure success for course marketing?",
-        "a": "Student enrolments, cost per enrolment, webinar registration rate and revenue per launch are the core metrics we track and report against monthly."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — engagements run month-to-month, with launch-specific projects scoped around your actual cohort or launch calendar."
-      }
+          {
+                "q": "How can a course creator attract more qualified students?",
+                "a": "We begin with the course outcome, ideal student and problem being solved. Search, YouTube, social content, partnerships, email marketing and paid campaigns can then direct suitable prospects into a structured enrolment journey instead of sending general traffic directly to checkout."
+          },
+          {
+                "q": "Do I need a large audience before launching an online course?",
+                "a": "No. A smaller relevant audience can be more valuable than a large disengaged following. Early demand can be developed through pilot cohorts, lead magnets, workshops, communities, partnerships and direct audience research before investing heavily in advertising."
+          },
+          {
+                "q": "What should an effective course sales funnel include?",
+                "a": "A course funnel normally includes audience discovery, a useful lead magnet or introductory lesson, email nurturing, a sales page, checkout, follow-up and student onboarding. The funnel should explain the transformation, suitability and learning experience—not merely list course modules."
+          },
+          {
+                "q": "Should a course use a live launch or an evergreen enrolment funnel?",
+                "a": "Live launches create concentrated attention, interaction and deadlines, while evergreen funnels allow students to enrol throughout the year. We may recommend proving the course and messaging through a live launch before automating a funnel that has not yet demonstrated demand."
+          },
+          {
+                "q": "Can webinars and free workshops increase course enrolments?",
+                "a": "Yes. A focused workshop allows prospective students to experience the instructor’s teaching before purchasing. We can develop registration pages, reminders, presentation flow, replay communication, sales follow-up and retargeting for live or established evergreen webinars."
+          },
+          {
+                "q": "Do YouTube, Meta and Google Ads work for selling courses?",
+                "a": "They can work when the offer, audience and funnel are already clear. YouTube supports educational discovery, Google captures existing demand and Meta can introduce the course to relevant audiences. Cold traffic should usually be nurtured rather than sent directly to an untested checkout page."
+          },
+          {
+                "q": "Why is an email list important for course marketing?",
+                "a": "An email list gives course creators a direct way to educate prospects, announce launches and continue conversations without depending entirely on social algorithms. We can build lead-capture, welcome, webinar, launch, abandoned-checkout and re-engagement sequences around the student journey."
+          },
+          {
+                "q": "Can you promote courses hosted on Udemy, Teachable, Kajabi or a custom website?",
+                "a": "Yes. The strategy changes according to the platform’s ownership, tracking, pricing and communication limitations. Marketplace courses may rely more on platform discovery, reviews and volume, while owned platforms provide greater control over customer data, funnels, pricing and email nurturing."
+          },
+          {
+                "q": "How should course-marketing success be measured?",
+                "a": "We consider lead cost, webinar registration and attendance, sales-page conversion, cost per enrolment, revenue, refunds and student retention. Completion, satisfaction and referrals also matter because sustainable education marketing depends on delivering the promised learning value."
+          },
+          {
+                "q": "How do you market a course without making unrealistic outcome claims?",
+                "a": "We focus messaging on the curriculum, learning experience, instructor expertise, suitable audience and achievable skills. Income, career or performance claims should be supported by evidence, properly qualified and reviewed so marketing does not promise results that depend on factors outside the course."
+          }
     ],
     "relatedServices": [
       "course",
@@ -951,50 +931,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Retargeting conversion"
     ],
     "faqs": [
-      {
-        "q": "How can real estate agents get more leads?",
-        "a": "Lead growth comes from combining strong local visibility (SEO, GBP) with conversion-focused landing pages and fast, automated CRM follow-up — visibility without a tracked follow-up system leaves leads to go cold."
-      },
-      {
-        "q": "Do you create property landing pages?",
-        "a": "Yes — dedicated landing pages for buyers, sellers, investors and renters are built to convert each specific audience, rather than sending all traffic to one generic page."
-      },
-      {
-        "q": "Can you run Facebook Ads for real estate?",
-        "a": "Yes — geo-targeted Meta campaigns for listings, open houses and agent brand building are a core part of real estate marketing, with detailed local targeting."
-      },
-      {
-        "q": "Do you help with Google ranking for realtors?",
-        "a": "Yes — local SEO and Google Business Profile optimization are central to ranking for high-intent searches like \"real estate agent [city]\" and \"homes for sale [neighborhood]\"."
-      },
-      {
-        "q": "Can you automate follow-up with buyers and sellers?",
-        "a": "Yes — CRM pipeline setup with automated follow-up sequences ensures every lead is contacted quickly and consistently, rather than depending on manual outreach."
-      },
-      {
-        "q": "Do you work with brokerages as well as individual agents?",
-        "a": "Yes — both individual agents and multi-agent brokerages are supported, with strategy and CRM structure scaled to the size of your team."
-      },
-      {
-        "q": "Can you help with neighborhood-specific content?",
-        "a": "Yes — neighborhood guides and market report content are built to rank for hyper-local property searches and establish your authority in specific areas."
-      },
-      {
-        "q": "Do you support property developers as well as agents?",
-        "a": "Yes — developers marketing new builds or pre-sale units are supported with dedicated landing pages and lead capture systems for project-specific campaigns."
-      },
-      {
-        "q": "How do you handle retargeting for property viewers?",
-        "a": "Pixel-based retargeting campaigns target users who viewed specific property listings but didn't convert, keeping that property in front of genuinely interested buyers."
-      },
-      {
-        "q": "How quickly can real estate marketing show results?",
-        "a": "Paid lead generation can show movement within days; local SEO ranking improvements typically take 60-90 days to compound — we set expectations based on your specific market during onboarding."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — month-to-month engagements with no lock-in, reported against buyer/seller lead volume and cost per lead."
-      }
+          {
+                "q": "How can agents, brokerages and property developers generate more qualified leads?",
+                "a": "We connect local search, property landing pages, paid campaigns, content and structured follow-up around specific buyer, seller or investor intent. Lead forms should include relevant qualification questions so sales teams can prioritise serious prospects instead of treating every enquiry equally."
+          },
+          {
+                "q": "Are Google Ads, Meta Ads or SEO better for real estate marketing?",
+                "a": "Google Ads captures active property-related searches, Meta helps create and nurture demand, and SEO builds longer-term visibility for locations, property types and buyer questions. The strongest combination depends on the project, market, budget, inventory and sales cycle."
+          },
+          {
+                "q": "Should every property development have its own landing page?",
+                "a": "Important projects should have focused pages containing location, property type, pricing guidance, amenities, images, availability, credibility information and a clear enquiry action. Dedicated pages create a more relevant experience than sending every advertisement to a general homepage."
+          },
+          {
+                "q": "How can a real estate business appear in local and AI-powered search results?",
+                "a": "We strengthen eligible Google Business Profiles, location pages, property information, reviews, structured data and consistent company details. Clear neighbourhood and buyer-focused content also gives traditional search engines and AI systems better factual information about the business and its market."
+          },
+          {
+                "q": "Does a real estate business still need a website if it uses property portals?",
+                "a": "Yes. Portals provide exposure, but an owned website gives the business control over branding, enquiries, analytics, content and remarketing. It also allows agents and developers to build long-term search visibility rather than relying entirely on rented marketplace listings."
+          },
+          {
+                "q": "Are there special advertising rules for real estate campaigns?",
+                "a": "Yes. Housing advertisements may be subject to platform and jurisdiction-specific restrictions, including limitations on certain audience-targeting methods. We configure campaigns according to applicable advertising policies, while the client remains responsible for reviewing legal and regulatory requirements in its market."
+          },
+          {
+                "q": "Can buyer and seller follow-up be automated through CRM, email or WhatsApp?",
+                "a": "Yes. We can route enquiries into a CRM and trigger acknowledgements, reminders, property information, appointment scheduling and nurture sequences. Automation supports the sales team but should allow prompt human intervention when a prospect asks a detailed question or shows strong buying intent."
+          },
+          {
+                "q": "How do you track real estate leads from enquiry to viewing or sale?",
+                "a": "We connect advertising and website sources with forms, calls, messaging and CRM stages. This allows the business to evaluate qualified enquiries, appointments, property viewings, negotiations and completed transactions rather than judging marketing solely by cost per lead."
+          },
+          {
+                "q": "How does retargeting work for property buyers with long decision cycles?",
+                "a": "Retargeting keeps suitable properties and useful information visible to previous website visitors, video viewers and engaged prospects. Campaigns can be segmented according to viewed locations, property types or funnel stages while respecting advertising consent and housing-policy restrictions."
+          },
+          {
+                "q": "Which metrics matter most in real estate marketing?",
+                "a": "Important metrics include qualified enquiries, contact rate, appointment or site-visit rate, cost per qualified lead, pipeline value and completed transactions. Reach and raw lead volume provide context, but they do not show whether marketing is attracting prospects who can and intend to proceed."
+          }
     ],
     "relatedServices": [
       "localseo",
@@ -1115,50 +1091,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Booked estimates"
     ],
     "faqs": [
-      {
-        "q": "How can roofing companies get more leads?",
-        "a": "Consistent lead flow comes from ranking well in the Google Maps pack, having a dedicated service area page for every zip code covered, and following up fast with call tracking and CRM automation behind every quote request."
-      },
-      {
-        "q": "Does SEO work for roofing companies?",
-        "a": "Yes — local SEO is one of the highest-ROI channels for roofers, since most roofing searches happen with strong local intent (\"roofer near me\", \"roof repair [city]\") that local SEO directly targets."
-      },
-      {
-        "q": "Should roofers run Google Ads?",
-        "a": "Google Ads can deliver fast leads for emergency or storm-damage searches, but performs best when paired with call tracking and a fast follow-up process — without that, ad spend is hard to evaluate."
-      },
-      {
-        "q": "Can you build roofing service area pages?",
-        "a": "Yes — dedicated landing pages for each city or zip code in your service area are built to rank for hyper-local roofing searches and build trust with homeowners researching contractors."
-      },
-      {
-        "q": "How do you track roofing calls and quote requests?",
-        "a": "Call tracking numbers and quote form tracking attribute every lead to its specific source, giving a clear view of which channels are actually generating booked estimates."
-      },
-      {
-        "q": "Do you help with storm-season campaigns?",
-        "a": "Yes — a storm-season campaign playbook combining Google Ads, Facebook neighborhood targeting and fast-response messaging is built in advance so you can move quickly when storm damage drives demand."
-      },
-      {
-        "q": "How important are reviews for roofing companies?",
-        "a": "Very — review volume and rating are both a strong local ranking signal and a major trust factor for homeowners comparing multiple roofing quotes before deciding."
-      },
-      {
-        "q": "Do you work with both residential and commercial roofers?",
-        "a": "Yes — strategy and landing page messaging are adjusted for residential homeowner leads versus commercial property leads, which have meaningfully different buying processes."
-      },
-      {
-        "q": "How fast should we follow up on a roofing quote request?",
-        "a": "Industry data consistently shows the fastest-responding contractor wins a disproportionate share of jobs — we build automated CRM follow-up specifically to minimize response time."
-      },
-      {
-        "q": "How quickly can roofing marketing show results?",
-        "a": "Google Ads can generate calls within days; local SEO and map pack ranking improvements typically take 60-90 days to compound — we set realistic expectations during onboarding."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — month-to-month engagements with no lock-in contract, reported against calls and quote requests generated."
-      }
+          {
+                "q": "What digital marketing works best for roofing companies?",
+                "a": "The strongest roofing strategies combine local SEO, Google Business Profile optimization, genuine customer reviews, high-intent Search Ads and Local Services Ads where available. We select the channel mix based on your service area, job types, competition and capacity."
+          },
+          {
+                "q": "How can a roofing company get more qualified local leads?",
+                "a": "We target searches connected to real roofing needs, such as roof repair, replacement, inspections, leaks and storm damage. Location targeting, qualifying forms, call tracking and clear service information help reduce irrelevant enquiries."
+          },
+          {
+                "q": "Is SEO or Google Ads better for a roofing company?",
+                "a": "Google Ads can produce visibility quickly, while roofing SEO builds sustainable organic and Google Maps visibility over time. Most established roofing companies benefit from using paid search for immediate demand and SEO for long-term lead generation."
+          },
+          {
+                "q": "Are Google Local Services Ads available for roofers?",
+                "a": "Roofing companies may qualify for Local Services Ads in supported locations, subject to Google’s category, screening and verification requirements. We can check eligibility, connect the correct Business Profile and configure eligible services and locations."
+          },
+          {
+                "q": "Can roofing service-area pages improve local search visibility?",
+                "a": "Yes, when each page contains genuinely useful information about the roofing services, properties and conditions in that location. We avoid near-identical city or postcode pages created only to manipulate rankings."
+          },
+          {
+                "q": "How should roofers market after a hailstorm or severe weather event?",
+                "a": "Storm campaigns should be prepared before severe weather occurs and activated only in affected locations. We can combine geo-targeted advertising, storm-damage pages and rapid-response lead routing without using misleading or fear-based claims."
+          },
+          {
+                "q": "How important are Google reviews for roofing companies?",
+                "a": "Reviews help homeowners evaluate workmanship, reliability and trust before requesting an inspection or estimate. We help establish ethical review-request and response processes without purchasing reviews or creating false feedback."
+          },
+          {
+                "q": "How do you connect roofing calls and quote requests to signed jobs?",
+                "a": "We use campaign tracking, dedicated phone attribution, enquiry forms and CRM stages to follow prospects from their first interaction through inspection, proposal and signed contract. This shows which campaigns generate revenue rather than just calls."
+          },
+          {
+                "q": "Is marketing different for residential and commercial roofing?",
+                "a": "Yes. Residential marketing commonly targets urgent homeowner needs and local searches, while commercial roofing involves longer sales cycles, property managers, procurement teams and account-based outreach."
+          },
+          {
+                "q": "How long does roofing marketing take to produce results?",
+                "a": "Paid campaigns can begin generating enquiries after setup, approval and optimization, while meaningful organic growth normally takes several months. Timing depends on competition, location, website condition, reputation and marketing investment."
+          }
     ],
     "relatedServices": [
       "localseo",
@@ -1279,50 +1251,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Patient inquiry rate"
     ],
     "faqs": [
-      {
-        "q": "Can you help clinics get more appointments?",
-        "a": "Yes — local SEO, optimized treatment pages and a streamlined booking flow work together to convert more searchers into booked appointments, rather than relying on visibility alone."
-      },
-      {
-        "q": "Do you create healthcare service pages?",
-        "a": "Yes — dedicated pages for each treatment or service are built with E-E-A-T-grounded content that satisfies Google's standards for medical/health content while clearly explaining what patients can expect."
-      },
-      {
-        "q": "Can you run ads for healthcare businesses?",
-        "a": "Yes — Google Ads for healthcare requires navigating specific advertising policies; we build compliant campaigns that meet platform requirements while still capturing high-intent patient searches."
-      },
-      {
-        "q": "How do you handle patient trust and reviews?",
-        "a": "A structured, compliant review request workflow after appointments, combined with authoritative content and clear provider profiles, builds the trust signals patients look for when choosing a provider."
-      },
-      {
-        "q": "Can you build appointment booking systems?",
-        "a": "Yes — booking system integration with automated reminders and patient intake forms is a core technology deliverable for healthcare clients."
-      },
-      {
-        "q": "Do you handle patient data in a privacy-aware way?",
-        "a": "Yes — form handling and data processes are built with privacy and regional compliance requirements (such as HIPAA in the US) in mind; we are not a legal compliance authority and recommend clients confirm specific regulatory requirements with their own counsel."
-      },
-      {
-        "q": "Do you work with wellness brands as well as medical clinics?",
-        "a": "Yes — wellness brands (fitness, nutrition, mental health, spa and wellness services) are supported alongside traditional medical practices, with messaging adjusted to each category's regulatory environment."
-      },
-      {
-        "q": "Can your AI chatbot answer medical questions?",
-        "a": "No — any chatbot we build for healthcare clients is scoped to general FAQs (hours, services, booking) rather than medical diagnosis or advice, which should always come from a licensed provider."
-      },
-      {
-        "q": "How important is GEO/AEO for healthcare providers?",
-        "a": "Increasingly important — patients are starting to ask AI tools health-related questions before searching Google directly, making AI answer engine visibility a growing channel for patient discovery."
-      },
-      {
-        "q": "How quickly can healthcare marketing show results?",
-        "a": "Local SEO and Google Business Profile improvements typically show movement within 60-90 days; we set a realistic timeline specific to your market and competition during onboarding."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — month-to-month engagements with no lock-in, reported against appointments booked and cost per appointment."
-      }
+          {
+                "q": "How can healthcare providers generate more booked appointments?",
+                "a": "We combine treatment-specific pages, local search visibility, appropriate advertising and a streamlined booking journey. Performance is measured through qualified calls and completed bookings rather than website traffic alone."
+          },
+          {
+                "q": "How do you keep healthcare marketing privacy-aware?",
+                "a": "We apply data minimization, consent controls and privacy-conscious tracking while avoiding unnecessary collection or disclosure of patient information. The healthcare provider and its legal or compliance advisers retain final approval over regulated requirements."
+          },
+          {
+                "q": "Can healthcare businesses advertise on Google and social platforms?",
+                "a": "Many providers can advertise, but restrictions depend on the treatment, product, claim, audience and target country. We review platform policies before launch and avoid prohibited targeting or unsupported medical claims."
+          },
+          {
+                "q": "How do you track healthcare campaigns without exposing patient information?",
+                "a": "We configure measurement so advertising platforms do not receive diagnoses, appointment details or other protected information unnecessarily. This can include safer form design, restricted data fields, consent management and carefully controlled analytics."
+          },
+          {
+                "q": "Can an AI chatbot answer patients’ medical questions?",
+                "a": "An AI chatbot can handle approved general information, opening hours, service navigation and appointment requests. It should not diagnose conditions, prescribe treatment or replace a qualified professional, and emergency enquiries should be directed to appropriate services."
+          },
+          {
+                "q": "Can you improve a clinic’s visibility in Google and AI-generated answers?",
+                "a": "Yes. We strengthen provider and treatment pages, local business information, structured content and trusted references so search systems can understand the organization accurately. Clinical information should be reviewed by an appropriately qualified professional."
+          },
+          {
+                "q": "How should healthcare providers respond to patient reviews?",
+                "a": "Responses should remain professional and must not confirm that the reviewer received care or reveal private information. We use neutral responses that acknowledge the feedback and invite the individual to continue the conversation privately."
+          },
+          {
+                "q": "Can you integrate appointment booking and reminder systems?",
+                "a": "Yes. We can connect suitable booking, CRM and reminder systems to reduce friction and missed appointments. The selected technology must meet the provider’s privacy, security and consent requirements."
+          },
+          {
+                "q": "Is wellness marketing different from marketing a regulated medical clinic?",
+                "a": "Yes. Medical providers usually face stricter requirements around claims, patient information, testimonials and advertising. Wellness brands still need accurate claims and responsible messaging, but their exact obligations depend on the service and jurisdiction."
+          },
+          {
+                "q": "Which metrics should healthcare marketing measure?",
+                "a": "Useful metrics include qualified calls, completed bookings, cost per booked appointment, cancellation rates and performance by treatment or location. We avoid treating unqualified form submissions as successful patient acquisition."
+          }
     ],
     "relatedServices": [
       "localseo",
@@ -1442,50 +1410,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "SMS/email campaign revenue"
     ],
     "faqs": [
-      {
-        "q": "How can restaurants get more customers online?",
-        "a": "Strong Google Maps visibility combined with an optimized menu, easy online ordering and active social content together drive the consistent discovery and conversion most restaurants need — any one alone tends to underperform."
-      },
-      {
-        "q": "Do you help with Google Maps ranking?",
-        "a": "Yes — Google Business Profile optimization, including menu integration, photos and review generation, is one of the highest-impact channels for restaurant visibility."
-      },
-      {
-        "q": "Can you build online ordering pages?",
-        "a": "Yes — menu landing pages and online ordering funnel optimization are built to reduce friction between a hungry searcher and a completed order."
-      },
-      {
-        "q": "Do TikTok and Instagram work for restaurants?",
-        "a": "Yes — food content performs strongly on both platforms, and consistent short-form video alongside influencer seeding is one of the most effective ways to build authentic local awareness."
-      },
-      {
-        "q": "Can you help with delivery and catering promotion?",
-        "a": "Yes — delivery platform visibility strategy and dedicated catering/event landing pages are built to capture demand beyond standard dine-in traffic."
-      },
-      {
-        "q": "How important are reviews for restaurants?",
-        "a": "Very — review volume and rating directly affect both Google Maps ranking and a diner's decision to choose your restaurant over a nearby competitor with similar offerings."
-      },
-      {
-        "q": "Do you set up loyalty or SMS marketing for restaurants?",
-        "a": "Yes — a loyalty and SMS/email promotion system is a core deliverable, used to drive repeat visits from existing customers rather than relying solely on new customer acquisition."
-      },
-      {
-        "q": "Can you help with WhatsApp ordering?",
-        "a": "Yes — WhatsApp Business ordering setup is available where relevant to your market, particularly useful for delivery-focused restaurants in regions with high WhatsApp usage."
-      },
-      {
-        "q": "Do you work with cafes and bars, not just full-service restaurants?",
-        "a": "Yes — cafes, bars, food trucks and quick-service concepts are all supported, with strategy adjusted to each format's typical customer journey."
-      },
-      {
-        "q": "How quickly can restaurant marketing show results?",
-        "a": "Google Business Profile and social content improvements often show movement within 30-60 days; we set realistic timelines based on your market and current online presence during onboarding."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — month-to-month engagements with no lock-in, reported against reservations, orders and foot traffic."
-      }
+          {
+                "q": "How can restaurants attract more local customers online?",
+                "a": "We improve visibility across Google Search, Maps, menus, reviews, social platforms and ordering channels. The objective is to turn nearby searches into reservations, direct orders, catering enquiries and physical visits."
+          },
+          {
+                "q": "How can a restaurant rank higher on Google Maps?",
+                "a": "A complete and accurate Google Business Profile is the foundation. Correct categories, opening hours, menu information, photographs, reviews and consistent location details help Google and customers understand the restaurant."
+          },
+          {
+                "q": "Should a restaurant menu be published as HTML or PDF?",
+                "a": "A mobile-friendly HTML menu is normally easier for customers and search engines to use. It can display dishes, descriptions, prices and dietary information clearly, while a PDF may be offered as a secondary download."
+          },
+          {
+                "q": "Can customers order directly through a restaurant’s Google profile?",
+                "a": "Where supported, restaurants can add ordering links or connect approved ordering providers to their Google Business Profile. We can organize these links so customers reach the preferred ordering experience with minimal friction."
+          },
+          {
+                "q": "Do Instagram and TikTok generate restaurant sales?",
+                "a": "They can when content showcases real dishes, atmosphere, preparation, staff and customer experiences and includes a clear next step. We connect content to reservations, ordering pages or location directions instead of measuring success through views alone."
+          },
+          {
+                "q": "How should restaurants manage negative and positive reviews?",
+                "a": "We help restaurants request genuine feedback, respond professionally and identify recurring operational issues. Defensive responses, fake reviews and incentives that distort customer opinion should be avoided."
+          },
+          {
+                "q": "Can you set up restaurant loyalty, email, SMS or WhatsApp campaigns?",
+                "a": "Yes. We can create consent-based campaigns for repeat visits, birthday offers, menu launches and inactive-customer reactivation. Messages should remain relevant, reasonably timed and easy to opt out of."
+          },
+          {
+                "q": "Can digital marketing generate catering and private-event enquiries?",
+                "a": "Yes. Dedicated catering and event pages can target searches for corporate catering, celebrations, group dining and venue hire. Enquiry forms should capture date, party size, budget and service requirements."
+          },
+          {
+                "q": "How should marketing work for a multi-location restaurant business?",
+                "a": "Each location should have accurate profiles, location-specific pages, menus, reviews and reporting. We maintain brand consistency while allowing every branch to target its own neighbourhood and customer demand."
+          },
+          {
+                "q": "How do you know whether restaurant marketing produces actual orders and visits?",
+                "a": "We track reservations, direct orders, calls, direction requests, offer redemptions and loyalty activity where the necessary data is available. Reporting separates meaningful restaurant outcomes from impressions and social engagement."
+          }
     ],
     "relatedServices": [
       "localseo",
@@ -1606,50 +1570,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Cost per donor"
     ],
     "faqs": [
-      {
-        "q": "Can you help nonprofits raise donations?",
-        "a": "Yes — we combine SEO, Google Ad Grants management and donation page optimization with donor email nurture, since awareness alone rarely converts without a frictionless donation flow and follow-up behind it."
-      },
-      {
-        "q": "Do you build donation landing pages?",
-        "a": "Yes — conversion-focused donation pages with integrated payment processing are a core deliverable, built to reduce drop-off between intent and completed donation."
-      },
-      {
-        "q": "Can you help with Google Ad Grants?",
-        "a": "Yes — Google Ad Grants management for eligible nonprofits is a core service, used to drive qualified traffic for donor acquisition and volunteer recruitment using the nonprofit's monthly grant."
-      },
-      {
-        "q": "How do you improve donor retention?",
-        "a": "Donor retention improves through structured email nurture (welcome sequences, impact updates, timely donation reminders) and transparent impact reporting that shows donors the result of their support."
-      },
-      {
-        "q": "Do you support charity campaign storytelling?",
-        "a": "Yes — impact content marketing including beneficiary stories, volunteer spotlights and impact reports is built to create the emotional connection that drives both first-time and recurring donations."
-      },
-      {
-        "q": "Can you help with volunteer recruitment, not just donations?",
-        "a": "Yes — volunteer recruitment funnels, including dedicated landing pages and sign-up forms, are built alongside donation-focused campaigns."
-      },
-      {
-        "q": "Do you work with small, locally-based nonprofits?",
-        "a": "Yes — nonprofits of every size are supported, with scope and channel mix tailored to your budget and current digital presence."
-      },
-      {
-        "q": "How do you measure success for nonprofit marketing?",
-        "a": "Donations, donor retention rate, volunteer signups and campaign reach are the core metrics tracked, alongside cost per donor to evaluate channel efficiency."
-      },
-      {
-        "q": "Can you help with peer-to-peer fundraising campaigns?",
-        "a": "Yes — peer-to-peer fundraising strategy and supporting landing pages are available as part of broader donation campaign strategy."
-      },
-      {
-        "q": "Is Google Ad Grants free advertising for any nonprofit?",
-        "a": "Eligible 501(c)(3) nonprofits (or equivalent in other countries) can receive in-kind Google Search advertising credit through the Ad Grants program — eligibility and program rules are set by Google, and we help manage the account once approved."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — month-to-month engagements with no lock-in, reported against donations and donor retention."
-      }
+          {
+                "q": "Which digital marketing channels help nonprofits raise more donations?",
+                "a": "Effective nonprofit marketing may combine organic search, Google Ad Grants, paid advertising, email, social media and optimized donation pages. The right combination depends on the organization’s mission, audience, location and fundraising model."
+          },
+          {
+                "q": "What is Google Ad Grants, and does the nonprofit receive cash?",
+                "a": "Google Ad Grants provides eligible nonprofits with up to $10,000 per month in in-kind Google Search advertising. It is advertising credit rather than cash, and actual usage depends on relevant search demand and continued policy compliance."
+          },
+          {
+                "q": "Is every nonprofit eligible for Google Ad Grants?",
+                "a": "No. The organization must satisfy Google’s current eligibility requirements, complete verification, maintain an appropriate website and follow the program’s policies. Approval and continued participation are controlled by Google."
+          },
+          {
+                "q": "Can Google Ad Grants be used to generate donations?",
+                "a": "Yes, eligible organizations can promote mission-related donation and fundraising pages when campaigns and landing pages comply with program policies. We also track conversions so the grant is evaluated through meaningful actions rather than ad clicks alone."
+          },
+          {
+                "q": "Can a nonprofit use paid Google Ads alongside an Ad Grant?",
+                "a": "Yes. A standard paid Google Ads account can complement the grant by supporting additional campaign formats, audiences and competitive searches. We keep the objectives and reporting clear so the accounts work together effectively."
+          },
+          {
+                "q": "What makes a nonprofit donation page convert better?",
+                "a": "A strong donation page explains the impact of each contribution, establishes trust and makes completing a gift simple on mobile devices. Clear donation amounts, recurring options, secure payment information and minimal form fields reduce friction."
+          },
+          {
+                "q": "How can digital marketing improve donor retention?",
+                "a": "We use audience segmentation, welcome journeys, impact updates and appropriate recurring-gift communication to maintain the relationship after the first donation. Retention depends on showing supporters what their contribution helped accomplish."
+          },
+          {
+                "q": "Can you promote volunteer recruitment as well as donations?",
+                "a": "Yes. Volunteer campaigns can target people by location, skills, availability or cause interest and send them to dedicated opportunity pages. We measure completed applications and suitable placements rather than page visits alone."
+          },
+          {
+                "q": "Can you support peer-to-peer fundraising campaigns?",
+                "a": "Yes. We can develop participant recruitment, campaign pages, supporter toolkits, email journeys and performance tracking. The strategy should make it easy for supporters to create, explain and share their individual fundraising pages."
+          },
+          {
+                "q": "How should a nonprofit measure marketing success?",
+                "a": "Important measures can include donor acquisition cost, recurring-donor growth, donation-page conversion, retention, volunteer applications and program registrations. We align reporting with the organization’s mission rather than relying only on reach or impressions."
+          }
     ],
     "relatedServices": [
       "email",
@@ -1770,50 +1730,46 @@ export const INDUSTRIES_DATA: Record<string, IndustryDetail> = {
       "Investor inquiries"
     ],
     "faqs": [
-      {
-        "q": "Can you market fintech apps?",
-        "a": "Yes — fintech app growth combining ASO-adjacent visibility, compliant paid acquisition and secure landing pages is a core part of this service, with app analytics tracking install-to-activation."
-      },
-      {
-        "q": "How do you handle compliance-sensitive financial content?",
-        "a": "Content is built with regulatory-safe messaging — avoiding guaranteed-return language, unverified claims or anything that could be read as financial advice — while still being genuinely educational and trust-building."
-      },
-      {
-        "q": "Do you create finance landing pages?",
-        "a": "Yes — secure, compliance-friendly landing pages with appropriate form handling are built specifically for financial product applications, demos or lead capture."
-      },
-      {
-        "q": "Can you help with investor visibility?",
-        "a": "Yes — credibility and investor-facing positioning content, alongside PR and thought leadership, are available for fintech companies building visibility with both customers and the investment community."
-      },
-      {
-        "q": "How do you track fintech leads and conversions?",
-        "a": "CRM integration tracks leads from first touch through application or demo, giving visibility into which channels are producing qualified, compliant pipeline rather than just raw traffic."
-      },
-      {
-        "q": "Is Google Ads allowed for financial services companies?",
-        "a": "Yes, within Google's specific financial products and services advertising policies — certification and policy-compliant campaign structure are required, which we manage as part of the service."
-      },
-      {
-        "q": "Do you work with banks as well as fintech startups?",
-        "a": "Yes — both established financial institutions and early-stage fintech startups are supported, with messaging and compliance rigor adjusted to your specific regulatory environment."
-      },
-      {
-        "q": "What is GEO/AEO and why does it matter for finance?",
-        "a": "GEO/AEO optimizes for citation inside AI-generated answers from tools like ChatGPT and Google AI Overviews — increasingly relevant as users ask AI tools financial questions before searching Google directly."
-      },
-      {
-        "q": "Can you help with LinkedIn Ads for B2B fintech?",
-        "a": "Yes — LinkedIn Ads targeting CFOs, finance directors and investment decision-makers is a core channel for B2B fintech products, with compliant messaging built into every campaign."
-      },
-      {
-        "q": "How quickly can fintech marketing show results?",
-        "a": "Paid campaigns can generate qualified leads within weeks; SEO and content authority-building for competitive financial keywords typically take 4-6 months — we set realistic expectations during onboarding."
-      },
-      {
-        "q": "Do you require a long-term contract?",
-        "a": "No — month-to-month engagements with no lock-in, reported against qualified leads and application starts rather than vanity traffic."
-      }
+          {
+                "q": "Can financial services and fintech companies advertise on Google?",
+                "a": "Many can, but eligibility depends on the financial product, target country, licensing status and Google’s current policies. Some advertisers require verification or certification, and campaign approval can never be guaranteed."
+          },
+          {
+                "q": "How do you handle compliance-sensitive financial content?",
+                "a": "We use documented review workflows, reliable sources, appropriate disclosures and controlled content versions. The client’s legal or compliance team retains final approval because marketing services do not replace regulatory advice."
+          },
+          {
+                "q": "What should a high-converting finance landing page include?",
+                "a": "It should explain the product, intended customer, eligibility, costs, benefits, risks and next step without making misleading promises. Clear disclosures, secure forms and consistent information help prospects make informed decisions."
+          },
+          {
+                "q": "Can you market fintech mobile apps?",
+                "a": "Yes. We can combine app-store optimization, compliant acquisition campaigns, search visibility, landing pages, onboarding communication and retention activity. Performance should be measured beyond installs through activation and valuable user actions."
+          },
+          {
+                "q": "How can fintech companies reduce customer acquisition costs?",
+                "a": "We improve targeting, landing-page conversion, onboarding and lifecycle communication while removing low-quality traffic. Acquisition cost should be reviewed alongside customer value, retention and risk—not optimized in isolation."
+          },
+          {
+                "q": "How can a finance brand build trust online?",
+                "a": "Trust signals include transparent fees, accurate eligibility information, regulatory details, security explanations, identifiable leadership and expert-reviewed educational content. These claims must remain consistent across the website, advertising and third-party profiles."
+          },
+          {
+                "q": "How do you track fintech leads and conversions securely?",
+                "a": "We design measurement around necessary business events while limiting unnecessary personal or financial data. Reporting can cover applications, verification, account funding or qualified leads without sending confidential account information to advertising platforms."
+          },
+          {
+                "q": "What are GEO and AEO for financial services?",
+                "a": "GEO and AEO improve how clearly search engines and AI systems can understand and reference a financial brand. We focus on factual product information, transparent fees, eligibility, expert-reviewed answers, trusted citations and consistent brand data."
+          },
+          {
+                "q": "Can you improve investor visibility for a fintech company?",
+                "a": "Yes. We can support investor-facing content, executive positioning, media outreach and appropriate campaign visibility. Investor communication should remain separate from customer acquisition and comply with applicable securities and promotion rules."
+          },
+          {
+                "q": "Which metrics should a finance or fintech campaign measure?",
+                "a": "Depending on the business, useful metrics include qualified applications, verification completion, funded accounts, activated users, retention, customer acquisition cost, lifetime value and qualified B2B pipeline. Impressions and raw leads are supporting indicators, not final outcomes."
+          }
     ],
     "relatedServices": [
       "geo",

@@ -117,14 +117,50 @@ export const newServicesData: BuilderServiceItem[] = [
   ],
   compliance:"",
   faqs:[
-    ["What is AI brand positioning?","AI brand positioning is the process of understanding and improving the digital signals that influence how AI answer engines describe, compare and recommend a company. It combines AI visibility analysis, entity clarity, content strategy, authority building and ongoing monitoring."],
-    ["How is AI brand positioning different from GEO or AI SEO?","GEO and AI SEO primarily focus on improving whether your brand and content appear in AI-generated answers. AI brand positioning goes a step further and focuses on how the brand is characterized once it appears — including category association, differentiation, sentiment and comparison with competitors."],
-    ["Can Amplipath control exactly what ChatGPT or Gemini says?","No agency can directly control a third-party AI model's output. What we can do is improve the quality, consistency and authority of the public information those systems can discover and use, then monitor whether the resulting narrative moves in the right direction."],
-    ["Which AI platforms do you monitor?","Depending on the engagement, monitoring can include ChatGPT, Google AI Overviews and AI Mode, Gemini, Perplexity, Claude and Bing Copilot, with emphasis placed on the platforms most relevant to your buyers."],
-    ["How do you measure AI brand positioning performance?","We can track visibility across target prompts, competitor share of mention, narrative consistency, positive or negative sentiment, category association, recommendation frequency and the sources AI systems cite when discussing your brand."],
-    ["How long does AI brand positioning take?","This is generally a medium- to long-term authority-building discipline rather than an instant campaign. Some owned-content improvements can be published quickly, while changes that depend on new authority signals, third-party coverage and model refresh cycles can take considerably longer."],
-    ["Do we need AI SEO before brand positioning?","Strong search visibility and machine-readable content make AI brand positioning easier because an AI system needs enough reliable information about your business before it can consistently form a useful narrative. We can evaluate both areas together."],
-    ["Can you help if AI currently displays incorrect information about our company?","Yes. We can identify likely sources of inconsistent information, recommend updates across owned properties and authoritative profiles, strengthen factual brand pages and monitor whether those corrections begin to appear in AI-generated responses."]
+      [
+          "What is AI brand visibility and positioning?",
+          "AI brand visibility and positioning is the work of making your company’s identity, expertise, products, evidence and differentiators clear across your website, verified profiles and credible third-party sources. The objective is to help AI-powered search systems understand and describe the brand accurately."
+      ],
+      [
+          "How is AI brand positioning different from GEO, AEO or AI SEO?",
+          "AI brand positioning defines how the company should be understood and differentiated. GEO, AEO and AI SEO focus more broadly on making information discoverable, understandable and eligible for inclusion in AI-generated answers. The disciplines overlap but are not identical."
+      ],
+      [
+          "Can Amplipath make my brand appear in ChatGPT or Google AI answers?",
+          "We can improve the evidence and technical foundations that support discoverability, but no agency can guarantee a mention or citation. AI answers vary according to the question, location, available sources, platform, model and timing."
+      ],
+      [
+          "Can Amplipath control exactly what ChatGPT, Gemini or another AI platform says?",
+          "No. AI systems are operated by independent companies and can generate different responses to similar questions. We can strengthen authoritative source information, identify inaccuracies and improve brand consistency, but we cannot directly control an external model’s output."
+      ],
+      [
+          "Which AI platforms can you evaluate?",
+          "Depending on the engagement and technical availability, evaluations may cover ChatGPT Search, Google AI Overviews and AI Mode, Gemini, Microsoft Copilot, Perplexity and Claude. The exact platform set should reflect the client’s customers, markets and business category."
+      ],
+      [
+          "How do you measure AI brand visibility?",
+          "We can track representative prompt coverage, brand mention frequency, citation frequency, share of voice, positioning accuracy, sentiment, competitor inclusion, AI referral traffic and assisted conversions. Results should be interpreted as trends because outputs can change and may be personalised."
+      ],
+      [
+          "Can you help when AI platforms display incorrect information about our business?",
+          "Yes. We trace likely source problems, correct owned content and structured data, align official profiles and address inaccurate third-party information where possible. Corrections may take time to be crawled, indexed or reflected, and an immediate update cannot be guaranteed."
+      ],
+      [
+          "Do we need conventional SEO before working on AI visibility?",
+          "Not necessarily before starting, but strong technical SEO, crawlable content and clear entity information are important foundations. Many AI search experiences rely on web-search indexes and accessible source pages, so serious technical problems can restrict visibility."
+      ],
+      [
+          "What type of content supports stronger AI brand positioning?",
+          "Useful first-party research, expert explanations, case studies, transparent service information, detailed product facts, comparison content and clearly attributed evidence can help. Content should answer real questions and demonstrate experience rather than simply repeat target keywords."
+      ],
+      [
+          "How long does AI brand positioning take?",
+          "There is no universal timeline. Changes depend on crawling, indexing, third-party publication schedules, platform updates and the strength of existing brand evidence. We establish a baseline, implement priority improvements and measure changes over repeated evaluation cycles."
+      ],
+      [
+          "What is included in an AI brand positioning engagement?",
+          "A typical engagement may include prompt and competitor research, source and citation analysis, entity-consistency checks, technical accessibility, content-gap planning, structured-data recommendations, authority development, misinformation remediation and ongoing visibility reporting."
+      ]
   ],
   related:[
     ["GEO / AEO","Improve your visibility in generative and answer engines."],
@@ -210,14 +246,34 @@ export const newServicesData: BuilderServiceItem[] = [
   ],
   compliance:"",
   faqs:[
-    ["What is programmatic advertising?","Programmatic advertising uses automated technology and data signals to buy and place digital advertising inventory. Instead of manually negotiating every placement, campaigns can evaluate available impressions and bid for relevant opportunities in real time."],
-    ["How is programmatic advertising different from Google Ads?","Google Ads focuses mainly on Google's own advertising ecosystem. Programmatic campaigns can provide access to a broader mix of publisher, display, video, native and connected-TV inventory through demand-side platforms and media partners."],
-    ["What kinds of programmatic ads can Amplipath manage?","Depending on the strategy and available inventory, campaigns can include display, native, online video, connected TV and retargeting formats."],
-    ["Can you use our CRM or customer data for targeting?","Where consent, privacy requirements and platform rules permit, first-party data can be used to create or refine audiences, suppress existing customers, support retargeting and improve conversion measurement."],
-    ["Does programmatic advertising work for B2B companies?","Yes. B2B strategies can use firmographic, industry, role, account, contextual and remarketing signals to reach audiences beyond standard keyword-based advertising."],
-    ["How much budget do we need?","The right budget depends on market size, audience availability, campaign objectives, creative formats and the media platforms being used. Amplipath scopes media investment separately from management and creative requirements."],
-    ["How do you measure programmatic performance?","We can measure delivery metrics such as reach, frequency and CPM alongside business metrics such as qualified traffic, conversions, cost per acquisition, lead quality and revenue where suitable tracking is available."],
-    ["Can programmatic advertising replace paid search?","Usually it works best as part of a broader mix. Paid search captures existing demand, while programmatic advertising can expand reach, build awareness, re-engage prospects and create additional touchpoints across the buying journey."]
+      [
+          "What is programmatic advertising?",
+          "Programmatic advertising uses technology to automate the buying, placement and optimization of digital advertising inventory. Instead of arranging every placement directly with individual publishers, advertisers can use platforms and real-time signals to reach relevant audiences across approved inventory."
+      ],
+      [
+          "How is programmatic advertising different from Google Ads or display advertising?",
+          "Display describes a visual advertising format, while programmatic describes how advertising inventory is purchased. Google Ads operates mainly within Google’s advertising ecosystem. Programmatic platforms can offer broader inventory, data options and buying controls. It normally complements paid search rather than replacing it."
+      ],
+      [
+          "What types of programmatic advertising can Amplipath manage?",
+          "Depending on the selected technology, available inventory and campaign market, programmatic activity may include display, video, native, audio and connected-TV placements. We recommend only the formats that match the audience, objective, creative resources, measurement capabilities and realistic budget."
+      ],
+      [
+          "Can our CRM or first-party customer data be used for targeting?",
+          "Potentially, yes. Consented first-party data may be activated through approved integrations and privacy-conscious matching processes. Feasibility depends on data quality, audience size, platform requirements and applicable laws. We do not recommend transferring unprotected customer information directly into advertising systems."
+      ],
+      [
+          "How do you protect brand safety and reduce advertising fraud?",
+          "We can use inventory controls, publisher and category exclusions, suitability settings, frequency limits, supply-path choices and available verification technology. No digital advertising system can promise zero fraud, but transparent inventory selection, monitoring and regular exclusion updates can reduce unnecessary exposure."
+      ],
+      [
+          "How much budget is needed for programmatic advertising?",
+          "For a meaningful programmatic advertising campaign, we recommend starting with a budget of $3,000 per month for media spend. This provides room to test different audiences, placements, and creatives while optimizing campaign performance."
+      ],
+      [
+          "How do you measure programmatic advertising performance?",
+          "Measurement is based on campaign objectives and can include reach, viewability, frequency, completed video views, engaged visits, assisted conversions, direct conversions, cost per acquisition and incremental impact. We also monitor placement quality and attribution limitations instead of relying only on platform-reported conversions."
+      ]
   ],
   related:[
     ["Display Advertising","Reach prospects through visual campaigns across relevant digital properties."],
@@ -303,14 +359,38 @@ export const newServicesData: BuilderServiceItem[] = [
   ],
   compliance:"Google controls Local Services Ads eligibility, screening, supported categories, badges and verification requirements. Availability and product structure can vary by country, industry and account. Amplipath can assist with preparation and management, but cannot guarantee Google approval, a particular badge, lead volume or placement.",
   faqs:[
-    ["What are Google Local Services Ads?","Local Services Ads are Google's local lead-generation ads for eligible service businesses. They can connect searchers directly with providers through calls, messages, quote requests or booking options depending on the market and category."],
-    ["Do Local Services Ads charge per click?","The traditional Local Services Ads model charges for valid leads rather than ordinary website clicks. Google is also evolving some local lead-generation products and interfaces, so the exact campaign experience can vary by account, country and category."],
-    ["Is my business eligible for Local Services Ads?","Eligibility depends on Google's supported categories, location and screening requirements. We can review your business and market, but Google makes the final eligibility and verification decisions."],
-    ["Can Amplipath guarantee a Google badge or verification?","No. Screening, verification and any trust designation are controlled by Google and may involve business, licence, insurance or background requirements depending on the category and region."],
-    ["Can bad leads be disputed?","Google's lead-credit and dispute options vary by country, vertical and product configuration. Where an account supports those features, Amplipath can help review lead quality and maintain a process for handling questionable leads."],
-    ["Should I stop running regular Google Search Ads if I use LSAs?","Usually not. Local Services Ads, Google Search Ads, Google Business Profile optimization and local SEO serve different parts of local search visibility and can work together."],
-    ["What metrics should we track?","Beyond cost per lead, we recommend tracking answer rate, qualified lead rate, booking rate, job value, customer acquisition cost and revenue by service category or location whenever your CRM and phone systems make that possible."],
-    ["How long does setup take?","Timing varies because verification and screening can depend on your industry, documents, country and Google's review process. Amplipath can help make the preparation cleaner, but cannot control Google's review timeline."]
+      [
+          "What are Google Local Services Ads?",
+          "Google Local Services Ads connect eligible local service providers with customers searching for nearby help. Ads can display business information such as services, service area, hours, reviews and verification status, depending on the business category and market."
+      ],
+      [
+          "Is my business eligible for Local Services Ads?",
+          "Eligibility depends on the country, location and business category. Google may require Business Profile ownership, business registration, licences, insurance, reviews, background checks or other verification. We assess availability before recommending the service."
+      ],
+      [
+          "Do Local Services Ads charge per click?",
+          "Generally, no. Google charges for valid leads generated through the ad rather than ordinary website clicks. Leads may include calls, messages or bookings where those formats are supported."
+      ],
+      [
+          "How much do Local Services Ads cost?",
+          "Lead prices vary according to location, service category, lead type and bidding settings. Businesses set an average weekly budget and a maximum amount they are willing to pay for leads, while Google applies a monthly spending limit."
+      ],
+      [
+          "What determines Local Services Ads rankings?",
+          "Google uses an auction that considers the bid and overall profile quality. Relevance, responsiveness, reviews, average response time, images, verification status and the likelihood of generating a lead may all influence placement."
+      ],
+      [
+          "Can poor-quality Local Services Ads leads be disputed or credited?",
+          "The process depends on the country and vertical. In supported markets, Google may automatically avoid charging for certain invalid leads or issue credits after review. Some locations and business categories are not eligible for credits. Amplipath can help refine targeting and submit feedback but cannot approve a credit."
+      ],
+      [
+          "Should I stop regular Google Search Ads if I use Local Services Ads?",
+          "Not necessarily. Local Services Ads and Search campaigns occupy different placements and provide different targeting and landing-page controls. Using both can increase coverage when the economics and lead quality support it."
+      ],
+      [
+          "Which Local Services Ads metrics should we track?",
+          "Important measurements include charged leads, cost per lead, qualified-lead rate, response time, missed calls, booked jobs, customer-acquisition cost, revenue and return on advertising spend. Lead volume without job and revenue data can be misleading."
+      ]
   ],
   related:[
     ["Local SEO","Improve organic visibility in maps and location-based search."],
@@ -396,14 +476,34 @@ export const newServicesData: BuilderServiceItem[] = [
   ],
   compliance:"Security testing is performed only on systems the client owns or is explicitly authorized to test. Standard assessments are designed to be controlled and non-destructive. No security provider can guarantee that a website will never be compromised; the goal is to reduce known risk, improve hardening and strengthen detection and response.",
   faqs:[
-    ["What is a website security analysis?","It is a structured review of a website's security posture, including the application, software stack, configuration and publicly visible infrastructure within an agreed scope. The objective is to identify weaknesses and provide practical remediation guidance."],
-    ["Is this the same as a penetration test?","Not necessarily. A security analysis can include vulnerability testing and manual validation without performing aggressive exploitation. Formal penetration testing is a deeper engagement with explicitly defined attack scenarios and authorization. We scope the appropriate level before testing."],
-    ["Can you check a hacked website?","Yes. A compromised-site engagement can focus on identifying suspicious changes, malware indicators, vulnerable entry points and recovery priorities. Depending on the incident, specialist hosting, forensic or infrastructure support may also be required."],
-    ["Can Amplipath guarantee my website cannot be hacked?","No responsible security provider can promise absolute security. The objective is to reduce avoidable risk, identify known weaknesses, strengthen configuration and improve the organization's ability to respond to future issues."],
-    ["How often should a website be reviewed?","Frequency depends on risk and change rate. Ecommerce sites, custom applications and frequently updated CMS websites generally benefit from recurring reviews, especially after major releases, migrations or changes to hosting and authentication."],
-    ["Will you fix the issues you find?","We provide prioritized remediation instructions. Depending on the technology and project scope, Amplipath can also implement selected fixes or work with your existing developer, host or IT provider."],
-    ["Will the testing cause downtime?","Standard assessments are scoped to minimize operational impact and avoid destructive techniques. Any testing that could create increased risk must be explicitly discussed and authorized beforehand."],
-    ["What will the final report contain?","The report can include an executive summary, technical findings, severity, evidence, affected systems, likely impact, remediation guidance and recommended priorities, with retesting available when required."]
+      [
+          "What does a website security analysis examine?",
+          "A security analysis reviews the website’s software, configuration, permissions, exposed services and common vulnerability indicators within the agreed scope. It identifies risks and recommends actions based on their likely severity and business impact."
+      ],
+      [
+          "Is a website security analysis the same as a penetration test?",
+          "No. A security review may combine configuration checks and vulnerability scanning, while penetration testing attempts controlled exploitation under explicit authorisation. Penetration testing must be separately scoped to define targets, techniques and boundaries."
+      ],
+      [
+          "Which website vulnerabilities can the assessment identify?",
+          "Depending on access and scope, testing may identify outdated components, insecure headers, weak configurations, exposed information, authentication risks and known software vulnerabilities. No single assessment can uncover every possible weakness."
+      ],
+      [
+          "Can security testing be completed without interrupting the live website?",
+          "Many checks are non-disruptive, but no active test is entirely risk-free. We agree on permitted methods, timing, backups and emergency contacts before testing, and potentially disruptive procedures require specific approval."
+      ],
+      [
+          "Can you investigate a website that may already have been compromised?",
+          "We can assess visible indicators, suspicious changes and common points of exposure. Incident response, malware removal, server forensics or account recovery may require an expanded scope and cooperation from the hosting provider."
+      ],
+      [
+          "What information will be included in the security report?",
+          "The report explains each confirmed issue, affected component, severity, supporting evidence and recommended remediation. It also separates verified findings from informational observations so teams can prioritise work clearly."
+      ],
+      [
+          "Will Amplipath correct the vulnerabilities discovered during the review?",
+          "Remediation can be provided when it falls within our technical access and agreed scope. Issues involving hosting infrastructure, third-party applications or proprietary systems may need action from the relevant provider or software owner."
+      ]
   ],
   related:[
     ["Website Development","Repair, rebuild or modernize websites that have accumulated technical debt."],
@@ -489,14 +589,30 @@ export const newServicesData: BuilderServiceItem[] = [
   ],
   compliance:"",
   faqs:[
-    ["What is included in website copywriting services?","A typical project can include research, messaging strategy, page structure, keyword and intent analysis, copywriting, editing, SEO recommendations, FAQs and calls to action. The exact scope depends on the pages and business goals."],
-    ["Do you use AI to write website content?","Amplipath may use AI tools for research, ideation, analysis or workflow support where useful, but final website copy is reviewed and shaped by a human strategist or editor. We do not treat raw automated output as finished client copy."],
-    ["Is the copy optimized for SEO?","Yes, when SEO is part of the scope. We map the page to relevant search intent, topics and supporting terms while prioritizing natural language and usefulness rather than keyword stuffing."],
-    ["Can you optimize copy for ChatGPT and AI search?","We can structure content for GEO/AEO by making important entities, facts, definitions, FAQs, comparisons and answers easier to understand and cite. No agency can guarantee inclusion in a specific AI answer."],
-    ["Can you rewrite our existing website instead of starting from scratch?","Yes. We can audit current pages, preserve useful material, remove repetition, improve positioning, expand weak sections and align the content with search and conversion goals."],
-    ["Will the content be original?","Yes. Final deliverables are written for your brand and should not reproduce competitors' protected copy. Competitor research is used to understand market expectations, content gaps and positioning opportunities."],
-    ["Do you upload the copy to our website?","Implementation can be included when appropriate or the content can be delivered in a clean developer-ready format for your existing team to publish."],
-    ["How is website copywriting priced?","Pricing depends on page count, complexity, research requirements, industry, word depth and whether strategy, SEO or implementation is included. Amplipath can quote a defined project or an ongoing content engagement."]
+      [
+          "What is included in professional website copywriting?",
+          "We can write homepage, service, product, industry, about, contact and other conversion-focused website content. Depending on the scope, we can also provide page headings, calls to action, internal-link recommendations, metadata and implementation notes."
+      ],
+      [
+          "How do you decide which website pages should be written first?",
+          "We prioritise pages according to commercial value, customer search intent and their role in the buying journey. Core service and product pages normally come first, followed by supporting industry, use-case, location or educational pages where appropriate."
+      ],
+      [
+          "How do you optimize website copy for SEO, AEO and AI search?",
+          "We organise each page around a clear topic and search intent, using descriptive headings, direct answers, relevant entities and supporting evidence. The copy is written for human readers while making the subject, expertise and relationships between ideas easier for search engines and AI systems to understand."
+      ],
+      [
+          "Will the website content be original and human-reviewed?",
+          "Yes. We create original copy for the business and review it for clarity, accuracy, brand alignment and natural language. AI may support research or workflow efficiency, but we do not publish unverified, generic AI output as completed client copy."
+      ],
+      [
+          "Can you write an accurate copy when our service is highly technical?",
+          "Yes. We use discovery sessions, existing documentation, product demonstrations and subject-matter interviews to understand the service. Any technical statement that cannot be independently confirmed is flagged for client review before publication."
+      ],
+      [
+          "How is the finished copy delivered to our designer or developer?",
+          "We can organise the copy page by page with headings, body content, calls to action, metadata and placement notes. This provides the design and development team with a clear content structure instead of an unformatted block of text."
+      ]
   ],
   related:[
     ["Content Marketing","Build a broader content system around commercial and informational search demand."],
@@ -582,16 +698,30 @@ export const newServicesData: BuilderServiceItem[] = [
   ],
   compliance:"Amplipath does not promote illegal pyramid schemes, deceptive investment opportunities or unsupported income, health, lifestyle or product claims. MLM and direct-selling marketing must comply with applicable laws, platform advertising policies and the company's own approved claims. Paid advertising availability also varies by platform and market, and ad approval cannot be guaranteed.",
   faqs:[
-    ["What is MLM or network marketing digital marketing?","It is the use of websites, content, search, social media, lead funnels, CRM and automation to help legitimate direct-selling companies acquire retail customers and communicate with prospective distributors more systematically."],
-    ["Can you generate distributor leads?","Yes, we can build marketing funnels intended to attract and educate prospective distributors. The strategy avoids presenting participation as guaranteed income and should use accurate, substantiated representations about the opportunity."],
-    ["Can you run Facebook, Instagram, Google or TikTok ads for an MLM?","Possibly, but business-opportunity and MLM advertising is subject to platform-specific policies and account review. We evaluate the offer, creative and destination before recommending paid media, and we cannot guarantee platform approval."],
-    ["Can our marketing promise how much distributors will earn?","Only claims that are lawful, properly substantiated and representative should be used. We strongly recommend avoiding exaggerated earnings or luxury-lifestyle messaging and ensuring any required disclosures are clear and prominent."],
-    ["Can you help sell the actual MLM products instead of only recruiting distributors?","Yes. In many cases, strong retail customer demand is an important part of a healthier digital strategy. We can build product-focused SEO, content, ecommerce, social campaigns, email marketing and customer-retention systems."],
-    ["Can you build a distributor recruitment website or funnel?","Yes. We can create landing pages, educational funnels, application flows, webinar journeys and CRM follow-up while keeping the messaging focused on accurate information rather than unrealistic promises."],
-    ["Can you create marketing materials for our distributors?","Yes. Amplipath can create approved social posts, email templates, landing-page assets, educational materials, onboarding sequences and campaign kits that help distributors communicate more consistently."],
-    ["Do you provide WhatsApp marketing for network marketing?","Yes, where appropriate and consent-based. WhatsApp can support lead follow-up, webinar reminders, onboarding, customer communication and distributor education, especially in mobile-first markets."],
-    ["Do you work with any MLM company?","No. We work with legitimate businesses selling real products or services and reserve the right to reject projects involving pyramid structures, deceptive recruiting, misleading financial representations or unsupported product claims."],
-    ["Can you help us market internationally?","Yes. International work can include localized landing pages, paid and organic channel strategy, CRM workflows, WhatsApp marketing and regional content, while the client remains responsible for obtaining appropriate legal guidance for each market."]
+      [
+          "What is MLM or network marketing digital marketing?",
+          "MLM (Multi-Level Marketing) is a business model in which participants earn income through direct sales of products or services and, in some cases, commissions based on sales made by people they recruit into their network. Network marketing is another term commonly used to describe this model. MLM digital marketing uses websites, search engines, content marketing, social media, email, WhatsApp, advertising, and CRM systems to promote legitimate products, reach potential customers, and attract distributors. It does not replace the company's responsibility to maintain a lawful compensation structure, provide accurate disclosures, and follow applicable marketing regulations."
+      ],
+      [
+          "Can Amplipath generate retail customers and distributor leads?",
+          "Yes. We can create campaigns aimed at genuine product customers and people who independently express interest in the business opportunity. However, we cannot guarantee that a lead will purchase, register or become an active distributor. Customer acquisition and distributor recruitment are tracked separately to avoid misleading reporting."
+      ],
+      [
+          "Can you build websites, funnels and marketing materials for our distributors?",
+          "Yes. Depending on scope, we can develop corporate or distributor landing pages, recruitment funnels, product pages, email journeys, WhatsApp follow-up systems, presentations, advertising creative and reusable social-media materials. All product, health, income and opportunity claims must be approved by the company’s legal or compliance team before publication."
+      ],
+      [
+          "Can you run Facebook, Instagram, Google or TikTok ads for an MLM company?",
+          "Potentially. We first review the company, products, compensation messaging, landing pages and target countries. Advertising is subject to each platform’s current policies, verification requirements and approval process. Amplipath cannot guarantee that a platform will approve an MLM advertisement or maintain an advertising account."
+      ],
+      [
+          "Do you work with every MLM company or promote MLMs internationally?",
+          "No. We conduct a suitability and compliance review before accepting an engagement. We will not promote suspected pyramid schemes, recruitment-only models, unverifiable products or businesses using deceptive health or earnings claims. International campaigns are reviewed country by country because direct-selling, advertising and consumer-protection requirements differ."
+      ],
+      [
+          "How do you measure MLM and network-marketing campaign success?",
+          "We prioritize retail sales, qualified customer leads, conversion rate, repeat purchases, customer-acquisition cost, distributor-lead quality and return on advertising spend. Recruitment totals or downline size alone are not treated as proof of sustainable growth. Reporting is connected to the campaign’s legitimate commercial objective."
+      ]
   ],
   related:[
     ["Social Media Marketing","Create structured brand and campaign content across priority social channels."],

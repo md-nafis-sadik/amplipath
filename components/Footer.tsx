@@ -1,21 +1,117 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useModal } from './ModalContext';
+import { LANGUAGES, switchWebsiteLanguage } from './GlobalLanguageSwitcher';
 
 export default function Footer() {
   const { openModal } = useModal();
+  const pathname = usePathname();
+
+  const [openRegion, setOpenRegion] = useState<string | null>(null);
+  const [showLanguageModal, setShowLanguageModal] = useState(false);
+  const [activeTab, setActiveTab] = useState<'All' | 'Americas' | 'Europe' | 'Asia & ME' | 'Africa'>('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [currentLang, setCurrentLang] = useState('en');
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      const match = document.cookie.match(/googtrans=\/en\/([a-zA-Z-]+)/);
+      const saved = match ? match[1] : (localStorage.getItem('amplipath_lang') || 'en');
+      setCurrentLang(saved);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setShowLanguageModal(false);
+      }
+    };
+    if (showLanguageModal) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [showLanguageModal]);
+
+  const globalRegions = [
+    {
+      id: 'na',
+      name: 'North America',
+      languages: [
+        { name: 'English (US)', flag: '🇺🇸', code: 'en' },
+        { name: 'Français (Canada)', flag: '🇨🇦', code: 'fr' },
+      ],
+    },
+    {
+      id: 'uk',
+      name: 'United Kingdom',
+      languages: [
+        { name: 'English (UK)', flag: '🇬🇧', code: 'en' },
+      ],
+    },
+    {
+      id: 'africa',
+      name: 'Africa',
+      languages: [
+        { name: 'Pan-Africa (EN)', flag: '🇳🇬', code: 'en' },
+      ],
+      exploreLink: { text: 'Africa Market Services →', href: '/services/africa' },
+    },
+    {
+      id: 'europe',
+      name: 'Europe',
+      languages: [
+        { name: 'Deutsch', flag: '🇩🇪', code: 'de' },
+        { name: 'Français', flag: '🇫🇷', code: 'fr' },
+        { name: 'Español', flag: '🇪🇸', code: 'es' },
+        { name: 'Italiano', flag: '🇮🇹', code: 'it' },
+        { name: 'Nederlands', flag: '🇳🇱', code: 'nl' },
+      ],
+    },
+    {
+      id: 'apac',
+      name: 'APAC',
+      languages: [
+        { name: 'العربية (Arabic)', flag: '🇸🇦', code: 'ar' },
+        { name: '日本語 (Japanese)', flag: '🇯🇵', code: 'ja' },
+        { name: '简体中文 (Chinese)', flag: '🇨🇳', code: 'zh-CN' },
+        { name: 'हिन्दी (Hindi)', flag: '🇮🇳', code: 'hi' },
+        { name: 'বাংলা (Bengali)', flag: '🇧🇩', code: 'bn' },
+      ],
+    },
+    {
+      id: 'latam',
+      name: 'LATAM',
+      languages: [
+        { name: 'Español (LATAM)', flag: '🇪🇸', code: 'es' },
+        { name: 'Português (Brasil)', flag: '🇧🇷', code: 'pt' },
+      ],
+    },
+  ];
+
+  const handleSelectLang = (code: string) => {
+    setCurrentLang(code);
+    switchWebsiteLanguage(code);
+  };
+
+  // Suppress duplicate global CTA band on pages that have their own dedicated, contextual CTA or form
+  const isIndividualServicePage = pathname !== '/services' && pathname?.startsWith('/services');
+  const hideCtaBand = isIndividualServicePage || pathname === '/work' || pathname === '/contact' || pathname === '/free-audit';
 
   return (
     <>
-      <div className="cta-band">
-        <h2>Ready to unlock growth?</h2>
-        <p>Tell us about your business — we’ll build a custom growth plan within 12 hours.</p>
-        <div className="cta-row">
-          <button className="btn-cw" onClick={() => openModal('lead')}>Get Started</button>
-          <Link href="/contact" className="btn-co no-underline inline-block">Contact Us</Link>
+      {!hideCtaBand && (
+        <div className="cta-band">
+          <h2>Ready to unlock growth?</h2>
+          <p>Tell us about your business — we’ll build a custom growth plan within 5 hours.</p>
+          <div className="cta-row">
+            <button className="btn-cw" onClick={() => openModal('lead')}>Get Started</button>
+            <Link href="/contact" className="btn-co no-underline inline-block">Contact Us</Link>
+          </div>
         </div>
-      </div>
+      )}
 
       <footer className="footer">
         <div className="fg">
@@ -66,12 +162,140 @@ export default function Footer() {
 
           <div>
             <div className="fc-head">Global</div>
-            <span className="fl">North America +</span>
-            <span className="fl">United Kingdom +</span>
-            <span className="fl">Africa +</span>
-            <span className="fl">Europe +</span>
-            <span className="fl">APAC +</span>
-            <span className="fl">LATAM +</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
+              {globalRegions.map((region) => {
+                const isOpen = openRegion === region.id;
+                return (
+                  <div key={region.id} style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)', paddingBottom: '3px' }}>
+                    <button
+                      type="button"
+                      onClick={() => setOpenRegion(isOpen ? null : region.id)}
+                      className="fl"
+                      style={{
+                        width: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: '8px',
+                        color: isOpen ? '#ffffff' : undefined,
+                        fontWeight: isOpen ? 600 : 400,
+                        marginBottom: 0,
+                        padding: '4px 0',
+                      }}
+                      aria-expanded={isOpen}
+                    >
+                      <span>{region.name}</span>
+                      <span
+                        style={{
+                          fontSize: '13px',
+                          fontWeight: 700,
+                          color: isOpen ? '#38bdf8' : '#64748b',
+                          transition: 'transform 0.2s ease, color 0.2s ease',
+                          transform: isOpen ? 'rotate(45deg)' : 'none',
+                          display: 'inline-block',
+                          lineHeight: 1,
+                        }}
+                      >
+                        +
+                      </span>
+                    </button>
+
+                    {isOpen && (
+                      <div
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.03)',
+                          borderLeft: '2px solid #3b82f6',
+                          borderRadius: '0 6px 6px 0',
+                          padding: '6px 8px',
+                          margin: '3px 0 6px 0',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '2px',
+                        }}
+                      >
+                        {region.languages.map((lang, lIdx) => {
+                          const isLangActive = currentLang === lang.code;
+                          return (
+                            <button
+                              key={lIdx}
+                              type="button"
+                              onClick={() => handleSelectLang(lang.code)}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                width: '100%',
+                                background: isLangActive ? 'rgba(59, 130, 246, 0.15)' : 'transparent',
+                                border: 'none',
+                                borderRadius: '4px',
+                                padding: '4px 6px',
+                                cursor: 'pointer',
+                                textAlign: 'left',
+                                color: isLangActive ? '#38bdf8' : '#cbd5e1',
+                                fontSize: '11px',
+                                transition: 'all 0.12s ease',
+                              }}
+                              className="hover:bg-slate-800 hover:text-white"
+                            >
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                <span style={{ fontSize: '12px' }}>{lang.flag}</span>
+                                <span>{lang.name}</span>
+                              </span>
+                              {isLangActive && <span style={{ fontSize: '10px', color: '#38bdf8', fontWeight: 700 }}>✓</span>}
+                            </button>
+                          );
+                        })}
+
+                        {region.exploreLink && (
+                          <Link
+                            href={region.exploreLink.href}
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                              color: '#60a5fa',
+                              fontSize: '10.5px',
+                              fontWeight: 600,
+                              textDecoration: 'none',
+                              padding: '4px 6px',
+                              marginTop: '2px',
+                            }}
+                            className="hover:underline"
+                          >
+                            <span>🌍</span>
+                            <span>{region.exploreLink.text}</span>
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setShowLanguageModal(true)}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                marginTop: '12px',
+                fontSize: '11px',
+                fontWeight: 600,
+                color: '#94a3b8',
+                background: 'rgba(255, 255, 255, 0.04)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '6px',
+                padding: '5px 8px',
+                cursor: 'pointer',
+                transition: 'all 0.15s ease',
+              }}
+              className="hover:text-white hover:border-slate-500"
+            >
+              <span>🌐</span>
+              <span>All Languages &amp; Regions</span>
+            </button>
           </div>
 
           <div>
@@ -140,6 +364,131 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {showLanguageModal && (
+        <div
+          className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-200"
+          onClick={() => setShowLanguageModal(false)}
+        >
+          <div
+            className="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto p-6 text-white shadow-2xl relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setShowLanguageModal(false)}
+              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors cursor-pointer border-none"
+              aria-label="Close modal"
+            >
+              ✕
+            </button>
+
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-2xl">🌐</span>
+              <div>
+                <span className="text-[11px] font-bold tracking-wider uppercase text-blue-400">Global Region &amp; Language</span>
+                <h3 className="text-lg font-bold text-white">Select Website Language</h3>
+              </div>
+            </div>
+            <p className="text-xs text-slate-400 mb-4">
+              Choose your preferred language. Translations are powered in real-time by Google Neural Machine Translation.
+            </p>
+
+            {/* Search Input */}
+            <div className="relative mb-3">
+              <input
+                type="text"
+                placeholder="Search language, country, or region..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-slate-800/90 text-white placeholder-slate-400 text-xs px-3 py-2 rounded-lg border border-slate-700 focus:outline-none focus:border-blue-400 transition-all"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-2.5 top-2 text-slate-400 hover:text-white text-xs bg-transparent border-none cursor-pointer"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            {/* Region Tabs */}
+            <div className="flex items-center gap-1 mb-3 pb-2 border-b border-slate-800 overflow-x-auto">
+              {(['All', 'Americas', 'Europe', 'Asia & ME', 'Africa'] as const).map((tab) => (
+                <button
+                  key={tab}
+                  type="button"
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-2.5 py-1 rounded-md font-medium text-xs whitespace-nowrap transition-colors border-none cursor-pointer ${
+                    activeTab === tab
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-slate-800 text-slate-400 hover:text-white'
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+
+            {/* Language Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 max-h-72 overflow-y-auto mb-4">
+              {LANGUAGES.filter((l) => {
+                const matchesTab = activeTab === 'All' || l.region === activeTab;
+                const matchesSearch =
+                  !searchQuery.trim() ||
+                  l.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  l.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  l.code.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesTab && matchesSearch;
+              }).map((lang, idx) => {
+                const isSelected = currentLang === lang.code;
+                return (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => {
+                      setShowLanguageModal(false);
+                      handleSelectLang(lang.code);
+                    }}
+                    className={`text-left p-2.5 rounded-xl transition-all flex items-start gap-2.5 border cursor-pointer ${
+                      isSelected
+                        ? 'bg-blue-950/60 border-blue-500/60 text-white'
+                        : 'bg-slate-800/40 border-slate-700/40 text-slate-300 hover:bg-slate-800 hover:text-white'
+                    }`}
+                  >
+                    <span className="text-xl flex-shrink-0 mt-0.5">{lang.flag}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold truncate">{lang.name}</span>
+                        {isSelected && <span className="text-blue-400 text-xs font-bold ml-1">✓</span>}
+                      </div>
+                      <p className="text-[10.5px] text-slate-400 truncate leading-tight mt-0.5">
+                        {lang.country}
+                      </p>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="flex items-center justify-between pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+              <span>⚡ Google Neural Translation</span>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowLanguageModal(false);
+                  handleSelectLang('en');
+                }}
+                className="text-blue-400 hover:text-blue-300 bg-transparent border-none p-0 cursor-pointer font-medium"
+              >
+                Reset to English
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

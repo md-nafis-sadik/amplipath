@@ -15,39 +15,31 @@ export default function AfricaMarketTemplate() {
   const FAQS = [
     {
       q: 'Which African countries can Amplipath help us target?',
-      a: 'We begin with the specific country or countries you want to reach, then assess audience demand, channel access, language needs, operational fit and available partners. The examples on this page are planning scenarios; your proposal defines the markets and actual delivery scope.'
+      a: 'Amplipath develops country-specific growth strategies across African markets, with core market capability spanning Nigeria, Ghana, Kenya and South Africa. Additional countries can be assessed according to audience demand, language, competition, advertising access, payment infrastructure and local execution requirements. We do not treat Africa as one identical audience.'
     },
     {
-      q: 'Can you help an international company enter an African market?',
-      a: 'Yes. We can develop a market-entry plan and, where suitable, support its website, campaigns and measurement. We will identify any local expertise or operational requirements needed for the selected country during discovery.'
+      q: 'Can Amplipath help an international company enter an African market?',
+      a: 'Yes. We help international companies identify suitable entry markets, understand local customer behaviour, adapt their positioning, localize the digital buying journey and select appropriate channels. We generally recommend proving demand in one or two priority markets before expanding across the continent.'
     },
     {
-      q: 'Is WhatsApp marketing suitable for every business?',
-      a: 'No. We assess whether your buyers want a conversation, whether your team can respond, and whether the flow fits the product and platform rules. When it does, we can design click-to-chat, lead routing and permission-based follow-up.'
+      q: 'What is included in Amplipath’s Africa Market Services?',
+      a: 'Depending on the engagement, services can include market research, opportunity assessment, entry strategy, localized websites and e-commerce, search and local SEO, AI-search visibility, paid media, content, creator campaigns, WhatsApp and CRM journeys, analytics and practical AI automation. The final scope is built around your commercial objectives and current market stage.'
     },
     {
-      q: 'Can you build or adapt our website or ecommerce store?',
-      a: 'Yes. Work may include a new landing page, an existing site refresh, an ecommerce experience or conversion improvements. Checkout and payment options depend on your business setup and the provider\'s availability in your target market.'
+      q: 'Can you localize our website, e-commerce store, WhatsApp journey and payment system?',
+      a: 'Yes. We can build or adapt landing pages, websites and e-commerce journeys for local audiences, including relevant language, currency, offers, contact methods and mobile experiences. We can also support WhatsApp and CRM journeys and assess integrations such as Paystack, Flutterwave or M-PESA where the provider supports the country, business type and account.'
     },
     {
-      q: 'What do SEO, AEO and GEO mean in this service?',
-      a: 'SEO covers search visibility and technical foundations. AEO and GEO are commonly used for work aimed at making useful content easier to understand and surface in answer and AI-assisted search experiences. We focus on clear site structure, relevant information and sound SEO practice; no agency can guarantee placement in search or AI answers.'
+      q: 'What do SEO, AEO and GEO mean within your Africa market service?',
+      a: 'SEO helps your business appear in traditional and local search results. AEO structures content so search and answer platforms can understand and answer customer questions clearly, while GEO focuses on visibility within generative AI experiences. We combine these practices through technical SEO, local business information, structured content and useful market-specific answers without promising guaranteed placement.'
     },
     {
-      q: 'Do you run paid ads and influencer campaigns?',
-      a: 'Paid search and social campaigns can be included where the audience, budget and channel availability fit. Creator work can include research, suitability checks, outreach and campaign measurement when it is agreed in the project scope.'
+      q: 'Do you run paid advertising, content and influencer campaigns across Africa?',
+      a: 'Yes. We can manage search and social advertising, localized campaign content and relevant creator or influencer partnerships. Before launch, we evaluate platform availability, industry restrictions, audience behaviour and media economics in each target country. Creators are selected using audience relevance, credibility and engagement quality—not follower count alone.'
     },
     {
-      q: 'Can you integrate Paystack, Flutterwave or M-PESA?',
-      a: 'We can assess suitable payment options and include supported integrations in a website or store project. Provider eligibility, available payment methods and technical requirements vary by country, account and platform, so these are checked before committing to an integration.'
-    },
-    {
-      q: 'How will we know whether the campaign is working?',
-      a: 'We agree on a baseline and measurable goals, then track appropriate signals such as qualified leads, sales, checkout completion, cost per lead and conversion rate. The reporting approach reflects the data your business can reliably access.'
-    },
-    {
-      q: 'What do you need from us to get started?',
-      a: 'Your target market, business goals, product or service, existing website and campaigns, a realistic budget range, and any current lead or sales data. We use those inputs to define the right starting scope.'
+      q: 'How will we measure whether an African market campaign is working?',
+      a: 'We establish the measurement framework before launch and connect relevant advertising, website, CRM, commerce and lead-journey data. Depending on the objective, reporting may cover qualified traffic, enquiries, WhatsApp conversations, leads, sales, conversion rate, acquisition cost and return on advertising spend. We use these results to decide whether to improve, expand or stop an activity.'
     }
   ];
 
@@ -634,25 +626,38 @@ export default function AfricaMarketTemplate() {
               <div className="w-12 h-1 bg-[#1A56DB] rounded-full" />
             </div>
 
-            <div className="lg:col-span-7 divide-y divide-slate-200 border-y border-slate-200 bg-white rounded-xl shadow-xs overflow-hidden">
+            <div className="lg:col-span-7 space-y-3">
               {FAQS.map((faq, i) => {
                 const isOpen = openFaq === i;
                 return (
-                  <div key={i} className="p-5 sm:p-6 transition-colors">
+                  <div
+                    key={i}
+                    className={`rounded-xl border transition-all ${
+                      isOpen
+                        ? 'border-[#1A56DB] bg-white shadow-md'
+                        : 'border-slate-200 bg-white hover:border-slate-300 shadow-xs'
+                    } overflow-hidden`}
+                  >
                     <button
                       type="button"
                       onClick={() => toggleFaq(i)}
-                      className="w-full text-left flex justify-between items-center gap-4 text-sm sm:text-base font-bold text-slate-900 cursor-pointer"
+                      className="w-full text-left p-5 sm:p-6 flex justify-between items-center gap-4 text-[15.5px] sm:text-base font-semibold text-slate-800 hover:text-[#1A56DB] transition-colors cursor-pointer"
                     >
                       <span>{faq.q}</span>
-                      <span className="text-[#1A56DB] text-lg font-normal shrink-0">
+                      <span
+                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 transition-all ${
+                          isOpen
+                            ? 'bg-[#1A56DB] text-white'
+                            : 'bg-slate-100 text-slate-600'
+                        }`}
+                      >
                         {isOpen ? '−' : '+'}
                       </span>
                     </button>
                     {isOpen && (
-                      <p className="text-xs sm:text-[13.5px] text-slate-600 leading-relaxed mt-3 pr-6">
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 border-t border-slate-100 text-sm sm:text-[14.5px] text-slate-600 leading-relaxed pt-4">
                         {faq.a}
-                      </p>
+                      </div>
                     )}
                   </div>
                 );

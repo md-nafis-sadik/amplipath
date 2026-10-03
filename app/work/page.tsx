@@ -50,6 +50,13 @@ function WorkPageContent() {
             className="text-white py-14 sm:py-20 relative overflow-hidden"
             style={{ background: selectedCase.bgGradient }}
           >
+            {selectedCase.image && (
+              <img
+                src={selectedCase.image}
+                alt={selectedCase.name}
+                className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-overlay"
+              />
+            )}
             <div className="absolute -bottom-10 -right-6 text-white/10 text-9xl font-extrabold select-none pointer-events-none">
               {selectedCase.watermark}
             </div>
@@ -381,25 +388,27 @@ function WorkPageContent() {
                     onClick={() => handleOpenCase(cs)}
                     className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
                   >
-                    {/* Visual Card Header */}
-                    <div
-                      className="h-36 p-5 flex flex-col justify-between relative overflow-hidden text-white"
-                      style={{ background: cs.bgGradient }}
-                    >
-                      <div className="flex items-center justify-between z-10">
-                        <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/15 text-white backdrop-blur-xs">
-                          {cs.category}
-                        </span>
-                        <span className="text-white/80 text-[11px] font-mono font-medium flex items-center gap-1 bg-black/20 px-2 py-0.5 rounded backdrop-blur-xs">
-                          {cs.websiteDisplay.replace(/^www\./, '').split('/')[0]} ↗
-                        </span>
-                      </div>
-                      <div className="z-10">
-                        <div className="text-xs text-white/80 font-semibold">{cs.name}</div>
-                        <div className="text-white font-bold text-base leading-tight mt-0.5">{cs.industry}</div>
-                      </div>
-                      <div className="absolute -bottom-6 -right-6 text-white/5 text-7xl font-extrabold select-none">
-                        {cs.watermark}
+                    {/* Visual Card Header with Photo */}
+                    <div className="h-48 relative overflow-hidden text-white bg-slate-900">
+                      <img
+                        src={cs.image}
+                        alt={cs.name}
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                        loading="lazy"
+                      />
+                      {/* Gradient overlay for readability and polish */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-slate-950/30" />
+
+                      <div className="absolute inset-0 p-5 flex flex-col justify-between z-10">
+                        <div className="flex items-center justify-between">
+                          <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md shadow-xs border border-white/15">
+                            {cs.category}
+                          </span>
+                        </div>
+                        <div>
+                          <div className="text-xs text-white/80 font-medium tracking-wide drop-shadow-sm">{cs.name}</div>
+                          <div className="text-white font-bold text-base sm:text-lg leading-tight mt-0.5 drop-shadow-sm">{cs.industry}</div>
+                        </div>
                       </div>
                     </div>
 
@@ -486,7 +495,7 @@ function WorkPageContent() {
             <div className="max-w-2xl mx-auto px-4 sm:px-6">
               <h2 className="text-2xl sm:text-4xl font-extrabold mb-3">Ready to unlock growth?</h2>
               <p className="text-sm sm:text-base text-blue-100 mb-6">
-                Tell us about your business — we&rsquo;ll build a custom growth plan within 12 hours.
+                Tell us about your business — we&rsquo;ll build a custom growth plan within 5 hours.
               </p>
               <button
                 type="button"

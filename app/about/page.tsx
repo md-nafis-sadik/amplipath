@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useModal } from '@/components/ModalContext';
@@ -8,6 +8,7 @@ import { useModal } from '@/components/ModalContext';
 export default function AboutPage() {
   const router = useRouter();
   const { openModal } = useModal();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="pg on" id="pg-about">
@@ -82,30 +83,99 @@ export default function AboutPage() {
   <div className="sec-tag wh">LEADERSHIP TEAM</div>
   <h2 className="sec-h2 wh">The specialists behind your growth.</h2>
   <div className="aln wh"></div>
-  <p className="sec-sub wh" style={{"marginBottom":"32px"}}>Our leadership team brings together deep expertise across SEO, paid media, technology, content strategy and Africa markets.</p>
-  <div className="team-grid">
-    <div>
-      <div className="tm-av" style={{"background":"var(--ac)","padding":"0","overflow":"hidden"}}><img src="/images/about_img_2.jpg" alt="Adebayo Ogungbemile" style={{"width":"100%","height":"100%","objectFit":"cover","objectPosition":"top","borderRadius":"50%"}}/></div>
-      <div className="tm-n">Adebayo Ogungbemile</div>
-      <div className="tm-r">Founder & Chief Executive Officer</div>
+  <p className="sec-sub wh" style={{"marginBottom":"24px"}}>Our leadership team brings together deep expertise across SEO and web development, mobile and AI systems, and automation.</p>
+  
+  <div className="lt-grid">
+    {/* Member 1: Adebayo Ogungbemile */}
+    <div className="lt-card">
+      <div className="lt-photo">
+        <img src="/images/team/adebayo.png" alt="Adebayo Ogungbemile" />
+      </div>
+      <div className="lt-name">Adebayo Ogungbemile</div>
+      <div className="lt-role">Founder &amp; Chief Executive Officer</div>
+      <a
+        className="lt-linkedin"
+        href="https://www.linkedin.com/in/adebayo-ogungbemile/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Adebayo Ogungbemile on LinkedIn"
+      >
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
     </div>
-    <div>
-      <div className="tm-av" style={{"background":"#1e293b","border":"2px dashed #475569","color":"#64748b","fontSize":"18px"}}>👤</div>
-      <div className="tm-n">Head of Growth</div>
-      <div className="tm-r">Chief Growth Officer</div>
+
+    {/* Member 2: Nafis Sadik */}
+    <div className="lt-card">
+      <div className="lt-photo">
+        <img src="/images/team/nafis.png" alt="Nafis Sadik" />
+      </div>
+      <div className="lt-name">Nafis Sadik</div>
+      <div className="lt-role">SEO &amp; Web Development Lead</div>
+      <a
+        className="lt-linkedin"
+        href="https://www.linkedin.com/in/nafissadik/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Nafis Sadik on LinkedIn"
+      >
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
     </div>
-    <div>
-      <div className="tm-av" style={{"background":"#1e293b","border":"2px dashed #475569","color":"#64748b","fontSize":"18px"}}>👤</div>
-      <div className="tm-n">SEO & GEO/AEO Director</div>
-      <div className="tm-r">VP, Search & AI Optimization</div>
+
+    {/* Member 3: Raheel Wazir */}
+    <div className="lt-card">
+      <div className="lt-photo">
+        <img src="/images/team/raheel.png" alt="Raheel Wazir" />
+      </div>
+      <div className="lt-name">Raheel Wazir</div>
+      <div className="lt-role">AI Systems &amp; Full-Stack Software Developer</div>
+      <a
+        className="lt-linkedin"
+        href="https://linkedin.com/in/rahil-wazir"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Raheel Wazir on LinkedIn"
+      >
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
     </div>
-    <div>
-      <div className="tm-av" style={{"background":"#1e293b","border":"2px dashed #475569","color":"#64748b","fontSize":"18px"}}>👤</div>
-      <div className="tm-n">Africa Market Lead</div>
-      <div className="tm-r">Head of African Markets</div>
+
+    {/* Member 4: Rana Fahad */}
+    <div className="lt-card">
+      <div className="lt-photo">
+        <img src="/images/team/rana.png" alt="Rana Fahad" />
+      </div>
+      <div className="lt-name">Rana Fahad</div>
+      <div className="lt-role">Mobile App Developer Lead</div>
+      <a
+        className="lt-linkedin"
+        href="https://www.linkedin.com/company/amplipath"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Rana Fahad on LinkedIn"
+      >
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+    </div>
+
+    {/* Member 5: Gouravdeep Singh */}
+    <div className="lt-card">
+      <div className="lt-photo">
+        <img src="/images/team/gouravdeep.png" alt="Gouravdeep Singh" />
+      </div>
+      <div className="lt-name">Gouravdeep Singh</div>
+      <div className="lt-role">Mobile App Developer</div>
+      <a
+        className="lt-linkedin"
+        href="https://www.linkedin.com/in/gouravdeepsingh/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Gouravdeep Singh on LinkedIn"
+      >
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
     </div>
   </div>
-  <p style={{"fontSize":"12px","color":"#475569","textAlign":"center","marginTop":"24px"}}>Full team profiles and credentials — coming soon.</p>
 </div>
 <div className="s-white">
   <div className="sec-tag">GLOBAL OFFICES</div>
@@ -125,6 +195,71 @@ export default function AboutPage() {
       <a href="https://maps.google.com/?q=7+Igele+Maroko+St+Ondo+Ondo+State+Nigeria" target="_blank" rel="noopener" style={{"display":"inline-block","marginTop":"8px","fontSize":"11px","color":"var(--ac)","fontWeight":"700","textDecoration":"none"}}>📍 View on map →</a>
     </div>
     </div>
+</div>
+
+{/* ══ ABOUT PAGE FAQS ══ */}
+<div className="s-gray" id="faq">
+  <div className="sec-tag">FREQUENTLY ASKED QUESTIONS</div>
+  <h2 className="sec-h2">Frequently asked questions about Amplipath.</h2>
+  <div className="aln"></div>
+  <p className="sec-sub">Learn how Amplipath works, what makes us different and what to expect when working with us.</p>
+
+  <div className="faq-wrap">
+    {[
+      {
+        q: "What makes Amplipath different from other digital marketing agencies?",
+        a: "Amplipath unifies marketing, technology, data and AI under one growth strategy. This means the team attracting traffic can also improve the website or app, connect analytics, automate follow-up and optimize conversion. Clients receive coordinated execution and reporting around business outcomes instead of disconnected campaigns, isolated deliverables or channel metrics that do not show their effect on growth."
+      },
+      {
+        q: "What does “integrated growth” mean at Amplipath?",
+        a: "Integrated growth means connecting marketing, technology, data and AI around the same business objectives. Instead of running advertising, websites, search, analytics and automation as disconnected activities, we design them to work together as one measurable system for attracting customers, improving conversions and supporting business operations."
+      },
+      {
+        q: "Is Amplipath a registered business?",
+        a: "Yes. Amplipath is registered in Nigeria with the Corporate Affairs Commission, or CAC, under registration number 9842325."
+      },
+      {
+        q: "Does Amplipath offer one-time projects and ongoing monthly services?",
+        a: "Yes. Fixed-scope engagements can include audits, strategies, websites, sales funnels, apps and automation systems. Services such as SEO, GEO/AEO, paid media, content, analytics and conversion optimization normally benefit from ongoing engagement because they require testing and refinement. A long-term contract is not automatically assumed; the duration, milestones, renewal conditions and exit terms are explained in the proposal."
+      },
+      {
+        q: "How does Amplipath decide which services our business actually needs?",
+        a: "We begin by understanding your goals, customers, current performance, digital assets, technology, budget and operational challenges. We then identify the most important growth barriers and recommend a prioritised combination of services. We do not assume that every client needs every service we offer."
+      },
+      {
+        q: "Can Amplipath work with our internal team, developers or existing agencies?",
+        a: "Yes. We can work as your primary growth partner or collaborate with your existing marketing, sales, creative, development or technology teams. We define responsibilities, access requirements, approval processes and performance expectations at the beginning so every team understands its role and duplicated work is avoided."
+      },
+      {
+        q: "Will our business own the accounts, data, website, code and digital assets created for us?",
+        a: "We prefer important business assets—including domains, advertising accounts, analytics accounts and approved deliverables—to remain under the client’s ownership or client-controlled access. Any third-party software, licensed assets, reusable frameworks or pre-existing intellectual property will be identified in the proposal or agreement before work begins."
+      },
+      {
+        q: "How does Amplipath use AI while maintaining human oversight and quality?",
+        a: "We use AI to support research, analysis, content workflows, personalization, automation and operational efficiency. Human specialists remain responsible for strategy, quality assurance, brand accuracy, technical decisions and final client-facing outputs. We select AI tools according to the project’s needs rather than using automation where human judgement is more appropriate."
+      }
+    ].map((faq, idx) => {
+      const isOpen = openFaq === idx;
+      return (
+        <div className={`faq-item ${isOpen ? 'open' : ''}`} key={idx}>
+          <button
+            className="faq-q"
+            type="button"
+            onClick={() => setOpenFaq(isOpen ? null : idx)}
+            aria-expanded={isOpen}
+          >
+            <span>{faq.q}</span>
+            <span className="faq-plus">{isOpen ? '−' : '+'}</span>
+          </button>
+          {isOpen && (
+            <div className="faq-a open">
+              <div className="faq-a-inner">{faq.a}</div>
+            </div>
+          )}
+        </div>
+      );
+    })}
+  </div>
 </div>
     </div>
   );
