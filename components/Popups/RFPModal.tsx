@@ -407,7 +407,7 @@ export default function RFPModal() {
               {/* Disclaimer */}
               <p style={{ fontSize: '10.5px', color: '#94a3b8', lineHeight: 1.45, marginBottom: '10px' }}>
                 By clicking below, you consent for Amplipath to contact you. We respect your privacy.{' '}
-                <span style={{ color: '#1A56DB', cursor: 'pointer', textDecoration: 'underline' }}>Privacy Policy.</span>
+                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: '#1A56DB', textDecoration: 'underline' }}>Privacy Policy.</a>
               </p>
 
               {/* Submit button */}

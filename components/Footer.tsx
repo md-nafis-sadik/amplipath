@@ -341,7 +341,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <span className="fb-copy">© 2026 AMPLIPATH, LLC. All rights reserved.</span>
         <div className="fb-links">
-          <Link href="/about">Privacy</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/about">Terms</Link>
           <Link href="/contact">Support</Link>
         </div>

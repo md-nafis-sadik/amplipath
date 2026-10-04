@@ -64,7 +64,7 @@ export default function FreeAuditPage() {
   <p className="h-sub">Our specialists review your website, SEO performance, paid ads, competitors and growth opportunities — then deliver a clear, actionable report showing exactly where you are winning, where you are losing and the specific changes that will make the biggest difference.</p>
 </div>
 <div className="s-white">
-  <div style={{"display":"grid","gridTemplateColumns":"1fr 1.2fr","gap":"40px","alignItems":"start","maxWidth":"1040px","margin":"0 auto"}}>
+  <div className="con-split">
     <div>
       <div className="sec-tag">WHAT IS INCLUDED</div>
       <h2 className="sec-h2" style={{"fontSize":"26px"}}>A complete review of your digital marketing.</h2>
@@ -81,7 +81,7 @@ export default function FreeAuditPage() {
         <div style={{"fontSize":"12px","color":"#475569","lineHeight":"1.6"}}>This is a genuine audit performed by our senior specialists — not an automated report. We invest the time because demonstrating real expertise is the best way to earn your business.</div>
       </div>
     </div>
-    <div className="cf" style={{ maxWidth: '480px', width: '100%', marginLeft: 'auto' }}>
+    <div className="cf">
       <div className="cf-h">Request your free audit.</div>
       <div className="cf-sub">Tell us about your website and we will start the review within 5 hours.</div>
       <div className="cf2">

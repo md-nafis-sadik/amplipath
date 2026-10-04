@@ -51,9 +51,9 @@ export default function ContactPage() {
         <h1 className="h-h1" style={{ fontSize: '38px' }}>Contact Amplipath.</h1>
         <p className="h-sub">General enquiries, support, partnerships, media and careers — send us a message and our team will respond within 5 hours.</p>
       </div>
-      <div className="s-white" style={{ minHeight: '600px', display: 'flex', alignItems: 'center' }}>
+      <div className="s-white" style={{ minHeight: '600px' }}>
         <div className="con-split">
-          <div style={{ maxWidth: '460px' }}>
+          <div>
             <h2 className="ci-h" style={{ fontSize: '26px', color: '#0f172a', marginBottom: '12px' }}>Get in touch</h2>
             <p className="ci-sub" style={{ fontSize: '14.5px', color: '#475569', lineHeight: '1.7', marginBottom: '22px' }}>
               Whether you need SEO, paid ads, a new website, game marketing or a full-service agency partner — our team responds within 5 hours with clear, honest recommendations for your specific situation.
@@ -80,7 +80,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <div className="cf" style={{ maxWidth: '480px', width: '100%', marginLeft: 'auto' }}>
+          <div className="cf">
             {submitted ? (
               <div style={{ padding: '30px', textAlign: 'center', background: '#1e293b', borderRadius: '12px', border: '1.5px solid #22c55e' }}>
                 <div style={{ fontSize: '36px', marginBottom: '12px' }}>✅</div>

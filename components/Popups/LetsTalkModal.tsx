@@ -127,16 +127,6 @@ export default function LetsTalkModal() {
                 <option>Not sure yet</option>
               </select>
               <div className="p2" style={{ marginBottom: '8px' }}>
-                <select className="pinp" name="monthlyBudget">
-                  <option value="">Monthly budget (optional)</option>
-                  <option>Not sure yet</option>
-                  <option>Under $1,000/mo</option>
-                  <option>$1,000 – $2,500/mo</option>
-                  <option>$2,500 – $5,000/mo</option>
-                  <option>$5,000 – $10,000/mo</option>
-                  <option>$10,000+/mo</option>
-                  <option>Discuss on call</option>
-                </select>
                 <select className="pinp" name="projectBudget">
                   <option value="">Project budget (optional)</option>
                   <option>Not sure yet</option>
@@ -145,6 +135,16 @@ export default function LetsTalkModal() {
                   <option>$10,000 – $25,000</option>
                   <option>$25,000 – $50,000</option>
                   <option>$50,000+</option>
+                  <option>Discuss on call</option>
+                </select>
+                <select className="pinp" name="monthlyBudget">
+                  <option value="">Monthly budget (optional)</option>
+                  <option>Not sure yet</option>
+                  <option>Under $1,000/mo</option>
+                  <option>$1,000 – $2,500/mo</option>
+                  <option>$2,500 – $5,000/mo</option>
+                  <option>$5,000 – $10,000/mo</option>
+                  <option>$10,000+/mo</option>
                   <option>Discuss on call</option>
                 </select>
               </div>

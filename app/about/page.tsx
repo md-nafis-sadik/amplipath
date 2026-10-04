@@ -15,15 +15,15 @@ export default function AboutPage() {
       <div className="hero">
   <div className="hero-bar"></div>
   <div className="h-tag"><div className="h-dot"></div>ABOUT AMPLIPATH</div>
-  <h1 className="h-h1" style={{"fontSize":"38px"}}>Built by marketers, for businesses that demand real results.</h1>
-  <p className="h-sub">We didn't build Amplipath to be another agency. We built it to be the agency we always wished existed — one that combines global execution standards with genuine local expertise, across every market that matters.</p>
+  <h1 className="h-h1" style={{"fontSize":"38px"}}>Built for businesses that demand connected, measurable growth.</h1>
+  <p className="h-sub">Amplipath was created for businesses that need more than isolated services and disconnected providers. We bring marketing, technology, data and AI together around shared objectives—combining global execution standards with the market understanding required to help businesses reach, convert and serve their customers more effectively.</p>
 </div>
 <div className="s-white">
   <div className="sec-tag">OUR MISSION</div>
-  <h2 className="sec-h2">Making world-class digital marketing accessible to every business — worldwide.</h2>
+  <h2 className="sec-h2">Unifying marketing, technology and AI to amplify business growth.</h2>
   <div className="aln"></div>
-  <p className="sec-sub" style={{"maxWidth":"700px"}}>Most premium digital marketing agencies serve only US and European markets at enterprise price points. Amplipath was founded to change that — delivering the same calibre of strategy and execution to startups, SMBs and enterprises in every major global market, including Africa.</p>
-  <p className="sec-sub" style={{"maxWidth":"700px","marginTop":"16px"}}>That's why Amplipath was built as both a marketing and technology agency from day one — because a growth plan is only as good as the website, app or system that has to deliver it.</p>
+  <p className="sec-sub" style={{"maxWidth":"700px"}}>Growth is strongest when strategy, customer acquisition, digital experiences, analytics and business operations support one another. We design integrated growth systems for startups, SMEs and established organizations across Africa and international markets.</p>
+  <p className="sec-sub" style={{"maxWidth":"700px","marginTop":"16px"}}>From marketing campaigns and search visibility to websites, applications, analytics and AI automation, every solution is shaped around clear business priorities and measured against meaningful outcomes.</p>
   <div className="vals" style={{"marginTop":"36px"}}>
     <div className="val"><div className="v-icon">💡</div><div className="v-title">Think big</div><div className="v-desc">We go deep on every channel and every market. Surface-level strategies produce surface-level results. We are channel specialists — not generalists who dabble in everything and excel at nothing.</div></div>
     <div className="val"><div className="v-icon">🎯</div><div className="v-title">Own it</div><div className="v-desc">Full accountability for our clients' results. Every campaign, every report, every recommendation — we own it completely. No excuses, no blaming external factors, no vanishing acts when results are slow.</div></div>
@@ -37,11 +37,7 @@ export default function AboutPage() {
   <div className="wstats">
     <div className="ws"><div className="ws-n">🌍</div><div className="ws-l">Global clients — every market</div></div>
     <div className="ws"><div className="ws-n">50+</div><div className="ws-l">Services delivered worldwide</div></div>
-    <div className="ws"><div className="ws-n">Global</div><div className="ws-l">Distributed specialist team</div></div>
     <div className="ws"><div className="ws-n">10+</div><div className="ws-l">Years industry experience</div></div>
-  </div>
-  <div className="wstats" style={{"marginTop":"12px"}}>
-    <div className="ws"><div className="ws-n">50+</div><div className="ws-l">Services offered</div></div>
     <div className="ws"><div className="ws-n">Month-to-month</div><div className="ws-l">No lock-in contracts</div></div>
     <div className="ws"><div className="ws-n">Revenue-first</div><div className="ws-l">We measure client revenue impact</div></div>
     <div className="ws"><div className="ws-n">30+</div><div className="ws-l">Days to first results</div></div>
@@ -49,7 +45,7 @@ export default function AboutPage() {
 </div>
 <div className="s-white">
   <div className="sec-tag">FOUNDER & STORY</div>
-  <h2 className="sec-h2">Built by a marketer who believed every business deserves world-class marketing.</h2>
+  <h2 className="sec-h2">Built from a belief that business growth should work as one connected system.</h2>
   <div className="aln"></div>
   <div style={{"display":"grid","gridTemplateColumns":"280px 1fr","gap":"40px","alignItems":"start","marginTop":"8px"}}>
     <div style={{"textAlign":"center"}}>
@@ -63,17 +59,17 @@ export default function AboutPage() {
       </div>
     </div>
     <div>
-      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"16px"}}>With over 10 years in the marketing industry, <strong>Adebayo Ogungbemile</strong> founded Amplipath with a singular conviction: that world-class digital marketing should not be reserved for enterprise companies with enterprise budgets.</p>
-      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"16px"}}>Throughout his career, Adebayo saw the same pattern repeat — small and medium-sized businesses left behind by agencies that either charged too much, delivered too little, or lacked the specialist knowledge to drive genuine growth. He built Amplipath to be the agency he always wished existed for those businesses.</p>
-      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"24px"}}>Today, Amplipath operates across the US, UK, Africa and worldwide — delivering specialist-level execution across 50+ digital marketing services, with particular expertise in the emerging disciplines that most agencies are only beginning to understand: GEO/AEO for AI search, Africa market marketing, and niche verticals like game marketing and course promotion.</p>
+      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"16px"}}>With 10 years of experience in marketing and business growth, <strong>Adebayo Ogungbemile</strong> founded Amplipath with a singular conviction: that world-class marketing, technology and intelligent systems should not be reserved for large enterprises with enterprise budgets.</p>
+      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"16px"}}>Throughout his career, Adebayo saw the same pattern repeat—startups and growing businesses forced to work with separate marketers, developers and technology providers, often resulting in disconnected strategies, inconsistent execution and limited accountability. He built Amplipath to bring these essential capabilities together through one integrated growth partner.</p>
+      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"24px"}}>Today, Amplipath works with businesses globally, bringing strategy and execution together across digital marketing, website and software development, mobile app development, search and analytics, AI automation and intelligent business systems. By integrating these capabilities into one coordinated growth system, we help businesses attract customers, strengthen their digital infrastructure, streamline operations and turn growth opportunities into measurable performance.</p>
       <div style={{"display":"grid","gridTemplateColumns":"1fr 1fr","gap":"12px"}}>
         <div style={{"background":"var(--acl)","borderRadius":"10px","padding":"16px","borderLeft":"4px solid var(--ac)"}}>
           <div style={{"fontSize":"11px","fontWeight":"700","color":"var(--ac)","textTransform":"uppercase","letterSpacing":".08em","marginBottom":"6px"}}>Our Mission</div>
-          <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>To make world-class digital marketing accessible to every business — from local SMBs to global enterprises — with no lock-in contracts and full accountability for results.</div>
+          <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>To amplify business growth by unifying marketing, technology and AI into integrated systems that turn potential into measurable performance.</div>
         </div>
         <div style={{"background":"#f8fafc","borderRadius":"10px","padding":"16px","borderLeft":"4px solid #64748b"}}>
           <div style={{"fontSize":"11px","fontWeight":"700","color":"#475569","textTransform":"uppercase","letterSpacing":".08em","marginBottom":"6px"}}>Our Vision</div>
-          <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>To be the most trusted global digital marketing agency for businesses in every market — including the 15+ African markets that the industry has historically underserved.</div>
+          <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>To become the global standard for integrated growth—where marketing, technology and AI work as one intelligent system.</div>
         </div>
       </div>
     </div>

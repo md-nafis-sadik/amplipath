@@ -231,7 +231,9 @@ body,
 .v-icon{font-size:26px;margin-bottom:10px}
 .v-title{font-size:16px;font-weight:700;color:#0f172a;margin-bottom:7px}
 .v-desc{font-size:13px;color:#64748b;line-height:1.65}
-.wstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.wstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+@media (max-width:768px){.wstats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.wstats{grid-template-columns:1fr}}
 .ws{background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:20px;text-align:center}
 .ws-n{font-size:28px;font-weight:700;color:var(--ac);letter-spacing:-.02em}
 .ws-l{font-size:12px;color:#64748b;margin-top:5px}
@@ -278,9 +280,9 @@ body,
 .tr-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:18px}
 .tr-type{font-size:10px;color:var(--ac);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
 .tr-title{font-size:14px;font-weight:700;color:#0f172a;margin-bottom:5px;line-height:1.35}
-.tr-meta{font-size:12px;color:#94a3b8}
-.con-split{display:grid;grid-template-columns:1fr 480px;gap:48px;max-width:1040px;margin:0 auto;align-items:start}
-@media (max-width:900px){.con-split{grid-template-columns:1fr;gap:36px;max-width:500px}}
+.con-split{display:grid;grid-template-columns:1fr 480px;gap:48px;max-width:1120px;margin:0;align-items:start}
+@media (max-width:1024px){.con-split{grid-template-columns:1fr 440px;gap:32px;max-width:100%}}
+@media (max-width:900px){.con-split{grid-template-columns:1fr;gap:36px;max-width:100%}}
 .ci-h{font-size:24px;font-weight:700;color:#0f172a;margin-bottom:10px;letter-spacing:-.02em}
 .ci-sub{font-size:14px;color:#475569;line-height:1.75;margin-bottom:18px}
 .ci-row{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:14px;color:#475569}
@@ -1106,8 +1108,8 @@ html {
    PREMIUM EXECUTIVE FAQ ACCORDION STYLES
    ═══════════════════════════════════════════════════════════ */
 .faq-wrap {
-  max-width: 880px;
-  margin: 32px auto 0;
+  max-width: 960px;
+  margin: 32px 0 0 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
