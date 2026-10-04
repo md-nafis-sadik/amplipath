@@ -47,7 +47,7 @@ export default function LetsTalkModal() {
 
   return (
     <div
-      className="pop-wrap open"
+      className="pop-wrap open no-scrollbar"
       id="pop-lead"
       onClick={(e) => {
         if ((e.target as HTMLElement).classList.contains('pop-wrap')) closeModal();
@@ -58,7 +58,7 @@ export default function LetsTalkModal() {
       }}
     >
       <div
-        className="pop-box"
+        className="pop-box no-scrollbar"
         style={{
           maxHeight: 'calc(100vh - 32px)',
           scrollbarWidth: 'none',

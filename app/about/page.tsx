@@ -53,7 +53,7 @@ export default function AboutPage() {
   <div className="aln"></div>
   <div style={{"display":"grid","gridTemplateColumns":"280px 1fr","gap":"40px","alignItems":"start","marginTop":"8px"}}>
     <div style={{"textAlign":"center"}}>
-      <img src="/images/about_img_1.jpg" alt="Adebayo Ogungbemile — Founder & CEO, Amplipath" style={{"width":"220px","height":"220px","borderRadius":"50%","objectFit":"cover","objectPosition":"top","border":"4px solid var(--ac)","boxShadow":"0 8px 32px rgba(26,86,219,0.2)"}}/>
+      <img src="/images/team/adebayo.png" alt="Adebayo Ogungbemile — Founder & CEO, Amplipath" style={{"width":"220px","height":"220px","borderRadius":"50%","objectFit":"cover","objectPosition":"top","border":"4px solid var(--ac)","boxShadow":"0 8px 32px rgba(26,86,219,0.2)"}}/>
       <div style={{"marginTop":"14px"}}>
         <div style={{"fontSize":"15px","fontWeight":"700","color":"#0f172a"}}>Adebayo Ogungbemile</div>
         <div style={{"fontSize":"13px","color":"var(--ac)","fontWeight":"600","marginTop":"3px"}}>Founder & CEO</div>
@@ -113,10 +113,10 @@ export default function AboutPage() {
       <div className="lt-role">SEO &amp; Web Development Lead</div>
       <a
         className="lt-linkedin"
-        href="https://www.linkedin.com/in/nafissadik/"
+        href="https://md-nafis-sadik.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Nafis Sadik on LinkedIn"
+        aria-label="Nafis Sadik"
       >
         <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
       </a>

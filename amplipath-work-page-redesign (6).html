@@ -592,10 +592,9 @@
 /* Popup fix: use more of the viewport before scrolling, and make any remaining
    scroll subtle instead of a raw browser scrollbar. True zero-scroll can't be
    guaranteed on short screens once conditional RFP fields expand — see note below. */
-.pop-box{max-height:96vh !important}
-.pop-box::-webkit-scrollbar{width:5px}
-.pop-box::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:10px}
-.pop-box::-webkit-scrollbar-track{background:transparent}
+html, body, * { scrollbar-width: none !important; -ms-overflow-style: none !important; }
+::-webkit-scrollbar, *::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
+.pop-box{max-height:96vh !important; scrollbar-width: none !important; -ms-overflow-style: none !important;}
 
 /* Work-page-only hero (scoped wk- classes so nothing else on the site is touched) */
 .wk-hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:#081729;padding:76px 40px 68px}

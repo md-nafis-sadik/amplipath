@@ -265,7 +265,7 @@ export default function GlobalLanguageSwitcher({ isMobile = false, onSelectMobil
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white mb-2 text-slate-900 focus:outline-none focus:border-blue-500"
             />
-            <div className="max-h-56 overflow-y-auto space-y-1">
+            <div className="max-h-56 overflow-y-auto space-y-1 no-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {filteredLanguages.map((lang, idx) => (
                 <button
                   key={idx}
@@ -366,7 +366,10 @@ export default function GlobalLanguageSwitcher({ isMobile = false, onSelectMobil
           </div>
 
           {/* Region Tabs */}
-          <div className="flex items-center gap-1 px-3 py-2 bg-slate-50 border-b border-slate-200 text-xs overflow-x-auto">
+          <div
+            className="flex items-center gap-1 px-3 py-2 bg-slate-50 border-b border-slate-200 text-xs overflow-x-auto no-scrollbar"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             {(['All', 'Americas', 'Europe', 'Asia & ME', 'Africa'] as const).map((tab) => (
               <button
                 key={tab}
@@ -384,7 +387,10 @@ export default function GlobalLanguageSwitcher({ isMobile = false, onSelectMobil
           </div>
 
           {/* Language Items Grid */}
-          <div className="p-2 max-h-72 overflow-y-auto grid grid-cols-2 gap-1 bg-white">
+          <div
+            className="p-2 max-h-72 overflow-y-auto grid grid-cols-2 gap-1 bg-white no-scrollbar"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             {filteredLanguages.length === 0 ? (
               <div className="col-span-2 py-6 text-center text-xs text-slate-500">
                 No matching languages found.

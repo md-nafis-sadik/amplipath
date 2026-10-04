@@ -12,7 +12,7 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
 
   return (
     <div
-      className="mega open"
+      className="mega open no-scrollbar"
       id="mega"
       onMouseLeave={onClose}
       style={{
@@ -29,7 +29,9 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
         gap: '20px',
         boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
         maxHeight: 'calc(100vh - 80px)',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        scrollbarWidth: 'none',
+        msOverflowStyle: 'none'
       }}
     >
       {/* ── COLUMN 1: Search & GEO/AEO + AI Marketing ── */}

@@ -2,14 +2,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useModal } from '../ModalContext';
 import { COUNTRIES, Country } from '@/lib/countries';
-import { rfpBudgetConfig } from '@/lib/budgetConfig';
+import { rfpBudgetConfig, defaultRfpBudgetOpts } from '@/lib/budgetConfig';
 
 export default function RFPModal() {
   const { activeModal, closeModal, selectedIndustry } = useModal();
   const [supportType, setSupportType] = useState('');
   const [budget, setBudget] = useState('');
-  const [buildBudget, setBuildBudget] = useState('');
-  const [monthlyBudget, setMonthlyBudget] = useState('');
   const [serviceCat, setServiceCat] = useState('');
   const [industry, setIndustry] = useState('');
 
@@ -44,6 +42,16 @@ export default function RFPModal() {
   if (activeModal !== 'rfp') return null;
 
   const currentBudgetConfig = supportType ? rfpBudgetConfig[supportType] : null;
+  const budgetOptions = currentBudgetConfig ? currentBudgetConfig.opts : defaultRfpBudgetOpts;
+
+  const handleSupportTypeChange = (val: string) => {
+    setSupportType(val);
+    const newConfig = val ? rfpBudgetConfig[val] : null;
+    const newOpts = newConfig ? newConfig.opts : defaultRfpBudgetOpts;
+    if (budget && !newOpts.includes(budget)) {
+      setBudget('');
+    }
+  };
 
   const filteredCountries = countrySearch.trim()
     ? COUNTRIES.filter(c =>
@@ -65,9 +73,9 @@ export default function RFPModal() {
       email: formData.get('email'),
       website: formData.get('website') || '',
       supportType,
-      budget: supportType === 'hybrid' ? `Build: ${buildBudget}, Monthly: ${monthlyBudget}` : budget,
+      budget,
       serviceCategory: serviceCat,
-      industry: industry || 'Not specified',
+      industry: industry || selectedIndustry || 'Not specified',
       phone: `${selectedCountry.c} ${formData.get('phone')}`,
       sourcePage: typeof window !== 'undefined' ? window.location.pathname : '/'
     };
@@ -108,7 +116,7 @@ export default function RFPModal() {
 
   return (
     <div
-      className="pop-wrap open"
+      className="pop-wrap open no-scrollbar"
       id="pop-rfp"
       onClick={(e) => {
         if ((e.target as HTMLElement).classList.contains('pop-wrap')) closeModal();
@@ -132,7 +140,7 @@ export default function RFPModal() {
       }}
     >
       <div
-        className="pop-box"
+        className="pop-box no-scrollbar"
         style={{
           background: '#fff',
           borderRadius: '14px',
@@ -234,10 +242,7 @@ export default function RFPModal() {
                   className="pinp"
                   id="rfp-engagement"
                   value={supportType}
-                  onChange={(e) => {
-                    setSupportType(e.target.value);
-                    setBudget('');
-                  }}
+                  onChange={(e) => handleSupportTypeChange(e.target.value)}
                   style={inputStyle}
                 >
                   <option value="">What support do you need?</option>
@@ -331,7 +336,7 @@ export default function RFPModal() {
                           autoFocus
                         />
                       </div>
-                      <div id="country-list" style={{ maxHeight: '180px', overflowY: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                      <div id="country-list" className="no-scrollbar" style={{ maxHeight: '180px', overflowY: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                         {filteredCountries.map((c, i) => (
                           <div
                             key={i}
@@ -384,77 +389,20 @@ export default function RFPModal() {
 
                 <select
                   className="pinp"
-                  id="rfp-industry"
-                  value={industry}
-                  onChange={(e) => setIndustry(e.target.value)}
+                  id="rfp-budget"
+                  name="budget"
+                  value={budget}
+                  onChange={(e) => setBudget(e.target.value)}
                   style={inputStyle}
                 >
-                  <option value="">Which industry? (optional)</option>
-                  <option value="ecommerce">E-Commerce &amp; Retail</option>
-                  <option value="saas">SaaS &amp; Technology</option>
-                  <option value="law">Legal &amp; Professional Services</option>
-                  <option value="healthcare">Healthcare &amp; Wellness</option>
-                  <option value="realestate">Real Estate &amp; Property</option>
-                  <option value="fintech">Finance &amp; Fintech</option>
-                  <option value="game">Gaming &amp; Entertainment</option>
-                  <option value="restaurant">Food &amp; Hospitality</option>
-                  <option value="nonprofit">Non-Profit &amp; NGO</option>
-                  <option value="course">Education &amp; Courses</option>
-                  <option value="roofing">Home Services &amp; Trade</option>
-                  <option value="other">Other</option>
+                  <option value="">Estimated budget (optional)</option>
+                  {budgetOptions.map((opt, i) => (
+                    <option key={i} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
                 </select>
               </div>
-
-              {/* Row 5: Dynamic Budget Selection */}
-              {supportType === 'hybrid' ? (
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
-                  <select
-                    required
-                    className="pinp"
-                    value={buildBudget}
-                    onChange={(e) => setBuildBudget(e.target.value)}
-                    style={inputStyle}
-                  >
-                    <option value="">Estimated Build Budget</option>
-                    <option>Not sure yet</option>
-                    <option>Under $5,000</option>
-                    <option>$5,000 - $10,000</option>
-                    <option>$10,000 - $25,000</option>
-                    <option>$25,000 - $50,000</option>
-                    <option>$50,000+</option>
-                  </select>
-                  <select
-                    required
-                    className="pinp"
-                    value={monthlyBudget}
-                    onChange={(e) => setMonthlyBudget(e.target.value)}
-                    style={inputStyle}
-                  >
-                    <option value="">Estimated Monthly Growth</option>
-                    <option>Not sure yet</option>
-                    <option>Under $1,000/mo</option>
-                    <option>$1,000 - $2,500/mo</option>
-                    <option>$2,500 - $5,000/mo</option>
-                    <option>$5,000 - $10,000/mo</option>
-                    <option>$10,000+/mo</option>
-                  </select>
-                </div>
-              ) : currentBudgetConfig ? (
-                <div style={{ marginBottom: '8px' }}>
-                  <select
-                    required
-                    className="pinp"
-                    value={budget}
-                    onChange={(e) => setBudget(e.target.value)}
-                    style={inputStyle}
-                  >
-                    <option value="">{currentBudgetConfig.label}</option>
-                    {currentBudgetConfig.opts.map((opt, i) => (
-                      <option key={i} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                </div>
-              ) : null}
 
               {/* Disclaimer */}
               <p style={{ fontSize: '10.5px', color: '#94a3b8', lineHeight: 1.45, marginBottom: '10px' }}>

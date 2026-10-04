@@ -371,7 +371,8 @@ export default function Footer() {
           onClick={() => setShowLanguageModal(false)}
         >
           <div
-            className="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto p-6 text-white shadow-2xl relative"
+            className="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto no-scrollbar p-6 text-white shadow-2xl relative"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -415,7 +416,10 @@ export default function Footer() {
             </div>
 
             {/* Region Tabs */}
-            <div className="flex items-center gap-1 mb-3 pb-2 border-b border-slate-800 overflow-x-auto">
+            <div
+              className="flex items-center gap-1 mb-3 pb-2 border-b border-slate-800 overflow-x-auto no-scrollbar"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               {(['All', 'Americas', 'Europe', 'Asia & ME', 'Africa'] as const).map((tab) => (
                 <button
                   key={tab}
@@ -433,7 +437,10 @@ export default function Footer() {
             </div>
 
             {/* Language Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 max-h-72 overflow-y-auto mb-4">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 max-h-72 overflow-y-auto no-scrollbar mb-4"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               {LANGUAGES.filter((l) => {
                 const matchesTab = activeTab === 'All' || l.region === activeTab;
                 const matchesSearch =

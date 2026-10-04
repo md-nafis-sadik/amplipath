@@ -354,8 +354,8 @@ export default function Navbar() {
       {/* ══ COMPLETE MOBILE NAVIGATION DRAWER (< 1024px) ══ */}
       {mobileMenuOpen && (
         <div
-          className="lg:hidden fixed inset-x-0 bottom-0 bg-white z-[999] overflow-y-auto border-t border-slate-200"
-          style={{ top: '64px' }}
+          className="lg:hidden fixed inset-x-0 bottom-0 bg-white z-[999] overflow-y-auto no-scrollbar border-t border-slate-200"
+          style={{ top: '64px', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           <div className="px-5 py-4 flex flex-col pb-32">
             {/* Quick Live Search Bar for all 73+ Services & Industries */}

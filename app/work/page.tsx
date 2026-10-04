@@ -354,7 +354,10 @@ function WorkPageContent() {
               </div>
 
               {/* Filter Chips */}
-              <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar">
+              <div
+                className="flex items-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
                 {[
                   { label: 'All', slug: 'all' },
                   { label: 'Websites & Search', slug: 'websites-search' },

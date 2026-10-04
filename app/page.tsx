@@ -160,7 +160,7 @@ export default function HomePage() {
 
   {/* Outer Card Wrapper */}
   <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xl shadow-slate-900/5 overflow-hidden">
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto no-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
       <table className="w-full border-collapse text-left min-w-[780px]">
         <thead>
           <tr className="border-b border-slate-200">
