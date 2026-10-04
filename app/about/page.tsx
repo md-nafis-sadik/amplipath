@@ -38,7 +38,7 @@ export default function AboutPage() {
     <div className="ws"><div className="ws-n">🌍</div><div className="ws-l">Global clients — every market</div></div>
     <div className="ws"><div className="ws-n">50+</div><div className="ws-l">Services delivered worldwide</div></div>
     <div className="ws"><div className="ws-n">Global</div><div className="ws-l">Distributed specialist team</div></div>
-    <div className="ws"><div className="ws-n">15</div><div className="ws-l">African markets covered</div></div>
+    <div className="ws"><div className="ws-n">10+</div><div className="ws-l">Years industry experience</div></div>
   </div>
   <div className="wstats" style={{"marginTop":"12px"}}>
     <div className="ws"><div className="ws-n">50+</div><div className="ws-l">Services offered</div></div>
