@@ -7,6 +7,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const {
       formType = 'General',
+      name = '',
       firstName = '',
       lastName = '',
       email = '',
@@ -18,9 +19,11 @@ export async function POST(req: Request) {
       phone = '',
       subject = '',
       message = '',
+      enquiryType = '',
       discussionTopic = '',
       monthlyBudget = '',
-      projectBudget = ''
+      projectBudget = '',
+      sourcePage = ''
     } = body;
 
     if (!email) {
@@ -30,8 +33,36 @@ export async function POST(req: Request) {
       );
     }
 
-    const fullName = `${firstName} ${lastName}`.trim() || 'Valued Prospect';
-    const emailSubject = `New ${formType} Submission — ${fullName} ${website ? `(${website})` : ''}`;
+    const SUPPORT_TYPE_MAP: Record<string, string> = {
+      marketing: 'Ongoing marketing growth',
+      website: 'Website / ecommerce development',
+      app: 'Mobile app / software / AI development',
+      hybrid: 'Marketing + technology together',
+      unsure: 'Not sure yet'
+    };
+
+    const SERVICE_CAT_MAP: Record<string, string> = {
+      search: 'Search & GEO/AEO (SEO, AI, Ads)',
+      social: 'Social & Paid Ads (Meta, TikTok)',
+      content: 'Content & Strategy (CRO, Email)',
+      ai: 'AI & Tech (Chatbots, Automation)',
+      web: 'Web & Apps (Custom, Ecommerce)',
+      africa: 'Africa Market (Local SEO, Ads)',
+      niche: 'Niche Growth (Gaming, Real Estate)'
+    };
+
+    const finalSupportType = SUPPORT_TYPE_MAP[supportType] || supportType;
+    const finalServiceCategory = SERVICE_CAT_MAP[serviceCategory] || serviceCategory;
+    const finalIndustry = (industry && industry !== 'Not specified' && industry !== 'undefined') ? industry.trim() : '';
+
+    let displayFormType = formType;
+    if (formType === 'RFP') displayFormType = 'Request for Proposal (RFP)';
+    else if (formType === 'lead' || formType === 'LetsTalk') displayFormType = "Let's Talk";
+    else if (formType === 'contact') displayFormType = 'Contact Us';
+    else if (formType === 'free-audit') displayFormType = 'Free Audit Request';
+
+    const fullName = name.trim() || `${firstName} ${lastName}`.trim() || 'Valued Prospect';
+    const emailSubject = `New ${displayFormType} Submission — ${fullName} ${website ? `(${website})` : ''}`;
 
     // 1. Send Email Notification via Nodemailer
     const smtpHost = process.env.SMTP_HOST;
@@ -60,20 +91,22 @@ export async function POST(req: Request) {
           </div>
           <div style="padding: 24px; background: #ffffff;">
             <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 8px 0; color: #64748b; font-weight: bold; width: 160px;">Form Type:</td><td style="padding: 8px 0; color: #0f172a;">${formType}</td></tr>
+              <tr><td style="padding: 8px 0; color: #64748b; font-weight: bold; width: 160px;">Form Type:</td><td style="padding: 8px 0; color: #0f172a;">${displayFormType}</td></tr>
               <tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Full Name:</td><td style="padding: 8px 0; color: #0f172a;">${fullName}</td></tr>
               <tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Email:</td><td style="padding: 8px 0; color: #0f172a;"><a href="mailto:${email}">${email}</a></td></tr>
               ${phone ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Phone:</td><td style="padding: 8px 0; color: #0f172a;">${phone}</td></tr>` : ''}
               ${website ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Website URL:</td><td style="padding: 8px 0; color: #0f172a;"><a href="${website}" target="_blank">${website}</a></td></tr>` : ''}
-              ${supportType ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Support Type:</td><td style="padding: 8px 0; color: #0f172a;">${supportType}</td></tr>` : ''}
+              ${finalSupportType ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Support Type:</td><td style="padding: 8px 0; color: #0f172a;">${finalSupportType}</td></tr>` : ''}
+              ${finalServiceCategory ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Service Category:</td><td style="padding: 8px 0; color: #0f172a;">${finalServiceCategory}</td></tr>` : ''}
+              ${finalIndustry ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Industry:</td><td style="padding: 8px 0; color: #0f172a;">${finalIndustry}</td></tr>` : ''}
+              ${discussionTopic ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Topic:</td><td style="padding: 8px 0; color: #0f172a;">${discussionTopic}</td></tr>` : ''}
               ${budget ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Budget:</td><td style="padding: 8px 0; color: #0f172a;">${budget}</td></tr>` : ''}
               ${monthlyBudget ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Monthly Budget:</td><td style="padding: 8px 0; color: #0f172a;">${monthlyBudget}</td></tr>` : ''}
               ${projectBudget ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Project Budget:</td><td style="padding: 8px 0; color: #0f172a;">${projectBudget}</td></tr>` : ''}
-              ${serviceCategory ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Service Category:</td><td style="padding: 8px 0; color: #0f172a;">${serviceCategory}</td></tr>` : ''}
-              ${industry ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Industry:</td><td style="padding: 8px 0; color: #0f172a;">${industry}</td></tr>` : ''}
-              ${discussionTopic ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Topic:</td><td style="padding: 8px 0; color: #0f172a;">${discussionTopic}</td></tr>` : ''}
+              ${enquiryType ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Enquiry Type:</td><td style="padding: 8px 0; color: #0f172a;">${enquiryType}</td></tr>` : ''}
               ${subject ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Subject:</td><td style="padding: 8px 0; color: #0f172a;">${subject}</td></tr>` : ''}
               ${message ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold; vertical-align: top;">Message:</td><td style="padding: 8px 0; color: #0f172a; white-space: pre-wrap;">${message}</td></tr>` : ''}
+              ${sourcePage ? `<tr><td style="padding: 8px 0; color: #64748b; font-weight: bold;">Source Page:</td><td style="padding: 8px 0; color: #0f172a;">${sourcePage}</td></tr>` : ''}
             </table>
           </div>
           <div style="background: #f8fafc; padding: 12px 24px; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; text-align: center;">
@@ -103,7 +136,7 @@ export async function POST(req: Request) {
     const universalBaseId = process.env.AIRTABLE_BASE_ID || '';
     let baseId = '';
     if (formType === 'RFP') baseId = process.env.AIRTABLE_BASE_ID_RFP || universalBaseId;
-    else if (formType === 'LetsTalk') baseId = process.env.AIRTABLE_BASE_ID_LETSTALK || universalBaseId;
+    else if (formType === 'LetsTalk' || formType === 'lead' || formType === "Let's Talk") baseId = process.env.AIRTABLE_BASE_ID_LETSTALK || universalBaseId;
     else baseId = process.env.AIRTABLE_BASE_ID_CONTACT || universalBaseId;
 
     if (airtableApiKey && baseId) {
@@ -112,17 +145,20 @@ export async function POST(req: Request) {
         const tableName = process.env.AIRTABLE_TABLE_NAME || 'Submissions';
 
         const fullNotes = [
-          `Form Type: ${formType}`,
+          `Form Type: ${displayFormType}`,
           `Full Name: ${fullName}`,
           `Email: ${email}`,
           phone ? `Phone: ${phone}` : '',
           website ? `Website: ${website}` : '',
-          supportType ? `Support Type: ${supportType}` : '',
+          finalSupportType ? `Support Type: ${finalSupportType}` : '',
+          finalServiceCategory ? `Service Category: ${finalServiceCategory}` : '',
           discussionTopic ? `Topic: ${discussionTopic}` : '',
           budget ? `Budget: ${budget}` : (monthlyBudget || projectBudget ? `Monthly: ${monthlyBudget || 'N/A'}, Project: ${projectBudget || 'N/A'}` : ''),
-          industry ? `Industry: ${industry}` : '',
-          serviceCategory ? `Service Category: ${serviceCategory}` : '',
+          finalIndustry ? `Industry: ${finalIndustry}` : '',
+          enquiryType ? `Enquiry Type: ${enquiryType}` : '',
+          subject ? `Subject: ${subject}` : '',
           message ? `Message: ${message}` : '',
+          sourcePage ? `Source Page: ${sourcePage}` : '',
           `Submitted At: ${new Date().toLocaleString()}`,
         ].filter(Boolean).join('\n');
 
@@ -135,10 +171,10 @@ export async function POST(req: Request) {
                   Email: email,
                   Phone: phone || '',
                   Website: website || '',
-                  SupportType: supportType || discussionTopic || '',
-                  Budget: budget || `Monthly: ${monthlyBudget}, Project: ${projectBudget}`,
-                  Industry: industry || '',
-                  ServiceCategory: serviceCategory || '',
+                  SupportType: finalSupportType || discussionTopic || '',
+                  Budget: budget || (monthlyBudget ? `Monthly: ${monthlyBudget}, Project: ${projectBudget}` : ''),
+                  Industry: finalIndustry || '',
+                  ServiceCategory: finalServiceCategory || '',
                   Message: message || '',
                   SubmittedAt: new Date().toISOString(),
                   Notes: fullNotes,

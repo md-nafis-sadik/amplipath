@@ -15,9 +15,13 @@ export default function LetsTalkModal() {
     setErrorMsg('');
 
     const formData = new FormData(e.currentTarget);
+    const firstName = (formData.get('firstName') as string) || '';
+    const lastName = (formData.get('lastName') as string) || '';
     const data = {
-      formType: 'lead',
-      name: `${formData.get('firstName') || ''} ${formData.get('lastName') || ''}`.trim(),
+      formType: "Let's Talk",
+      firstName,
+      lastName,
+      name: `${firstName} ${lastName}`.trim(),
       email: formData.get('email'),
       website: formData.get('website') || '',
       discussionTopic: formData.get('discussionTopic'),

@@ -14,8 +14,8 @@ export default function FreeAuditPage() {
     lastName: '',
     email: '',
     website: '',
-    monthlySpend: 'Under $1,000 / month',
-    primaryGoal: 'SEO & Organic Growth'
+    auditFocus: 'Full Digital Marketing Review',
+    monthlySpend: 'Under $1,000/mo'
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -31,11 +31,13 @@ export default function FreeAuditPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           formType: 'free-audit',
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           name: `${formData.firstName} ${formData.lastName}`.trim(),
           email: formData.email,
           website: formData.website,
-          monthlySpend: formData.monthlySpend,
-          primaryGoal: formData.primaryGoal,
+          serviceCategory: formData.auditFocus,
+          budget: formData.monthlySpend,
           sourcePage: '/free-audit'
         })
       });
@@ -91,10 +93,10 @@ export default function FreeAuditPage() {
       <div className="cf-f"><label>Business email</label><input type="email" placeholder="john@company.com" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} required /></div>
       <div className="cf-f"><label>Website URL (required)</label><input type="text" placeholder="https://yourwebsite.com" value={formData.website} onChange={e => setFormData({ ...formData, website: e.target.value })} required /></div>
       <div className="cf-f"><label>What do you want us to focus on?</label>
-        <select value={formData.monthlySpend} onChange={e => setFormData({ ...formData, monthlySpend: e.target.value })}><option value="">Select audit focus...</option><option>SEO & Organic Traffic</option><option>Google Ads & PPC</option><option>Social Media & Paid Social</option><option>AI Search (GEO/AEO)</option><option>Full Digital Marketing Review</option><option>Website & Conversion Rate</option><option>Africa Market Performance</option></select>
+        <select value={formData.auditFocus} onChange={e => setFormData({ ...formData, auditFocus: e.target.value })}><option value="">Select audit focus...</option><option>SEO & Organic Traffic</option><option>Google Ads & PPC</option><option>Social Media & Paid Social</option><option>AI Search (GEO/AEO)</option><option>Full Digital Marketing Review</option><option>Website & Conversion Rate</option><option>Africa Market Performance</option></select>
       </div>
       <div className="cf-f"><label>Monthly marketing budget</label>
-        <select value={formData.primaryGoal} onChange={e => setFormData({ ...formData, primaryGoal: e.target.value })}><option value="">Select range...</option><option>Under $500/mo</option><option>$500–$1,000/mo</option><option>$1,000–$2,500/mo</option><option>$2,500–$5,000/mo</option><option>$5,000–$10,000/mo</option><option>$10,000+/mo</option></select>
+        <select value={formData.monthlySpend} onChange={e => setFormData({ ...formData, monthlySpend: e.target.value })}><option value="">Select range...</option><option>Under $500/mo</option><option>$500–$1,000/mo</option><option>$1,000–$2,500/mo</option><option>$2,500–$5,000/mo</option><option>$5,000–$10,000/mo</option><option>$10,000+/mo</option></select>
       </div>
       <button className="cf-btn" type="submit" disabled={submitting}>
         {submitting ? 'Submitting Request...' : 'Request my free audit →'}

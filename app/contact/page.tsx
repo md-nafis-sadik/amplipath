@@ -26,6 +26,8 @@ export default function ContactPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           formType: 'contact',
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           name: `${formData.firstName} ${formData.lastName}`.trim(),
           email: formData.email,
           subject: formData.subject,

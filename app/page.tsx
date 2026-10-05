@@ -41,7 +41,7 @@ export default function HomePage() {
 </div>
 
 {/*  Internal linking hub - Section 1.3  */}
-<div style={{"background":"var(--acl)","borderTop":"1px solid #c7d7f9","borderBottom":"1px solid #c7d7f9","padding":"16px 40px"}}>
+<div className="explore-hub" style={{"background":"var(--acl)","borderTop":"1px solid #c7d7f9","borderBottom":"1px solid #c7d7f9","padding":"16px 40px"}}>
   <div style={{"display":"flex","alignItems":"center","gap":"12px","flexWrap":"wrap","justifyContent":"center"}}>
     <span style={{"fontSize":"11px","fontWeight":"700","color":"var(--ac)","textTransform":"uppercase","letterSpacing":".1em","whiteSpace":"nowrap"}}>Explore services:</span>
     <button onClick={() => router.push('/services/search-seo')} style={{"fontSize":"12px","color":"var(--ac)","background":"#fff","border":"1.5px solid var(--ac)","borderRadius":"20px","padding":"5px 14px","cursor":"pointer","fontWeight":"600","whiteSpace":"nowrap"}}>🔍 Search & SEO</button>

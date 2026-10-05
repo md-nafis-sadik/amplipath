@@ -60,22 +60,56 @@ export default function RFPModal() {
       )
     : COUNTRIES;
 
+  const SUPPORT_TYPE_LABELS: Record<string, string> = {
+    marketing: 'Ongoing marketing growth',
+    website: 'Website / ecommerce development',
+    app: 'Mobile app / software / AI development',
+    hybrid: 'Marketing + technology together',
+    unsure: 'Not sure yet'
+  };
+
+  const SERVICE_CATEGORY_LABELS: Record<string, string> = {
+    search: 'Search & GEO/AEO (SEO, AI, Ads)',
+    social: 'Social & Paid Ads (Meta, TikTok)',
+    content: 'Content & Strategy (CRO, Email)',
+    ai: 'AI & Tech (Chatbots, Automation)',
+    web: 'Web & Apps (Custom, Ecommerce)',
+    africa: 'Africa Market (Local SEO, Ads)',
+    niche: 'Niche Growth (Gaming, Real Estate)'
+  };
+
+  const toggleCountryPicker = () => {
+    const nextState = !countryPickerOpen;
+    setCountryPickerOpen(nextState);
+    if (nextState) {
+      setTimeout(() => {
+        countryWrapRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMsg('');
 
     const formData = new FormData(e.currentTarget);
+    const firstName = (formData.get('firstName') as string) || '';
+    const lastName = (formData.get('lastName') as string) || '';
+    const rawIndustry = industry || selectedIndustry || '';
+    const validIndustry = (rawIndustry && rawIndustry !== 'Not specified' && rawIndustry !== 'undefined') ? rawIndustry.trim() : '';
+
     const data = {
       formType: 'RFP',
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
+      firstName,
+      lastName,
+      name: `${firstName} ${lastName}`.trim(),
       email: formData.get('email'),
       website: formData.get('website') || '',
-      supportType,
+      supportType: SUPPORT_TYPE_LABELS[supportType] || supportType,
       budget,
-      serviceCategory: serviceCat,
-      industry: industry || selectedIndustry || 'Not specified',
+      serviceCategory: SERVICE_CATEGORY_LABELS[serviceCat] || serviceCat,
+      industry: validIndustry,
       phone: `${selectedCountry.c} ${formData.get('phone')}`,
       sourcePage: typeof window !== 'undefined' ? window.location.pathname : '/'
     };
@@ -174,7 +208,7 @@ export default function RFPModal() {
           ✕
         </button>
 
-        <div style={{ padding: '18px 24px 12px', textAlign: 'center', borderBottom: '1px solid #f1f5f9' }}>
+        <div className="rfp-top">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '6px' }}>
             <img
               src="/images/logo-horizontal.jpg"
@@ -190,7 +224,7 @@ export default function RFPModal() {
           </p>
         </div>
 
-        <div style={{ padding: '16px 24px 18px' }}>
+        <div className="rfp-body">
           {status === 'success' ? (
             <div style={{ textAlign: 'center', padding: '24px 16px' }}>
               <div style={{ fontSize: '36px', marginBottom: '10px' }}>✅</div>
@@ -224,19 +258,19 @@ export default function RFPModal() {
               )}
 
               {/* Row 1: First Name, Last Name */}
-              <div className="p2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
+              <div className="p2" style={{ marginBottom: '8px' }}>
                 <input required name="firstName" className="pinp" type="text" placeholder="First Name" style={inputStyle} />
                 <input required name="lastName" className="pinp" type="text" placeholder="Last Name" style={inputStyle} />
               </div>
 
               {/* Row 2: Business Email, Website URL */}
-              <div className="p2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
+              <div className="p2" style={{ marginBottom: '8px' }}>
                 <input required name="email" className="pinp" type="email" placeholder="Business Email" style={inputStyle} />
                 <input name="website" className="pinp" type="text" placeholder="Website URL (optional)" style={inputStyle} />
               </div>
 
               {/* Row 3: Support Type & Service category in 2 columns */}
-              <div className="p2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
+              <div className="p2" style={{ marginBottom: '8px' }}>
                 <select
                   required
                   className="pinp"
@@ -272,12 +306,12 @@ export default function RFPModal() {
                 </select>
               </div>
 
-              {/* Row 4: Phone Picker & Industry Dropdown in 2 columns */}
-              <div className="p2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
+              {/* Row 4: Phone Picker & Budget in 2 columns */}
+              <div className="p2" style={{ marginBottom: '8px' }}>
                 <div style={{ display: 'flex', gap: '6px', position: 'relative' }} ref={countryWrapRef}>
                   <div
                     id="country-btn"
-                    onClick={() => setCountryPickerOpen(!countryPickerOpen)}
+                    onClick={toggleCountryPicker}
                     style={{
                       display: 'flex',
                       alignItems: 'center',
@@ -304,14 +338,15 @@ export default function RFPModal() {
                       id="country-dropdown"
                       style={{
                         position: 'absolute',
-                        top: '42px',
+                        bottom: 'calc(100% + 6px)',
                         left: 0,
                         width: '280px',
+                        maxWidth: 'calc(100vw - 48px)',
                         background: '#fff',
-                        border: '1.5px solid #e2e8f0',
+                        border: '1.5px solid #cbd5e1',
                         borderRadius: '8px',
-                        boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
-                        zIndex: 999,
+                        boxShadow: '0 -10px 30px rgba(0,0,0,0.18)',
+                        zIndex: 9999,
                         overflow: 'hidden'
                       }}
                     >
@@ -336,7 +371,7 @@ export default function RFPModal() {
                           autoFocus
                         />
                       </div>
-                      <div id="country-list" className="no-scrollbar" style={{ maxHeight: '180px', overflowY: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                      <div id="country-list" className="no-scrollbar" style={{ maxHeight: '160px', overflowY: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                         {filteredCountries.map((c, i) => (
                           <div
                             key={i}
