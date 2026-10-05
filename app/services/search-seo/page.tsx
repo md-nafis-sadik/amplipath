@@ -5,6 +5,14 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 export const metadata: Metadata = {
   title: 'Search & GEO/AEO Services | AMPLIPATH',
   description: 'Search Engine Optimization, GEO and AI search optimization services from AMPLIPATH.',
+  alternates: {
+    canonical: '/services/search-seo',
+  },
+  openGraph: {
+    title: 'Search & GEO/AEO Services | AMPLIPATH',
+    description: 'Search Engine Optimization, GEO and AI search optimization services from AMPLIPATH.',
+    url: '/services/search-seo',
+  },
 };
 
 export default function ServicePage() {

@@ -5,6 +5,14 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 export const metadata: Metadata = {
   title: 'Social & Paid Advertising Services | AMPLIPATH',
   description: 'High-converting social advertising, Google PPC, and programmatic campaigns engineered by AMPLIPATH.',
+  alternates: {
+    canonical: '/services/paid-ads',
+  },
+  openGraph: {
+    title: 'Social & Paid Advertising Services | AMPLIPATH',
+    description: 'High-converting social advertising, Google PPC, and programmatic campaigns engineered by AMPLIPATH.',
+    url: '/services/paid-ads',
+  },
 };
 
 export default function ServicePage() {

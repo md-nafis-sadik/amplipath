@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ServiceDetail } from '@/data/servicesData';
 import { useModal } from '@/components/ModalContext';
 import { getParentCategory, getParentCategoryForChild, ParentCategoryData } from '@/data/parentCategories';
+import { getCaseStudyForService } from '@/data/serviceCaseStudyMap';
 
 interface ServicePageProps {
   data: ServiceDetail;
@@ -14,6 +15,7 @@ interface ServicePageProps {
 export default function ServicePageTemplate({ data, serviceId, parentCategory }: ServicePageProps) {
   const { openModal } = useModal();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const matchedCase = getCaseStudyForService(serviceId);
 
   if (!data) {
     return <div className="p-20 text-center text-slate-600">Service information not found.</div>;
@@ -333,17 +335,48 @@ export default function ServicePageTemplate({ data, serviceId, parentCategory }:
         </div>
       )}
 
-      {/* ══ CASE STUDY STRIP ══ */}
-      {data.cs && (
-        <div className="case-strip">
-          <div className="cs-lbl">FEATURED CLIENT RESULT</div>
-          <div className="cs-stat">{data.cs.stat}</div>
-          <div className="cs-title">{data.cs.title}</div>
-          <div className="cs-desc">{data.cs.desc}</div>
-          <button className="cs-cta" onClick={() => openModal('rfp')}>
-            Request Similar Results →
-          </button>
-        </div>
+      {/* ══ MATCHED CASE STUDY STRIP ══ */}
+      {matchedCase && (
+        <section className="case-strip">
+          <div className="cs-inner">
+            <div className="cs-media">
+              <img
+                src={matchedCase.image}
+                alt={matchedCase.name}
+                loading="lazy"
+              />
+              {matchedCase.metric && (
+                <div className="cs-media-badge">
+                  <span className="text-[#38bdf8] font-bold mr-1.5">●</span>
+                  {matchedCase.metric}
+                </div>
+              )}
+            </div>
+
+            <div className="cs-content">
+              <div className="cs-tag">FEATURED WORK</div>
+              <h3 className="cs-heading">
+                {matchedCase.name.includes('–') || matchedCase.name.includes('—')
+                  ? matchedCase.name
+                  : `${matchedCase.name} — ${matchedCase.industry}`}
+              </h3>
+              <p className="cs-summary">{matchedCase.headline}</p>
+              <div className="cs-actions">
+                <button
+                  type="button"
+                  className="cs-btn-primary"
+                  onClick={() => openModal('rfp')}
+                >
+                  Request Similar Results
+                </button>
+                <Link href={`/work?case=${matchedCase.id}`} className="cs-btn-secondary">
+                  <span>View Case Study</span>
+                  <span>&rarr;</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       )}
 
       {/* ══ FAQS ACCORDION ══ */}

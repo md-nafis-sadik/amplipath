@@ -5,6 +5,14 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 export const metadata: Metadata = {
   title: "AI Development & Consulting Services | AMPLIPATH",
   description: "Custom AI software, autonomous agent systems, automated workflows, and enterprise AI consulting from AMPLIPATH.",
+  alternates: {
+    canonical: '/services/ai-development',
+  },
+  openGraph: {
+    title: "AI Development & Consulting Services | AMPLIPATH",
+    description: "Custom AI software, autonomous agent systems, automated workflows, and enterprise AI consulting from AMPLIPATH.",
+    url: '/services/ai-development',
+  },
 };
 
 export default function ServicePage() {

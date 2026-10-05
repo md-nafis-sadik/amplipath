@@ -5,6 +5,14 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 export const metadata: Metadata = {
   title: 'Niche & Growth Marketing Services | AMPLIPATH',
   description: 'Specialist marketing services for games, mobile apps, education, podcasts, and emerging markets by AMPLIPATH.',
+  alternates: {
+    canonical: '/services/niche-services',
+  },
+  openGraph: {
+    title: 'Niche & Growth Marketing Services | AMPLIPATH',
+    description: 'Specialist marketing services for games, mobile apps, education, podcasts, and emerging markets by AMPLIPATH.',
+    url: '/services/niche-services',
+  },
 };
 
 export default function ServicePage() {

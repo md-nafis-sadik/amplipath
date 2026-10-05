@@ -100,31 +100,80 @@ export async function POST(req: Request) {
 
     // 2. Save to Airtable Database
     const airtableApiKey = process.env.AIRTABLE_API_KEY;
+    const universalBaseId = process.env.AIRTABLE_BASE_ID || '';
     let baseId = '';
-    if (formType === 'RFP') baseId = process.env.AIRTABLE_BASE_ID_RFP || '';
-    else if (formType === 'LetsTalk') baseId = process.env.AIRTABLE_BASE_ID_LETSTALK || '';
-    else baseId = process.env.AIRTABLE_BASE_ID_CONTACT || '';
+    if (formType === 'RFP') baseId = process.env.AIRTABLE_BASE_ID_RFP || universalBaseId;
+    else if (formType === 'LetsTalk') baseId = process.env.AIRTABLE_BASE_ID_LETSTALK || universalBaseId;
+    else baseId = process.env.AIRTABLE_BASE_ID_CONTACT || universalBaseId;
 
     if (airtableApiKey && baseId) {
       try {
         const base = new Airtable({ apiKey: airtableApiKey }).base(baseId);
-        // Table name is typically 'Submissions' or 'Table 1'
-        await base('Submissions').create([
-          {
-            fields: {
-              Name: fullName,
-              Email: email,
-              Phone: phone || '',
-              Website: website || '',
-              SupportType: supportType || discussionTopic || '',
-              Budget: budget || `Monthly: ${monthlyBudget}, Project: ${projectBudget}`,
-              Industry: industry || '',
-              ServiceCategory: serviceCategory || '',
-              Message: message || '',
-              SubmittedAt: new Date().toISOString(),
-            },
-          },
-        ]);
+        const tableName = process.env.AIRTABLE_TABLE_NAME || 'Submissions';
+
+        const fullNotes = [
+          `Form Type: ${formType}`,
+          `Full Name: ${fullName}`,
+          `Email: ${email}`,
+          phone ? `Phone: ${phone}` : '',
+          website ? `Website: ${website}` : '',
+          supportType ? `Support Type: ${supportType}` : '',
+          discussionTopic ? `Topic: ${discussionTopic}` : '',
+          budget ? `Budget: ${budget}` : (monthlyBudget || projectBudget ? `Monthly: ${monthlyBudget || 'N/A'}, Project: ${projectBudget || 'N/A'}` : ''),
+          industry ? `Industry: ${industry}` : '',
+          serviceCategory ? `Service Category: ${serviceCategory}` : '',
+          message ? `Message: ${message}` : '',
+          `Submitted At: ${new Date().toLocaleString()}`,
+        ].filter(Boolean).join('\n');
+
+        const tryInsert = async (targetTable: string) => {
+          try {
+            await base(targetTable).create([
+              {
+                fields: {
+                  Name: fullName,
+                  Email: email,
+                  Phone: phone || '',
+                  Website: website || '',
+                  SupportType: supportType || discussionTopic || '',
+                  Budget: budget || `Monthly: ${monthlyBudget}, Project: ${projectBudget}`,
+                  Industry: industry || '',
+                  ServiceCategory: serviceCategory || '',
+                  Message: message || '',
+                  SubmittedAt: new Date().toISOString(),
+                  Notes: fullNotes,
+                },
+              },
+            ]);
+          } catch (fieldErr: any) {
+            if (fieldErr.message && fieldErr.message.includes('Unknown field name')) {
+              await base(targetTable).create([
+                {
+                  fields: {
+                    Name: `${fullName} (${email})`,
+                    Notes: fullNotes,
+                  },
+                },
+              ]);
+            } else {
+              throw fieldErr;
+            }
+          }
+        };
+
+        try {
+          await tryInsert(tableName);
+        } catch (tableErr: any) {
+          if (tableErr.message && (tableErr.message.includes('Table not found') || tableErr.message.includes('NOT_FOUND') || tableErr.message.includes('could not find table'))) {
+            try {
+              await tryInsert('tbl3f1eEvfOysBc0E');
+            } catch {
+              await tryInsert('Table 1');
+            }
+          } else {
+            throw tableErr;
+          }
+        }
       } catch (atErr) {
         console.error('Airtable insertion error:', atErr);
       }

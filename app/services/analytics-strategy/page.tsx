@@ -5,6 +5,14 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 export const metadata: Metadata = {
   title: "Analytics & Strategy Services | AMPLIPATH",
   description: "Enterprise web analytics, marketing strategy, and decision-ready data infrastructure engineered for measurable ROI by AMPLIPATH.",
+  alternates: {
+    canonical: '/services/analytics-strategy',
+  },
+  openGraph: {
+    title: "Analytics & Strategy Services | AMPLIPATH",
+    description: "Enterprise web analytics, marketing strategy, and decision-ready data infrastructure engineered for measurable ROI by AMPLIPATH.",
+    url: '/services/analytics-strategy',
+  },
 };
 
 export default function ServicePage() {

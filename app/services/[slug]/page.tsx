@@ -80,14 +80,26 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const { data } = resolved;
   const pageTitle = data.metaTitle || `${data.shortTitle || data.eye} | AMPLIPATH`;
   const pageDesc = data.metaDescription || data.sub || 'Measurable growth delivered through specialized digital marketing and technology solutions from AMPLIPATH.';
+  const canonicalUrl = `/services/${params.slug}`;
 
   return {
     title: pageTitle,
     description: pageDesc,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: pageTitle,
       description: pageDesc,
-    }
+      url: canonicalUrl,
+      type: 'website',
+      siteName: 'AMPLIPATH',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDesc,
+    },
   };
 }
 

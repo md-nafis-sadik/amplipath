@@ -7,6 +7,7 @@ import ModalRoot from '@/components/ModalRoot';
 import { ModalProvider } from '@/components/ModalContext';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://amplipath.com'),
   title: 'AMPLIPATH — Digital Marketing, Technology & AI Agency',
   description:
     'AMPLIPATH is an integrated growth company combining digital marketing, technology and AI into one unified system — grow faster, operate smarter, scale with confidence.',

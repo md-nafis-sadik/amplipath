@@ -1,20 +1,252 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useModal } from '@/components/ModalContext';
+
+interface JobRole {
+  id: string;
+  title: string;
+  category: 'Engineering' | 'Growth & Ads' | 'SEO & Search' | 'Strategy' | 'Content';
+  categoryLabel: string;
+  type: string;
+  location: string;
+  compensation: string;
+  compDetail: string;
+  description: string;
+  responsibilities: string[];
+  requirements: string[];
+}
+
+const OPEN_ROLES: JobRole[] = [
+  {
+    id: 'frontend-dev',
+    title: 'Frontend Developer',
+    category: 'Engineering',
+    categoryLabel: 'Technology & Engineering',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per website / landing page deliverable',
+    description: 'Build fast, responsive, conversion-focused websites and landing pages for Amplipath clients using modern web technologies.',
+    responsibilities: [
+      'Translate design wireframes and UX specs into clean, responsive web pages and components',
+      'Optimize Core Web Vitals, page load speeds, and mobile accessibility for global audiences',
+      'Integrate interactive UI elements, lead capture forms, and analytics tracking pixels',
+      'Collaborate asynchronously with design and SEO leads to ensure technical search friendliness'
+    ],
+    requirements: [
+      'Strong proficiency in modern HTML5, CSS3, JavaScript/TypeScript, and React or Next.js',
+      'Proven experience building responsive, mobile-first websites with clean, maintainable code',
+      'Understanding of technical SEO principles, semantic markup, and performance optimization',
+      'Portfolio of live websites or web applications that you have built or contributed to'
+    ]
+  },
+  {
+    id: 'fullstack-dev',
+    title: 'Full-Stack Software Developer',
+    category: 'Engineering',
+    categoryLabel: 'Technology & Engineering',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per project milestone / build',
+    description: 'Build end-to-end web applications, custom platforms, client portals, and third-party API integrations that scale.',
+    responsibilities: [
+      'Architect and develop full-stack applications with robust backend APIs and clean frontend interfaces',
+      'Build secure database schemas, user authentication, and multi-tenant logic',
+      'Integrate payment gateways (Stripe, Paystack, Flutterwave), CRMs, and marketing automation APIs',
+      'Deploy, monitor, and maintain serverless and cloud infrastructure for client systems'
+    ],
+    requirements: [
+      'Solid experience with React/Next.js, Node.js, Python, or serverless cloud backends',
+      'Experience with SQL/NoSQL databases, RESTful and GraphQL APIs, and third-party integrations',
+      'Knowledge of web security best practices, data protection, and scalable architecture',
+      'A track record of shipping production-grade applications with clean documentation'
+    ]
+  },
+  {
+    id: 'mobile-dev',
+    title: 'Mobile App Developer (Flutter / React Native)',
+    category: 'Engineering',
+    categoryLabel: 'Technology & Engineering',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per app sprint / milestone',
+    description: 'Build intuitive, high-performance cross-platform mobile apps for iOS and Android across fintech, ecommerce, and sports tech.',
+    responsibilities: [
+      'Develop cross-platform mobile applications using Flutter or React Native',
+      'Connect mobile frontends to REST/GraphQL APIs and cloud backend services',
+      'Manage app store submission, guidelines compliance, and deployment pipelines',
+      'Ensure smooth 60fps animations, offline capabilities, and high-performance native bridges'
+    ],
+    requirements: [
+      'Demonstrated experience with Flutter (Dart) or React Native (TypeScript)',
+      'At least 2 published apps on Google Play Store or Apple App Store',
+      'Solid grasp of state management, mobile UI patterns, and secure local storage',
+      'Strong communication skills for asynchronous sprint reviews and milestone delivery'
+    ]
+  },
+  {
+    id: 'ai-developer',
+    title: 'AI Systems Developer',
+    category: 'Engineering',
+    categoryLabel: 'Technology & Engineering',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per AI system / workflow deliverable',
+    description: 'Build custom AI workflows, autonomous agent systems, WhatsApp bots, and LLM-powered business automation tools.',
+    responsibilities: [
+      'Engineer custom AI pipelines integrating OpenAI, Claude, Gemini, or open-source LLMs',
+      'Build intelligent conversational agents and WhatsApp chatbots for lead qualification and support',
+      'Develop retrieval-augmented generation (RAG) systems over proprietary client knowledge bases',
+      'Connect AI agent workflows to client CRMs, databases, and operational software'
+    ],
+    requirements: [
+      'Hands-on experience with LLM APIs, prompt engineering, and agent frameworks (LangChain, LlamaIndex, etc.)',
+      'Backend scripting proficiency in Python or Node.js with API integration experience',
+      'Understanding of token efficiency, streaming responses, and reliable error handling',
+      'Passionate about practical, commercial AI applications that save businesses real hours'
+    ]
+  },
+  {
+    id: 'paid-ads',
+    title: 'Paid Ads Specialist',
+    category: 'Growth & Ads',
+    categoryLabel: 'Growth & Paid Media',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per campaign managed / performance bonus',
+    description: 'Plan, execute, and scale paid acquisition campaigns across Meta Ads, Google Ads, TikTok Ads, and YouTube Ads.',
+    responsibilities: [
+      'Formulate paid advertising funnels from top-of-funnel discovery to high-intent retargeting',
+      'Manage ad budgets, creative iterations, audience segmentation, and A/B split testing',
+      'Implement server-side tracking (Conversions API, Google Tag Manager, GA4 event tracking)',
+      'Analyze ROAS, CAC, and conversion metrics to optimize campaign velocity continuously'
+    ],
+    requirements: [
+      'Demonstrated track record of managing paid spend with verified positive ROAS or CPA benchmarks',
+      'Deep expertise in Meta Ads Manager and Google Ads; TikTok Ads and YouTube experience is a plus',
+      'Data-driven mindset with analytical proficiency in Google Analytics 4 and Tag Manager',
+      'Familiarity with African, North American, or UK consumer acquisition markets'
+    ]
+  },
+  {
+    id: 'smm-manager',
+    title: 'Social Media & Community Manager',
+    category: 'Growth & Ads',
+    categoryLabel: 'Growth & Paid Media',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per client retainer / monthly milestone',
+    description: 'Grow and engage brand audiences across LinkedIn, X (Twitter), Instagram, and TikTok with high-impact organic storytelling.',
+    responsibilities: [
+      'Develop monthly social media content calendars aligned with brand positioning and sales goals',
+      'Craft compelling short-form video hooks, graphic carousel briefs, and authoritative text posts',
+      'Actively manage community conversations, comment replies, and brand partner interactions',
+      'Compile monthly social performance reports highlighting audience growth and engagement rate'
+    ],
+    requirements: [
+      'Proven experience growing social channels for B2B brands, tech companies, or direct-to-consumer businesses',
+      'Exceptional copywriting ability with keen awareness of modern social trends and humor',
+      'Familiarity with Canva, Figma, or basic video editing tools for rapid content creation',
+      'Proactive attitude and strong organizational discipline for consistent publishing'
+    ]
+  },
+  {
+    id: 'seo-specialist',
+    title: 'SEO & GEO/AEO Specialist',
+    category: 'SEO & Search',
+    categoryLabel: 'SEO & Search',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per SEO audit / monthly organic retainer',
+    description: 'Lead technical SEO, keyword architecture, and modern Generative Engine Optimization (GEO/AEO) for AI search engines.',
+    responsibilities: [
+      'Conduct in-depth technical SEO audits covering crawlability, indexation, schema, and Core Web Vitals',
+      'Formulate keyword maps and content cluster strategies targeting commercial search intent',
+      'Implement Generative Engine Optimization tactics so clients get cited in ChatGPT, Gemini, and Perplexity',
+      'Execute high-authority digital PR, link outreach, and local search optimization'
+    ],
+    requirements: [
+      '3+ years of verifiable experience driving organic search growth for ecommerce or service websites',
+      'Proficiency with industry tools: Ahrefs, SEMrush, Screaming Frog, Google Search Console',
+      'Clear understanding of AI search mechanics (GEO, citation frequency, entity search)',
+      'Ability to articulate technical recommendations clearly to developers and business founders'
+    ]
+  },
+  {
+    id: 'marketing-strategist',
+    title: 'Marketing Strategist',
+    category: 'Strategy',
+    categoryLabel: 'Strategy & Management',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per strategy deliverable / client roadmap',
+    description: 'Develop comprehensive, omnichannel go-to-market strategies that connect marketing, technology, and AI into one cohesive growth engine.',
+    responsibilities: [
+      'Lead discovery audits analyzing client market positioning, competitors, and growth funnels',
+      'Craft end-to-end 90-day growth blueprints spanning acquisition, conversion, and retention',
+      'Guide multidisciplinary teams (SEO, Dev, Paid Media) to ensure alignment around client business KPIs',
+      'Deliver strategic briefing decks and executive performance reviews'
+    ],
+    requirements: [
+      '5+ years in digital marketing, growth strategy, or agency leadership',
+      'Deep fluency across multiple growth channels: SEO, paid ads, lifecycle email, and conversion rate optimization',
+      'Strong commercial acumen with the ability to link marketing tactics to revenue and customer lifetime value',
+      'Exceptional presentation and client communication skills'
+    ]
+  },
+  {
+    id: 'content-writer',
+    title: 'Content Writer & Copywriter',
+    category: 'Content',
+    categoryLabel: 'Content & Copy',
+    type: 'Project-Based / Contract',
+    location: 'Remote · Worldwide',
+    compensation: 'Project-Based',
+    compDetail: 'Per article / copywriting project',
+    description: 'Craft research-backed long-form articles, high-converting landing page copy, and strategic thought leadership pieces.',
+    responsibilities: [
+      'Write original, authoritative long-form content that answers real search intent and ranks in Google and AI engines',
+      'Draft persuasive landing page copy, value propositions, and email sequences that drive action',
+      'Interview subject matter experts and turn complex technical topics into engaging, accessible prose',
+      'Proofread and edit copy to uphold rigorous brand tone of voice and editorial standards'
+    ],
+    requirements: [
+      'Exceptional native-level English writing and editing capability with zero tolerance for fluff',
+      'Experience writing about technology, marketing, SaaS, business, or finance',
+      'Understanding of on-page SEO best practices (heading hierarchy, keyword integration, entity coverage)',
+      'Portfolio of published articles, website copy, or case studies that demonstrate strong research'
+    ]
+  }
+];
+
+const CATEGORIES = [
+  'All Roles',
+  'Technology & Engineering',
+  'Growth & Paid Media',
+  'SEO & Search',
+  'Strategy & Management',
+  'Content & Copy'
+];
 
 export default function CareersPage() {
-  const router = useRouter();
-  const { openModal } = useModal();
+  const [selectedCategory, setSelectedCategory] = useState<string>('All Roles');
+  const [expandedRoleId, setExpandedRoleId] = useState<string | null>(null);
 
+  // Form State
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    location: '',
-    role: 'SEO & GEO/AEO Specialist',
+    country: '',
+    role: 'Frontend Developer',
     portfolio: '',
     pitch: ''
   });
@@ -22,310 +254,563 @@ export default function CareersPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
+  const formRef = useRef<HTMLDivElement>(null);
+  const firstInputRef = useRef<HTMLInputElement>(null);
+
+  const filteredRoles = selectedCategory === 'All Roles'
+    ? OPEN_ROLES
+    : OPEN_ROLES.filter(r => r.categoryLabel === selectedCategory);
+
+  const handleApplyClick = (roleTitle: string) => {
+    setFormData(prev => ({ ...prev, role: roleTitle }));
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        if (firstInputRef.current) firstInputRef.current.focus();
+      }, 500);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setError('');
+
     try {
       const res = await fetch('/api/careers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          fullName: `${formData.firstName} ${formData.lastName}`.trim(),
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
-          location: formData.location,
+          country: formData.country,
           role: formData.role,
-          portfolio: formData.portfolio,
-          pitch: formData.pitch
+          portfolioUrl: formData.portfolio,
+          whyAmplipath: formData.pitch
         })
       });
-      if (!res.ok) throw new Error('Application submission failed. Please try again.');
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'Application submission failed. Please try again.');
       setSubmitted(true);
     } catch (err: any) {
-      setError(err.message || 'Something went wrong.');
+      setError(err.message || 'Something went wrong while submitting. Please try again or email hello@amplipath.com.');
     } finally {
       setSubmitting(false);
     }
   };
 
   return (
-    <div className="pg on" id="pg-careers">
-      {submitted ? (
-        <div style={{ maxWidth: '600px', margin: '80px auto', padding: '40px', textAlign: 'center', background: '#f0fdf4', borderRadius: '16px', border: '1.5px solid #86efac' }}>
-          <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎉</div>
-          <h2 style={{ fontSize: '24px', fontWeight: '800', color: '#166534', marginBottom: '12px' }}>Application Received!</h2>
-          <p style={{ fontSize: '15px', color: '#15803d', lineHeight: '1.6' }}>Thank you for applying to join Amplipath. Our talent team reviews all applications and will get in touch within 3 business days.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div className="hero">
-  <div className="hero-bar"></div>
-  <div className="h-tag"><div className="h-dot"></div>CAREERS AT AMPLIPATH</div>
-  <h1 className="h-h1" style={{"fontSize":"38px"}}>Build the future of integrated growth — with us.</h1>
-  <p className="h-sub">Amplipath is an early-stage integrated growth company combining digital marketing, technology and AI. We are building a global remote team of specialists who want to work on real client problems, grow alongside a company from the ground up, and be rewarded for the results they produce.</p>
-</div>
+    <div className="min-h-screen bg-[#fafbfc] text-[#0f172a] font-sans antialiased">
+      {/* ── 1. HERO SECTION (MailerLite Style) ── */}
+      <section className="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28 bg-white border-b border-slate-200">
+        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
 
-<div className="s-white">
-  <div className="sec-tag">BEFORE YOU APPLY</div>
-  <h2 className="sec-h2">We are honest about where we are — and where we are going.</h2>
-  <div className="aln"></div>
-  <p className="sec-sub" style={{"maxWidth":"720px","marginBottom":"28px"}}>Amplipath is a startup. We are not going to pretend otherwise. What we offer right now is not a monthly salary — it is a project-based model where you are paid per deliverable, per campaign or per client engagement. This means your income depends on the work delivered and the results produced. The upside is real: as the company grows, so does the volume, the pay rate and the opportunity. If you want a guaranteed fixed salary on day one, we are not the right fit yet. If you want to build something meaningful from the ground up and be paid fairly for the work you actually do — read on.</p>
-  <div style={{"display":"grid","gridTemplateColumns":"repeat(auto-fit,minmax(220px,1fr))","gap":"16px","marginTop":"8px"}}>
-    <div style={{"background":"#f0f7ff","borderRadius":"12px","padding":"20px 22px","border":"1.5px solid #dbeafe"}}>
-      <div style={{"fontSize":"22px","marginBottom":"8px"}}>🌍</div>
-      <div style={{"fontWeight":"700","color":"#0f172a","fontSize":"14px","marginBottom":"5px"}}>100% Remote</div>
-      <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7"}}>Work from anywhere in the world. No relocation required. All collaboration happens online.</div>
-    </div>
-    <div style={{"background":"#f0f7ff","borderRadius":"12px","padding":"20px 22px","border":"1.5px solid #dbeafe"}}>
-      <div style={{"fontSize":"22px","marginBottom":"8px"}}>💰</div>
-      <div style={{"fontWeight":"700","color":"#0f172a","fontSize":"14px","marginBottom":"5px"}}>Project-Based Pay</div>
-      <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7"}}>Paid per project, deliverable or campaign. Clear scope. Clear rate. No ambiguity about what you earn.</div>
-    </div>
-    <div style={{"background":"#f0f7ff","borderRadius":"12px","padding":"20px 22px","border":"1.5px solid #dbeafe"}}>
-      <div style={{"fontSize":"22px","marginBottom":"8px"}}>📈</div>
-      <div style={{"fontWeight":"700","color":"#0f172a","fontSize":"14px","marginBottom":"5px"}}>Real Growth Path</div>
-      <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7"}}>Early contributors get priority for expanded roles, higher rates and leadership positions as the company scales.</div>
-    </div>
-    <div style={{"background":"#f0f7ff","borderRadius":"12px","padding":"20px 22px","border":"1.5px solid #dbeafe"}}>
-      <div style={{"fontSize":"22px","marginBottom":"8px"}}>🔧</div>
-      <div style={{"fontWeight":"700","color":"#0f172a","fontSize":"14px","marginBottom":"5px"}}>Real Client Work</div>
-      <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7"}}>Work on actual campaigns and builds for real clients across multiple industries and markets worldwide.</div>
-    </div>
-  </div>
-</div>
-
-<div className="s-gray">
-  <div className="sec-tag">OPEN POSITIONS</div>
-  <h2 className="sec-h2">9 roles open worldwide — all project-based, all remote.</h2>
-  <div className="aln"></div>
-  <div style={{"display":"flex","flexDirection":"column","gap":"14px","marginTop":"16px"}}>
-
-    {/*  Role 1  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>Marketing Strategist</span>
-            <span style={{"background":"#dbeafe","color":"#1e40af","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Strategy</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Careers at Amplipath &bull; We&apos;re Hiring Remotely
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Build integrated marketing strategies for Amplipath clients across SEO, GEO/AEO, paid ads, social media and content. You will own the strategy layer — from initial audit and roadmap to monthly performance reviews. You should have deep knowledge of at least two marketing channels and a track record of building strategies that produced measurable results.</p>
-        </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per strategy deliverable</div>
-        </div>
-      </div>
-    </div>
 
-    {/*  Role 2  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>Paid Ads Specialist</span>
-            <span style={{"background":"#dbeafe","color":"#1e40af","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Paid Media</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+            Work at Amplipath
+          </h1>
+
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto mb-10">
+            We’re a global remote team that puts people, autonomy, and craftsmanship first. 
+            Work from where you want, collaborate with top specialists across marketing, tech, and AI, 
+            and be rewarded for the measurable impact you produce.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#open-roles"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
+            >
+              <span>Explore Open Roles ({OPEN_ROLES.length})</span>
+              <span>&darr;</span>
+            </a>
+            <a
+              href="#culture"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm transition-all"
+            >
+              <span>Our Culture &amp; Perks</span>
+              <span>&rarr;</span>
+            </a>
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Plan, launch and optimise paid advertising campaigns across Google Ads, Meta Ads (Facebook and Instagram), TikTok Ads and YouTube. You manage budgets, audiences, creatives and conversion tracking. Experience with African market audiences is a strong advantage. You must be able to show real ROAS or CPA results from previous campaigns.</p>
-        </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per campaign managed</div>
-        </div>
-      </div>
-    </div>
 
-    {/*  Role 3  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>SEO &amp; GEO/AEO Specialist</span>
-            <span style={{"background":"#dbeafe","color":"#1e40af","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>SEO</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+          {/* Quick Perks Bar */}
+          <div className="mt-14 pt-8 border-t border-slate-100 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+            <div className="p-3 rounded-lg bg-slate-50/80 border border-slate-100">
+              <div className="text-base font-bold text-slate-900 mb-0.5">🌍 100% Remote</div>
+              <div className="text-xs text-slate-500">Work from anywhere in the world</div>
+            </div>
+            <div className="p-3 rounded-lg bg-slate-50/80 border border-slate-100">
+              <div className="text-base font-bold text-slate-900 mb-0.5">⏱️ Flexible Hours</div>
+              <div className="text-xs text-slate-500">Autonomous, asynchronous flow</div>
+            </div>
+            <div className="p-3 rounded-lg bg-slate-50/80 border border-slate-100">
+              <div className="text-base font-bold text-slate-900 mb-0.5">💰 Project-Based Pay</div>
+              <div className="text-xs text-slate-500">Clear rates per milestone</div>
+            </div>
+            <div className="p-3 rounded-lg bg-slate-50/80 border border-slate-100">
+              <div className="text-base font-bold text-slate-900 mb-0.5">🚀 Fast Growth</div>
+              <div className="text-xs text-slate-500">Priority for lead retainers</div>
+            </div>
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Deliver SEO services including technical audits, content strategy, on-page optimisation, link building and GEO/AEO (Generative Engine Optimisation for ChatGPT, Gemini and Perplexity). You should understand how AI search works and have experience helping brands appear in AI-generated answers, not just traditional search results.</p>
         </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per audit / per month</div>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    {/*  Role 4  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>Social Media Manager</span>
-            <span style={{"background":"#dbeafe","color":"#1e40af","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Social</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+      {/* ── 2. OPEN POSITIONS SECTION (MailerLite Style Filterable List) ── */}
+      <section id="open-roles" className="py-20 md:py-28 max-w-6xl mx-auto px-6">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-xs font-extrabold tracking-widest text-blue-600 uppercase mb-2">
+            CURRENT OPPORTUNITIES
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Manage organic social media presence for Amplipath clients across Instagram, TikTok, LinkedIn, Facebook and X. You will handle content calendars, caption writing, community management and basic performance reporting. Knowledge of African social media behaviour and trends is a strong plus.</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+            Find your next opportunity
+          </h2>
+          <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+            All roles are 100% remote. We evaluate talent based on past craft, real problem-solving, 
+            and reliability — not geographic borders.
+          </p>
         </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per client / per month</div>
-        </div>
-      </div>
-    </div>
 
-    {/*  Role 5  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>Frontend Developer</span>
-            <span style={{"background":"#fef3c7","color":"#d97706","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Technology</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+        {/* Filter Tabs */}
+        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
+          {CATEGORIES.map(cat => (
+            <button
+              key={cat}
+              type="button"
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${
+                selectedCategory === cat
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Roles List */}
+        <div className="space-y-4">
+          {filteredRoles.map(role => {
+            const isExpanded = expandedRoleId === role.id;
+            return (
+              <div
+                key={role.id}
+                className="bg-white rounded-2xl border border-slate-200 hover:border-slate-300 transition-all shadow-xs hover:shadow-md overflow-hidden"
+              >
+                <div className="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+                        {role.categoryLabel}
+                      </span>
+                      <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+                        {role.location}
+                      </span>
+                      <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                        {role.type}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+                      {role.title}
+                    </h3>
+
+                    <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+                      {role.description}
+                    </p>
+                  </div>
+
+                  {/* Actions / Meta */}
+                  <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-3 shrink-0 pt-4 md:pt-0 border-t md:border-t-0 border-slate-100">
+                    <div className="text-left md:text-right">
+                      <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Compensation</div>
+                      <div className="text-sm font-bold text-slate-900">{role.compensation}</div>
+                      <div className="text-xs text-slate-500">{role.compDetail}</div>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setExpandedRoleId(isExpanded ? null : role.id)}
+                        className="px-3 py-2 text-xs font-bold text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors"
+                      >
+                        {isExpanded ? 'Hide Details ▲' : 'View Details ▼'}
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => handleApplyClick(role.title)}
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-xs transition-all hover:-translate-y-0.5"
+                      >
+                        Apply Now &rarr;
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Expanded Details Drawer */}
+                {isExpanded && (
+                  <div className="px-6 pb-8 pt-4 md:px-8 border-t border-slate-100 bg-slate-50/60">
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div>
+                        <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+                          What you&apos;ll be doing:
+                        </h4>
+                        <ul className="space-y-2">
+                          {role.responsibilities.map((resp, idx) => (
+                            <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600 leading-relaxed">
+                              <span className="text-blue-600 font-bold shrink-0">✓</span>
+                              <span>{resp}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+                          What we&apos;re looking for:
+                        </h4>
+                        <ul className="space-y-2">
+                          {role.requirements.map((req, idx) => (
+                            <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600 leading-relaxed">
+                              <span className="text-emerald-600 font-bold shrink-0">●</span>
+                              <span>{req}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                      <span className="text-xs text-slate-500">
+                        Ready to make an impact? We review every portfolio submission personally.
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => handleApplyClick(role.title)}
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg transition-colors"
+                      >
+                        Apply for {role.title} &rarr;
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* General Pitch CTA */}
+        <div className="mt-8 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-slate-900 to-blue-950 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <h4 className="text-lg font-bold mb-1">Don&apos;t see your exact role listed?</h4>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
+              We are constantly onboarding exceptional marketing, design, and development talent. 
+              Submit an open application and tell us what you do best.
+            </p>
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Build fast, responsive, conversion-focused websites and landing pages for Amplipath clients. Strong HTML, CSS and JavaScript required. Experience with React, Next.js or Vue is a plus. You should understand SEO-friendly markup, Core Web Vitals and mobile-first design. Portfolio of live websites required to apply.</p>
+          <button
+            type="button"
+            onClick={() => handleApplyClick('General Application / Specialist')}
+            className="px-5 py-2.5 bg-white text-slate-950 hover:bg-blue-50 font-bold text-xs rounded-xl whitespace-nowrap transition-all shadow-sm"
+          >
+            Send Open Application &rarr;
+          </button>
         </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per website / project</div>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    {/*  Role 6  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>Full-Stack Software Developer</span>
-            <span style={{"background":"#fef3c7","color":"#d97706","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Technology</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+      {/* ── 3. WE FOCUS ON PEOPLE (MailerLite Culture Section) ── */}
+      <section id="culture" className="py-20 md:py-28 bg-white border-y border-slate-200">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="text-xs font-extrabold tracking-widest text-blue-600 uppercase mb-2">
+              OUR CULTURE &amp; VALUES
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+              We focus on people &amp; outcomes
+            </h2>
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+              A culture of autonomy, trust, and craftsmanship helps our global team and clients thrive together.
+            </p>
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Build full-stack web applications, client portals, custom platforms, API integrations, ecommerce systems and internal tools. Proficient in both frontend (React, Next.js) and backend (Node.js, Python, Firebase or equivalent). Experience with database design, authentication and third-party API integration required.</p>
-        </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per project / milestone</div>
-        </div>
-      </div>
-    </div>
 
-    {/*  Role 7  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>Mobile App Developer</span>
-            <span style={{"background":"#fef3c7","color":"#d97706","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Technology</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 md:p-8 rounded-2xl bg-[#fafbfc] border border-slate-200 hover:border-blue-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-blue-100/70 text-blue-600 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                🌍
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">100% Remote-First</h3>
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                Work from anywhere in the world. No morning commute, no relocation required. 
+                All communication and collaboration is online and asynchronous.
+              </p>
+            </div>
+
+            <div className="p-6 md:p-8 rounded-2xl bg-[#fafbfc] border border-slate-200 hover:border-blue-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-emerald-100/70 text-emerald-600 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                🎯
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Outcomes Over Hours</h3>
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                We don’t track chair time or surveillance software. We care about the craftsmanship 
+                of your code, the efficacy of your campaigns, and client results.
+              </p>
+            </div>
+
+            <div className="p-6 md:p-8 rounded-2xl bg-[#fafbfc] border border-slate-200 hover:border-blue-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-amber-100/70 text-amber-600 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                💰
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Transparent Milestone Pay</h3>
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                Clear scope and clear payment rates for every deliverable. No unpaid trial tasks, 
+                no ambiguous deductions, and guaranteed on-time disbursements.
+              </p>
+            </div>
+
+            <div className="p-6 md:p-8 rounded-2xl bg-[#fafbfc] border border-slate-200 hover:border-blue-300 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-purple-100/70 text-purple-600 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                🚀
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Long-Term Growth Upside</h3>
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                Early contributors get priority for recurring client accounts, higher-tier milestone 
+                budgets, and full leadership retainers as we scale globally.
+              </p>
+            </div>
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Build mobile applications for Android and iOS using Flutter or React Native. Projects include client apps, marketplace platforms, booking systems, fintech tools and ecommerce mobile experiences. You should have at least two published apps on the Play Store or App Store, and be comfortable managing the full development-to-deployment lifecycle.</p>
         </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per app / milestone</div>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    {/*  Role 8  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>AI Systems Developer</span>
-            <span style={{"background":"#f3e8ff","color":"#7c3aed","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>AI</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+      {/* ── 4. HOW WE WORK / PROCESS (MailerLite Style) ── */}
+      <section className="py-20 md:py-24 max-w-5xl mx-auto px-6">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-xs font-extrabold tracking-widest text-blue-600 uppercase mb-2">
+            TRANSPARENT PROCESS
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Build AI-powered products and integrations for Amplipath clients: AI chatbots, automation pipelines, AI agents, lead qualification systems, WhatsApp AI automation, CRM AI integrations and custom LLM-powered tools. Experience with OpenAI, Anthropic Claude, Gemini or open-source LLMs required. Ability to work with APIs, prompt engineering and serverless functions essential.</p>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">
+            What happens after you apply?
+          </h2>
+          <p className="text-slate-600 text-xs md:text-sm">
+            We respect your time. No 6-round corporate interviews or automated screening bots.
+          </p>
         </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per system / project</div>
-        </div>
-      </div>
-    </div>
 
-    {/*  Role 9  */}
-    <div style={{"background":"#fff","borderRadius":"12px","border":"1.5px solid var(--border)","overflow":"hidden"}}>
-      <div style={{"padding":"22px 24px","display":"flex","gap":"16px","alignItems":"flex-start","flexWrap":"wrap"}}>
-        <div style={{"flex":"1","minWidth":"200px"}}>
-          <div style={{"display":"flex","gap":"8px","alignItems":"center","marginBottom":"6px","flexWrap":"wrap"}}>
-            <span style={{"fontWeight":"700","color":"#0f172a","fontSize":"16px"}}>Content Writer &amp; Copywriter</span>
-            <span style={{"background":"#dbeafe","color":"#1e40af","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Content</span>
-            <span style={{"background":"#f0fdf4","color":"#16a34a","fontSize":"11px","fontWeight":"600","padding":"3px 10px","borderRadius":"20px"}}>Remote · Worldwide</span>
+        <div className="grid md:grid-cols-3 gap-6 relative">
+          <div className="p-6 rounded-2xl bg-white border border-slate-200">
+            <div className="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center mb-4">
+              1
+            </div>
+            <h3 className="text-base font-bold text-slate-900 mb-1.5">Application &amp; Portfolio Review</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Our core team reviews your past work and portfolio personally. We look for real-world execution, 
+              attention to detail, and problem-solving.
+            </p>
           </div>
-          <p style={{"fontSize":"13px","color":"#475569","lineHeight":"1.7","margin":"0"}}>Write long-form SEO content, blog articles, landing page copy, email sequences, ad copy and social captions for Amplipath and its clients. You should understand SEO content principles, be able to write in multiple brand voices, and produce original content that drives real search traffic — not generic filler. Portfolio of published articles required.</p>
-        </div>
-        <div style={{"flexShrink":"0","textAlign":"right","minWidth":"140px"}}>
-          <div style={{"fontSize":"12px","color":"#94a3b8","marginBottom":"4px"}}>Compensation</div>
-          <div style={{"fontSize":"13px","fontWeight":"700","color":"#0f172a"}}>Project-based</div>
-          <div style={{"fontSize":"11px","color":"#64748b"}}>Per article / per project</div>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</div>
+          <div className="p-6 rounded-2xl bg-white border border-slate-200">
+            <div className="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center mb-4">
+              2
+            </div>
+            <h3 className="text-base font-bold text-slate-900 mb-1.5">Quick Intro &amp; Alignment Call</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              A 20-minute informal conversation to discuss how you like to work, your availability, 
+              and upcoming client projects that match your skills.
+            </p>
+          </div>
 
-{/*  Application Form  */}
-<div className="s-white">
-  <div style={{"display":"grid","gridTemplateColumns":"1fr 1.2fr","gap":"48px","alignItems":"start"}}>
-    <div>
-      <div className="sec-tag">APPLY NOW</div>
-      <h2 className="sec-h2" style={{"fontSize":"28px"}}>Open to talent from any country.</h2>
-      <div className="aln"></div>
-      <p style={{"fontSize":"14px","color":"#475569","lineHeight":"1.8","marginBottom":"20px"}}>We review every application personally. We do not use automated screening. If your background and portfolio are relevant, you will hear back from us within 5 business days. If we are not hiring for your role at this moment, we will keep your application on file and reach out when the right project opens.</p>
-      <div style={{"display":"flex","flexDirection":"column","gap":"12px"}}>
-        <div style={{"display":"flex","gap":"10px","alignItems":"flex-start"}}><span style={{"color":"#1A56DB","fontWeight":"700","fontSize":"16px","flexShrink":"0"}}>✓</span><span style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>Open to applicants from any country worldwide</span></div>
-        <div style={{"display":"flex","gap":"10px","alignItems":"flex-start"}}><span style={{"color":"#1A56DB","fontWeight":"700","fontSize":"16px","flexShrink":"0"}}>✓</span><span style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>All roles are 100% remote</span></div>
-        <div style={{"display":"flex","gap":"10px","alignItems":"flex-start"}}><span style={{"color":"#1A56DB","fontWeight":"700","fontSize":"16px","flexShrink":"0"}}>✓</span><span style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>Project-based compensation — paid per deliverable</span></div>
-        <div style={{"display":"flex","gap":"10px","alignItems":"flex-start"}}><span style={{"color":"#1A56DB","fontWeight":"700","fontSize":"16px","flexShrink":"0"}}>✓</span><span style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>No unpaid trial periods or test tasks without compensation</span></div>
-        <div style={{"display":"flex","gap":"10px","alignItems":"flex-start"}}><span style={{"color":"#1A56DB","fontWeight":"700","fontSize":"16px","flexShrink":"0"}}>✓</span><span style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>Early contributors get priority for higher-rate work as we scale</span></div>
-      </div>
-    </div>
-    <div>
-      <div style={{"background":"#f8fafc","borderRadius":"14px","padding":"32px","border":"1.5px solid var(--border)"}}>
-        <h3 style={{"fontSize":"18px","fontWeight":"700","color":"#0f172a","marginBottom":"20px"}}>Submit your application</h3>
-        <div className="cf2" style={{"marginBottom":"14px"}}>
-          <div><label style={{"fontSize":"12px","fontWeight":"600","color":"#374151","display":"block","marginBottom":"5px"}}>First name</label><input type="text" placeholder="Your first name" style={{"width":"100%","background":"#fff","border":"1.5px solid #e2e8f0","borderRadius":"8px","padding":"11px 14px","fontSize":"14px","color":"#0f172a","fontFamily":"inherit","outline":"none","boxSizing":"border-box"}} value={formData.firstName} onChange={e => setFormData({ ...formData, firstName: e.target.value })} required /></div>
-          <div><label style={{"fontSize":"12px","fontWeight":"600","color":"#374151","display":"block","marginBottom":"5px"}}>Last name</label><input type="text" placeholder="Your last name" style={{"width":"100%","background":"#fff","border":"1.5px solid #e2e8f0","borderRadius":"8px","padding":"11px 14px","fontSize":"14px","color":"#0f172a","fontFamily":"inherit","outline":"none","boxSizing":"border-box"}} value={formData.lastName} onChange={e => setFormData({ ...formData, lastName: e.target.value })} required /></div>
+          <div className="p-6 rounded-2xl bg-white border border-slate-200">
+            <div className="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center mb-4">
+              3
+            </div>
+            <h3 className="text-base font-bold text-slate-900 mb-1.5">Paid Milestone Kickoff</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              We agree on a clear scope, rate, and timeline for your first paid deliverable. 
+              Deliver great work, get paid promptly, and build continuous momentum.
+            </p>
+          </div>
         </div>
-        <div style={{"marginBottom":"14px"}}><label style={{"fontSize":"12px","fontWeight":"600","color":"#374151","display":"block","marginBottom":"5px"}}>Email address</label><input type="email" placeholder="your@email.com" style={{"width":"100%","background":"#fff","border":"1.5px solid #e2e8f0","borderRadius":"8px","padding":"11px 14px","fontSize":"14px","color":"#0f172a","fontFamily":"inherit","outline":"none","boxSizing":"border-box"}} value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} required /></div>
-        <div style={{"marginBottom":"14px"}}><label style={{"fontSize":"12px","fontWeight":"600","color":"#374151","display":"block","marginBottom":"5px"}}>Country</label><input type="text" placeholder="Where are you based?" style={{"width":"100%","background":"#fff","border":"1.5px solid #e2e8f0","borderRadius":"8px","padding":"11px 14px","fontSize":"14px","color":"#0f172a","fontFamily":"inherit","outline":"none","boxSizing":"border-box"}} value={formData.location} onChange={e => setFormData({ ...formData, location: e.target.value })} required /></div>
-        <div style={{"marginBottom":"14px"}}><label style={{"fontSize":"12px","fontWeight":"600","color":"#374151","display":"block","marginBottom":"5px"}}>Role applying for</label>
-          <select style={{"width":"100%","background":"#fff","border":"1.5px solid #e2e8f0","borderRadius":"8px","padding":"11px 14px","fontSize":"14px","color":"#0f172a","fontFamily":"inherit","outline":"none","boxSizing":"border-box"}} value={formData.role} onChange={e => setFormData({ ...formData, role: e.target.value })}>
-            <option value="">Select a role...</option>
-            <option>Marketing Strategist</option>
-            <option>Paid Ads Specialist</option>
-            <option>SEO &amp; GEO/AEO Specialist</option>
-            <option>Social Media Manager</option>
-            <option>Frontend Developer</option>
-            <option>Full-Stack Software Developer</option>
-            <option>Mobile App Developer</option>
-            <option>AI Systems Developer</option>
-            <option>Content Writer &amp; Copywriter</option>
-          </select>
+      </section>
+
+      {/* ── 5. APPLICATION FORM (Clean, High-Conversion Card) ── */}
+      <section ref={formRef} id="apply" className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto px-6">
+          {submitted ? (
+            <div className="p-10 md:p-14 bg-white rounded-3xl border border-emerald-200 shadow-md text-center max-w-xl mx-auto">
+              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-6">
+                🎉
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-3">
+                Application Received!
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                Thank you for applying to collaborate with Amplipath. Our team reviews all applications 
+                personally and will get in touch via email within 3 business days.
+              </p>
+              <button
+                type="button"
+                onClick={() => setSubmitted(false)}
+                className="px-6 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors"
+              >
+                Submit another application
+              </button>
+            </div>
+          ) : (
+            <div className="bg-white rounded-3xl border border-slate-200 shadow-lg p-8 md:p-12">
+              <div className="max-w-2xl mb-8">
+                <div className="text-xs font-extrabold tracking-widest text-blue-600 uppercase mb-2">
+                  JOIN OUR TALENT NETWORK
+                </div>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
+                  Submit your application
+                </h2>
+                <p className="text-xs md:text-sm text-slate-500 leading-relaxed">
+                  Fill in your details and link your portfolio or past work. We review every application personally.
+                </p>
+              </div>
+
+              {error && (
+                <div className="mb-6 p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-medium">
+                  {error}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      First Name *
+                    </label>
+                    <input
+                      ref={firstInputRef}
+                      type="text"
+                      required
+                      placeholder="e.g. Alex"
+                      value={formData.firstName}
+                      onChange={e => setFormData({ ...formData, firstName: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none text-sm text-slate-900 transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Smith"
+                      value={formData.lastName}
+                      onChange={e => setFormData({ ...formData, lastName: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none text-sm text-slate-900 transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="alex@example.com"
+                      value={formData.email}
+                      onChange={e => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none text-sm text-slate-900 transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Country &bull; Location *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Nigeria, United Kingdom, Canada..."
+                      value={formData.country}
+                      onChange={e => setFormData({ ...formData, country: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none text-sm text-slate-900 transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Role Applying For *
+                    </label>
+                    <select
+                      value={formData.role}
+                      onChange={e => setFormData({ ...formData, role: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none text-sm text-slate-900 transition-all bg-white"
+                    >
+                      {OPEN_ROLES.map(r => (
+                        <option key={r.id} value={r.title}>
+                          {r.title} ({r.categoryLabel})
+                        </option>
+                      ))}
+                      <option value="General Application / Specialist">
+                        General Application / Other Specialist
+                      </option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                      Portfolio, GitHub, or LinkedIn URL *
+                    </label>
+                    <input
+                      type="url"
+                      required
+                      placeholder="https://yourwork.com or linkedin.com/in/you"
+                      value={formData.portfolio}
+                      onChange={e => setFormData({ ...formData, portfolio: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none text-sm text-slate-900 transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                    Why do you want to collaborate with Amplipath? *
+                  </label>
+                  <textarea
+                    required
+                    rows={4}
+                    placeholder="Tell us briefly about the projects you're proudest of, what you bring to the table, and what kind of work excites you..."
+                    value={formData.pitch}
+                    onChange={e => setFormData({ ...formData, pitch: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-100 outline-none text-sm text-slate-900 transition-all resize-y"
+                  ></textarea>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full py-4 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm tracking-wide transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  >
+                    {submitting ? 'Submitting Application to Talent Team...' : 'Submit Application →'}
+                  </button>
+                  <p className="text-[11px] text-slate-400 text-center mt-3">
+                    🔒 Your information is confidential and will only be reviewed by the Amplipath talent team.
+                  </p>
+                </div>
+              </form>
+            </div>
+          )}
         </div>
-        <div style={{"marginBottom":"14px"}}><label style={{"fontSize":"12px","fontWeight":"600","color":"#374151","display":"block","marginBottom":"5px"}}>Portfolio or LinkedIn URL</label><input type="url" placeholder="https://yourportfolio.com or linkedin.com/in/you" style={{"width":"100%","background":"#fff","border":"1.5px solid #e2e8f0","borderRadius":"8px","padding":"11px 14px","fontSize":"14px","color":"#0f172a","fontFamily":"inherit","outline":"none","boxSizing":"border-box"}} value={formData.portfolio} onChange={e => setFormData({ ...formData, portfolio: e.target.value })} /></div>
-        <div style={{"marginBottom":"20px"}}><label style={{"fontSize":"12px","fontWeight":"600","color":"#374151","display":"block","marginBottom":"5px"}}>Why do you want to work with Amplipath?</label><textarea placeholder="Tell us briefly — what draws you to this role and what you bring to it..." style={{"width":"100%","background":"#fff","border":"1.5px solid #e2e8f0","borderRadius":"8px","padding":"11px 14px","fontSize":"14px","color":"#0f172a","fontFamily":"inherit","outline":"none","boxSizing":"border-box","minHeight":"100px","resize":"vertical"}} value={formData.pitch} onChange={e => setFormData({ ...formData, pitch: e.target.value })} required></textarea></div>
-        <button type="submit" disabled={submitting} style={{"width":"100%","background":"#1A56DB","color":"#fff","fontSize":"14px","fontWeight":"700","padding":"14px","border":"none","borderRadius":"8px","cursor":"pointer","fontFamily":"inherit"}}>
-          {submitting ? 'Submitting Application...' : 'Submit Application →'}
-        </button>
-        <p style={{"fontSize":"11px","color":"#94a3b8","marginTop":"10px","lineHeight":"1.5"}}>We review every application personally. You will hear back within 5 business days if your background is a fit.</p>
-      </div>
-    </div>
-  </div>
-</div>
-          {error && <div style={{ color: '#ef4444', fontSize: '14px', marginTop: '12px', textAlign: 'center' }}>{error}</div>}
-        </form>
-      )}
+      </section>
     </div>
   );
 }

@@ -77,24 +77,50 @@ export async function POST(req: Request) {
 
     // 2. Save to Airtable "Job Applications" table
     const airtableApiKey = process.env.AIRTABLE_API_KEY;
-    const baseId = process.env.AIRTABLE_BASE_ID_CAREERS;
+    const baseId = process.env.AIRTABLE_BASE_ID_CAREERS || process.env.AIRTABLE_BASE_ID;
 
     if (airtableApiKey && baseId) {
       try {
         const base = new Airtable({ apiKey: airtableApiKey }).base(baseId);
-        await base('Job Applications').create([
-          {
-            fields: {
-              FullName: fullName,
-              Email: email,
-              Country: country,
-              Role: role,
-              PortfolioUrl: portfolioUrl,
-              WhyAmplipath: whyAmplipath,
-              AppliedAt: new Date().toISOString(),
+        const fullNotes = [
+          `Application for: ${role}`,
+          `Full Name: ${fullName}`,
+          `Email: ${email}`,
+          country ? `Country: ${country}` : '',
+          portfolioUrl ? `Portfolio / LinkedIn: ${portfolioUrl}` : '',
+          whyAmplipath ? `Why Amplipath: ${whyAmplipath}` : '',
+          `Applied At: ${new Date().toLocaleString()}`,
+        ].filter(Boolean).join('\n');
+
+        try {
+          await base('Job Applications').create([
+            {
+              fields: {
+                FullName: fullName,
+                Email: email,
+                Country: country,
+                Role: role,
+                PortfolioUrl: portfolioUrl,
+                WhyAmplipath: whyAmplipath,
+                AppliedAt: new Date().toISOString(),
+              },
             },
-          },
-        ]);
+          ]);
+        } catch {
+          // Fallback to default table
+          try {
+            await base(process.env.AIRTABLE_TABLE_NAME || 'tbl3f1eEvfOysBc0E').create([
+              {
+                fields: {
+                  Name: `[Job App] ${fullName} - ${role}`,
+                  Notes: fullNotes,
+                },
+              },
+            ]);
+          } catch (innerErr) {
+            console.error('Careers fallback error:', innerErr);
+          }
+        }
       } catch (atErr) {
         console.error('Airtable careers error:', atErr);
       }

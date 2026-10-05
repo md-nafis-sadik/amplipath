@@ -3,8 +3,16 @@ import { SERVICES_DATA } from '@/data/servicesData';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 export const metadata: Metadata = {
-  title: 'Content Marketing & Strategy | AMPLIPATH',
-  description: 'Measurable growth delivered through specialized digital marketing and technology solutions from AMPLIPATH.',
+  title: 'Content Marketing & Growth Strategy | AMPLIPATH',
+  description: 'Enterprise content marketing, search strategy, conversion copywriting, and digital PR campaigns engineered for organic authority and sustainable growth.',
+  alternates: {
+    canonical: '/services/content-strategy',
+  },
+  openGraph: {
+    title: 'Content Marketing & Growth Strategy | AMPLIPATH',
+    description: 'Enterprise content marketing, search strategy, conversion copywriting, and digital PR campaigns engineered for organic authority and sustainable growth.',
+    url: '/services/content-strategy',
+  },
 };
 
 export default function ServicePage() {
