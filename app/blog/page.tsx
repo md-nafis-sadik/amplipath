@@ -3,8 +3,33 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/markdown';
 
 export const metadata = {
-  title: 'Blog & Insights | AMPLIPATH',
-  description: 'In-depth perspectives on digital marketing, generative engine optimization, artificial intelligence, and global market expansion.',
+  title: 'Resources & Insights | Marketing Guides | Amplipath',
+  description: 'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
+  alternates: {
+    canonical: '/blog',
+  },
+  openGraph: {
+    title: 'Resources & Insights | Marketing Guides | Amplipath',
+    description: 'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
+    url: '/blog',
+    siteName: 'AMPLIPATH',
+    images: [
+      {
+        url: '/images/amplipath-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Amplipath Resources & Insights',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Resources & Insights | Marketing Guides | Amplipath',
+    description: 'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
+    images: ['/images/amplipath-og.jpg'],
+  },
 };
 
 export default function BlogPage() {

@@ -36,7 +36,7 @@ export default function AboutPage() {
   <div className="aln"></div>
   <div className="wstats">
     <div className="ws"><div className="ws-n">🌍</div><div className="ws-l">Global clients — every market</div></div>
-    <div className="ws"><div className="ws-n">50+</div><div className="ws-l">Services delivered worldwide</div></div>
+    <div className="ws"><div className="ws-n">70+</div><div className="ws-l">Services delivered worldwide</div></div>
     <div className="ws"><div className="ws-n">10+</div><div className="ws-l">Years industry experience</div></div>
     <div className="ws"><div className="ws-n">Month-to-month</div><div className="ws-l">No lock-in contracts</div></div>
     <div className="ws"><div className="ws-n">Revenue-first</div><div className="ws-l">We measure client revenue impact</div></div>

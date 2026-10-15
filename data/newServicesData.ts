@@ -52,8 +52,8 @@ export const newServicesData: BuilderServiceItem[] = [
   eyebrow:"AI Search Visibility",
   title:"AI Brand Positioning Services: <em>Shape How AI Describes Your Brand</em>",
   shortTitle:"AI Brand Positioning",
-  metaTitle:"AI Brand Positioning Services | Amplipath",
-  metaDescription:"Shape how ChatGPT, Gemini, Perplexity and AI search experiences understand and describe your brand with AI brand audits, entity optimization, authority building and ongoing monitoring.",
+  metaTitle:"AI Brand Positioning & Search Visibility | Amplipath",
+  metaDescription:"Position your brand for discovery and accurate representation across AI search, answer engines and traditional search with an entity-led strategy.",
   intro:"AI assistants are increasingly part of the buying journey. Amplipath helps brands understand how they are represented in AI-generated answers, strengthen the digital evidence behind the position they want to own, and monitor how that narrative changes across major answer engines.",
   stats:[
     ["AI + Search","Visibility layer"],
@@ -182,7 +182,7 @@ export const newServicesData: BuilderServiceItem[] = [
   title:"Programmatic Advertising Services: <em>Reach the Right Audience Across the Open Web</em>",
   shortTitle:"Programmatic Advertising",
   metaTitle:"Programmatic Advertising Services | Amplipath",
-  metaDescription:"Programmatic advertising strategy, audience targeting, display, video, connected TV, retargeting, first-party data activation and performance reporting from Amplipath.",
+  metaDescription:"Reach defined audiences across digital channels with programmatic advertising, media planning, targeting, creative delivery and transparent measurement.",
   intro:"Amplipath plans, launches and optimizes data-driven programmatic campaigns across display, video, native and connected environments. We combine audience strategy, automated media buying, creative testing and measurement so your advertising budget can reach more relevant prospects without relying on manual placement decisions.",
   stats:[
     ["Real-time","Media buying"],
@@ -295,7 +295,7 @@ export const newServicesData: BuilderServiceItem[] = [
   title:"Google Local Services Ads Management: <em>Turn Local Searches Into Qualified Leads</em>",
   shortTitle:"Google Local Services Ads",
   metaTitle:"Google Local Services Ads Management | Amplipath",
-  metaDescription:"Google Local Services Ads management for eligible local businesses. Amplipath helps with eligibility, setup, verification, service areas, budgets, lead quality, reviews and reporting.",
+  metaDescription:"Generate qualified local leads with Google Local Services Ads setup, profile optimization, budget planning, tracking and ongoing campaign management.",
   intro:"Google Local Services Ads help eligible local businesses connect with people actively searching for nearby services. Amplipath helps you navigate eligibility and verification, configure service areas, manage budgets and lead flow, strengthen your profile, and measure which enquiries are actually becoming customers.",
   stats:[
     ["Pay-per-lead","Model"],
@@ -412,7 +412,7 @@ export const newServicesData: BuilderServiceItem[] = [
   title:"Website Security Analysis & Testing: <em>Find Weaknesses Before They Become Expensive Problems</em>",
   shortTitle:"Website Security Analysis",
   metaTitle:"Website Security Analysis & Testing | Amplipath",
-  metaDescription:"Website security audits and vulnerability analysis covering web applications, SSL/TLS, servers, software, malware, access controls, backups and practical remediation recommendations.",
+  metaDescription:"Amplipath audits your website for security vulnerabilities, malware, outdated plugins and weak points, with a clear report and remediation plan",
   intro:"A website can look perfectly healthy while outdated software, weak access controls, exposed services or insecure configuration quietly increase business risk. Amplipath reviews the technical security posture of your website and turns findings into a practical remediation plan your team can act on.",
   stats:[
     ["Web app","Review"],
@@ -524,8 +524,8 @@ export const newServicesData: BuilderServiceItem[] = [
   eyebrow:"SEO + Conversion Copy",
   title:"Website Copywriting Services: <em>Clear, Search-Ready Copy That Converts</em>",
   shortTitle:"Website Copywriting",
-  metaTitle:"Website Copywriting Services | Amplipath",
-  metaDescription:"Professional website copywriting for service pages, landing pages, ecommerce, SEO, GEO/AEO, brand voice, content refreshes and conversion-focused websites.",
+  metaTitle:"Website Copywriting Services for Conversions | Amplipath",
+  metaDescription:"Amplipath writes website copy that's clear, on-brand and built to convert, from homepages to service pages, written with SEO in mind from the start",
   intro:"Your website copy has to explain what you do, answer the questions buyers actually have, support search visibility and give visitors a reason to take the next step. Amplipath combines research, brand voice, SEO, AI-search readiness and conversion strategy to create copy built for both discovery and action.",
   stats:[
     ["SEO + GEO","Ready"],
@@ -634,7 +634,7 @@ export const newServicesData: BuilderServiceItem[] = [
   title:"MLM & Network Marketing Services: <em>Build a Smarter, Compliance-Aware Growth System</em>",
   shortTitle:"MLM & Network Marketing",
   metaTitle:"MLM & Network Marketing Services | Amplipath",
-  metaDescription:"Marketing services for legitimate MLM and network marketing businesses including funnels, customer acquisition, distributor lead generation, content, paid media, email, WhatsApp, CRM and onboarding systems.",
+  metaDescription:"We help MLM and network marketing businesses generate qualified leads, recruit distributors, build downlines and grow their teams through targeted digital marketing.",
   intro:"Network marketing businesses need more than motivational social posts. Amplipath builds structured digital systems for legitimate product-led MLM and direct-selling companies — covering customer acquisition, distributor lead generation, landing pages, content, CRM follow-up, automation and performance tracking while keeping compliance at the center of the strategy.",
   stats:[
     ["Product-led","Strategy"],

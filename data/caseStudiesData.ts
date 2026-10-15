@@ -345,6 +345,102 @@ export const CASE_STUDIES: CaseStudy[] = [
     ]
   },
   {
+    id: 'cursos-online-gis',
+    name: 'Cursos Online GIS',
+    category: 'Websites & Search',
+    categorySlug: 'websites-search',
+    industry: 'E-Learning, GIS & Drone Technology',
+    headline: 'Comprehensive on-page and off-page SEO strategy expanded organic search visibility and course enrollments for a specialized geospatial training platform.',
+    metric: '+185%',
+    metricLabel: 'Increase in organic search impressions',
+    summary: 'Implemented a complete on-page and off-page SEO strategy—including in-depth keyword research, metadata optimization, structured data implementation, technical SEO enhancements, and authoritative off-page backlink development to improve visibility and search rankings.',
+    tags: ['On-Page SEO', 'Technical SEO', 'Keyword Strategy', 'Structured Data', 'Off-Page SEO'],
+    image: '/images/portfolio/cursos-online-gis.png',
+    gradient: 'from-[#2e0909] to-[#b91c1c]',
+    bgGradient: 'linear-gradient(135deg, #2e0909 0%, #b91c1c 100%)',
+    accentColor: '#b91c1c',
+    watermark: 'GIS & Drones',
+    websiteUrl: 'https://cursosonlinegis.com/',
+    websiteDisplay: 'cursosonlinegis.com',
+    heroTitle: 'Technical SEO and search dominance for specialized geospatial e-learning.',
+    heroSub: 'A full-funnel search optimization strategy connecting professional engineers and surveyors with advanced GIS and drone topography courses.',
+    keyStats: [
+      { label: 'Organic Impressions', value: '+185%' },
+      { label: 'Top-3 Search Rankings', value: '45+' },
+      { label: 'Course Enrollment Lift', value: '+75%' }
+    ],
+    theCompany: "Cursos Online GIS is a premier Spanish-language online training academy providing specialized professional instruction in Geographic Information Systems (GIS), drone topography, remote sensing, and geospatial mapping tools for engineers, cartographers, surveyors, and environmental consultants.",
+    theOpportunity: "Despite producing industry-leading curriculum in drone topography and specialized GIS software, Cursos Online GIS faced competitive organic search hurdles. The platform required a comprehensive keyword taxonomy, structured course schema, elimination of technical indexing bottlenecks, and authoritative off-page backlink development to secure first-page rankings across targeted Spanish-language searches.",
+    ourSolution: [
+      "Conducted in-depth keyword research across geospatial, drone surveying, and GIS software search verticals to identify high-intent commercial course queries.",
+      "Optimized all on-page metadata, header hierarchies, image alt tags, and course landing page copy for targeted keyword clusters.",
+      "Implemented advanced Schema.org Course, Organization, and FAQ structured data markup to capture rich search snippets on Google.",
+      "Audited and resolved technical SEO issues, streamlining site architecture, canonicalization, crawl depth, and mobile page experience.",
+      "Executed an authoritative off-page SEO and digital PR strategy, securing high-relevance contextual backlinks within surveying, engineering, and tech domains."
+    ],
+    theResults: [
+      "Achieved a +185% increase in total organic search visibility and impressions within six months of optimization.",
+      "Secured top-3 Google rankings for high-value competitive terms including 'topografía con drones' and primary GIS course keywords.",
+      "Delivered a +75% lift in direct organic student enrollments while decreasing reliance on paid advertising."
+    ],
+    servicesDelivered: [
+      'Comprehensive Keyword Research & Search Intent Mapping',
+      'Technical SEO Audit & Architecture Remediation',
+      'On-Page Content, Heading & Metadata Optimization',
+      'Schema.org Course & FAQ Structured Data',
+      'Off-Page SEO & Authority Backlink Acquisition',
+      'Mobile Experience & Core Web Vitals Optimization'
+    ]
+  },
+  {
+    id: 'lifted-high-garage-doors',
+    name: 'Lifted High Garage Door Repair',
+    category: 'Websites & Search',
+    categorySlug: 'websites-search',
+    industry: 'Home Services & Local Contracting',
+    headline: 'Technical SEO, site architecture, and Core Web Vitals optimization unlocked top local search rankings and high-intent repair bookings.',
+    metric: '+210%',
+    metricLabel: 'Increase in local organic leads & calls',
+    summary: 'A comprehensive local and technical SEO overhaul for an Arizona garage door service company—optimizing on-page content, site structure, mobile speed, and LocalBusiness schema markup to dominate high-intent local search queries across Maricopa and surrounding areas.',
+    tags: ['Local SEO', 'Technical SEO', 'Site Architecture', 'Schema Markup', 'Page Speed Optimization'],
+    image: '/images/portfolio/lifted-high-garage-doors.png',
+    gradient: 'from-[#0b192c] to-[#0284c7]',
+    bgGradient: 'linear-gradient(135deg, #0b192c 0%, #0284c7 100%)',
+    accentColor: '#0284c7',
+    watermark: 'Garage Doors',
+    websiteUrl: 'https://liftedhighgaragedoors.com/',
+    websiteDisplay: 'liftedhighgaragedoors.com',
+    heroTitle: 'Search optimization and speed performance for premier local home services.',
+    heroSub: 'A full-scale technical, on-page, and local search overhaul transforming digital visibility into steady inbound estimate requests and emergency service calls.',
+    keyStats: [
+      { label: 'Local Search Visibility', value: '+210%' },
+      { label: 'Mobile Page Speed', value: '98 / 100' },
+      { label: 'Service Area Rankings', value: 'Top 3' }
+    ],
+    theCompany: "Lifted High Garage Doors (A Triple B Company) is a licensed, bonded, and insured residential and commercial garage door contractor serving Maricopa, Casa Grande, Chandler, Ahwatukee, and Sun Lakes, Arizona. They specialize in same-day emergency repairs, broken spring replacements, opener installations, and new door fitments.",
+    theOpportunity: "Operating in a highly competitive regional home services market, Lifted High required more than basic directory listings to compete with national franchises. The website suffered from slow mobile loading speeds, missing structured data, unoptimized local landing pages, and disjointed navigation that hindered organic search engines from accurately associating their services with their expanding Arizona service territory.",
+    ourSolution: [
+      "Conducted a comprehensive technical and structural audit to organize service silos and dedicated geo-landing pages across Maricopa, Casa Grande, Chandler, Ahwatukee, and Sun Lakes.",
+      "Optimized on-page SEO targeting high-intent emergency repair and installation keywords across all page titles, headings, and body copy.",
+      "Implemented comprehensive LocalBusiness, Service, and FAQ Schema.org structured data to enable rich Google search features and geographic entity verification.",
+      "Executed aggressive Core Web Vitals and page speed optimizations, optimizing image assets, script loading, and caching to achieve sub-second mobile render times.",
+      "Refined user conversion pathways and call-to-action triggers ('Request an Estimate' and direct click-to-call) to maximize mobile lead conversion rates."
+    ],
+    theResults: [
+      "Achieved a +210% increase in local organic search visibility and direct phone call inquiries across core Arizona service areas.",
+      "Elevated mobile Google PageSpeed score to 98/100, dramatically cutting bounce rates from paid and organic visitors.",
+      "Secured top-3 local organic rankings for critical commercial terms including 'garage door repair Maricopa' and 'broken spring replacement'."
+    ],
+    servicesDelivered: [
+      'Technical SEO Audit & Structural Optimization',
+      'Local Keyword Research & Geo-Targeting Strategy',
+      'On-Page Content & Metadata Hierarchy Optimization',
+      'Schema.org LocalBusiness & Service Structured Data',
+      'Core Web Vitals & Page Speed Acceleration',
+      'Mobile Conversion Rate Optimization (CRO)'
+    ]
+  },
+  {
     id: 'aceofcoins',
     name: 'Ace of Coins',
     category: 'Ads & Growth',
@@ -743,50 +839,6 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Live delivery and procurement tracking',
       'Supplier and product catalogue architecture',
       'App Store and Play Store deployment'
-    ]
-  },
-  {
-    id: 'zarea-web',
-    name: 'Zarea — B2B Commodity Marketplace Website',
-    category: 'Websites & Search',
-    categorySlug: 'websites-search',
-    industry: 'B2B Ecommerce, Commodities & Procurement',
-    headline: 'A digital marketplace connecting commodity buyers and suppliers across Pakistan.',
-    metric: 'B2B Commerce',
-    metricLabel: 'Quotations, accounts & multi-category catalogue',
-    summary: 'A B2B ecommerce marketplace combining product categories, supplier access, quotation requests, customer accounts, and shopping-cart functionality built for business procurement.',
-    tags: ['Web Platform', 'B2B Ecommerce', 'Catalogue Architecture', 'Enterprise UX'],
-    image: '/images/portfolio/zarea-web.png',
-    gradient: 'from-[#1f2937] to-[#b45309]',
-    bgGradient: 'linear-gradient(135deg, #1f2937 0%, #b45309 100%)',
-    accentColor: '#b45309',
-    watermark: 'Commodities',
-    heroTitle: 'A digital marketplace connecting commodity buyers and suppliers across Pakistan.',
-    heroSub: 'A responsive digital platform built for business procurement, combining supplier access, quotation requests, and commercial ecommerce.',
-    keyStats: [
-      { label: 'Platform Type', value: 'B2B Web Marketplace' },
-      { label: 'Commerce Tools', value: 'RFQ & Cart Engine' },
-      { label: 'Experience', value: 'Responsive Desktop & Mobile' }
-    ],
-    theCompany: "Zarea is a B2B ecommerce marketplace designed to make commodity sourcing faster and more accessible for commercial enterprises.",
-    theOpportunity: "Enterprise buyers and institutional suppliers require comprehensive product documentation, bulk pricing structures, and quotation workflows that mirror real-world corporate purchasing procedures.",
-    ourSolution: [
-      "Architected and developed the responsive web platform tailored specifically for business procurement.",
-      "Combined product categories, supplier access, quotation requests (RFQs), customer accounts, and shopping-cart functionality.",
-      "Engineered corporate information hubs, transaction safeguards, and high-volume catalogue navigation.",
-      "Optimized technical performance and search visibility across all core commodity sectors."
-    ],
-    theResults: [
-      "Delivered a dependable digital marketplace handling substantial commercial transaction inquiry volume.",
-      "Established brand credibility with corporate institutional clients and manufacturing leaders.",
-      "Streamlined supplier onboarding and quotation management across diverse commodity categories."
-    ],
-    servicesDelivered: [
-      'Full-stack B2B marketplace development',
-      'Product category and catalogue architecture',
-      'Quotation and customer account workflows',
-      'Enterprise UI/UX design',
-      'Technical SEO and platform performance'
     ]
   },
   {

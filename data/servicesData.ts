@@ -41,6 +41,8 @@ export interface ServiceDetail {
 
 export const SERVICES_DATA: Record<string, ServiceDetail> = {
   "seo": {
+    "metaTitle": "SEO Services for Sustainable Organic Growth | Amplipath",
+    "metaDescription": "Improve organic visibility with SEO strategy, keyword targeting, content optimization and technical improvements aligned with measurable business goals.",
     "eye": "Search Engine Optimization Services",
     "h1": "A future-facing SEO strategy that drives sustainable organic growth.",
     "sub": "Custom SEO strategies engineered to future-proof your brand's discoverability, capture first-page rankings and build lasting organic traffic across Google, Bing and AI search engines — for businesses of every size and sector.",
@@ -253,6 +255,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "geo": {
+    "metaTitle": "GEO & AEO Services for AI Search Visibility | Amplipath",
+    "metaDescription": "Improve your brand’s visibility and citations across ChatGPT, Google AI Overviews, Gemini, Perplexity and AI Mode with our GEO and AEO services.",
     "eye": "GEO / AEO — AI Search Optimization",
     "h1": "Be found in ChatGPT, Gemini and the AI engines replacing traditional search.",
     "sub": "As AI-generated answers replace traditional blue links for millions of daily queries, Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) ensure your brand is cited, recommended and referenced by every major AI model — ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews.",
@@ -470,6 +474,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "game": {
+    "metaTitle": "Game Marketing Agency for Player Growth | Amplipath",
+    "metaDescription": "Grow awareness, wishlists, players and community engagement with game marketing across content, paid media, platforms and launch campaigns.",
     "eye": "Game Marketing Services",
     "h1": "Launch your game to the audience it deserves.",
     "sub": "From Steam wishlist campaigns to TikTok influencer seeding, console launch PR to mobile app user acquisition — Amplipath specialises in marketing games across every platform, genre and audience worldwide. We have done this for indie developers, mid-size studios and major publishers.",
@@ -644,6 +650,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "africa": {
+    "metaTitle": "Africa Market Entry & Growth Services | Amplipath",
+    "metaDescription": "Grow across African markets with locally informed strategy, digital marketing, WhatsApp campaigns, influencer outreach and market intelligence.",
     "eye": "Africa Market Growth & Digital Marketing Services",
     "h1": "Africa is many markets. Build for the one you want to win.",
     "sub": "Amplipath connects country-specific research, websites, search, paid media, WhatsApp and intelligent automation into one growth plan. Enter a new African market or strengthen your position in an existing one with work built around your customers and commercial goals.",
@@ -815,6 +823,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "webdev": {
+    "metaTitle": "Custom Website Development Company | Amplipath",
+    "metaDescription": "Build a fast, responsive and conversion-focused website with strategy, UX, design, development, integrations and launch support from Amplipath.",
     "eye": "Website Development Services",
     "h1": "Websites built to convert, rank and scale from day one.",
     "sub": "Business websites, e-commerce stores, landing pages and custom web applications — all engineered for conversion, built for speed, and optimized for search from the first line of code. No templates. No corners cut.",
@@ -1006,6 +1016,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aidev": {
+    "metaTitle": "AI Development Services for Businesses | Amplipath",
+    "metaDescription": "We design and develop AI solutions for real business needs, from discovery and prototyping to integrations, testing, deployment and ongoing improvement.",
     "eye": "AI Development & Consulting Services",
     "h1": "Build intelligence into your business — custom AI that delivers measurable ROI.",
     "sub": "AI-powered applications, LLM integrations, autonomous agents, chatbot development and strategic AI consulting — we bring enterprise-grade AI capability to businesses of every size, with clear ROI projections before we build a single line of code.",
@@ -1168,6 +1180,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "course": {
+    "metaTitle": "Online Course Marketing & Promotion | Amplipath",
+    "metaDescription": "Amplipath helps course creators on Udemy, Kajabi and Teachable attract students, increase enrollments, gain authentic reviews and boost conversions through targeted marketing.",
     "eye": "Course Promotion Services",
     "h1": "Turn your expertise into a thriving, consistently growing course business.",
     "sub": "Whether you teach on Udemy, Teachable, Kajabi or your own platform — Amplipath builds the marketing systems that fill your courses with students, month after month, without depending on platform algorithm luck or exhausting manual promotion.",
@@ -1328,6 +1342,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "gbp": {
+    "metaTitle": "Google Business Profile Optimization Services | Amplipath",
+    "metaDescription": "Amplipath strengthens your local presence through Google Business Profile setup, optimization, category selection, content updates and performance monitoring.",
     "eye": "Google Business Profile Optimization & Management",
     "h1": "Dominate Google Maps and local search — where your customers are already looking.",
     "sub": "A fully optimized Google Business Profile is the highest-ROI local marketing asset for most businesses. We set it up correctly, optimize every element and manage it ongoing — so you consistently appear at the top of Google Maps and local search results.",
@@ -1507,6 +1523,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "amazonseo": {
+    "metaTitle": "Amazon SEO & Marketplace Growth Services | Amplipath",
+    "metaDescription": "Amplipath optimizes Amazon product listings, keywords and marketplace strategy to help your products rank higher and convert more browsers into buyers.",
     "eye": "Amazon SEO & Marketplace Marketing",
     "h1": "Turn Amazon into your highest-converting sales channel.",
     "sub": "Amazon is the world's largest product search engine — more product searches start on Amazon than on Google. Amplipath optimizes your product listings, A+ content and search visibility to ensure your products appear first when buyers are ready to purchase.",
@@ -1680,6 +1698,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "pinterestseo": {
+    "metaTitle": "Pinterest SEO Services for Organic Discovery | Amplipath",
+    "metaDescription": "Amplipath optimizes Pinterest boards and pins for search, helping ecommerce and lifestyle brands drive consistent organic traffic from Pinterest search.",
     "eye": "Pinterest SEO Services",
     "h1": "Turn Pinterest into a consistent, compounding source of organic traffic.",
     "sub": "Pinterest is a visual search engine — not just a social platform. Properly optimized pins rank in Pinterest search, Google search and appear in home feeds for years after publishing. Amplipath builds Pinterest SEO strategies that drive sustained traffic month after month.",
@@ -1855,6 +1875,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "redditmarketing": {
+    "metaTitle": "Reddit Marketing & SEO Agency | Amplipath",
+    "metaDescription": "Amplipath is a Reddit marketing agency helping brands grow through Reddit communities, Reddit Ads, content marketing and community engagement.",
     "eye": "Reddit Marketing & SEO",
     "h1": "Build authentic brand credibility in the communities where your audience already lives.",
     "sub": "Reddit is the internet's largest community platform and one of the most underutilized organic marketing channels. With the right strategy, Reddit drives significant organic traffic, brand awareness and qualified leads. With the wrong approach, it backfires publicly. We know exactly how to do this correctly.",
@@ -2018,6 +2040,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "linkedinads": {
+    "metaTitle": "LinkedIn Ads & B2B Lead Generation | Amplipath",
+    "metaDescription": "Generate qualified B2B demand with LinkedIn Ads, audience targeting, lead forms, conversion tracking and pipeline-focused optimization.",
     "eye": "LinkedIn Ads & B2B Lead Generation",
     "h1": "Reach decision-makers and generate qualified B2B leads at scale.",
     "sub": "LinkedIn is the world's largest professional network and the most powerful B2B advertising platform. With precise job title, company size, seniority and industry targeting, LinkedIn Ads reaches the exact decision-makers your sales team needs to speak with.",
@@ -2182,6 +2206,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "quoraads": {
+    "metaTitle": "Quora Ads Management & Campaign Strategy | Amplipath",
+    "metaDescription": "Amplipath manages Quora advertising campaigns, placing your brand in front of people actively searching for answers related to your product or industry",
     "eye": "Quora Ads Management",
     "h1": "Reach high-intent audiences actively researching solutions like yours.",
     "sub": "Quora is where professionals go to research complex decisions — software purchases, service providers, financial products and career moves. Quora Ads places your brand in front of these highly engaged researchers at exactly the moment they are forming opinions and making decisions.",
@@ -2332,6 +2358,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "redditads": {
+    "metaTitle": "Reddit Ads Management & Campaign Strategy | Amplipath",
+    "metaDescription": "Reach engaged communities with Reddit Ads planned around subreddit relevance, audience intent, conversion tracking and optimization.",
     "eye": "Reddit Ads Management",
     "h1": "Advertising within the communities where your audience actually engages.",
     "sub": "Reddit's advertising platform offers unique community and interest targeting that reaches engaged niche audiences other platforms miss. When done correctly, Reddit Ads deliver strong results for gaming, tech, finance, education and consumer brands — at CPCs well below LinkedIn.",
@@ -2479,6 +2507,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "amazonads": {
+    "metaTitle": "Amazon Ads Management & PPC Services | Amplipath",
+    "metaDescription": "Amplipath manages Amazon PPC and sponsored product campaigns, helping sellers improve visibility, search rankings and sales on the marketplace.",
     "eye": "Amazon Ads Management",
     "h1": "Maximize your Amazon revenue with expertly managed Sponsored Ads.",
     "sub": "Amazon Ads is the fastest-growing digital advertising platform — and for product sellers, it is the most direct path from ad spend to purchase. Amplipath manages Amazon Sponsored Products, Sponsored Brands, Sponsored Display and DSP campaigns that maximize revenue while minimizing ACoS.",
@@ -2639,6 +2669,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "pinterestbiz": {
+    "metaTitle": "Pinterest Business Optimization Services | Amplipath",
+    "metaDescription": "Amplipath optimizes Pinterest business accounts and ad campaigns, helping ecommerce and lifestyle brands turn Pinterest traffic into customers",
     "eye": "Pinterest Business Optimization & Management",
     "h1": "Build a Pinterest presence that drives consistent traffic, sales and brand discovery.",
     "sub": "Pinterest Business is a visual search and shopping platform where purchase intent is built in. A professionally managed Pinterest Business account consistently drives website traffic, product sales and brand awareness — particularly for lifestyle, e-commerce, home, food, fashion and DIY brands.",
@@ -2786,6 +2818,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "copywriting": {
+    "metaTitle": "Conversion Copywriting Services | Amplipath",
+    "metaDescription": "Turn attention into action with research-led conversion copy for landing pages, offers, funnels and campaigns, supported by clear testing hypotheses.",
     "eye": "Conversion Copywriting Services",
     "h1": "Words that persuade, convert and generate revenue.",
     "sub": "Great design gets attention. Great copy converts attention into action. Our specialist direct-response copywriters combine psychological persuasion principles, deep audience research and proven conversion frameworks — writing landing pages, ads, emails and sales pages that measurably outperform generic content.",
@@ -2934,6 +2968,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "crm": {
+    "metaTitle": "CRM Setup & Marketing Automation Services | Amplipath",
+    "metaDescription": "Amplipath sets up and configures CRM systems and marketing automation workflows, connecting your sales and marketing data into one working system.",
     "eye": "CRM Setup & Marketing Automation",
     "h1": "Turn your CRM into a revenue-generating machine — not just a contact database.",
     "sub": "Most businesses have a CRM and most businesses underuse it. Amplipath sets up, configures and automates your CRM so it actively generates pipeline, nurtures leads and tracks revenue — transforming it from a passive database into your most valuable marketing asset.",
@@ -3083,6 +3119,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "marketinganalytics": {
+    "metaTitle": "Marketing Analytics & Looker Studio Services | Amplipath",
+    "metaDescription": "Turn marketing data into clear decisions with analytics setup, measurement planning, Looker Studio dashboards, reporting and actionable performance insights.",
     "eye": "Marketing Analytics & Data Studio",
     "h1": "Clear, accurate data that tells you exactly what is — and is not — driving revenue.",
     "sub": "Most marketing dashboards show vanity metrics that cannot be connected to business outcomes. Amplipath builds analytics infrastructure, custom dashboards and attribution models that give leadership teams clear visibility into marketing ROI — so every budget decision is data-backed.",
@@ -3230,6 +3268,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "crypto": {
+    "metaTitle": "Cryptocurrency Marketing Agency | Amplipath",
+    "metaDescription": "Amplipath markets crypto projects, tokens and platforms through community building, content strategy and compliant advertising across channels.",
     "eye": "Cryptocurrency Marketing",
     "h1": "Specialist marketing for crypto, Web3 and blockchain brands.",
     "sub": "Crypto marketing requires a different playbook than traditional digital marketing — compliant advertising, community-first growth and credibility-building in a market that runs on trust. Amplipath builds and executes marketing strategies for token launches, exchanges, NFT projects and Web3 platforms that need real traction, not just hype.",
@@ -3401,6 +3441,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "brandstrategy": {
+    "metaTitle": "Brand Strategy & Positioning Services | Amplipath",
+    "metaDescription": "Clarify your market position with brand strategy covering audience research, differentiation, messaging, architecture and practical implementation.",
     "eye": "Brand Strategy Services",
     "h1": "A clear, consistent brand identity that makes every campaign work harder.",
     "sub": "Most marketing underperforms not because the channels are wrong, but because the brand foundation is unclear. Amplipath builds brand strategy — positioning, messaging, voice and visual direction — that gives every future campaign, ad and piece of content a consistent foundation to build on.",
@@ -3569,6 +3611,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "affiliate": {
+    "metaTitle": "Affiliate Marketing Strategy & Management | Amplipath",
+    "metaDescription": "Build and manage affiliate programs with partner recruitment, commission planning, tracking, compliance and performance optimization.",
     "eye": "Affiliate Marketing",
     "h1": "Build affiliate programmes that drive performance-based growth.",
     "sub": "A well-structured affiliate program turns external partners into a performance-based growth channel you only pay for results on. We design the commission structure, recruit relevant affiliates, set up tracking and monitor for fraud — so the program scales without becoming a liability.",
@@ -3692,6 +3736,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aiads": {
+    "metaTitle": "AI PPC Bidding & Ad Optimization Services | Amplipath",
+    "metaDescription": "Optimize Google Ads and PPC campaigns with AI-powered bidding, budget management and expert oversight to reduce wasted ad spend and improve ROAS.",
     "eye": "AI-Powered Ad Bidding",
     "h1": "Smart bidding automation that maximizes ROAS across channels.",
     "sub": "Automated bidding only works as well as the conversion data feeding it. We configure conversion values correctly, select the right bidding strategy for your goal and validate performance against manual bidding — so automation actually outperforms the alternative, not just replaces it.",
@@ -3827,6 +3873,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aiagents": {
+    "metaTitle": "AI Agent Development Services | Amplipath",
+    "metaDescription": "We develop task-focused AI agents that support research, customer service and operations with clear workflows, integrations, guardrails and human oversight.",
     "eye": "AI Agents & Automation",
     "h1": "Autonomous AI agents that handle multi-step business processes.",
     "sub": "An AI agent that can search, query a database, send an email and chain those actions together handles work no single chatbot prompt can. We define the agent's decision boundaries clearly, build in tool access and guardrails, and deploy with a monitoring dashboard so autonomous actions stay visible.",
@@ -3956,6 +4004,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aicampaign": {
+    "metaTitle": "AI-Powered Campaign Management | Amplipath",
+    "metaDescription": "Improve campaign planning and optimization with AI-supported research, audience insights, testing, reporting and experienced human oversight.",
     "eye": "AI-Powered Campaign Management",
     "h1": "Automated campaign optimization using machine learning.",
     "sub": "AI handles the repetitive optimization work — budget pacing, bid adjustments, anomaly detection — while our specialists focus on strategy, creative direction and the judgment calls automation can't make. The result is faster optimization cycles without losing human oversight.",
@@ -4084,6 +4134,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aiconsult": {
+    "metaTitle": "AI Technology Consulting Services | Amplipath",
+    "metaDescription": "Turn AI opportunities into a practical roadmap with use-case discovery, technology evaluation, governance, implementation planning and risk guidance.",
     "eye": "AI Technology Consulting",
     "h1": "Workflow audits and a practical AI adoption roadmap.",
     "sub": "Most businesses know AI matters but don't know where to start. We audit your current workflows, data infrastructure and team readiness, then deliver a prioritized roadmap with ROI projections per initiative — so adoption decisions are based on actual opportunity, not hype.",
@@ -4203,6 +4255,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aiintegrate": {
+    "metaTitle": "AI Integration Services for Business Systems | Amplipath",
+    "metaDescription": "We connect AI capabilities to your CRM, website, software and operational tools through secure integrations, workflow design, testing and monitoring.",
     "eye": "AI Integration Services",
     "h1": "Connect ChatGPT, Claude and Gemini to your business systems.",
     "sub": "The value of AI models comes from connecting them to your actual business data and workflows — your CRM, CMS, e-commerce platform or internal tools. We map exactly how AI should plug into your existing systems, then build and document the integration.",
@@ -4332,6 +4386,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aimobile": {
+    "metaTitle": "AI Mobile App Development Services | Amplipath",
+    "metaDescription": "Amplipath builds mobile apps with AI capabilities built in, from Flutter and React Native apps to intelligent features like personalization and automation.",
     "eye": "AI Mobile App Development",
     "h1": "iOS and Android apps with integrated AI features.",
     "sub": "In-app chat assistants, personalized recommendations and image or voice recognition all change the cost and architecture decision depending on whether they run on-device or in the cloud. We make that call deliberately, based on latency and cost needs, then build and test the AI feature inside a native or cross-platform app.",
@@ -4458,6 +4514,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aiprompt": {
+    "metaTitle": "AI Prompt Engineering & Marketing Services | Amplipath",
+    "metaDescription": "Amplipath provides AI prompt engineering for ChatGPT, Gemini and other AI tools to automate marketing, improve content creation, research and campaign workflows.",
     "eye": "AI Marketing Prompt Strategy",
     "h1": "AI prompt frameworks for consistent, on-brand content at scale.",
     "sub": "Generic prompts produce generic AI output. We build a custom prompt library trained on your specific brand voice, audience and offer — so every piece of AI-assisted content your team generates sounds like you, not like every other brand using the same default ChatGPT prompt.",
@@ -4605,6 +4663,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "aiwebsoft": {
+    "metaTitle": "AI Website & Software Development | Amplipath",
+    "metaDescription": "We build AI-enabled websites and software with useful automation, intelligent features, secure integrations, scalable architecture and human-centered UX.",
     "eye": "AI Websites & Software Development",
     "h1": "Web platforms with AI capability built into the core.",
     "sub": "AI bolted onto an existing site as an afterthought rarely works well. We scope exactly which AI features add genuine user value, then build the platform — search, recommendations, content generation, predictive dashboards — with the model integration architected in from the start.",
@@ -4725,6 +4785,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "analytics": {
+    "metaTitle": "Web Analytics Consulting & Measurement | Amplipath",
+    "metaDescription": "Amplipath sets up and manages web analytics, GA4, tracking pixels and conversion events, giving you accurate data to make informed marketing decisions",
     "eye": "Web Analytics & Reporting",
     "h1": "GA4 setup and dashboards that turn data into decisions.",
     "sub": "Most GA4 implementations are broken in some way — misconfigured goals, missing e-commerce events, no cross-domain tracking. We audit and fix the foundation, then build a Looker Studio dashboard that unifies every channel into a single, decision-ready view.",
@@ -4870,6 +4932,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "appmarketing": {
+    "metaTitle": "Mobile App Marketing & User Acquisition | Amplipath",
+    "metaDescription": "Amplipath plans and runs mobile app marketing campaigns, app store optimization, paid user acquisition and retention strategy, to grow installs and usage",
     "eye": "Mobile App Marketing & ASO",
     "h1": "App Store Optimization and user acquisition that drives installs and retention.",
     "sub": "Installs without retention are wasted spend. We optimize App Store and Play Store listings for organic search visibility, run paid UA across Apple Search Ads and Google UAC, then build the push and lifecycle messaging that keeps users coming back after install.",
@@ -5005,6 +5069,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "book": {
+    "metaTitle": "Book & eBook Marketing Services | Amplipath",
+    "metaDescription": "We help authors and self-published writers promote books and ebooks on Amazon KDP, Goodreads and Apple Books, attract readers, earn genuine reviews and increase book sales.",
     "eye": "Book & eBook Marketing",
     "h1": "Amazon SEO and launch campaigns for authors.",
     "sub": "Amazon is the world's largest book search engine, and category/keyword selection alone can make or break visibility. We optimize your listing, coordinate a launch-week review push and help build the author platform that keeps selling books long after release week ends.",
@@ -5133,6 +5199,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "brandai": {
+    "metaTitle": "Brand Voice & Personality Development Services | Amplipath",
+    "metaDescription": "Amplipath helps businesses develop a unique brand voice, personality, tone of voice and messaging strategy for consistent communication across all channels.",
     "eye": "Brand Personality Design",
     "h1": "Codify your brand voice so AI always sounds like you.",
     "sub": "A brand voice that lives only in someone's head doesn't scale — and definitely doesn't transfer into an AI tool. We document your tone, vocabulary and personality into a structured guide, then translate it into a working AI system prompt your team can use anywhere.",
@@ -5270,6 +5338,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "chatbot": {
+    "metaTitle": "AI Chatbot Development Services | Amplipath",
+    "metaDescription": "Amplipath builds custom AI chatbots for websites and apps, trained on your business to answer questions, qualify leads and support customers.",
     "eye": "AI Chatbot Development",
     "h1": "Intelligent chatbots for sales, support and lead generation.",
     "sub": "A chatbot trained on your real product documentation, FAQs and brand voice handles support and qualification far better than a generic rules-based decision tree. We scope the right chatbot type for your use case, train it on your content and deploy across web, WhatsApp or Messenger.",
@@ -5407,6 +5477,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "content": {
+    "metaTitle": "Content Marketing Strategy & Services | Amplipath",
+    "metaDescription": "Amplipath plans and produces content marketing strategies, blog content, resources and campaigns, built to attract organic traffic and build authority",
     "eye": "Content Marketing Services",
     "h1": "SEO-driven content that builds lasting domain authority.",
     "sub": "Content that exists only to fill a calendar doesn't move rankings or revenue. We build content around real keyword opportunity and internal linking strategy — blog articles, pillar guides, case studies and more — so every piece compounds your domain authority instead of sitting unread.",
@@ -5543,6 +5615,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "cro": {
+    "metaTitle": "Conversion Rate Optimization Services | Amplipath",
+    "metaDescription": "Increase the percentage of visitors who take action through conversion research, user-journey analysis, testing and evidence-led website improvements.",
     "eye": "Conversion Rate Optimization",
     "h1": "A/B testing and UX analysis that turns more traffic into customers.",
     "sub": "More traffic is the expensive way to grow revenue. We analyze heatmaps, session recordings and funnel drop-off to find exactly where visitors are leaving, then run statistically valid A/B tests on landing pages, forms and checkout flows to convert more of the traffic you already have.",
@@ -5676,6 +5750,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "crowdfund": {
+    "metaTitle": "Crowdfunding Marketing via Boostfunders | Amplipath",
+    "metaDescription": "Amplipath plans and runs crowdfunding marketing campaigns for Kickstarter and Indiegogo launches, audience building, outreach and promotional strategy",
     "eye": "Crowdfunding Marketing",
     "h1": "Pre-launch and live-campaign support for Kickstarter, Indiegogo and beyond.",
     "sub": "The first 48 hours of a crowdfunding campaign often determine its trajectory — but the work doesn't stop at launch. We build your pre-launch audience and email list, then stay hands-on through the entire live campaign window, managing daily momentum, backer communication and PR push across Kickstarter, Indiegogo, GoFundMe, Wefunder and more.",
@@ -5830,6 +5906,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "customweb": {
+    "metaTitle": "Custom Website Design & Development | Amplipath",
+    "metaDescription": "We create a custom website shaped around your brand, users and operations, with tailored design, development, integrations and scalable functionality.",
     "eye": "Custom Website Development",
     "h1": "Bespoke web applications built on modern frameworks.",
     "sub": "When WordPress or Shopify can't do what your business actually needs — a booking system, an internal dashboard, a custom marketplace — we build it from the ground up on React, Next.js or your stack of choice, with proper API architecture and authentication from day one.",
@@ -5982,6 +6060,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "digitalpr": {
+    "metaTitle": "Digital PR Services & Online Brand Authority | Amplipath",
+    "metaDescription": "Amplipath runs digital PR campaigns that earn press coverage, backlinks and brand mentions from relevant publications, building authority and visibility.",
     "eye": "Digital PR",
     "h1": "Earn high-authority backlinks and media coverage.",
     "sub": "Digital PR earns the links and mentions that move domain authority — the kind no amount of guest posting alone can replicate. We develop a genuinely newsworthy angle, build a targeted journalist list, and pitch at scale until coverage and backlinks actually land.",
@@ -6106,6 +6186,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "display": {
+    "metaTitle": "Display Advertising & Retargeting Services | Amplipath",
+    "metaDescription": "Expand reach and re-engage visitors with display advertising and retargeting campaigns built around audience intent, creative testing and measurement.",
     "eye": "Display Advertising",
     "h1": "Programmatic and direct display campaigns across the web.",
     "sub": "Display advertising still drives real performance when retargeting is configured correctly and brand-safety exclusions are managed proactively. We build banner sets across every standard size, configure pixel-based retargeting and protect placement quality across the Google Display Network and programmatic buys.",
@@ -6239,6 +6321,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "dropship": {
+    "metaTitle": "Dropshipping Website Development | Amplipath",
+    "metaDescription": "We build conversion-focused dropshipping stores with AliExpress, Alibaba and CJdropshipping integration, product sourcing, supplier setup and ecommerce optimization.",
     "eye": "Dropshipping Website Development",
     "h1": "Dropshipping stores with supplier integration and conversion-optimized pages.",
     "sub": "Dropshipping success lives or dies on supplier reliability and product page trust signals. We build the store with automated order routing to your chosen supplier network, then design product pages with the reviews, badges and urgency elements that actually convert cold traffic.",
@@ -6383,6 +6467,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "ecomdev": {
+    "metaTitle": "Ecommerce Website Development Company | Amplipath",
+    "metaDescription": "Launch or improve your online store with ecommerce strategy, UX design, development, payments, integrations, testing and conversion-focused functionality.",
     "eye": "E-Commerce Development",
     "h1": "Online stores optimized for conversion, speed and search visibility.",
     "sub": "Whether you need a Shopify build, a WooCommerce migration or a fully headless custom store, we architect for mobile checkout speed and SEO from the first wireframe — not as an afterthought once the store is already slow.",
@@ -6538,6 +6624,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "ecoseo": {
+    "metaTitle": "Ecommerce SEO Services for Online Stores | Amplipath",
+    "metaDescription": "Grow your online store with Amplipath's ecommerce SEO services. Improve Google rankings, product and category visibility, organic traffic and sales.",
     "eye": "E-Commerce SEO Services",
     "h1": "SEO built specifically for product and category pages.",
     "sub": "Standard SEO playbooks don't account for faceted navigation, thin product pages or marketplace listings competing against your own site. We build e-commerce SEO strategies around the structure your store actually has — Shopify, WooCommerce, Magento or custom — so product and category pages rank and convert.",
@@ -6717,6 +6805,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "email": {
+    "metaTitle": "Email Marketing Strategy & Management | Amplipath",
+    "metaDescription": "Build customer relationships with email strategy, campaign production, segmentation, testing and reporting across acquisition and retention journeys.",
     "eye": "Email Marketing Services",
     "h1": "List building and campaigns that convert subscribers into customers.",
     "sub": "A healthy list, sent to consistently with genuinely useful content, still outperforms most paid channels on ROI. We build the list-growth mechanics, write and design the campaigns, and test relentlessly — then report on revenue per send, not just open rate.",
@@ -6852,6 +6942,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "emailai": {
+    "metaTitle": "AI Email Marketing & Personalization Services | Amplipath",
+    "metaDescription": "Amplipath offers AI email marketing services with smart segmentation, personalized email campaigns and automation to improve engagement, conversions and sales.",
     "eye": "AI Email Marketing Personalization",
     "h1": "AI-driven segmentation and dynamic content that lifts conversions.",
     "sub": "Most email programs send the same message to everyone on the list. We use behavioral data and AI-powered dynamic content to send the right message, product or offer to each individual subscriber — based on what they've actually done, not a generic blast schedule.",
@@ -6985,6 +7077,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "emailauto": {
+    "metaTitle": "Email Automation Services & Workflows | Amplipath",
+    "metaDescription": "We builds automated email flows, abandoned cart, re-engagement, that work in the background to convert and retain customers.",
     "eye": "Email Automations",
     "h1": "Drip sequences and automated flows for hands-free revenue.",
     "sub": "Welcome series, abandoned cart, post-purchase and win-back flows run continuously without a single manual send — and for most e-commerce brands, they quietly generate a meaningful share of total email revenue. We map every trigger, build the flows and connect them directly to your store or CRM.",
@@ -7110,6 +7204,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "fbads": {
+    "metaTitle": "Facebook & Instagram Ads Management | Amplipath",
+    "metaDescription": "Reach and convert the right audiences with Facebook and Instagram advertising, including creative testing, targeting, tracking and ongoing optimization.",
     "eye": "Facebook & Instagram Ads",
     "h1": "Full-funnel Meta campaigns managed by certified specialists.",
     "sub": "From cold prospecting to retargeting warm traffic, we structure Meta campaigns around a complete funnel — not a single objective. Pixel and Conversions API tracking are verified before any spend, so every dollar is attributed correctly from the first impression.",
@@ -7270,6 +7366,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "guestpost": {
+    "metaTitle": "Guest Posting & Link Building Services | Amplipath",
+    "metaDescription": "Amplipath builds high-quality backlinks through guest posting and outreach on relevant, authoritative sites, strengthening your site's search authority",
     "eye": "Guest Posting & Link Building",
     "h1": "Strategic backlink acquisition that builds real domain authority.",
     "sub": "We pitch, write and place guest content on publications that pass real editorial scrutiny — not link farms. Every target is vetted on domain authority, topical relevance and real traffic before outreach even begins, building authority Google trusts rather than authority Google penalizes.",
@@ -7398,6 +7496,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "influencer": {
+    "metaTitle": "Influencer Marketing Agency & Campaigns | Amplipath",
+    "metaDescription": "Amplipath connects brands with the right creators and manages influencer campaigns end to end, from outreach and briefs to performance reporting.",
     "eye": "Influencer Marketing",
     "h1": "Vetted influencer matching with performance-tracked campaigns.",
     "sub": "Follower count means nothing without audience authenticity and brand fit. We vet creators on engagement quality, past brand partnerships and content style before negotiating a single deal — then track every campaign against reach, engagement and actual conversion, not vanity metrics.",
@@ -7557,6 +7657,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "landing": {
+    "metaTitle": "Landing Page Design & Development | Amplipath",
+    "metaDescription": "Amplipath designs and builds high-converting landing pages for campaigns, product launches and lead generation, optimized for speed and conversions.",
     "eye": "Landing Page Development",
     "h1": "High-converting, campaign-specific pages built and tested for results.",
     "sub": "A landing page exists for one job: converting the specific traffic sent to it. We build pages matched exactly to your ad creative and offer, configure conversion tracking before traffic starts, and run structured A/B tests rather than guessing at what converts best.",
@@ -7694,6 +7796,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "localseo": {
+    "metaTitle": "Local SEO Services | Rank in Your City | Amplipath",
+    "metaDescription": "Amplipath helps nearby customers find your business through local SEO, Google Business Profile optimization, location pages, business listings and review management.",
     "eye": "Local SEO Services",
     "h1": "Local SEO services that put your business on the map — literally.",
     "sub": "For businesses that serve customers in a physical location or defined service area, ranking in the Google Maps 3-pack matters more than ranking organically. We optimize every local ranking signal — from your Google Business Profile to citation consistency to local landing pages — so you show up first when nearby customers search.",
@@ -7868,9 +7972,11 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "mobileapp": {
+    "metaTitle": "Mobile App Development Company | Amplipath",
+    "metaDescription": "Amplipath is a mobile app development company building custom iOS and Android apps and MVPs with Flutter and React Native, from concept to launch and support.",
     "eye": "Mobile App Development",
     "h1": "Custom mobile app development that delivers measurable, revenue-generating results.",
-    "sub": "We design and develop scalable mobile apps for startups, service businesses, e-commerce brands, marketplaces, communities and internal business workflows. From UI/UX and API integration to Firebase, app submission and post-launch support, Amplipath helps you turn an idea into a functional Android and iOS app.",
+    "sub": "Amplipath is a mobile app development company that designs, builds and launches custom iOS and Android apps and MVPs using Flutter and React Native. We handle UI/UX design, API and Firebase integration, App Store and Google Play submission and post-launch support for startups, service businesses, ecommerce brands and marketplaces.",
     "stats": [
       {
         "n": "5+",
@@ -7916,7 +8022,6 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
           "React Native",
           "Flutter",
           "Ionic",
-          "PhoneGap",
           "NativeScript",
           "Angular",
           "SwiftUI",
@@ -7941,7 +8046,6 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       {
         "l": "Tools",
         "it": [
-          "Xamarin",
           "Bubble",
           "FlutterFlow",
           "Android Studio",
@@ -7970,7 +8074,11 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       "A custom app icon",
       "Splash screen design",
       "Ad network integration (if monetized)",
-      "Full, documented source code"
+      "Full, documented source code",
+      "MVP development",
+      "AI features or chatbot integration",
+      "App Store listing optimization (ASO)",
+      "Backend, API and Firebase setup"
     ],
     "pillars": [
       {
@@ -8065,6 +8173,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "music": {
+    "metaTitle": "Music Marketing & Promotion Services | Amplipath",
+    "metaDescription": "Grow your music audience on Spotify, Apple Music, YouTube, SoundCloud and TikTok through music promotion, playlist outreach, targeted campaigns and fan engagement.",
     "eye": "Music Promotion Services",
     "h1": "Streaming strategy and release campaigns for artists and labels.",
     "sub": "A great track still needs a release strategy to find an audience. We optimize your Spotify for Artists profile, pitch to editorial and independent playlist curators, coordinate TikTok seeding ahead of release week and keep momentum going with sustained content and ads after drop day.",
@@ -8204,6 +8314,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "podcast": {
+    "metaTitle": "Podcast Marketing & Audience Growth | Amplipath",
+    "metaDescription": "Grow podcast discovery and loyal listenership with positioning, distribution strategy, content promotion, guest outreach and audience analytics support.",
     "eye": "Podcast Marketing",
     "h1": "Audience growth and guest booking strategy for podcast creators.",
     "sub": "Most podcasts fail to grow not from poor content but from invisible discovery — titles and descriptions that don't surface in search, and no repurposing strategy. We fix podcast SEO, book guests that expand your reach and turn long episodes into short-form clips that drive new listeners back to the full show.",
@@ -8332,6 +8444,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "pr": {
+    "metaTitle": "Public Relations Strategy & Media Outreach | Amplipath",
+    "metaDescription": "Amplipath runs PR campaigns that build media relationships, earn press coverage and manage brand reputation across traditional and digital outlets.",
     "eye": "Public Relations",
     "h1": "Media relations and reputation management that builds credibility.",
     "sub": "Earned media coverage builds a kind of trust paid advertising can't replicate. We develop the story angle, build a targeted journalist relationship, write and distribute press releases, and stay ready to support if a reputation issue ever needs a fast, coordinated response.",
@@ -8459,6 +8573,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "sem": {
+    "metaTitle": "SEM & Google Ads Management Services | Amplipath",
+    "metaDescription": "Amplipath manages Google Ads and search engine marketing campaigns, keyword targeting, bid strategy and ad copy, built to generate leads and sales efficiently.",
     "eye": "SEM & Google Ads Management",
     "h1": "Data-driven Google Ads campaigns with transparent ROI reporting.",
     "sub": "Search, Shopping, Display, Performance Max and YouTube — all managed inside Google Ads with conversion tracking configured correctly from day one. We build campaign structures around your actual margins and sales cycle, not generic templates, and report in numbers tied directly to revenue.",
@@ -8628,6 +8744,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "smm": {
+    "metaTitle": "Social Media Marketing Agency | Amplipath",
+    "metaDescription": "Amplipath plans and runs social media marketing campaigns across Instagram, TikTok, Facebook and LinkedIn, built to grow real audiences and engagement.",
     "eye": "Social Media Marketing",
     "h1": "Organic social strategies that build real audience trust.",
     "sub": "Posting consistently isn't a strategy. We build content pillars, a defined brand voice and a posting cadence engineered around how each platform's algorithm actually distributes content — so your social presence builds genuine audience trust, not just follower vanity metrics.",
@@ -8788,6 +8906,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "smmanage": {
+    "metaTitle": "Social Media Management Services | Amplipath",
+    "metaDescription": "Keep your social channels consistent with content planning, publishing, engagement, monitoring and reporting managed by Amplipath specialists.",
     "eye": "Social Media Management",
     "h1": "Done-for-you daily posting, comments and reporting.",
     "sub": "A consistent, professionally managed social presence without the daily time burden on your team. We handle scheduling, comment and DM responses, hashtag research and trend monitoring — then report monthly on exactly what moved the needle.",
@@ -8944,6 +9064,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "sms": {
+    "metaTitle": "SMS & Text Message Marketing Services | Amplipath",
+    "metaDescription": "Reach customers directly with permission-based SMS marketing, automated messaging, segmentation and measurable conversion tracking.",
     "eye": "Text Message Marketing",
     "h1": "SMS campaigns and automated alerts with high open rates.",
     "sub": "SMS open rates dwarf email — but only when opt-in is compliant and frequency is managed carefully. We set up a TCPA-compliant opt-in flow, build promotional and automated sequences, and respect quiet hours so your list stays engaged rather than opting out.",
@@ -9075,6 +9197,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "socialcommerce": {
+    "metaTitle": "Social Commerce Services & Management | Sell on Social | Amplipath",
+    "metaDescription": "Amplipath sets up and manages shoppable social storefronts on Instagram, TikTok and Facebook, turning social engagement directly into sales.",
     "eye": "Social Commerce",
     "h1": "Turn social media into a direct sales channel.",
     "sub": "TikTok Shop, Instagram Shopping and Facebook Shops collapse the gap between discovery and checkout to a single tap. We set up the catalog sync, shoppable content and creator/affiliate programs needed to actually convert social traffic into transactions inside the app.",
@@ -9228,6 +9352,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "steam": {
+    "metaTitle": "Steam Game Marketing & Launch Services | Amplipath",
+    "metaDescription": "Amplipath helps indie and mid-size studios plan Steam page optimization, wishlist campaigns and launch marketing to drive visibility and sales.",
     "eye": "Steam Marketing",
     "h1": "Steam page optimization and wishlist campaigns that convert.",
     "sub": "Steam's algorithm surfaces games based on wishlist velocity, tag relevance and conversion rate — not just ad spend. We optimize your store page copy and key art, run wishlist campaigns across Reddit/TikTok/Meta and build a Steam Next Fest strategy that compounds momentum into launch day.",
@@ -9356,6 +9482,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "strategy": {
+    "metaTitle": "Marketing Strategy & Growth Planning | Amplipath",
+    "metaDescription": "Amplipath builds marketing strategies and growth plans tailored to your business goals, channels, budget and audience, before any execution begins",
     "eye": "Marketing Strategy & Planning",
     "h1": "Full-funnel strategy with clear KPIs and a 90-day roadmap.",
     "sub": "Before any campaign launches, we audit your current marketing, map your funnel and build a 90-day roadmap with specific milestones and KPIs — so every channel decision has a clear reason behind it, not just a recommendation pulled from a generic playbook.",
@@ -9480,6 +9608,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "techseo": {
+    "metaTitle": "Technical SEO Services & Website Audits | Amplipath",
+    "metaDescription": "Identify and fix crawlability, indexing, site architecture, performance and structured-data issues with Amplipath’s technical SEO services.",
     "eye": "Technical SEO Services",
     "h1": "Fix the technical foundation search engines need to rank you.",
     "sub": "No amount of content or link building overcomes a technically broken site. We run a full crawl-level audit covering Core Web Vitals, indexation, site architecture and structured data — then fix the issues directly, so search engines can actually find, render and rank what you've built.",
@@ -9654,6 +9784,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "tiktok": {
+    "metaTitle": "TikTok Ads & TikTok Shop Management | Amplipath",
+    "metaDescription": "Amplipath runs TikTok ad campaigns and manages TikTok Shop setup and listings, helping brands reach TikTok's audience and convert views into purchases.",
     "eye": "TikTok Ads & Shop",
     "h1": "Short-form ad creative and TikTok Shop campaigns that convert.",
     "sub": "TikTok rewards native, trend-aligned creative — not repurposed static ads. We brief and launch in-feed and Spark Ads built specifically for the platform's format, plus TikTok Shop integration where applicable, then optimize weekly based on CTR, CPA and ROAS.",
@@ -9799,6 +9931,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "videoseo": {
+    "metaTitle": "Video SEO Services for YouTube & Search | Amplipath",
+    "metaDescription": "Amplipath optimizes video titles, descriptions and metadata so your content ranks higher on YouTube and appears in Google's video search results.",
     "eye": "Video SEO Services",
     "h1": "Get your videos discovered on YouTube and Google.",
     "sub": "YouTube is the world's second-largest search engine, and well-optimized video content surfaces directly inside Google's own results. We optimize titles, descriptions, tags, thumbnails and schema so your existing video library — and everything you publish going forward — actually gets found.",
@@ -9961,6 +10095,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     ]
   },
   "ytads": {
+    "metaTitle": "YouTube Ads Management Services | Amplipath",
+    "metaDescription": "Reach viewers across YouTube with targeted video campaigns, audience strategy, conversion tracking and continuous optimization.",
     "eye": "YouTube Ads",
     "h1": "Video ad campaigns targeting high-intent viewers.",
     "sub": "YouTube Ads run through Google Ads, giving access to search-intent and remarketing audiences most video platforms can't match. We brief scripts for skip-rate and message retention, manage placement exclusions for brand safety, and report on view rate and downstream conversions.",
@@ -10106,8 +10242,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     "h1": "Shape How AI Describes Your Brand",
     "sub": "AI assistants are increasingly part of the buying journey. Amplipath helps brands understand how they are represented in AI-generated answers, strengthen the digital evidence behind the position they want to own, and monitor how that narrative changes across major answer engines.",
     "shortTitle": "AI Brand Positioning",
-    "metaTitle": "AI Brand Positioning Services | AMPLIPATH",
-    "metaDescription": "Shape how ChatGPT, Gemini, Perplexity and AI search experiences understand and describe your brand with AI brand audits, entity optimization, authority building and ongoing monitoring.",
+    "metaTitle": "AI Brand Positioning & Search Visibility | Amplipath",
+    "metaDescription": "Position your brand for discovery and accurate representation across AI search, answer engines and traditional search with an entity-led strategy.",
     "stats": [
       {
         "n": "AI + Search",
@@ -10337,8 +10473,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     "h1": "Reach the Right Audience Across the Open Web",
     "sub": "Amplipath plans, launches and optimizes data-driven programmatic campaigns across display, video, native and connected environments. We combine audience strategy, automated media buying, creative testing and measurement so your advertising budget can reach more relevant prospects without relying on manual placement decisions.",
     "shortTitle": "Programmatic Advertising",
-    "metaTitle": "Programmatic Advertising Services | AMPLIPATH",
-    "metaDescription": "Programmatic advertising strategy, audience targeting, display, video, connected TV, retargeting, first-party data activation and performance reporting from Amplipath.",
+    "metaTitle": "Programmatic Advertising Services | Amplipath",
+    "metaDescription": "Reach defined audiences across digital channels with programmatic advertising, media planning, targeting, creative delivery and transparent measurement.",
     "stats": [
       {
         "n": "Real-time",
@@ -10570,8 +10706,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     "h1": "Turn Local Searches Into Qualified Leads",
     "sub": "Google Local Services Ads help eligible local businesses connect with people actively searching for nearby services. Amplipath helps you navigate eligibility and verification, configure service areas, manage budgets and lead flow, strengthen your profile, and measure which enquiries are actually becoming customers.",
     "shortTitle": "Google Local Services Ads",
-    "metaTitle": "Google Local Services Ads Management | AMPLIPATH",
-    "metaDescription": "Google Local Services Ads management for eligible local businesses. Amplipath helps with eligibility, setup, verification, service areas, budgets, lead quality, reviews and reporting.",
+    "metaTitle": "Google Local Services Ads Management | Amplipath",
+    "metaDescription": "Generate qualified local leads with Google Local Services Ads setup, profile optimization, budget planning, tracking and ongoing campaign management.",
     "stats": [
       {
         "n": "Pay-per-lead",
@@ -10799,8 +10935,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     "h1": "Find Weaknesses Before They Become Expensive Problems",
     "sub": "A website can look perfectly healthy while outdated software, weak access controls, exposed services or insecure configuration quietly increase business risk. Amplipath reviews the technical security posture of your website and turns findings into a practical remediation plan your team can act on.",
     "shortTitle": "Website Security Analysis",
-    "metaTitle": "Website Security Analysis & Testing | AMPLIPATH",
-    "metaDescription": "Website security audits and vulnerability analysis covering web applications, SSL/TLS, servers, software, malware, access controls, backups and practical remediation recommendations.",
+    "metaTitle": "Website Security Analysis & Testing | Amplipath",
+    "metaDescription": "Amplipath audits your website for security vulnerabilities, malware, outdated plugins and weak points, with a clear report and remediation plan",
     "stats": [
       {
         "n": "Web app",
@@ -11031,8 +11167,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     "h1": "Clear, Search-Ready Copy That Converts",
     "sub": "Your website copy has to explain what you do, answer the questions buyers actually have, support search visibility and give visitors a reason to take the next step. Amplipath combines research, brand voice, SEO, AI-search readiness and conversion strategy to create copy built for both discovery and action.",
     "shortTitle": "Website Copywriting",
-    "metaTitle": "Website Copywriting Services | AMPLIPATH",
-    "metaDescription": "Professional website copywriting for service pages, landing pages, ecommerce, SEO, GEO/AEO, brand voice, content refreshes and conversion-focused websites.",
+    "metaTitle": "Website Copywriting Services for Conversions | Amplipath",
+    "metaDescription": "Amplipath writes website copy that's clear, on-brand and built to convert, from homepages to service pages, written with SEO in mind from the start",
     "stats": [
       {
         "n": "SEO + GEO",
@@ -11266,8 +11402,8 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
     "h1": "Build a Smarter, Compliance-Aware Growth System",
     "sub": "Network marketing businesses need more than motivational social posts. Amplipath builds structured digital systems for legitimate product-led MLM and direct-selling companies — covering customer acquisition, distributor lead generation, landing pages, content, CRM follow-up, automation and performance tracking while keeping compliance at the center of the strategy.",
     "shortTitle": "MLM & Network Marketing",
-    "metaTitle": "MLM & Network Marketing Services | AMPLIPATH",
-    "metaDescription": "Marketing services for legitimate MLM and network marketing businesses including funnels, customer acquisition, distributor lead generation, content, paid media, email, WhatsApp, CRM and onboarding systems.",
+    "metaTitle": "MLM & Network Marketing Services | Amplipath",
+    "metaDescription": "We help MLM and network marketing businesses generate qualified leads, recruit distributors, build downlines and grow their teams through targeted digital marketing.",
     "stats": [
       {
         "n": "Product-led",

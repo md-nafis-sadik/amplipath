@@ -8,6 +8,9 @@ const SERVICE_TO_CASE_STUDY_ID: Record<string, string> = {
   'search-geo-aeo': 'savajay',
   'techseo': 'forbidden',
   'ecoseo': 'amber',
+  'guestpost': 'cursos-online-gis',
+  'localseo': 'lifted-high-garage-doors',
+  'local-seo': 'lifted-high-garage-doors',
 
   // Web & Ecommerce Development
   'ecomdev': 'amber',

@@ -1753,4 +1753,364 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
   box-shadow: none !important;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   PREMIUM MOTION & SCROLL REVEAL SYSTEM
+   Preserves 100% of the original design, layout, colors & fonts
+   while adding fluid, modern micro-interactions and scroll motion.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Smooth hardware-accelerated scroll reveal */
+.motion-ready {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.22s ease,
+              background-color 0.22s ease !important;
+  will-change: opacity, transform;
+}
+
+.motion-ready.revealed {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+/* ── Keyframe Animations ── */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseRadar {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(26, 86, 219, 0.6);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(26, 86, 219, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(26, 86, 219, 0);
+  }
+}
+
+@keyframes greenRadar {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes menuSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalBackdropFade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes modalBoxPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── Hero Top Bar Animated Shimmer ── */
+.hero-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #1A56DB 0%, #7C3AED 35%, #0284c7 70%, #1A56DB 100%) !important;
+  background-size: 200% 200% !important;
+  animation: heroShimmer 9s ease infinite !important;
+}
+
+/* ── Hero Elements Staggered Load ── */
+.hero .h-tag {
+  animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.05s;
+}
+.hero .h-h1 {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.16s;
+}
+.hero .h-sub {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.28s;
+}
+.hero .h-btns {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.38s;
+}
+.hero .p-logo-strip {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.48s;
+}
+
+/* Subpage & Category Hero Load */
+.sp-hero .sp-breadcrumb, .cat-hero .cat-breadcrumb {
+  animation: heroFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.05s;
+}
+.sp-hero .sp-h1, .cat-hero .cat-h1 {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.14s;
+}
+.sp-hero .sp-sub, .cat-hero .cat-sub {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.24s;
+}
+.sp-hero .hero-actions, .cat-hero .cat-cta {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.34s;
+}
+
+/* Live Activity Radar Dot */
+.h-dot {
+  position: relative;
+}
+.h-dot::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: var(--ac);
+  animation: pulseRadar 2.2s infinite;
+}
+
+/* ── Card Elevation & Soft Shadows on Hover ── */
+.scard, .why-card, .ind-card, .cat-card, .pillar, .rc, .wc, .blog-card, .related-card, .cap-card, .audience, .proc {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.22s ease !important;
+}
+
+.scard:hover,
+.why-card:hover,
+.ind-card:hover,
+.cat-card:hover,
+.pillar:hover,
+.rc:hover,
+.wc:hover,
+.blog-card:hover,
+.related-card:hover,
+.cap-card:hover,
+.audience:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 32px -6px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(26, 86, 219, 0.08) !important;
+}
+
+/* Icon Reactive Elevation on Card Hover */
+.scard:hover .sc-ico,
+.why-card:hover .why-ico,
+.ind-card:hover .ind-ico,
+.audience:hover .ico,
+.svc-card:hover .svc-card-ico {
+  transform: scale(1.1) translateY(-2px);
+}
+.sc-ico, .why-ico, .ind-ico, .audience .ico, .svc-card-ico {
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+}
+
+/* Interactive Link Arrow Glide */
+.sc-more, .rc-lk, .related-link, .svc-card-link {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+}
+.scard:hover .sc-more,
+.rc:hover .rc-lk,
+.related-card:hover .related-link,
+.svc-card:hover .svc-card-link {
+  transform: translateX(5px);
+}
+
+/* ── Button Refined Hover, Press & Sheen Motion ── */
+.btn-fill, .btn-primary, .cs-btn-primary, .nx-talk, .cf-btn, .pop-btn, .btn-cw, .cat-cta, .sp-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.18s ease !important;
+}
+.btn-fill:hover, .btn-primary:hover, .cs-btn-primary:hover, .nx-talk:hover, .cf-btn:hover, .pop-btn:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px -2px rgba(26, 86, 219, 0.38) !important;
+}
+.btn-fill:active, .btn-primary:active, .cs-btn-primary:active, .nx-talk:active, .cf-btn:active, .pop-btn:active,
+.btn-out:active, .btn-secondary:active, .nx-rfp:active, .btn-co:active {
+  transform: translateY(0.5px) scale(0.985) !important;
+}
+
+.btn-out, .btn-secondary, .nx-rfp, .btn-co, .sp-btn2 {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.18s ease,
+              color 0.18s ease,
+              background-color 0.18s ease !important;
+}
+.btn-out:hover, .btn-secondary:hover, .nx-rfp:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Subtle Shimmer Sheen sweep on Primary Buttons */
+.btn-fill::after, .btn-primary::after, .cs-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.65s ease;
+  pointer-events: none;
+}
+.btn-fill:hover::after, .btn-primary:hover::after, .cs-btn-primary:hover::after {
+  left: 150%;
+}
+
+/* ── Dropdowns & Mega Menu Fluid Slide Down ── */
+.mega.open {
+  animation: menuSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+.ind-drop-menu.open, .res-drop-menu.open {
+  animation: menuSlideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+/* ── Modals & Popups Smooth Backdrop & Spring Pop ── */
+.pop-wrap.open {
+  animation: modalBackdropFade 0.24s ease-out forwards !important;
+}
+.pop-wrap.open .pop-box {
+  animation: modalBoxPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+/* ── Sticky Navbar Glassmorphism ── */
+.nx-nav {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+/* ── Floating Live Chat Button & Pulse ── */
+#nx-chat-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9998;
+  width: 58px;
+  height: 58px;
+  background: var(--ac);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(26, 86, 219, 0.45);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  border: none;
+}
+#nx-chat-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(26, 86, 219, 0.55);
+}
+#nx-chat-pulse {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  background: #22C55E;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  animation: greenRadar 2s infinite !important;
+}
+
+/* ── Chips & Micro-Pills Spring Lift ── */
+.attr-chip, .chip, .cat-tag-pill, .p-badge {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.18s ease, border-color 0.18s ease;
+}
+.attr-chip:hover, .chip:hover, .cat-tag-pill:hover {
+  transform: translateY(-1.5px);
+}
+
+/* ── Process Steps & Stat Box Interactions ── */
+.proc-step:hover .proc-num, .proc:hover .proc-num {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 5px rgba(26, 86, 219, 0.25);
+}
+.proc-num, .proc .proc-num {
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.26s ease !important;
+}
+
+.stat-box {
+  transition: background-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stat-box:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.stat-box:hover .stat-n {
+  transform: scale(1.06);
+}
+.stat-n {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+}
+
+/* ── Accessibility: Prefers Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .motion-ready {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
 

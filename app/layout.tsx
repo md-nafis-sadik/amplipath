@@ -4,29 +4,37 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ChatWidget from '@/components/ChatWidget';
 import ModalRoot from '@/components/ModalRoot';
+import ScrollMotion from '@/components/ScrollMotion';
 import { ModalProvider } from '@/components/ModalContext';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://amplipath.com'),
-  title: 'AMPLIPATH — Digital Marketing, Technology & AI Agency',
+  title: 'Amplipath | Digital Marketing, SEO, PPC & AI Agency',
   description:
-    'AMPLIPATH is an integrated growth company combining digital marketing, technology and AI into one unified system — grow faster, operate smarter, scale with confidence.',
+    'Amplipath is a digital marketing and AI agency offering SEO, PPC, web and mobile app development, AI automation and AI agents for businesses worldwide.',
   openGraph: {
-    title: 'AMPLIPATH — Digital Marketing, Technology & AI Agency',
+    title: 'Amplipath | Digital Marketing, SEO, PPC & AI Agency',
     description:
-      'AMPLIPATH is an integrated growth company combining digital marketing, technology and AI into one unified system.',
+      'Amplipath is a digital marketing and AI agency offering SEO, PPC, web and mobile app development, AI automation and AI agents for businesses worldwide.',
     url: 'https://amplipath.com',
     siteName: 'AMPLIPATH',
     images: [
       {
-        url: '/images/logo-horizontal.jpg',
+        url: '/images/amplipath-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'AMPLIPATH',
+        alt: 'Amplipath — Digital Marketing, Technology & AI Agency',
       },
     ],
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Amplipath | Digital Marketing, SEO, PPC & AI Agency',
+    description:
+      'Amplipath is a digital marketing and AI agency offering SEO, PPC, web and mobile app development, AI automation and AI agents for businesses worldwide.',
+    images: ['/images/amplipath-og.jpg'],
   },
   icons: {
     icon: '/images/logo-icon.jpg',
@@ -52,6 +60,7 @@ export default function RootLayout({
           <Footer />
           <ModalRoot />
           <ChatWidget />
+          <ScrollMotion />
         </ModalProvider>
       </body>
     </html>

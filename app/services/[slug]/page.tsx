@@ -94,11 +94,21 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       url: canonicalUrl,
       type: 'website',
       siteName: 'AMPLIPATH',
+      images: [
+        {
+          url: '/images/services-og.jpg',
+          width: 1200,
+          height: 630,
+          alt: pageTitle,
+        },
+      ],
+      locale: 'en_US',
     },
     twitter: {
       card: 'summary_large_image',
       title: pageTitle,
       description: pageDesc,
+      images: ['/images/services-og.jpg'],
     },
   };
 }
