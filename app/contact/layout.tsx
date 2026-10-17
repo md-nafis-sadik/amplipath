@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     siteName: 'AMPLIPATH',
     images: [
       {
-        url: '/images/amplipath-og.jpg',
+        url: '/images/logo-horizontal.jpg',
         width: 1200,
         height: 630,
         alt: 'Contact Amplipath',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Amplipath | Request a Free Proposal Today',
     description: 'Hire Amplipath for digital marketing, SEO, PPC, website and mobile app development, analytics, AI automation, and integrated growth solutions tailored to your business.',
-    images: ['/images/amplipath-og.jpg'],
+    images: ['/images/logo-horizontal.jpg'],
   },
 };
 

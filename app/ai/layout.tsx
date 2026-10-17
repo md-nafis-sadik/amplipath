@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     siteName: 'AMPLIPATH',
     images: [
       {
-        url: '/images/amplipath-og.jpg',
+        url: '/images/logo-horizontal.jpg',
         width: 1200,
         height: 630,
         alt: 'Amplipath AI & Technology Solutions',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI & Technology Solutions for Business | Amplipath',
     description: 'Explore Amplipath’s AI and technology solutions, including intelligent automation, AI agents, chatbots, software integrations and application development.',
-    images: ['/images/amplipath-og.jpg'],
+    images: ['/images/logo-horizontal.jpg'],
   },
 };
 

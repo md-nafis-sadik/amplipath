@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     siteName: 'AMPLIPATH',
     images: [
       {
-        url: '/images/amplipath-og.jpg',
+        url: '/images/logo-horizontal.jpg',
         width: 1200,
         height: 630,
         alt: 'Amplipath Client Case Studies & Results',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Work | Client Case Studies & Results | Amplipath',
     description: 'Explore Amplipath case studies across websites, search, paid media, growth strategy, AI automation and app development, with measurable client outcomes.',
-    images: ['/images/amplipath-og.jpg'],
+    images: ['/images/logo-horizontal.jpg'],
   },
 };
 

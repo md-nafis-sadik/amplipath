@@ -332,7 +332,6 @@ export default function Footer() {
             <Link href="/free-audit" className="fl">Free Marketing Audit</Link>
             <button type="button" onClick={() => openModal('rfp')} className="fl text-left bg-transparent border-none p-0 cursor-pointer">Request Proposal (RFP)</button>
             <div className="fc-head" style={{ marginTop: '18px' }}>Offices</div>
-            <p style={{ fontSize: '11.5px', color: '#94a3b8', lineHeight: 1.5, marginBottom: '6px' }}>📍 215 S Monroe St, Tallahassee, FL, US</p>
             <p style={{ fontSize: '11.5px', color: '#94a3b8', lineHeight: 1.5 }}>📍 7 Igele Maroko St, Ondo State, NG</p>
           </div>
         </div>

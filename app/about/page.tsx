@@ -177,20 +177,14 @@ export default function AboutPage() {
   <div className="sec-tag">GLOBAL OFFICES</div>
   <h2 className="sec-h2">Where in the world we work.</h2>
   <div className="aln"></div>
-  <div style={{"display":"grid","gridTemplateColumns":"repeat(2,1fr)","gap":"16px","marginTop":"8px","maxWidth":"640px"}}>
-    <div style={{"background":"var(--acl)","border":"2px solid var(--ac)","borderRadius":"10px","padding":"18px"}}>
-      <div style={{"fontSize":"20px","marginBottom":"8px"}}>🇺🇸</div>
-      <div style={{"fontSize":"14px","fontWeight":"700","color":"#0f172a"}}>United States — Virtual Office</div>
-      <div style={{"fontSize":"12px","color":"#64748b","marginTop":"3px"}}>215 S Monroe St, Tallahassee,<br/>Florida 32301</div>
-      <a href="https://maps.google.com/?q=215+S+Monroe+St+Tallahassee+FL+32301" target="_blank" rel="noopener" style={{"display":"inline-block","marginTop":"8px","fontSize":"11px","color":"var(--ac)","fontWeight":"700","textDecoration":"none"}}>📍 View on map →</a>
-    </div>
+  <div style={{"display":"grid","gridTemplateColumns":"1fr","gap":"16px","marginTop":"8px","maxWidth":"360px"}}>
     <div style={{"background":"var(--acl)","border":"2px solid var(--ac)","borderRadius":"10px","padding":"18px"}}>
       <div style={{"fontSize":"20px","marginBottom":"8px"}}>🇳🇬</div>
       <div style={{"fontSize":"14px","fontWeight":"700","color":"#0f172a"}}>Nigeria — Africa Office</div>
       <div style={{"fontSize":"12px","color":"#64748b","marginTop":"3px"}}>7 Igele Maroko St, Opp Ayadi Junction,<br/>Ondo, Ondo State</div>
       <a href="https://maps.google.com/?q=7+Igele+Maroko+St+Ondo+Ondo+State+Nigeria" target="_blank" rel="noopener" style={{"display":"inline-block","marginTop":"8px","fontSize":"11px","color":"var(--ac)","fontWeight":"700","textDecoration":"none"}}>📍 View on map →</a>
     </div>
-    </div>
+  </div>
 </div>
 
 {/* ══ ABOUT PAGE FAQS ══ */}

@@ -15,7 +15,7 @@ export const metadata = {
     siteName: 'AMPLIPATH',
     images: [
       {
-        url: '/images/amplipath-og.jpg',
+        url: '/images/logo-horizontal.jpg',
         width: 1200,
         height: 630,
         alt: 'Amplipath Resources & Insights',
@@ -28,7 +28,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Resources & Insights | Marketing Guides | Amplipath',
     description: 'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
-    images: ['/images/amplipath-og.jpg'],
+    images: ['/images/logo-horizontal.jpg'],
   },
 };
 

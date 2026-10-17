@@ -9050,7 +9050,7 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       },
       {
         "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
+        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our global team and Ondo office."
       },
       {
         "q": "What tools or platforms do you rely on most for social Media Management?",
@@ -9774,7 +9774,7 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       },
       {
         "q": "Do you work with businesses outside the US and Nigeria?",
-        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our Tallahassee and Ondo offices."
+        "a": "Yes — Amplipath serves clients worldwide across all markets, with particular depth in North American and African markets given our global team and Ondo office."
       }
     ],
     "related": [

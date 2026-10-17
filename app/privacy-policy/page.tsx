@@ -496,8 +496,7 @@ export default function PrivacyPolicyPage() {
                   </a>
                 </div>
                 <div style={{ fontSize: '13px', color: '#64748b', lineHeight: 1.6 }}>
-                  <div>📍 <strong>US Office:</strong> 215 S Monroe St, Tallahassee, FL, US</div>
-                  <div style={{ marginTop: '4px' }}>📍 <strong>Africa Office:</strong> 7 Igele Maroko St, Ondo State, NG</div>
+                  <div>📍 <strong>Africa Office:</strong> 7 Igele Maroko St, Ondo State, NG</div>
                 </div>
               </div>
             </section>

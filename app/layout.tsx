@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     siteName: 'AMPLIPATH',
     images: [
       {
-        url: '/images/amplipath-og.jpg',
+        url: '/images/logo-horizontal.jpg',
         width: 1200,
         height: 630,
-        alt: 'Amplipath — Digital Marketing, Technology & AI Agency',
+        alt: 'AMPLIPATH',
       },
     ],
     locale: 'en_US',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: 'Amplipath | Digital Marketing, SEO, PPC & AI Agency',
     description:
       'Amplipath is a digital marketing and AI agency offering SEO, PPC, web and mobile app development, AI automation and AI agents for businesses worldwide.',
-    images: ['/images/amplipath-og.jpg'],
+    images: ['/images/logo-horizontal.jpg'],
   },
   icons: {
     icon: '/images/logo-icon.jpg',
