@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ChatWidget from '@/components/ChatWidget';
 import ModalRoot from '@/components/ModalRoot';
-import ScrollMotion from '@/components/ScrollMotion';
 import { ModalProvider } from '@/components/ModalContext';
 
 export const metadata: Metadata = {
@@ -60,7 +59,6 @@ export default function RootLayout({
           <Footer />
           <ModalRoot />
           <ChatWidget />
-          <ScrollMotion />
         </ModalProvider>
       </body>
     </html>

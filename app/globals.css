@@ -1759,22 +1759,7 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
    while adding fluid, modern micro-interactions and scroll motion.
    ═══════════════════════════════════════════════════════════ */
 
-/* Smooth hardware-accelerated scroll reveal */
-.motion-ready {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.22s ease,
-              background-color 0.22s ease !important;
-  will-change: opacity, transform;
-}
 
-.motion-ready.revealed {
-  opacity: 1 !important;
-  transform: translateY(0);
-}
 
 /* ── Keyframe Animations ── */
 @keyframes heroFadeUp {
@@ -2106,10 +2091,7 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .motion-ready {
-    opacity: 1 !important;
-    transform: none !important;
-  }
+
 }
 
 
