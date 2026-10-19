@@ -264,8 +264,17 @@ body,
 .lt-linkedin:hover{background:#0A66C2;color:#fff;transform:scale(1.08)}
 .lt-linkedin svg{width:15px;height:15px;fill:currentColor}
 @media (max-width:1100px){.lt-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:700px){.lt-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
-@media (max-width:440px){.lt-grid{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .lt-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .lt-card{padding-bottom:14px}
+  .lt-name{font-size:14px;margin:12px 0 2px;padding:0 6px}
+  .lt-role{font-size:11.5px;margin-bottom:12px;padding:0 6px;line-height:1.35}
+  .lt-linkedin{width:28px;height:28px}
+  .lt-linkedin svg{width:13px;height:13px}
+}
+@media (max-width:340px){
+  .lt-grid{grid-template-columns:1fr;max-width:240px;margin-left:auto;margin-right:auto}
+}
 .wg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .wc{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;overflow:hidden;cursor:pointer;transition:all .18s}
 .wc:hover{box-shadow:0 4px 20px rgba(0,0,0,0.08);transform:translateY(-2px)}
@@ -1751,6 +1760,251 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
 .goog-text-highlight {
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ABOUT PAGE — RESPONSIVE SYSTEM
+   Preserves 100% of the desktop/large layout and styling,
+   while delivering fluid responsiveness on tablets and mobile.
+   ═══════════════════════════════════════════════════════════ */
+
+#pg-about {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.about-hero-h1 {
+  font-size: 38px;
+}
+
+.about-founder-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.about-founder-sidebar {
+  text-align: center;
+}
+
+.about-founder-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 4px solid var(--ac);
+  box-shadow: 0 8px 32px rgba(26, 86, 219, 0.2);
+  margin: 0 auto;
+  display: block;
+}
+
+.about-founder-meta {
+  margin-top: 14px;
+}
+
+.about-founder-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.about-founder-title {
+  font-size: 13px;
+  color: var(--ac);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.about-founder-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #0a66c2;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1.5px solid #0a66c2;
+  border-radius: 6px;
+  padding: 5px 12px;
+  transition: all 0.2s ease;
+}
+
+.about-founder-linkedin:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.about-founder-linkedin span {
+  font-size: 14px;
+}
+
+.about-founder-bio {
+  min-width: 0;
+}
+
+.about-founder-bio p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.about-founder-bio p:last-of-type {
+  margin-bottom: 24px;
+}
+
+.about-mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.about-mv-card {
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.about-mv-card.mission {
+  background: var(--acl);
+  border-left: 4px solid var(--ac);
+}
+
+.about-mv-card.vision {
+  background: #f8fafc;
+  border-left: 4px solid #64748b;
+}
+
+.about-mv-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 6px;
+}
+
+.about-mv-card.mission .about-mv-tag {
+  color: var(--ac);
+}
+
+.about-mv-card.vision .about-mv-tag {
+  color: #475569;
+}
+
+.about-mv-text {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.about-office-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 8px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.about-office-card {
+  background: var(--acl);
+  border: 2px solid var(--ac);
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.about-office-flag {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.about-office-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.about-office-addr {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+.about-office-map {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--ac);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.about-office-map:hover {
+  text-decoration: underline;
+}
+
+/* ── Tablet & Mobile Breakpoints for About Page ── */
+@media (max-width: 900px) {
+  .about-founder-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-founder-sidebar {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .about-founder-avatar {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 860px) and (min-width: 641px) {
+  .vals {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero-h1 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+  .about-founder-grid {
+    gap: 24px;
+  }
+  .about-founder-avatar {
+    width: 160px;
+    height: 160px;
+  }
+  .about-founder-bio p {
+    font-size: 14.5px;
+    line-height: 1.72;
+    margin-bottom: 14px;
+  }
+  .about-founder-bio p:last-of-type {
+    margin-bottom: 20px;
+  }
+  .about-mv-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wstats .ws-n {
+    font-size: 24px !important;
+    word-break: break-word;
+  }
+  .wstats .ws {
+    padding: 16px 14px !important;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════

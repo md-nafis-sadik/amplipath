@@ -15,7 +15,7 @@ export default function AboutPage() {
       <div className="hero">
   <div className="hero-bar"></div>
   <div className="h-tag"><div className="h-dot"></div>ABOUT AMPLIPATH</div>
-  <h1 className="h-h1" style={{"fontSize":"38px"}}>Built for businesses that demand connected, measurable growth.</h1>
+  <h1 className="h-h1 about-hero-h1">Built for businesses that demand connected, measurable growth.</h1>
   <p className="h-sub">Amplipath was created for businesses that need more than isolated services and disconnected providers. We bring marketing, technology, data and AI together around shared objectives—combining global execution standards with the market understanding required to help businesses reach, convert and serve their customers more effectively.</p>
 </div>
 <div className="s-white">
@@ -47,29 +47,38 @@ export default function AboutPage() {
   <div className="sec-tag">FOUNDER & STORY</div>
   <h2 className="sec-h2">Built from a belief that business growth should work as one connected system.</h2>
   <div className="aln"></div>
-  <div style={{"display":"grid","gridTemplateColumns":"280px 1fr","gap":"40px","alignItems":"start","marginTop":"8px"}}>
-    <div style={{"textAlign":"center"}}>
-      <img src="/images/team/adebayo.png" alt="Adebayo Ogungbemile — Founder & CEO, Amplipath" style={{"width":"220px","height":"220px","borderRadius":"50%","objectFit":"cover","objectPosition":"top","border":"4px solid var(--ac)","boxShadow":"0 8px 32px rgba(26,86,219,0.2)"}}/>
-      <div style={{"marginTop":"14px"}}>
-        <div style={{"fontSize":"15px","fontWeight":"700","color":"#0f172a"}}>Adebayo Ogungbemile</div>
-        <div style={{"fontSize":"13px","color":"var(--ac)","fontWeight":"600","marginTop":"3px"}}>Founder & CEO</div>
-        <a href="https://www.linkedin.com/in/adebayo-ogungbemile/" target="_blank" rel="noopener" style={{"display":"inline-flex","alignItems":"center","gap":"5px","marginTop":"10px","fontSize":"12px","color":"#0a66c2","fontWeight":"700","textDecoration":"none","border":"1.5px solid #0a66c2","borderRadius":"6px","padding":"5px 12px"}}>
-          <span style={{"fontSize":"14px"}}>in</span> Connect on LinkedIn
+  <div className="about-founder-grid">
+    <div className="about-founder-sidebar">
+      <img
+        src="/images/team/adebayo.png"
+        alt="Adebayo Ogungbemile — Founder & CEO, Amplipath"
+        className="about-founder-avatar"
+      />
+      <div className="about-founder-meta">
+        <div className="about-founder-name">Adebayo Ogungbemile</div>
+        <div className="about-founder-title">Founder &amp; CEO</div>
+        <a
+          href="https://www.linkedin.com/in/adebayo-ogungbemile/"
+          target="_blank"
+          rel="noopener"
+          className="about-founder-linkedin"
+        >
+          <span>in</span> Connect on LinkedIn
         </a>
       </div>
     </div>
-    <div>
-      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"16px"}}>With 10 years of experience in marketing and business growth, <strong>Adebayo Ogungbemile</strong> founded Amplipath with a singular conviction: that world-class marketing, technology and intelligent systems should not be reserved for large enterprises with enterprise budgets.</p>
-      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"16px"}}>Throughout his career, Adebayo saw the same pattern repeat—startups and growing businesses forced to work with separate marketers, developers and technology providers, often resulting in disconnected strategies, inconsistent execution and limited accountability. He built Amplipath to bring these essential capabilities together through one integrated growth partner.</p>
-      <p style={{"fontSize":"15px","color":"#475569","lineHeight":"1.85","marginBottom":"24px"}}>Today, Amplipath works with businesses globally, bringing strategy and execution together across digital marketing, website and software development, mobile app development, search and analytics, AI automation and intelligent business systems. By integrating these capabilities into one coordinated growth system, we help businesses attract customers, strengthen their digital infrastructure, streamline operations and turn growth opportunities into measurable performance.</p>
-      <div style={{"display":"grid","gridTemplateColumns":"1fr 1fr","gap":"12px"}}>
-        <div style={{"background":"var(--acl)","borderRadius":"10px","padding":"16px","borderLeft":"4px solid var(--ac)"}}>
-          <div style={{"fontSize":"11px","fontWeight":"700","color":"var(--ac)","textTransform":"uppercase","letterSpacing":".08em","marginBottom":"6px"}}>Our Mission</div>
-          <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>To amplify business growth by unifying marketing, technology and AI into integrated systems that turn potential into measurable performance.</div>
+    <div className="about-founder-bio">
+      <p>With 10 years of experience in marketing and business growth, <strong>Adebayo Ogungbemile</strong> founded Amplipath with a singular conviction: that world-class marketing, technology and intelligent systems should not be reserved for large enterprises with enterprise budgets.</p>
+      <p>Throughout his career, Adebayo saw the same pattern repeat—startups and growing businesses forced to work with separate marketers, developers and technology providers, often resulting in disconnected strategies, inconsistent execution and limited accountability. He built Amplipath to bring these essential capabilities together through one integrated growth partner.</p>
+      <p>Today, Amplipath works with businesses globally, bringing strategy and execution together across digital marketing, website and software development, mobile app development, search and analytics, AI automation and intelligent business systems. By integrating these capabilities into one coordinated growth system, we help businesses attract customers, strengthen their digital infrastructure, streamline operations and turn growth opportunities into measurable performance.</p>
+      <div className="about-mv-grid">
+        <div className="about-mv-card mission">
+          <div className="about-mv-tag">Our Mission</div>
+          <div className="about-mv-text">To amplify business growth by unifying marketing, technology and AI into integrated systems that turn potential into measurable performance.</div>
         </div>
-        <div style={{"background":"#f8fafc","borderRadius":"10px","padding":"16px","borderLeft":"4px solid #64748b"}}>
-          <div style={{"fontSize":"11px","fontWeight":"700","color":"#475569","textTransform":"uppercase","letterSpacing":".08em","marginBottom":"6px"}}>Our Vision</div>
-          <div style={{"fontSize":"13px","color":"#475569","lineHeight":"1.6"}}>To become the global standard for integrated growth—where marketing, technology and AI work as one intelligent system.</div>
+        <div className="about-mv-card vision">
+          <div className="about-mv-tag">Our Vision</div>
+          <div className="about-mv-text">To become the global standard for integrated growth—where marketing, technology and AI work as one intelligent system.</div>
         </div>
       </div>
     </div>
@@ -177,12 +186,12 @@ export default function AboutPage() {
   <div className="sec-tag">GLOBAL OFFICES</div>
   <h2 className="sec-h2">Where in the world we work.</h2>
   <div className="aln"></div>
-  <div style={{"display":"grid","gridTemplateColumns":"1fr","gap":"16px","marginTop":"8px","maxWidth":"360px"}}>
-    <div style={{"background":"var(--acl)","border":"2px solid var(--ac)","borderRadius":"10px","padding":"18px"}}>
-      <div style={{"fontSize":"20px","marginBottom":"8px"}}>🇳🇬</div>
-      <div style={{"fontSize":"14px","fontWeight":"700","color":"#0f172a"}}>Nigeria — Africa Office</div>
-      <div style={{"fontSize":"12px","color":"#64748b","marginTop":"3px"}}>7 Igele Maroko St, Opp Ayadi Junction,<br/>Ondo, Ondo State</div>
-      <a href="https://maps.google.com/?q=7+Igele+Maroko+St+Ondo+Ondo+State+Nigeria" target="_blank" rel="noopener" style={{"display":"inline-block","marginTop":"8px","fontSize":"11px","color":"var(--ac)","fontWeight":"700","textDecoration":"none"}}>📍 View on map →</a>
+  <div className="about-office-grid">
+    <div className="about-office-card">
+      <div className="about-office-flag">🇳🇬</div>
+      <div className="about-office-name">Nigeria — Africa Office</div>
+      <div className="about-office-addr">7 Igele Maroko St, Opp Ayadi Junction,<br/>Ondo, Ondo State</div>
+      <a href="https://maps.google.com/?q=7+Igele+Maroko+St+Ondo+Ondo+State+Nigeria" target="_blank" rel="noopener" className="about-office-map">📍 View on map →</a>
     </div>
   </div>
 </div>
