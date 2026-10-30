@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { useModal } from '@/components/ModalContext';
 import { CaseStudy, CASE_STUDIES } from '@/data/caseStudiesData';
+import CaseStudyDetailView from '@/components/CaseStudyDetailView';
 
 function WorkPageContent() {
   const router = useRouter();
@@ -12,18 +14,65 @@ function WorkPageContent() {
 
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
+  const [casesList, setCasesList] = useState<CaseStudy[]>(CASE_STUDIES);
 
-  // Check URL query on mount (e.g. /work?case=amber)
+  useEffect(() => {
+    fetch('/api/portfolio')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.caseStudies && data.caseStudies.length > 0) {
+          const mapped: CaseStudy[] = data.caseStudies.map((dbCs: any) => {
+            const fallback = CASE_STUDIES.find((c) => c.id === dbCs.slug);
+            let keyStats = fallback?.keyStats || [];
+            let servicesDelivered = fallback?.servicesDelivered || [];
+            try {
+              if (dbCs.services) servicesDelivered = typeof dbCs.services === 'string' ? JSON.parse(dbCs.services) : dbCs.services;
+            } catch {}
+            try {
+              if (dbCs.keyStats) keyStats = typeof dbCs.keyStats === 'string' ? JSON.parse(dbCs.keyStats) : dbCs.keyStats;
+            } catch {}
+
+            return {
+              id: dbCs.slug,
+              name: dbCs.name,
+              category: fallback?.category || 'Websites & Search',
+              categorySlug: fallback?.categorySlug || 'websites-search',
+              industry: dbCs.industry || fallback?.industry || '',
+              headline: dbCs.headline || fallback?.headline || '',
+              metric: dbCs.metric || fallback?.metric || '',
+              metricLabel: dbCs.metricLabel || fallback?.metricLabel || '',
+              summary: dbCs.summary || fallback?.summary || '',
+              tags: fallback?.tags || ['Growth & Technology'],
+              image: dbCs.image || fallback?.image || '',
+              gradient: fallback?.gradient || 'from-[#1e293b] to-[#0f172a]',
+              bgGradient: fallback?.bgGradient || 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+              accentColor: fallback?.accentColor || '#2563eb',
+              watermark: fallback?.watermark || 'Case',
+              websiteUrl: dbCs.clientWebsite || fallback?.websiteUrl,
+              websiteDisplay: fallback?.websiteDisplay,
+              heroTitle: fallback?.heroTitle || dbCs.headline || dbCs.name,
+              heroSub: fallback?.heroSub || dbCs.summary || '',
+              keyStats: Array.isArray(keyStats) && keyStats.length > 0 ? keyStats : (fallback?.keyStats || []),
+              theCompany: fallback?.theCompany || dbCs.summary || '',
+              theOpportunity: dbCs.overview || fallback?.theOpportunity || '',
+              ourSolution: dbCs.solution ? [dbCs.solution] : (fallback?.ourSolution || []),
+              theResults: dbCs.results ? [dbCs.results] : (fallback?.theResults || []),
+              servicesDelivered: Array.isArray(servicesDelivered) && servicesDelivered.length > 0 ? servicesDelivered : (fallback?.servicesDelivered || []),
+            };
+          });
+          setCasesList(mapped);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  // Check URL query on mount (e.g. /work?case=amber) and redirect to dedicated SEO page
   useEffect(() => {
     const caseParam = searchParams.get('case');
     if (caseParam) {
-      const found = CASE_STUDIES.find(c => c.id === caseParam);
-      if (found) {
-        setSelectedCase(found);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      router.replace(`/work/${caseParam}`);
     }
-  }, [searchParams]);
+  }, [searchParams, router]);
 
   const handleOpenCase = (c: CaseStudy) => {
     setSelectedCase(c);
@@ -37,235 +86,15 @@ function WorkPageContent() {
 
   // Filtered case studies
   const filteredCases = activeFilter === 'all'
-    ? CASE_STUDIES
-    : CASE_STUDIES.filter(c => c.categorySlug === activeFilter);
+    ? casesList
+    : casesList.filter(c => c.categorySlug === activeFilter);
+
 
   return (
     <div className="bg-white min-h-screen text-[#0f172a] font-sans">
       {/* ══ IF A CASE STUDY IS SELECTED, SHOW DETAIL VIEW ══ */}
       {selectedCase ? (
-        <div className="animate-in fade-in duration-200">
-          {/* Hero Banner */}
-          <div
-            className="text-white py-14 sm:py-20 relative overflow-hidden"
-            style={{ background: selectedCase.bgGradient }}
-          >
-            {selectedCase.image && (
-              <img
-                src={selectedCase.image}
-                alt={selectedCase.name}
-                className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-overlay"
-              />
-            )}
-            <div className="absolute -bottom-10 -right-6 text-white/10 text-9xl font-extrabold select-none pointer-events-none">
-              {selectedCase.watermark}
-            </div>
-            <div className="max-w-[1180px] mx-auto px-4 sm:px-6 relative z-10">
-              <button
-                type="button"
-                onClick={handleCloseCase}
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white/80 hover:text-white transition-colors mb-6 cursor-pointer bg-transparent border-none p-0"
-              >
-                &larr; Back to all projects
-              </button>
-
-              <div className="flex items-center gap-2 text-xs font-bold text-white/70 uppercase tracking-wider mb-2">
-                <span>{selectedCase.name}</span>
-                <span>/</span>
-                <span className="text-white font-extrabold">{selectedCase.category}</span>
-              </div>
-
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight max-w-3xl leading-tight mb-4">
-                {selectedCase.heroTitle}
-              </h1>
-
-              <p className="text-sm sm:text-lg text-white/90 max-w-2xl leading-relaxed">
-                {selectedCase.heroSub}
-              </p>
-
-              {selectedCase.websiteUrl && (
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <a
-                    href={selectedCase.websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white text-slate-900 font-bold text-xs shadow-lg hover:bg-slate-100 hover:scale-[1.02] transition-all cursor-pointer"
-                  >
-                    <svg className="w-3.5 h-3.5 text-[#1A56DB]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <circle cx="12" cy="12" r="10" />
-                      <line x1="2" y1="12" x2="22" y2="12" />
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                    </svg>
-                    <span>Visit Live Project</span>
-                    <span className="text-slate-400 font-bold">&rarr;</span>
-                  </a>
-                  {selectedCase.websiteDisplay && (
-                    <span className="text-xs text-white/80 font-mono bg-white/10 px-3 py-1.5 rounded-md backdrop-blur-xs">
-                      {selectedCase.websiteDisplay}
-                    </span>
-                  )}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Case Detail Body */}
-          <div className="max-w-[1180px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
-            {/* Meta Strip */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 pb-8 border-b border-slate-200">
-              <div>
-                <span className="block text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mb-1">Client</span>
-                <strong className="text-sm sm:text-base font-bold text-slate-900">{selectedCase.name}</strong>
-              </div>
-              <div>
-                <span className="block text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mb-1">Industry</span>
-                <span className="text-sm sm:text-base font-semibold text-slate-800">{selectedCase.industry}</span>
-              </div>
-              <div>
-                <span className="block text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mb-1">Primary Category</span>
-                <span className="text-sm sm:text-base font-semibold text-slate-800">{selectedCase.category}</span>
-              </div>
-              <div>
-                <span className="block text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mb-1">Key Impact</span>
-                <span className="text-base sm:text-lg font-extrabold text-[#1A56DB]">{selectedCase.metric}</span>
-              </div>
-              <div>
-                <span className="block text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mb-1">
-                  {selectedCase.websiteUrl ? 'Live Project' : 'Project Status'}
-                </span>
-                {selectedCase.websiteUrl ? (
-                  <a
-                    href={selectedCase.websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#1A56DB] hover:text-blue-700 hover:underline"
-                  >
-                    <span className="truncate max-w-[140px]">{selectedCase.websiteDisplay || 'Visit Website'}</span>
-                    <span>↗</span>
-                  </a>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-emerald-600">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span> Live & Deployed
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Key Results Numbers Bar */}
-            <div className="my-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {selectedCase.keyStats.map((st, idx) => (
-                <div key={idx} className="p-5 rounded-xl border border-slate-200 bg-slate-50 text-center">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#1A56DB] tracking-tight">{st.value}</div>
-                  <div className="text-xs font-semibold text-slate-600 mt-1">{st.label}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 mt-8">
-              {/* Left Column: Narrative */}
-              <div className="lg:col-span-8 space-y-10">
-                {/* The Company */}
-                <div>
-                  <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#1A56DB] mb-2">The Company</h3>
-                  <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    {selectedCase.theCompany}
-                  </p>
-                </div>
-
-                {/* The Opportunity */}
-                <div>
-                  <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#1A56DB] mb-2">The Opportunity</h3>
-                  <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                    {selectedCase.theOpportunity}
-                  </p>
-                </div>
-
-                {/* Our Solution */}
-                <div>
-                  <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#1A56DB] mb-3">Our Solution</h3>
-                  <div className="space-y-2.5">
-                    {selectedCase.ourSolution.map((sol, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <span className="w-5 h-5 rounded-full bg-blue-100 text-[#1A56DB] text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">✓</span>
-                        <p className="text-sm sm:text-base text-slate-700 m-0 leading-relaxed">{sol}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* The Results */}
-                <div className="p-6 rounded-2xl bg-blue-50/60 border-l-4 border-[#1A56DB]">
-                  <h3 className="text-base font-extrabold text-[#141e30] mb-3">The Outcome</h3>
-                  <div className="space-y-2">
-                    {selectedCase.theResults.map((res, idx) => (
-                      <p key={idx} className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium m-0">
-                        {res}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column: Services & CTA */}
-              <div className="lg:col-span-4 space-y-6">
-                {/* Live Project Website Card */}
-                {selectedCase.websiteUrl && (
-                  <div className="p-6 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50/70 to-slate-50/70 shadow-xs">
-                    <span className="block text-[11px] font-extrabold uppercase tracking-wider text-[#1A56DB] mb-2">Live Project Website</span>
-                    <div className="text-sm font-bold text-slate-900 mb-3 truncate">
-                      {selectedCase.websiteDisplay}
-                    </div>
-                    <a
-                      href={selectedCase.websiteUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-[#1A56DB] hover:bg-[#1243B0] text-white text-xs font-bold transition-all shadow-sm"
-                    >
-                      <span>Visit Live Website</span>
-                      <span>↗</span>
-                    </a>
-                  </div>
-                )}
-
-                <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs">
-                  <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-4">Services Delivered</h4>
-                  <ul className="space-y-2 text-xs font-semibold text-slate-700">
-                    {selectedCase.servicesDelivered.map((srv, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#1A56DB]" />
-                        <span>{srv}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white text-center">
-                  <h4 className="text-lg font-bold text-white mb-2">Want Similar Growth?</h4>
-                  <p className="text-xs text-slate-300 leading-relaxed mb-5">
-                    Let’s evaluate your current performance and build a bespoke execution strategy.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => openModal('rfp')}
-                    className="w-full py-3 px-4 rounded-xl bg-[#1A56DB] hover:bg-[#1243B0] text-white text-xs font-bold transition-all shadow-md cursor-pointer"
-                  >
-                    Start a Project &rarr;
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-14 pt-8 border-t border-slate-200">
-              <button
-                type="button"
-                onClick={handleCloseCase}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 hover:border-[#1A56DB] hover:text-[#1A56DB] text-xs font-bold transition-colors cursor-pointer"
-              >
-                &larr; Back to all projects
-              </button>
-            </div>
-          </div>
-        </div>
+        <CaseStudyDetailView caseStudy={selectedCase} onClose={handleCloseCase} />
       ) : (
         /* ══ HUB VIEW: HERO + FILTERABLE GRID ══ */
         <div>
@@ -400,9 +229,9 @@ function WorkPageContent() {
               {/* Grid of Case Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredCases.map((cs) => (
-                  <div
+                  <Link
                     key={cs.id}
-                    onClick={() => handleOpenCase(cs)}
+                    href={`/work/${cs.id}`}
                     className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col cursor-pointer group"
                   >
                     {/* Visual Card Header with Photo */}
@@ -455,7 +284,7 @@ function WorkPageContent() {
                         <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 

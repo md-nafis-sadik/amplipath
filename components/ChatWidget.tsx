@@ -1,10 +1,16 @@
 'use client';
 import React, { useEffect } from 'react';
 import Script from 'next/script';
+import { usePathname } from 'next/navigation';
 import { useModal } from './ModalContext';
 
 export default function ChatWidget() {
+  const pathname = usePathname();
   const { openModal } = useModal();
+
+  if (pathname?.startsWith('/admin')) {
+    return null;
+  }
   const tawkPropertyId = process.env.NEXT_PUBLIC_TAWK_PROPERTY_ID;
   const tawkWidgetId = process.env.NEXT_PUBLIC_TAWK_WIDGET_ID || 'default';
 

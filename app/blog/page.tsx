@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { getAllPosts } from '@/lib/markdown';
+import Image from 'next/image';
+import { getLivePosts } from '@/lib/markdown';
 
 export const metadata = {
   title: 'Resources & Insights | Marketing Guides | Amplipath',
@@ -32,8 +33,8 @@ export const metadata = {
   },
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage() {
+  const posts = await getLivePosts();
 
   return (
     <div>
@@ -53,21 +54,37 @@ export default function BlogPage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-600 hover:shadow-lg transition-all flex flex-col no-underline text-inherit"
+                className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-blue-600 hover:shadow-lg transition-all flex flex-col no-underline text-inherit group"
               >
-                <div className="text-3xl mb-3">{post.emoji}</div>
-                <div className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">
-                  {post.category}
-                </div>
-                <h2 className="text-lg font-bold text-slate-900 leading-snug mb-3">
-                  {post.title}
-                </h2>
-                <p className="text-sm text-slate-600 leading-relaxed flex-1 mb-4">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between text-xs text-slate-400 pt-3 border-t border-slate-100">
-                  <span>{post.date}</span>
-                  <span>{post.readTime}</span>
+                {post.featuredImage ? (
+                  <div className="relative w-full aspect-video bg-slate-100 overflow-hidden">
+                    <img
+                      src={post.featuredImage}
+                      alt={post.imageAlt || post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                    />
+                  </div>
+                ) : (
+                  <div className="p-6 pb-0 text-3xl mb-1">{post.emoji}</div>
+                )}
+
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">
+                      {post.category}
+                    </div>
+                    <h2 className="text-lg font-bold text-slate-900 leading-snug mb-3 group-hover:text-blue-600 transition">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 mb-4">
+                      {post.excerpt}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-between text-xs text-slate-400 pt-3 border-t border-slate-100 mt-auto">
+                    <span>{post.date}</span>
+                    <span>{post.readTime}</span>
+                  </div>
                 </div>
               </Link>
             ))}

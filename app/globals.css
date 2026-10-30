@@ -34,6 +34,22 @@ body,
 }
 
 /* 3. Utility classes for elements with scroll */
+.admin-scroll::-webkit-scrollbar {
+  display: block !important;
+  width: 4px !important;
+}
+.admin-scroll::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+.admin-scroll::-webkit-scrollbar-thumb {
+  background: #334155 !important;
+  border-radius: 4px !important;
+}
+.admin-scroll {
+  scrollbar-width: thin !important;
+  scrollbar-color: #334155 transparent !important;
+}
+
 .no-scrollbar::-webkit-scrollbar,
 .scrollbar-none::-webkit-scrollbar,
 .hide-scrollbar::-webkit-scrollbar {
@@ -2345,8 +2361,645 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-
 }
+
+/* ═══════════════════════════════════════════════════════════
+   WORDPRESS-GRADE RICH TEXT EDITOR TYPOGRAPHY (TIPTAP)
+   ═══════════════════════════════════════════════════════════ */
+.tiptap {
+  min-height: 420px;
+  outline: none !important;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  color: #64748b;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.tiptap h1 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.tiptap h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.tiptap h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.35;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tiptap h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-top: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.tiptap p {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  margin-bottom: 0.875rem;
+}
+
+.tiptap ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.tiptap ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.tiptap li {
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+}
+
+.tiptap blockquote {
+  border-left: 4px solid #3b82f6;
+  background-color: rgba(15, 23, 42, 0.6);
+  padding: 0.75rem 1.25rem;
+  margin: 1.25rem 0;
+  font-style: italic;
+  color: #94a3b8;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.tiptap pre {
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.8125rem;
+  color: #34d399;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.tiptap code {
+  background-color: #1e293b;
+  color: #60a5fa;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.375rem;
+  font-family: monospace;
+  font-size: 0.85em;
+}
+
+.tiptap pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.tiptap img {
+  border-radius: 0.75rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.25rem 0;
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.tiptap hr {
+  border: none;
+  border-top: 1px solid #1e293b;
+  margin: 2rem 0;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PUBLIC BLOG ARTICLE CONTENT TYPOGRAPHY (.blog-article-prose)
+   ═══════════════════════════════════════════════════════════ */
+.blog-article-prose h1, .prose:not(.tiptap):not(.tiptap-content) h1 { font-size: 2rem; font-weight: 800; color: #0f172a; margin-top: 2rem; margin-bottom: 1rem; line-height: 1.25; letter-spacing: -0.02em; }
+.blog-article-prose h2, .prose:not(.tiptap):not(.tiptap-content) h2 { font-size: 1.625rem; font-weight: 700; color: #0f172a; margin-top: 1.75rem; margin-bottom: 0.75rem; line-height: 1.3; letter-spacing: -0.015em; }
+.blog-article-prose h3, .prose:not(.tiptap):not(.tiptap-content) h3 { font-size: 1.3rem; font-weight: 600; color: #0f172a; margin-top: 1.5rem; margin-bottom: 0.5rem; line-height: 1.35; }
+.blog-article-prose h4, .prose:not(.tiptap):not(.tiptap-content) h4 { font-size: 1.1rem; font-weight: 600; color: #1e293b; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.blog-article-prose p, .prose:not(.tiptap):not(.tiptap-content) p { font-size: 1.0625rem; line-height: 1.8; color: #334155; margin-bottom: 1.25rem; }
+.blog-article-prose ul, .prose:not(.tiptap):not(.tiptap-content) ul { list-style-type: disc; padding-left: 1.75rem; margin-bottom: 1.25rem; color: #334155; }
+.blog-article-prose ol, .prose:not(.tiptap):not(.tiptap-content) ol { list-style-type: decimal; padding-left: 1.75rem; margin-bottom: 1.25rem; color: #334155; }
+.blog-article-prose li, .prose:not(.tiptap):not(.tiptap-content) li { margin-bottom: 0.35rem; line-height: 1.65; }
+.blog-article-prose blockquote, .prose:not(.tiptap):not(.tiptap-content) blockquote { border-left: 4px solid #1A56DB; background: #f8fafc; padding: 1rem 1.5rem; margin: 1.5rem 0; font-style: italic; color: #475569; border-radius: 0 0.75rem 0.75rem 0; }
+.blog-article-prose img, .prose:not(.tiptap):not(.tiptap-content) img { border-radius: 0.75rem; max-width: 100%; height: auto; display: block; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); }
+.blog-article-prose a, .prose:not(.tiptap):not(.tiptap-content) a { color: #1A56DB; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+.blog-article-prose a:hover, .prose:not(.tiptap):not(.tiptap-content) a:hover { color: #1243B0; }
+.blog-article-prose hr, .prose:not(.tiptap):not(.tiptap-content) hr { border: none; border-top: 1px solid #e2e8f0; margin: 2.5rem 0; }
+.blog-article-prose code, .prose:not(.tiptap):not(.tiptap-content) code { background: #f1f5f9; color: #1A56DB; padding: 0.2rem 0.4rem; border-radius: 0.375rem; font-size: 0.875em; font-family: monospace; }
+.blog-article-prose pre, .prose:not(.tiptap):not(.tiptap-content) pre { background: #0f172a; color: #38bdf8; padding: 1.25rem; border-radius: 0.75rem; overflow-x: auto; margin: 1.5rem 0; }
+.blog-article-prose pre code, .prose:not(.tiptap):not(.tiptap-content) pre code { background: transparent; color: inherit; padding: 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   TIPTAP RICH TEXT EDITOR: HIGH-CONTRAST THEMED CANVAS
+   ═══════════════════════════════════════════════════════════ */
+/* 1. DARK CANVAS MODE: CRISP PURE WHITE TYPOGRAPHY */
+.tiptap-dark {
+  background-color: #020617 !important;
+  color: #f1f5f9 !important;
+}
+.tiptap-dark h1 {
+  font-size: 1.875rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  line-height: 1.25 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+.tiptap-dark h2 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.3 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.tiptap-dark h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #f8fafc !important;
+  line-height: 1.35 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.tiptap-dark h4 {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #f1f5f9 !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.35rem !important;
+}
+.tiptap-dark p {
+  font-size: 0.9375rem !important;
+  line-height: 1.75 !important;
+  color: #f1f5f9 !important;
+  margin-bottom: 0.875rem !important;
+}
+.tiptap-dark strong, .tiptap-dark b {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+.tiptap-dark em, .tiptap-dark i {
+  color: #e2e8f0 !important;
+}
+.tiptap-dark ul, .tiptap-dark ol {
+  color: #f1f5f9 !important;
+  margin-bottom: 1rem !important;
+}
+.tiptap-dark li {
+  color: #f1f5f9 !important;
+  margin-bottom: 0.25rem !important;
+}
+.tiptap-dark blockquote {
+  border-left: 4px solid #3b82f6 !important;
+  background-color: rgba(15, 23, 42, 0.7) !important;
+  color: #cbd5e1 !important;
+  padding: 0.75rem 1.25rem !important;
+  margin: 1.25rem 0 !important;
+  border-radius: 0 0.75rem 0.75rem 0 !important;
+}
+
+/* 2. LIGHT / PAPER CANVAS MODE (WORDPRESS / GOOGLE DOCS STYLE) */
+.tiptap-light {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+.tiptap-light h1 {
+  font-size: 1.875rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  line-height: 1.25 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+.tiptap-light h2 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  line-height: 1.3 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.tiptap-light h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  line-height: 1.35 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.tiptap-light h4 {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.35rem !important;
+}
+.tiptap-light p {
+  font-size: 0.9375rem !important;
+  line-height: 1.75 !important;
+  color: #1e293b !important;
+  margin-bottom: 0.875rem !important;
+}
+.tiptap-light strong, .tiptap-light b {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+.tiptap-light em, .tiptap-light i {
+  color: #334155 !important;
+}
+.tiptap-light ul, .tiptap-light ol {
+  color: #1e293b !important;
+  margin-bottom: 1rem !important;
+}
+.tiptap-light li {
+  color: #1e293b !important;
+  margin-bottom: 0.25rem !important;
+}
+.tiptap-light blockquote {
+  border-left: 4px solid #2563eb !important;
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  padding: 0.75rem 1.25rem !important;
+  margin: 1.25rem 0 !important;
+  border-radius: 0 0.75rem 0.75rem 0 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FULL ADMIN PANEL: LIGHT THEME (WORDPRESS / MODERN SAAS)
+   ═══════════════════════════════════════════════════════════ */
+.admin-theme-light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Brand Logo Responsiveness across Light & Dark Themes */
+.admin-theme-light .admin-logo-img-dark {
+  display: none !important;
+}
+.admin-theme-light .admin-logo-img-light {
+  display: block !important;
+}
+.admin-theme-light .admin-logo-text {
+  color: #0f172a !important;
+}
+
+.admin-theme-dark .admin-logo-img-light {
+  display: none !important;
+}
+.admin-theme-dark .admin-logo-img-dark {
+  display: block !important;
+}
+.admin-theme-dark .admin-logo-text {
+  color: #ffffff !important;
+}
+
+/* Sidebar & Header in Light Theme */
+.admin-theme-light aside {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+.admin-theme-light aside .text-slate-300 {
+  color: #334155 !important;
+}
+.admin-theme-light aside .text-slate-400 {
+  color: #64748b !important;
+}
+.admin-theme-light aside .text-slate-500 {
+  color: #94a3b8 !important;
+}
+.admin-theme-light aside .hover\:bg-slate-800:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+.admin-theme-light aside .border-slate-800 {
+  border-color: #e2e8f0 !important;
+}
+.admin-theme-light aside .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+.admin-theme-light aside .bg-slate-950\/80,
+.admin-theme-light aside .bg-slate-950\/60,
+.admin-theme-light aside .bg-slate-950 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+.admin-theme-light aside .bg-slate-800\/80 {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+/* Top Sticky Header */
+.admin-theme-light header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.admin-theme-light .md\:hidden.bg-slate-900 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Main Content Area */
+.admin-theme-light main {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Cards & Panel Containers */
+.admin-theme-light .bg-slate-900,
+.admin-theme-light .bg-slate-900\/70,
+.admin-theme-light .bg-slate-900\/60,
+.admin-theme-light .bg-slate-900\/80 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.admin-theme-light .bg-slate-950,
+.admin-theme-light .bg-slate-950\/70,
+.admin-theme-light .bg-slate-950\/80,
+.admin-theme-light .bg-slate-950\/60 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Inputs, Textareas, Selects */
+.admin-theme-light input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+.admin-theme-light textarea,
+.admin-theme-light select {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.admin-theme-light input::placeholder,
+.admin-theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.admin-theme-light input:focus,
+.admin-theme-light textarea:focus,
+.admin-theme-light select:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Typography in Light Mode */
+.admin-theme-light h1:not(.keep-white),
+.admin-theme-light h2:not(.keep-white),
+.admin-theme-light h3:not(.keep-white),
+.admin-theme-light h4:not(.keep-white),
+.admin-theme-light .text-white {
+  color: #0f172a !important;
+}
+.admin-theme-light .text-slate-100 {
+  color: #0f172a !important;
+}
+.admin-theme-light .text-slate-200 {
+  color: #1e293b !important;
+}
+.admin-theme-light .text-slate-300 {
+  color: #334155 !important;
+}
+.admin-theme-light .text-slate-400 {
+  color: #475569 !important;
+}
+.admin-theme-light .text-slate-500 {
+  color: #64748b !important;
+}
+.admin-theme-light .text-slate-600 {
+  color: #475569 !important;
+}
+
+.admin-theme-dark .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+.admin-theme-dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+.admin-theme-dark .text-slate-500 {
+  color: #64748b !important;
+}
+.admin-theme-dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+/* Preserve Colored Badges & Buttons */
+.admin-theme-light .bg-blue-600,
+.admin-theme-light .bg-blue-600 *,
+.admin-theme-light .bg-blue-500,
+.admin-theme-light .bg-blue-500 *,
+.admin-theme-light .bg-rose-500,
+.admin-theme-light .bg-rose-500 *,
+.admin-theme-light .bg-rose-600,
+.admin-theme-light .bg-rose-600 *,
+.admin-theme-light .bg-emerald-600,
+.admin-theme-light .bg-emerald-600 * {
+  color: #ffffff !important;
+}
+
+/* Deep Professional Accent Colors in Admin Light Mode (High Contrast & Executive) */
+.admin-theme-light .text-emerald-400 {
+  color: #047857 !important;
+}
+.admin-theme-light .text-emerald-500 {
+  color: #065f46 !important;
+}
+.admin-theme-light .bg-emerald-500\/10 {
+  background-color: #ecfdf5 !important;
+  color: #065f46 !important;
+}
+.admin-theme-light .border-emerald-500\/20 {
+  border-color: #a7f3d0 !important;
+}
+.admin-theme-light .text-blue-400 {
+  color: #2563eb !important;
+}
+.admin-theme-light .text-amber-400 {
+  color: #b45309 !important;
+}
+.admin-theme-light .text-rose-400 {
+  color: #dc2626 !important;
+}
+.admin-theme-light .text-purple-400 {
+  color: #7c3aed !important;
+}
+
+/* Secondary Buttons in Light Mode */
+.admin-theme-light .bg-slate-800:not(.bg-blue-600):not(.bg-rose-500):not(.bg-emerald-600),
+.admin-theme-light .bg-slate-800\/80 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+.admin-theme-light .bg-slate-800:not(.bg-blue-600):not(.bg-rose-500):not(.bg-emerald-600):hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Borders in Light Mode */
+.admin-theme-light .border-slate-800,
+.admin-theme-light .border-slate-800\/80,
+.admin-theme-light .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Dashboard Gradient Banner in Light Mode */
+.admin-theme-light .bg-gradient-to-r.from-blue-900\/60 {
+  background: linear-gradient(to right, #eff6ff, #f8fafc) !important;
+  border-color: #bfdbfe !important;
+}
+.admin-theme-light .bg-gradient-to-r.from-blue-900\/60 h1 {
+  color: #1e3a8a !important;
+}
+.admin-theme-light .bg-gradient-to-r.from-blue-900\/60 p {
+  color: #475569 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CRISP MODERN SAAS RADII (LESS ROUNDED EVERYWHERE IN ADMIN)
+   ═══════════════════════════════════════════════════════════ */
+.admin-theme-light .rounded-3xl,
+.admin-theme-dark .rounded-3xl {
+  border-radius: 8px !important;
+}
+
+.admin-theme-light .rounded-2xl,
+.admin-theme-dark .rounded-2xl {
+  border-radius: 8px !important;
+}
+
+.admin-theme-light .rounded-xl,
+.admin-theme-dark .rounded-xl {
+  border-radius: 6px !important;
+}
+
+.admin-theme-light .rounded-lg,
+.admin-theme-dark .rounded-lg {
+  border-radius: 5px !important;
+}
+
+/* Form controls: clean, crisp modern 5px corners */
+.admin-theme-light input:not([type="checkbox"]):not([type="radio"]),
+.admin-theme-dark input:not([type="checkbox"]):not([type="radio"]),
+.admin-theme-light textarea,
+.admin-theme-dark textarea,
+.admin-theme-light select,
+.admin-theme-dark select {
+  border-radius: 5px !important;
+}
+
+/* Buttons: professional 5px corners */
+.admin-theme-light button:not(.rounded-full-force),
+.admin-theme-dark button:not(.rounded-full-force),
+.admin-theme-light a.rounded-xl,
+.admin-theme-dark a.rounded-xl,
+.admin-theme-light a.rounded-lg,
+.admin-theme-dark a.rounded-lg {
+  border-radius: 5px !important;
+}
+
+/* Convert bubbly badges/pills to crisp modern tags, preserving status indicator dots */
+.admin-theme-light span.rounded-full:not(.animate-pulse):not(.w-1):not(.w-2):not(.w-3):not(.w-4):not(.w-5):not(.w-6):not(.w-8):not(.w-10):not(.w-11):not(.w-12):not(.w-16),
+.admin-theme-dark span.rounded-full:not(.animate-pulse):not(.w-1):not(.w-2):not(.w-3):not(.w-4):not(.w-5):not(.w-6):not(.w-8):not(.w-10):not(.w-11):not(.w-12):not(.w-16) {
+  border-radius: 4px !important;
+}
+
+/* Stat Card Icon Boxes: Ensure background is crisp solid color and icon is always pure white in both Light and Dark mode */
+.admin-theme-light .admin-stat-icon-box,
+.admin-theme-dark .admin-stat-icon-box {
+  background-color: #2563eb !important;
+}
+.admin-theme-light .admin-stat-icon-box svg,
+.admin-theme-dark .admin-stat-icon-box svg,
+.admin-theme-light .admin-stat-icon-box *,
+.admin-theme-dark .admin-stat-icon-box * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Table Row Hover: Subtle, gentle tint instead of dark muddy gray */
+.admin-theme-light tbody tr:hover,
+.admin-theme-light tr.hover\:bg-slate-800\/40:hover,
+.admin-theme-light .hover\:bg-slate-800\/40:hover {
+  background-color: #f8fafc !important;
+}
+
+.admin-theme-dark tbody tr:hover,
+.admin-theme-dark tr.hover\:bg-slate-800\/40:hover,
+.admin-theme-dark .hover\:bg-slate-800\/40:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Date & Time Picker Controls (High contrast popups matching theme) */
+.admin-theme-light input[type="date"],
+.admin-theme-light input[type="time"],
+.admin-theme-light input[type="datetime-local"] {
+  color-scheme: light !important;
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+
+.admin-theme-dark input[type="date"],
+.admin-theme-dark input[type="time"],
+.admin-theme-dark input[type="datetime-local"] {
+  color-scheme: dark !important;
+  color: #ffffff !important;
+  background-color: #020617 !important;
+}
+
+/* Ensure all admin action buttons, primary CTAs and header links remain strictly on 1 line */
+.admin-theme-light .border-b button,
+.admin-theme-dark .border-b button,
+.admin-theme-light .border-b a,
+.admin-theme-dark .border-b a,
+.admin-theme-light button.bg-blue-600,
+.admin-theme-dark button.bg-blue-600,
+.admin-theme-light a.bg-blue-600,
+.admin-theme-dark a.bg-blue-600,
+.admin-theme-light button.bg-emerald-600,
+.admin-theme-dark button.bg-emerald-600,
+.admin-theme-light button.bg-rose-600,
+.admin-theme-dark button.bg-rose-600 {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+
+
+
+
+
+
 
 
 

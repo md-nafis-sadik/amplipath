@@ -138,3 +138,18 @@ export async function POST(req: Request) {
     );
   }
 }
+
+export async function GET() {
+  try {
+    const prisma = (await import('@/lib/prisma')).default;
+    const jobs = await prisma.jobListing.findMany({
+      where: { isDeleted: false, status: 'active' },
+      orderBy: { createdAt: 'desc' },
+    });
+    return NextResponse.json({ jobs });
+  } catch (error) {
+    console.warn('GET /api/careers fallback:', error);
+    return NextResponse.json({ jobs: [] });
+  }
+}
+

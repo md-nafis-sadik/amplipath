@@ -10,6 +10,50 @@ export default function AboutPage() {
   const { openModal } = useModal();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  const [teamList, setTeamList] = useState([
+    {
+      name: 'Adebayo Ogungbemile',
+      role: 'Founder & Chief Executive Officer',
+      photoUrl: '/images/team/adebayo.png',
+      linkedinUrl: 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+    },
+    {
+      name: 'Nafis Sadik',
+      role: 'SEO & Web Development Lead',
+      photoUrl: '/images/team/nafis.png',
+      linkedinUrl: 'https://md-nafis-sadik.vercel.app/',
+    },
+    {
+      name: 'Raheel Wazir',
+      role: 'AI Systems & Full-Stack Software Developer',
+      photoUrl: '/images/team/raheel.png',
+      linkedinUrl: 'https://linkedin.com/in/rahil-wazir',
+    },
+    {
+      name: 'Rana Fahad',
+      role: 'Mobile App Developer Lead',
+      photoUrl: '/images/team/rana.png',
+      linkedinUrl: 'https://www.linkedin.com/company/amplipath',
+    },
+    {
+      name: 'Gouravdeep Singh',
+      role: 'Mobile App Developer',
+      photoUrl: '/images/team/gouravdeep.png',
+      linkedinUrl: 'https://www.linkedin.com/in/gouravdeepsingh/',
+    },
+  ]);
+
+  React.useEffect(() => {
+    fetch('/api/team')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.team && data.team.length > 0) {
+          setTeamList(data.team);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   return (
     <div className="pg on" id="pg-about">
       <div className="hero">
@@ -91,97 +135,29 @@ export default function AboutPage() {
   <p className="sec-sub wh" style={{"marginBottom":"24px"}}>Our leadership team brings together deep expertise across SEO and web development, mobile and AI systems, and automation.</p>
   
   <div className="lt-grid">
-    {/* Member 1: Adebayo Ogungbemile */}
-    <div className="lt-card">
-      <div className="lt-photo">
-        <img src="/images/team/adebayo.png" alt="Adebayo Ogungbemile" />
+    {teamList.map((member, idx) => (
+      <div key={idx} className="lt-card">
+        <div className="lt-photo">
+          <img src={member.photoUrl || '/images/team/adebayo.png'} alt={member.name} />
+        </div>
+        <div className="lt-name">{member.name}</div>
+        <div className="lt-role">{member.role}</div>
+        {member.linkedinUrl && (
+          <a
+            className="lt-linkedin"
+            href={member.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${member.name} on LinkedIn`}
+          >
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+        )}
       </div>
-      <div className="lt-name">Adebayo Ogungbemile</div>
-      <div className="lt-role">Founder &amp; Chief Executive Officer</div>
-      <a
-        className="lt-linkedin"
-        href="https://www.linkedin.com/in/adebayo-ogungbemile/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Adebayo Ogungbemile on LinkedIn"
-      >
-        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      </a>
-    </div>
-
-    {/* Member 2: Nafis Sadik */}
-    <div className="lt-card">
-      <div className="lt-photo">
-        <img src="/images/team/nafis.png" alt="Nafis Sadik" />
-      </div>
-      <div className="lt-name">Nafis Sadik</div>
-      <div className="lt-role">SEO &amp; Web Development Lead</div>
-      <a
-        className="lt-linkedin"
-        href="https://md-nafis-sadik.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Nafis Sadik"
-      >
-        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      </a>
-    </div>
-
-    {/* Member 3: Raheel Wazir */}
-    <div className="lt-card">
-      <div className="lt-photo">
-        <img src="/images/team/raheel.png" alt="Raheel Wazir" />
-      </div>
-      <div className="lt-name">Raheel Wazir</div>
-      <div className="lt-role">AI Systems &amp; Full-Stack Software Developer</div>
-      <a
-        className="lt-linkedin"
-        href="https://linkedin.com/in/rahil-wazir"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Raheel Wazir on LinkedIn"
-      >
-        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      </a>
-    </div>
-
-    {/* Member 4: Rana Fahad */}
-    <div className="lt-card">
-      <div className="lt-photo">
-        <img src="/images/team/rana.png" alt="Rana Fahad" />
-      </div>
-      <div className="lt-name">Rana Fahad</div>
-      <div className="lt-role">Mobile App Developer Lead</div>
-      <a
-        className="lt-linkedin"
-        href="https://www.linkedin.com/company/amplipath"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Rana Fahad on LinkedIn"
-      >
-        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      </a>
-    </div>
-
-    {/* Member 5: Gouravdeep Singh */}
-    <div className="lt-card">
-      <div className="lt-photo">
-        <img src="/images/team/gouravdeep.png" alt="Gouravdeep Singh" />
-      </div>
-      <div className="lt-name">Gouravdeep Singh</div>
-      <div className="lt-role">Mobile App Developer</div>
-      <a
-        className="lt-linkedin"
-        href="https://www.linkedin.com/in/gouravdeepsingh/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Gouravdeep Singh on LinkedIn"
-      >
-        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-      </a>
-    </div>
+    ))}
   </div>
 </div>
+
 <div className="s-white">
   <div className="sec-tag">GLOBAL OFFICES</div>
   <h2 className="sec-h2">Where in the world we work.</h2>

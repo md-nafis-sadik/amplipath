@@ -1,0 +1,183 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("editor") // "super_admin", "editor", "author"
+  avatar       String?  @db.Text
+  status       String   @default("active") // "active", "suspended"
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model BlogCategory {
+  id        Int        @id @default(autoincrement())
+  name      String
+  slug      String     @unique
+  posts     BlogPost[]
+  createdAt DateTime   @default(now())
+}
+
+model BlogPost {
+  id              Int           @id @default(autoincrement())
+  title           String
+  slug            String        @unique
+  excerpt         String?       @db.Text
+  contentHtml     String        @db.LongText
+  featuredImage   String?
+  imageAlt        String?
+  authorName      String        @default("Amplipath Team")
+  status          String        @default("draft") // "draft", "published", "scheduled"
+  scheduledAt     DateTime?
+  publishedAt     DateTime?
+  isFeatured      Boolean       @default(false)
+  isDeleted       Boolean       @default(false)
+  deletedAt       DateTime?
+  categoryId      Int?
+  category        BlogCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  tags            String?       @db.Text // JSON or comma-separated
+  relatedPostIds  String?       @db.Text // JSON array of IDs
+  seoTitle        String?
+  metaDescription String?       @db.Text
+  canonicalUrl    String?
+  ogTitle         String?
+  ogDescription   String?       @db.Text
+  ogImage         String?
+  noIndex         Boolean       @default(false)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}
+
+model CaseStudy {
+  id              Int       @id @default(autoincrement())
+  name            String    // Client / Project Name
+  slug            String    @unique
+  industry        String?
+  headline        String?
+  metric          String?   // e.g. "+140%"
+  metricLabel     String?   // e.g. "Organic Traffic Lift"
+  summary         String?   @db.Text
+  image           String?   // Featured hero image
+  clientWebsite   String?
+  appStoreUrl     String?
+  playStoreUrl    String?
+  overview        String?   @db.LongText
+  solution        String?   @db.LongText
+  results         String?   @db.LongText
+  services        String?   @db.Text // JSON array
+  deliverables    String?   @db.Text // JSON array
+  screenshots     String?   @db.Text // JSON array of image URLs
+  keyStats        String?   @db.Text // JSON array of {label, value}
+  status          String    @default("published") // "draft", "published"
+  isFeatured      Boolean   @default(false)
+  isDeleted       Boolean   @default(false)
+  deletedAt       DateTime?
+  seoTitle        String?
+  metaDescription String?   @db.Text
+  canonicalUrl    String?
+  noIndex         Boolean   @default(false)
+  ogTitle         String?
+  ogDescription   String?   @db.Text
+  ogImage         String?
+  sortOrder       Int       @default(0)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model PageSeo {
+  id              Int      @id @default(autoincrement())
+  pagePath        String   @unique // e.g. "/services/seo", "/industries/fintech", "/"
+  pageName        String
+  pageType        String   // "service", "industry", "core"
+  seoTitle        String?  @db.Text
+  metaDescription String?  @db.Text
+  canonicalUrl    String?
+  noIndex         Boolean  @default(false)
+  ogTitle         String?  @db.Text
+  ogDescription   String?  @db.Text
+  ogImage         String?
+  ctaText         String?
+  ctaLink         String?
+  breadcrumbTitle String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model FaqItem {
+  id              Int       @id @default(autoincrement())
+  question        String    @db.Text
+  answer          String    @db.LongText
+  category        String    @default("General")
+  isDeleted       Boolean   @default(false)
+  deletedAt       DateTime?
+  sortOrder       Int       @default(0)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  pageAssignments PageFaq[]
+}
+
+model PageFaq {
+  id        Int      @id @default(autoincrement())
+  pagePath  String   // e.g. "/", "/about", "/services/seo"
+  faqId     Int
+  faq       FaqItem  @relation(fields: [faqId], references: [id], onDelete: Cascade)
+  sortOrder Int      @default(0)
+
+  @@unique([pagePath, faqId])
+}
+
+model TeamMember {
+  id           Int       @id @default(autoincrement())
+  name         String
+  role         String
+  photoUrl     String?
+  bio          String?   @db.Text
+  linkedinUrl  String?
+  portfolioUrl String?
+  sortOrder    Int       @default(0)
+  isActive     Boolean   @default(true)
+  isDeleted    Boolean   @default(false)
+  deletedAt    DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model JobListing {
+  id               Int       @id @default(autoincrement())
+  title            String
+  slug             String    @unique
+  category         String
+  categoryLabel    String
+  employmentType   String    @default("Full-time")
+  location         String    @default("Remote")
+  compensation     String?
+  compDetail       String?
+  description      String    @db.LongText
+  responsibilities String?   @db.Text // JSON array
+  requirements     String?   @db.Text // JSON array
+  status           String    @default("active") // "active", "archived", "draft"
+  isDeleted        Boolean   @default(false)
+  deletedAt        DateTime?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+model MediaFile {
+  id           Int      @id @default(autoincrement())
+  filename     String
+  originalName String
+  mimeType     String
+  sizeBytes    Int
+  url          String
+  altText      String?
+  uploadedAt   DateTime @default(now())
+}

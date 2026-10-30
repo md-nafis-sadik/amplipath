@@ -9,6 +9,10 @@ export default function Footer() {
   const { openModal } = useModal();
   const pathname = usePathname();
 
+  if (pathname?.startsWith('/admin')) {
+    return null;
+  }
+
   const [openRegion, setOpenRegion] = useState<string | null>(null);
   const [showLanguageModal, setShowLanguageModal] = useState(false);
   const [activeTab, setActiveTab] = useState<'All' | 'Americas' | 'Europe' | 'Asia & ME' | 'Africa'>('All');

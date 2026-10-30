@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { SERVICES_DATA, ServiceDetail } from '@/data/servicesData';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import prisma from '@/lib/prisma';
 
 const CATEGORY_ALIAS_MAP: Record<string, string> = {
   'search-geo-aeo': 'seo',
@@ -78,25 +79,43 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   const { data } = resolved;
-  const pageTitle = data.metaTitle || `${data.shortTitle || data.eye} | AMPLIPATH`;
-  const pageDesc = data.metaDescription || data.sub || 'Measurable growth delivered through specialized digital marketing and technology solutions from AMPLIPATH.';
   const canonicalUrl = `/services/${params.slug}`;
+
+  // Query live SEO configuration from MySQL with static fallback
+  let dbSeo: any = null;
+  try {
+    dbSeo = await prisma.pageSeo.findUnique({
+      where: { pagePath: canonicalUrl },
+    });
+  } catch (err) {
+    // DB offline fallback
+  }
+
+  const pageTitle = dbSeo?.seoTitle || data.metaTitle || `${data.shortTitle || data.eye} | AMPLIPATH`;
+  const pageDesc =
+    dbSeo?.metaDescription ||
+    data.metaDescription ||
+    data.sub ||
+    'Measurable growth delivered through specialized digital marketing and technology solutions from AMPLIPATH.';
+  const ogImg = dbSeo?.ogImage || '/images/services-og.jpg';
+  const noIndex = dbSeo?.noIndex || false;
 
   return {
     title: pageTitle,
     description: pageDesc,
+    robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
     alternates: {
-      canonical: canonicalUrl,
+      canonical: dbSeo?.canonicalUrl || canonicalUrl,
     },
     openGraph: {
-      title: pageTitle,
-      description: pageDesc,
+      title: dbSeo?.ogTitle || pageTitle,
+      description: dbSeo?.ogDescription || pageDesc,
       url: canonicalUrl,
       type: 'website',
       siteName: 'AMPLIPATH',
       images: [
         {
-          url: '/images/services-og.jpg',
+          url: ogImg,
           width: 1200,
           height: 630,
           alt: pageTitle,
@@ -106,9 +125,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
     twitter: {
       card: 'summary_large_image',
-      title: pageTitle,
-      description: pageDesc,
-      images: ['/images/services-og.jpg'],
+      title: dbSeo?.ogTitle || pageTitle,
+      description: dbSeo?.ogDescription || pageDesc,
+      images: [ogImg],
     },
   };
 }

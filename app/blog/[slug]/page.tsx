@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { getAllPosts, getPostBySlug } from '@/lib/markdown';
 
 export async function generateStaticParams() {
@@ -8,13 +9,45 @@ export async function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
   if (!post) return { title: 'Article Not Found | AMPLIPATH' };
 
+  const pageTitle = post.seoTitle || `${post.title} | AMPLIPATH`;
+  const pageDesc = post.metaDescription || post.excerpt || '';
+  const canonicalUrl = post.canonicalUrl || `/blog/${post.slug}`;
+  const ogImg = post.ogImage || post.featuredImage || '/images/logo-horizontal.jpg';
+
   return {
-    title: `${post.title} | AMPLIPATH`,
-    description: post.excerpt,
+    title: pageTitle,
+    description: pageDesc,
+    robots: post.noIndex ? { index: false, follow: false } : { index: true, follow: true },
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: post.ogTitle || pageTitle,
+      description: post.ogDescription || pageDesc,
+      url: canonicalUrl,
+      type: 'article',
+      siteName: 'AMPLIPATH',
+      images: [
+        {
+          url: ogImg,
+          width: 1200,
+          height: 630,
+          alt: post.imageAlt || post.title,
+        },
+      ],
+      publishedTime: post.date,
+      authors: [post.authorName || 'AMPLIPATH Research'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.ogTitle || pageTitle,
+      description: post.ogDescription || pageDesc,
+      images: [ogImg],
+    },
   };
 }
 
@@ -25,8 +58,42 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     notFound();
   }
 
+  // Schema.org Article Structured Data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.featuredImage || 'https://amplipath.com/images/logo-horizontal.jpg',
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Organization',
+      name: post.authorName || 'AMPLIPATH Research',
+      url: 'https://amplipath.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'AMPLIPATH',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://amplipath.com/images/logo-horizontal.jpg',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://amplipath.com/blog/${post.slug}`,
+    },
+  };
+
   return (
     <article className="py-12 px-6 md:px-12 bg-white">
+      {/* Schema.org Article JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="max-w-3xl mx-auto">
         <div className="mb-6">
           <Link href="/blog" className="text-xs text-blue-600 font-bold hover:underline">
@@ -50,11 +117,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <span>&middot;</span>
           <span>{post.readTime}</span>
           <span>&middot;</span>
-          <span>By AMPLIPATH Research</span>
+          <span>By {post.authorName || 'AMPLIPATH Research'}</span>
         </div>
 
+        {post.featuredImage && (
+          <div className="mb-8 rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
+            <img
+              src={post.featuredImage}
+              alt={post.imageAlt || post.title}
+              className="w-full h-auto object-cover max-h-[460px]"
+            />
+          </div>
+        )}
+
         <div
-          className="prose prose-slate max-w-none leading-relaxed"
+          className="prose prose-slate blog-article-prose max-w-none leading-relaxed"
           dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }}
         />
 

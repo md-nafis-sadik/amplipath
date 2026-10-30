@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface JobRole {
@@ -239,6 +239,47 @@ const CATEGORIES = [
 export default function CareersPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All Roles');
   const [expandedRoleId, setExpandedRoleId] = useState<string | null>(null);
+  const [roles, setRoles] = useState<JobRole[]>(OPEN_ROLES);
+
+  useEffect(() => {
+    fetch('/api/careers')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.jobs && data.jobs.length > 0) {
+          const mapped: JobRole[] = data.jobs.map((j: any) => {
+            let resp = [];
+            let req = [];
+            try {
+              resp = typeof j.responsibilities === 'string' ? JSON.parse(j.responsibilities) : j.responsibilities || [];
+            } catch {
+              resp = j.responsibilities ? [j.responsibilities] : [];
+            }
+            try {
+              req = typeof j.requirements === 'string' ? JSON.parse(j.requirements) : j.requirements || [];
+            } catch {
+              req = j.requirements ? [j.requirements] : [];
+            }
+            return {
+              id: j.slug,
+              title: j.title,
+              category: j.category as any,
+              categoryLabel: j.categoryLabel || j.category,
+              type: j.employmentType,
+              location: j.location,
+              compensation: j.compensation || 'Project-Based',
+              compDetail: j.compDetail || '',
+              description: j.description,
+              responsibilities: Array.isArray(resp) ? resp : [],
+              requirements: Array.isArray(req) ? req : [],
+            };
+          });
+          setRoles(mapped);
+        }
+      })
+      .catch(() => {
+        // Fall back to OPEN_ROLES
+      });
+  }, []);
 
   // Form State
   const [formData, setFormData] = useState({
@@ -258,8 +299,9 @@ export default function CareersPage() {
   const firstInputRef = useRef<HTMLInputElement>(null);
 
   const filteredRoles = selectedCategory === 'All Roles'
-    ? OPEN_ROLES
-    : OPEN_ROLES.filter(r => r.categoryLabel === selectedCategory);
+    ? roles
+    : roles.filter(r => r.categoryLabel === selectedCategory);
+
 
   const handleApplyClick = (roleTitle: string) => {
     setFormData(prev => ({ ...prev, role: roleTitle }));

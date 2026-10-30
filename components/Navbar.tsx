@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from './Logo';
 import MegaMenu from './MegaMenu';
 import { useModal } from './ModalContext';
@@ -146,6 +147,11 @@ const INDUSTRIES = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  if (pathname?.startsWith('/admin')) {
+    return null;
+  }
+
   const [megaOpen, setMegaOpen] = useState(false);
   const [indOpen, setIndOpen] = useState(false);
   const [resOpen, setResOpen] = useState(false);
