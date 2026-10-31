@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ServiceDetail } from '@/data/servicesData';
 import { useModal } from '@/components/ModalContext';
@@ -15,7 +15,23 @@ interface ServicePageProps {
 export default function ServicePageTemplate({ data, serviceId, parentCategory }: ServicePageProps) {
   const { openModal } = useModal();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [faqsList, setFaqsList] = useState(data.faqs || []);
   const matchedCase = getCaseStudyForService(serviceId);
+
+  useEffect(() => {
+    if (data.faqs) {
+      setFaqsList(data.faqs);
+    }
+    const currentPath = window.location.pathname.replace(/\/$/, '') || `/services/${serviceId}`;
+    fetch(`/api/faqs?page=${encodeURIComponent(currentPath)}`)
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.faqs && json.faqs.length > 0) {
+          setFaqsList(json.faqs);
+        }
+      })
+      .catch(() => {});
+  }, [serviceId, data.faqs]);
 
   if (!data) {
     return <div className="p-20 text-center text-slate-600">Service information not found.</div>;
@@ -380,14 +396,14 @@ export default function ServicePageTemplate({ data, serviceId, parentCategory }:
       )}
 
       {/* ══ FAQS ACCORDION ══ */}
-      {data.faqs && data.faqs.length > 0 && (
+      {faqsList && faqsList.length > 0 && (
         <section className="section gray" id="faq">
           <div className="container">
             <div className="sec-tag">Frequently Asked Questions</div>
             <h2 className="sec-h2">{data.shortTitle || data.eye} FAQs</h2>
             <div className="aln"></div>
             <div className="faq-wrap">
-              {data.faqs.map((faq, idx) => {
+              {faqsList.map((faq, idx) => {
                 const isOpen = openFaqIndex === idx;
                 return (
                   <div key={idx} className={`faq-item ${isOpen ? 'open' : ''}`}>

@@ -31,6 +31,7 @@ interface FaqItem {
   answer: string;
   category: string;
   sortOrder: number;
+  serialOrder?: number;
   updatedAt: string;
   pageAssignments: PageAssignment[];
 }
@@ -191,6 +192,7 @@ export default function FaqManagerPage() {
             <table className="w-full text-left text-xs">
               <thead className="bg-slate-50 dark:bg-slate-950/60 text-slate-500 dark:text-slate-400 uppercase font-semibold border-b border-slate-200 dark:border-slate-800">
                 <tr>
+                  <th className="py-3.5 px-4 w-12 text-center">#</th>
                   <th className="py-3.5 px-4">Question &amp; Answer</th>
                   <th className="py-3.5 px-4">Category</th>
                   <th className="py-3.5 px-4">Page Assignments</th>
@@ -199,8 +201,15 @@ export default function FaqManagerPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300">
-                {faqs.map((faq) => (
+                {faqs.map((faq, idx) => (
                   <tr key={faq.id} className="hover:bg-slate-50/80 dark:hover:bg-white/[0.03] transition">
+                    {/* Serial Order Number */}
+                    <td className="py-3 px-4 text-center">
+                      <span className="font-mono text-[11px] text-slate-400 font-semibold">
+                        {faq.serialOrder || (page - 1) * 20 + idx + 1}
+                      </span>
+                    </td>
+
                     {/* Question & Answer Excerpt */}
                     <td className="py-3 px-4 max-w-md">
                       <div className="flex items-start gap-2">

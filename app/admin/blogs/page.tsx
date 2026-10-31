@@ -12,6 +12,7 @@ interface PostItem {
   authorName: string;
   status: 'draft' | 'published' | 'scheduled';
   isFeatured: boolean;
+  scheduledAt: string | null;
   publishedAt: string | null;
   updatedAt: string;
   category: { id: number; name: string } | null;
@@ -207,13 +208,32 @@ export default function BlogListPage() {
                       </span>
                     </td>
                     <td className="py-3 px-4 text-slate-400">
-                      {p.publishedAt
-                        ? new Date(p.publishedAt).toLocaleDateString('en-US', {
-                            month: 'short',
-                            day: 'numeric',
-                            year: 'numeric',
-                          })
-                        : '—'}
+                      {p.status === 'scheduled' && p.scheduledAt ? (
+                        <div className="text-xs">
+                          <span className="text-blue-500 font-medium block">
+                            {new Date(p.scheduledAt).toLocaleDateString('en-US', {
+                              month: 'short',
+                              day: 'numeric',
+                              year: 'numeric',
+                            })}
+                          </span>
+                          <span className="text-[11px] text-slate-500">
+                            {new Date(p.scheduledAt).toLocaleTimeString('en-US', {
+                              hour: 'numeric',
+                              minute: '2-digit',
+                              hour12: true,
+                            })}
+                          </span>
+                        </div>
+                      ) : p.publishedAt ? (
+                        new Date(p.publishedAt).toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric',
+                        })
+                      ) : (
+                        '—'
+                      )}
                     </td>
                     <td className="py-3 px-4 text-right">
                       <div className="flex items-center justify-end gap-1">

@@ -748,8 +748,14 @@ export default function CaseStudyForm({ initialData, isEditing }: Props) {
 
       {/* Live Preview Modal */}
       {showPreview && (
-        <div className="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="w-full max-w-3xl bg-slate-900 border border-slate-800 text-white rounded-lg p-6 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto space-y-6">
+        <div
+          className="fixed inset-0 z-[9999] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={() => setShowPreview(false)}
+        >
+          <div
+            className="w-full max-w-3xl bg-slate-900 border border-slate-800 text-white rounded-lg p-6 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto space-y-6"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex items-center justify-between border-b border-slate-800 pb-4">
               <span className="text-xs uppercase font-bold tracking-wider text-blue-400">
                 Case Study Preview

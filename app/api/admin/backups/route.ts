@@ -3,6 +3,8 @@ import prisma from '@/lib/prisma';
 import { getAdminSession } from '@/lib/auth';
 import { normalizeRole } from '@/lib/rbac';
 
+import { exportDatabaseSql } from '@/scripts/export-sql';
+
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
@@ -83,7 +85,20 @@ export async function GET(request: Request) {
       },
     };
 
+    const format = searchParams.get('format') || 'json';
+
     if (download) {
+      if (format === 'sql') {
+        const sql = await exportDatabaseSql();
+        const filename = `amplipath_production_${new Date().toISOString().slice(0, 10)}.sql`;
+        return new NextResponse(sql, {
+          headers: {
+            'Content-Type': 'application/sql',
+            'Content-Disposition': `attachment; filename="${filename}"`,
+          },
+        });
+      }
+
       const filename = `amplipath_backup_${new Date().toISOString().slice(0, 10)}.json`;
       return new NextResponse(JSON.stringify(backupPayload, null, 2), {
         headers: {

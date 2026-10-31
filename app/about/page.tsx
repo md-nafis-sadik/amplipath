@@ -1,14 +1,61 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useModal } from '@/components/ModalContext';
+
+const STATIC_ABOUT_FAQS = [
+  {
+    q: "What makes Amplipath different from other digital marketing agencies?",
+    a: "Amplipath unifies marketing, technology, data and AI under one growth strategy. This means the team attracting traffic can also improve the website or app, connect analytics, automate follow-up and optimize conversion. Clients receive coordinated execution and reporting around business outcomes instead of disconnected campaigns, isolated deliverables or channel metrics that do not show their effect on growth."
+  },
+  {
+    q: "What does “integrated growth” mean at Amplipath?",
+    a: "Integrated growth means connecting marketing, technology, data and AI around the same business objectives. Instead of running advertising, websites, search, analytics and automation as disconnected activities, we design them to work together as one measurable system for attracting customers, improving conversions and supporting business operations."
+  },
+  {
+    q: "Is Amplipath a registered business?",
+    a: "Yes. Amplipath is registered in Nigeria with the Corporate Affairs Commission, or CAC, under registration number 9842325."
+  },
+  {
+    q: "Does Amplipath offer one-time projects and ongoing monthly services?",
+    a: "Yes. Fixed-scope engagements can include audits, strategies, websites, sales funnels, apps and automation systems. Services such as SEO, GEO/AEO, paid media, content, analytics and conversion optimization normally benefit from ongoing engagement because they require testing and refinement. A long-term contract is not automatically assumed; the duration, milestones, renewal conditions and exit terms are explained in the proposal."
+  },
+  {
+    q: "How does Amplipath decide which services our business actually needs?",
+    a: "We begin by understanding your goals, customers, current performance, digital assets, technology, budget and operational challenges. We then identify the most important growth barriers and recommend a prioritised combination of services. We do not assume that every client needs every service we offer."
+  },
+  {
+    q: "Can Amplipath work with our internal team, developers or existing agencies?",
+    a: "Yes. We can work as your primary growth partner or collaborate with your existing marketing, sales, creative, development or technology teams. We define responsibilities, access requirements, approval processes and performance expectations at the beginning so every team understands its role and duplicated work is avoided."
+  },
+  {
+    q: "Will our business own the accounts, data, website, code and digital assets created for us?",
+    a: "We prefer important business assets—including domains, advertising accounts, analytics accounts and approved deliverables—to remain under the client’s ownership or client-controlled access. Any third-party software, licensed assets, reusable frameworks or pre-existing intellectual property will be identified in the proposal or agreement before work begins."
+  },
+  {
+    q: "How does Amplipath use AI while maintaining human oversight and quality?",
+    a: "We use AI to support research, analysis, content workflows, personalization, automation and operational efficiency. Human specialists remain responsible for strategy, quality assurance, brand accuracy, technical decisions and final client-facing outputs. We select AI tools according to the project’s needs rather than using automation where human judgement is more appropriate."
+  }
+];
 
 export default function AboutPage() {
   const router = useRouter();
   const { openModal } = useModal();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [faqsList, setFaqsList] = useState(STATIC_ABOUT_FAQS);
+
+  useEffect(() => {
+    fetch('/api/faqs?page=%2Fabout')
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.faqs && json.faqs.length > 0) {
+          setFaqsList(json.faqs);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const [teamList, setTeamList] = useState([
     {
@@ -180,40 +227,7 @@ export default function AboutPage() {
   <p className="sec-sub">Learn how Amplipath works, what makes us different and what to expect when working with us.</p>
 
   <div className="faq-wrap">
-    {[
-      {
-        q: "What makes Amplipath different from other digital marketing agencies?",
-        a: "Amplipath unifies marketing, technology, data and AI under one growth strategy. This means the team attracting traffic can also improve the website or app, connect analytics, automate follow-up and optimize conversion. Clients receive coordinated execution and reporting around business outcomes instead of disconnected campaigns, isolated deliverables or channel metrics that do not show their effect on growth."
-      },
-      {
-        q: "What does “integrated growth” mean at Amplipath?",
-        a: "Integrated growth means connecting marketing, technology, data and AI around the same business objectives. Instead of running advertising, websites, search, analytics and automation as disconnected activities, we design them to work together as one measurable system for attracting customers, improving conversions and supporting business operations."
-      },
-      {
-        q: "Is Amplipath a registered business?",
-        a: "Yes. Amplipath is registered in Nigeria with the Corporate Affairs Commission, or CAC, under registration number 9842325."
-      },
-      {
-        q: "Does Amplipath offer one-time projects and ongoing monthly services?",
-        a: "Yes. Fixed-scope engagements can include audits, strategies, websites, sales funnels, apps and automation systems. Services such as SEO, GEO/AEO, paid media, content, analytics and conversion optimization normally benefit from ongoing engagement because they require testing and refinement. A long-term contract is not automatically assumed; the duration, milestones, renewal conditions and exit terms are explained in the proposal."
-      },
-      {
-        q: "How does Amplipath decide which services our business actually needs?",
-        a: "We begin by understanding your goals, customers, current performance, digital assets, technology, budget and operational challenges. We then identify the most important growth barriers and recommend a prioritised combination of services. We do not assume that every client needs every service we offer."
-      },
-      {
-        q: "Can Amplipath work with our internal team, developers or existing agencies?",
-        a: "Yes. We can work as your primary growth partner or collaborate with your existing marketing, sales, creative, development or technology teams. We define responsibilities, access requirements, approval processes and performance expectations at the beginning so every team understands its role and duplicated work is avoided."
-      },
-      {
-        q: "Will our business own the accounts, data, website, code and digital assets created for us?",
-        a: "We prefer important business assets—including domains, advertising accounts, analytics accounts and approved deliverables—to remain under the client’s ownership or client-controlled access. Any third-party software, licensed assets, reusable frameworks or pre-existing intellectual property will be identified in the proposal or agreement before work begins."
-      },
-      {
-        q: "How does Amplipath use AI while maintaining human oversight and quality?",
-        a: "We use AI to support research, analysis, content workflows, personalization, automation and operational efficiency. Human specialists remain responsible for strategy, quality assurance, brand accuracy, technical decisions and final client-facing outputs. We select AI tools according to the project’s needs rather than using automation where human judgement is more appropriate."
-      }
-    ].map((faq, idx) => {
+    {faqsList.map((faq, idx) => {
       const isOpen = openFaq === idx;
       return (
         <div className={`faq-item ${isOpen ? 'open' : ''}`} key={idx}>

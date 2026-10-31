@@ -1743,9 +1743,9 @@ body {
   position: static !important;
 }
 
-/* 3. Keep header locked at the top without disruption */
-header,
-header.sticky {
+/* 3. Keep public website header locked at the top without disruption */
+header:not(.admin-header):not(.admin-theme-light header):not(.admin-theme-dark header),
+header.sticky:not(.admin-header):not(.admin-theme-light header):not(.admin-theme-dark header) {
   top: 0 !important;
   z-index: 50 !important;
 }
@@ -2716,7 +2716,13 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
   color: #334155 !important;
 }
 
-/* Top Sticky Header */
+/* Top Sticky Header in Admin Panel */
+.admin-theme-light header,
+.admin-theme-dark header,
+header.admin-header {
+  z-index: 30 !important;
+}
+
 .admin-theme-light header {
   background-color: rgba(255, 255, 255, 0.95) !important;
   border-color: #e2e8f0 !important;
@@ -2813,11 +2819,25 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
   color: #94a3b8 !important;
 }
 
-/* Preserve Colored Badges & Buttons */
+/* Preserve White Text on ALL Colored Buttons, Badges, Links & CTAs in Admin Light Mode */
 .admin-theme-light .bg-blue-600,
 .admin-theme-light .bg-blue-600 *,
 .admin-theme-light .bg-blue-500,
 .admin-theme-light .bg-blue-500 *,
+.admin-theme-light .bg-blue-700,
+.admin-theme-light .bg-blue-700 *,
+.admin-theme-light [class*="bg-blue-"],
+.admin-theme-light [class*="bg-blue-"] *,
+.admin-theme-light [class*="bg-[#1A56DB]"],
+.admin-theme-light [class*="bg-[#1A56DB]"] *,
+.admin-theme-light [class*="bg-[#1546b8]"],
+.admin-theme-light [class*="bg-[#1546b8]"] *,
+.admin-theme-light button[class*="bg-blue"],
+.admin-theme-light button[class*="bg-blue"] *,
+.admin-theme-light a[class*="bg-blue"],
+.admin-theme-light a[class*="bg-blue"] *,
+.admin-theme-light button.text-white,
+.admin-theme-light button.text-white *,
 .admin-theme-light .bg-rose-500,
 .admin-theme-light .bg-rose-500 *,
 .admin-theme-light .bg-rose-600,
@@ -2825,6 +2845,16 @@ iframe.VIpgJd-ZVi9C-x3G2rb-OWXEXe-s2gQvd {
 .admin-theme-light .bg-emerald-600,
 .admin-theme-light .bg-emerald-600 * {
   color: #ffffff !important;
+}
+
+/* Ensure SVG icons inside colored action buttons are strictly white */
+.admin-theme-light .bg-blue-600 svg,
+.admin-theme-light [class*="bg-blue"] svg,
+.admin-theme-light [class*="bg-[#1A56DB]"] svg,
+.admin-theme-light .bg-rose-600 svg,
+.admin-theme-light .bg-emerald-600 svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 /* Deep Professional Accent Colors in Admin Light Mode (High Contrast & Executive) */

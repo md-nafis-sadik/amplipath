@@ -30,6 +30,23 @@ export async function GET(request: Request) {
       ];
     }
 
+    // Auto-promote any scheduled posts whose release time has passed
+    try {
+      await prisma.blogPost.updateMany({
+        where: {
+          isDeleted: false,
+          status: 'scheduled',
+          scheduledAt: { lte: new Date() },
+        },
+        data: {
+          status: 'published',
+          publishedAt: new Date(),
+        },
+      });
+    } catch (schedErr) {
+      console.warn('Auto-promote scheduled posts error:', schedErr);
+    }
+
     const [total, posts, categories] = await Promise.all([
       prisma.blogPost.count({ where }),
       prisma.blogPost.findMany({

@@ -1,35 +1,17 @@
 import type { Metadata } from 'next';
 import ServicesClient from '@/components/ServicesClient';
+import { getPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Our Services | Marketing, Web & AI Solutions | Amplipath',
-  description: "Explore Amplipath's full range of services: SEO, GEO/AEO, paid media, content strategy, analytics, web and app development, and AI automation.",
-  alternates: {
-    canonical: '/services',
-  },
-  openGraph: {
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata('/services', {
     title: 'Our Services | Marketing, Web & AI Solutions | Amplipath',
-    description: "Explore Amplipath's full range of services: SEO, GEO/AEO, paid media, content strategy, analytics, web and app development, and AI automation.",
-    url: '/services',
-    siteName: 'AMPLIPATH',
-    images: [
-      {
-        url: '/images/services-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Amplipath Services — Marketing, Web & AI Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Our Services | Marketing, Web & AI Solutions | Amplipath',
-    description: "Explore Amplipath's full range of services: SEO, GEO/AEO, paid media, content strategy, analytics, web and app development, and AI automation.",
-    images: ['/images/services-og.jpg'],
-  },
-};
+    description:
+      "Explore Amplipath's full range of services: SEO, GEO/AEO, paid media, content strategy, analytics, web and app development, and AI automation.",
+    ogImage: '/images/services-og.jpg',
+  });
+}
 
 export default function ServicesPage() {
   return <ServicesClient />;

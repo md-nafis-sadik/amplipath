@@ -143,7 +143,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       }`}
     >
       {/* Mobile Top Header */}
-      <div className="md:hidden flex items-center justify-between p-4 bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+      <div className="admin-header md:hidden flex items-center justify-between p-4 bg-slate-900 border-b border-slate-800 sticky top-0 z-30">
         <div className="flex items-center gap-2.5">
           <Link href="/admin" className="inline-flex items-center gap-2.5">
             <div className="relative w-7 h-7 flex-shrink-0 flex items-center justify-center">
@@ -311,7 +311,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Main Content Area with Desktop Top Bar */}
       <div className={`flex-1 flex flex-col min-w-0 min-h-screen ${theme === 'light' ? 'bg-slate-50' : 'bg-slate-950'}`}>
         {/* Desktop Sticky Header Bar */}
-        <header className="hidden md:flex h-14 border-b border-slate-800 bg-slate-900/70 backdrop-blur-md px-6 items-center justify-between sticky top-0 z-30 flex-shrink-0">
+        <header className="admin-header hidden md:flex h-14 border-b border-slate-800 bg-slate-900/70 backdrop-blur-md px-6 items-center justify-between sticky top-0 z-30 flex-shrink-0">
           <div className="flex items-center gap-2 text-xs">
             <span className="text-slate-400 font-medium">Amplipath Admin</span>
             <span className="text-slate-600">/</span>

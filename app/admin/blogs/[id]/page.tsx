@@ -33,7 +33,7 @@ export default async function EditBlogPage({ params }: { params: { id: string } 
     imageAlt: post.imageAlt || '',
     authorName: post.authorName,
     status: post.status as 'draft' | 'published' | 'scheduled',
-    scheduledAt: post.scheduledAt ? post.scheduledAt.toISOString().slice(0, 16) : '',
+    scheduledAt: post.scheduledAt ? post.scheduledAt.toISOString() : '',
     isFeatured: post.isFeatured,
     categoryId: post.categoryId || '',
     tags: post.tags || '',

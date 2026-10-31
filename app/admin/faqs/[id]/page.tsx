@@ -35,6 +35,7 @@ export default async function EditFaqPage({ params }: { params: { id: string } }
         question: faq.question,
         answer: faq.answer,
         category: faq.category,
+        sortOrder: faq.sortOrder,
         assignedPages,
       }}
     />

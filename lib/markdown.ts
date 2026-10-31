@@ -58,8 +58,36 @@ export function getAllPosts(): BlogPost[] {
 
 export async function getLivePosts(): Promise<BlogPost[]> {
   try {
+    const now = new Date();
+
+    // Auto-promote any scheduled posts whose release time has passed
+    try {
+      await prisma.blogPost.updateMany({
+        where: {
+          isDeleted: false,
+          status: 'scheduled',
+          scheduledAt: { lte: now },
+        },
+        data: {
+          status: 'published',
+          publishedAt: now,
+        },
+      });
+    } catch (schedErr) {
+      console.warn('Auto-publish check error:', schedErr);
+    }
+
     const dbPosts = await prisma.blogPost.findMany({
-      where: { isDeleted: false, status: 'published' },
+      where: {
+        isDeleted: false,
+        OR: [
+          { status: 'published' },
+          {
+            status: 'scheduled',
+            scheduledAt: { lte: now },
+          },
+        ],
+      },
       include: { category: true },
       orderBy: [{ publishedAt: 'desc' }, { createdAt: 'desc' }],
     });
@@ -97,18 +125,36 @@ export async function getLivePosts(): Promise<BlogPost[]> {
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   // 1. Try querying live MySQL database first
   try {
+    const now = new Date();
     const dbPost = await prisma.blogPost.findUnique({
       where: { slug },
       include: { category: true },
     });
 
-    if (dbPost && !dbPost.isDeleted && dbPost.status === 'published') {
+    const isLive =
+      dbPost &&
+      !dbPost.isDeleted &&
+      (dbPost.status === 'published' ||
+        (dbPost.status === 'scheduled' && dbPost.scheduledAt && dbPost.scheduledAt <= now));
+
+    if (dbPost && isLive) {
+      if (dbPost.status === 'scheduled') {
+        try {
+          await prisma.blogPost.update({
+            where: { id: dbPost.id },
+            data: { status: 'published', publishedAt: dbPost.scheduledAt || now },
+          });
+        } catch (updErr) {
+          console.warn('Error auto-updating scheduled post status:', updErr);
+        }
+      }
+
       return {
         slug: dbPost.slug,
         title: dbPost.title,
         date: dbPost.publishedAt
           ? dbPost.publishedAt.toISOString().split('T')[0]
-          : dbPost.createdAt.toISOString().split('T')[0],
+          : (dbPost.scheduledAt ? dbPost.scheduledAt.toISOString().split('T')[0] : dbPost.createdAt.toISOString().split('T')[0]),
         category: dbPost.category?.name || 'General',
         excerpt: dbPost.excerpt || '',
         emoji: '📝',

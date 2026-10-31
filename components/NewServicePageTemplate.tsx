@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { BuilderServiceItem, commonWhy } from '@/data/newServicesData';
 import { useModal } from '@/components/ModalContext';
@@ -12,6 +12,22 @@ interface NewServicePageTemplateProps {
 export default function NewServicePageTemplate({ service: s }: NewServicePageTemplateProps) {
   const { openModal } = useModal();
   const [openFaqs, setOpenFaqs] = useState<Set<number>>(new Set());
+  const [faqsList, setFaqsList] = useState<Array<[string, string]>>(s.faqs || []);
+
+  useEffect(() => {
+    if (s.faqs) {
+      setFaqsList(s.faqs);
+    }
+    const currentPath = `/services/${s.slug}`;
+    fetch(`/api/faqs?page=${encodeURIComponent(currentPath)}`)
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.faqs && json.faqs.length > 0) {
+          setFaqsList(json.faqs.map((f: any) => [f.q, f.a]));
+        }
+      })
+      .catch(() => {});
+  }, [s.slug, s.faqs]);
 
   const toggleFaq = (index: number) => {
     setOpenFaqs((prev) => {
@@ -251,7 +267,7 @@ export default function NewServicePageTemplate({ service: s }: NewServicePageTem
           <div className="aln"></div>
 
           <div className="faq-wrap">
-            {s.faqs.map(([q, a], idx) => {
+            {faqsList.map(([q, a], idx) => {
               const isOpen = openFaqs.has(idx);
               return (
                 <div key={idx} className={`faq-item ${isOpen ? 'open' : ''}`}>

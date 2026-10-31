@@ -22,6 +22,7 @@ interface FaqFormData {
   question: string;
   answer: string;
   category: string;
+  sortOrder?: number;
   assignedPages: string[];
 }
 
@@ -37,6 +38,7 @@ export default function FaqForm({ initialData, pages, isEditing = false }: FaqFo
   const [question, setQuestion] = useState(initialData?.question || '');
   const [answer, setAnswer] = useState(initialData?.answer || '');
   const [category, setCategory] = useState(initialData?.category || 'General');
+  const [sortOrder, setSortOrder] = useState<number>(initialData?.sortOrder ?? 0);
   const [assignedPages, setAssignedPages] = useState<string[]>(initialData?.assignedPages || []);
   const [pageSearch, setPageSearch] = useState('');
 
@@ -86,6 +88,7 @@ export default function FaqForm({ initialData, pages, isEditing = false }: FaqFo
         question: question.trim(),
         answer: answer.trim(),
         category: category.trim() || 'General',
+        sortOrder: parseInt(String(sortOrder), 10) || 0,
         assignedPages,
       };
 
@@ -186,34 +189,52 @@ export default function FaqForm({ initialData, pages, isEditing = false }: FaqFo
             />
           </div>
 
-          {/* Category */}
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-              Category / Grouping
-            </label>
-            <input
-              type="text"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              placeholder="e.g. General, Web Development, SEO, Pricing"
-              className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-            />
-            <div className="flex flex-wrap items-center gap-1.5 mt-2">
-              <span className="text-[11px] text-slate-400">Quick select:</span>
-              {['General', 'Services', 'Pricing', 'Technical', 'Timeline'].map((preset) => (
-                <button
-                  key={preset}
-                  type="button"
-                  onClick={() => setCategory(preset)}
-                  className={`text-[11px] px-2 py-0.5 rounded border transition ${
-                    category === preset
-                      ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 border-blue-200 dark:border-blue-700/50 font-medium'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:text-slate-900 dark:hover:text-white'
-                  }`}
-                >
-                  {preset}
-                </button>
-              ))}
+          {/* Category & Serial Sort Order */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="sm:col-span-2">
+              <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                Category / Grouping
+              </label>
+              <input
+                type="text"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                placeholder="e.g. General, Web Development, SEO, Pricing"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              />
+              <div className="flex flex-wrap items-center gap-1.5 mt-2">
+                <span className="text-[11px] text-slate-400">Quick select:</span>
+                {['General', 'Services', 'Pricing', 'Technical', 'Timeline'].map((preset) => (
+                  <button
+                    key={preset}
+                    type="button"
+                    onClick={() => setCategory(preset)}
+                    className={`text-[11px] px-2 py-0.5 rounded border transition cursor-pointer ${
+                      category === preset
+                        ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 border-blue-200 dark:border-blue-700/50 font-medium'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    {preset}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                Serial Order Number
+              </label>
+              <input
+                type="number"
+                value={sortOrder}
+                onChange={(e) => setSortOrder(parseInt(e.target.value, 10) || 0)}
+                placeholder="0"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              />
+              <p className="text-[11px] text-slate-400 mt-2">
+                Position sequence when displayed with other FAQs.
+              </p>
             </div>
           </div>
 

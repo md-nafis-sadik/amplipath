@@ -47,9 +47,15 @@ export default function BackupsPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const handleDownload = () => {
+  const handleDownloadJson = () => {
     setDownloading(true);
-    window.location.href = '/api/admin/backups?download=1';
+    window.location.href = '/api/admin/backups?download=1&format=json';
+    setTimeout(() => setDownloading(false), 2000);
+  };
+
+  const handleDownloadSql = () => {
+    setDownloading(true);
+    window.location.href = '/api/admin/backups?download=1&format=sql';
     setTimeout(() => setDownloading(false), 2000);
   };
 
@@ -58,16 +64,31 @@ export default function BackupsPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-white tracking-tight">Database Backups &amp; Export</h1>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Database Backups &amp; Export</h1>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            Export production SQL dumps for cPanel phpMyAdmin migration or JSON snapshots for disaster recovery.
+          </p>
         </div>
-        <button
-          onClick={handleDownload}
-          disabled={downloading}
-          className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-md shadow-sm transition inline-flex items-center gap-1.5 text-xs font-semibold justify-center whitespace-nowrap shrink-0 disabled:opacity-50"
-        >
-          <Download className="w-4 h-4 shrink-0" />
-          <span>{downloading ? 'Preparing...' : 'Download Backup'}</span>
-        </button>
+        <div className="flex items-center gap-2.5">
+          <button
+            onClick={handleDownloadSql}
+            disabled={downloading}
+            className="px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-md shadow-sm transition inline-flex items-center gap-1.5 text-xs justify-center whitespace-nowrap shrink-0 disabled:opacity-50 cursor-pointer"
+            title="Download ready-to-import MySQL .sql dump for cPanel phpMyAdmin"
+          >
+            <Download className="w-4 h-4 shrink-0" />
+            <span>{downloading ? 'Exporting...' : 'Download SQL Dump (.sql)'}</span>
+          </button>
+          <button
+            onClick={handleDownloadJson}
+            disabled={downloading}
+            className="px-4 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-semibold rounded-md shadow-xs transition inline-flex items-center gap-1.5 text-xs justify-center whitespace-nowrap shrink-0 disabled:opacity-50 cursor-pointer"
+            title="Download JSON snapshot"
+          >
+            <Download className="w-4 h-4 shrink-0" />
+            <span>JSON Backup</span>
+          </button>
+        </div>
       </div>
 
       {/* Database Overview Card */}

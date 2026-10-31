@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { SERVICES_DATA, ServiceDetail } from '@/data/servicesData';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 import prisma from '@/lib/prisma';
+import { getLivePageFaqs } from '@/lib/faqs';
 
 const CATEGORY_ALIAS_MAP: Record<string, string> = {
   'search-geo-aeo': 'seo',
@@ -132,11 +133,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ServiceDynamicPage({ params }: { params: { slug: string } }) {
+export default async function ServiceDynamicPage({ params }: { params: { slug: string } }) {
   const resolved = resolveServiceData(params.slug);
   if (!resolved) {
     notFound();
   }
 
-  return <ServicePageTemplate data={resolved.data} serviceId={resolved.serviceId} />;
+  const canonicalUrl = `/services/${params.slug}`;
+  const liveFaqs = await getLivePageFaqs(canonicalUrl, resolved.data.faqs);
+
+  const serviceData = {
+    ...resolved.data,
+    faqs: liveFaqs,
+  };
+
+  return <ServicePageTemplate data={serviceData} serviceId={resolved.serviceId} />;
 }

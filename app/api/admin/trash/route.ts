@@ -12,6 +12,20 @@ export async function GET(request: Request) {
     const limit = Math.min(20, Math.max(1, parseInt(searchParams.get('limit') || '20', 10)));
     const skip = (page - 1) * limit;
 
+    // Auto-purge any items older than 30 days to prevent database bloat
+    const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+    try {
+      await Promise.all([
+        prisma.blogPost.deleteMany({ where: { isDeleted: true, deletedAt: { lte: thirtyDaysAgo } } }),
+        prisma.caseStudy.deleteMany({ where: { isDeleted: true, deletedAt: { lte: thirtyDaysAgo } } }),
+        prisma.faqItem.deleteMany({ where: { isDeleted: true, deletedAt: { lte: thirtyDaysAgo } } }),
+        prisma.teamMember.deleteMany({ where: { isDeleted: true, deletedAt: { lte: thirtyDaysAgo } } }),
+        prisma.jobListing.deleteMany({ where: { isDeleted: true, deletedAt: { lte: thirtyDaysAgo } } }),
+      ]);
+    } catch (pruneErr) {
+      console.warn('Auto-prune trash error:', pruneErr);
+    }
+
     const [blogs, caseStudies, faqs, team, careers] = await Promise.all([
       type === 'all' || type === 'blog'
         ? prisma.blogPost.findMany({

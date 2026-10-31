@@ -1,37 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { getLivePosts } from '@/lib/markdown';
+import { getPageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Resources & Insights | Marketing Guides | Amplipath',
-  description: 'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
-  alternates: {
-    canonical: '/blog',
-  },
-  openGraph: {
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata('/blog', {
     title: 'Resources & Insights | Marketing Guides | Amplipath',
-    description: 'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
-    url: '/blog',
-    siteName: 'AMPLIPATH',
-    images: [
-      {
-        url: '/images/logo-horizontal.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Amplipath Resources & Insights',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Resources & Insights | Marketing Guides | Amplipath',
-    description: 'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
-    images: ['/images/logo-horizontal.jpg'],
-  },
-};
+    description:
+      'Guides, strategy breakdowns and marketing insights from Amplipath, covering SEO, AI search, paid media, web development, Mobile app development, AI Automation and growth strategy',
+  });
+}
 
 export default async function BlogPage() {
   const posts = await getLivePosts();

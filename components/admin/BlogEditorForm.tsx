@@ -92,6 +92,24 @@ function slugify(text: string): string {
     .replace(/^-+/, '');
 }
 
+function toLocalDatetimeString(isoOrUtc: string | null | undefined): string {
+  if (!isoOrUtc) return '';
+  const d = new Date(isoOrUtc);
+  if (isNaN(d.getTime())) {
+    if (typeof isoOrUtc === 'string' && isoOrUtc.length >= 16) {
+      return isoOrUtc.slice(0, 16);
+    }
+    return '';
+  }
+  const pad = (n: number) => String(n).padStart(2, '0');
+  const year = d.getFullYear();
+  const month = pad(d.getMonth() + 1);
+  const day = pad(d.getDate());
+  const hours = pad(d.getHours());
+  const minutes = pad(d.getMinutes());
+  return `${year}-${month}-${day}T${hours}:${minutes}`;
+}
+
 export default function BlogEditorForm({ initialData, categories: initialCategories, isEditing }: Props) {
   const router = useRouter();
   const isSlugCustomized = useRef(Boolean(isEditing && initialData?.slug));
@@ -124,6 +142,7 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
     };
     return {
       ...data,
+      scheduledAt: toLocalDatetimeString(data.scheduledAt),
       contentHtml: markdownToHtml(data.contentHtml || ''),
     };
   });
@@ -239,13 +258,23 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
       hour12: true,
     });
 
+    let relativeStr = '';
     if (diffMs <= 0) {
-      return `${dateStr} at ${timeStr} (Time passed — will publish immediately)`;
+      relativeStr = ' (Time passed — will publish immediately)';
+    } else if (diffHours < 24) {
+      relativeStr = ` (in ~${diffHours} hour${diffHours !== 1 ? 's' : ''})`;
+    } else {
+      relativeStr = ` (in ~${diffDays} day${diffDays !== 1 ? 's' : ''})`;
     }
-    if (diffHours < 24) {
-      return `${dateStr} at ${timeStr} (in ~${diffHours} hour${diffHours !== 1 ? 's' : ''})`;
+
+    let tzName = '';
+    try {
+      tzName = ` · ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
+    } catch {
+      // fallback
     }
-    return `${dateStr} at ${timeStr} (in ~${diffDays} day${diffDays !== 1 ? 's' : ''})`;
+
+    return `${dateStr} at ${timeStr}${tzName}${relativeStr}`;
   };
 
   const handleSubmit = async (overrideStatus?: 'draft' | 'published' | 'scheduled') => {
@@ -267,6 +296,7 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
 
     const targetStatus = overrideStatus || formData.status;
 
+    let finalScheduledAt: string | null = null;
     if (targetStatus === 'scheduled') {
       if (!formData.scheduledAt) {
         setError('Please select a scheduled publication date and time');
@@ -277,6 +307,11 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
         setError('Please enter a valid scheduled date');
         return;
       }
+      finalScheduledAt = sched.toISOString();
+    } else if (targetStatus === 'draft') {
+      finalScheduledAt = null;
+    } else {
+      finalScheduledAt = formData.scheduledAt ? new Date(formData.scheduledAt).toISOString() : null;
     }
 
     setSaving(true);
@@ -285,6 +320,7 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
         ...formData,
         slug: cleanSlug,
         status: targetStatus,
+        scheduledAt: finalScheduledAt,
         publishedAt: targetStatus === 'published' ? new Date().toISOString() : undefined,
       };
 
@@ -729,7 +765,7 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
                   <div>
                     <label className="block text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1">
                       <Clock className="w-3 h-3 text-slate-500" />
-                      <span>Time (24h)</span>
+                      <span>Time (24h · Local)</span>
                     </label>
                     <input
                       type="time"
@@ -866,14 +902,20 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
 
       {/* New Category Modal */}
       {showCatModal && (
-        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="w-full max-w-sm bg-slate-900 border border-slate-800 rounded-lg p-6 shadow-2xl space-y-4">
+        <div
+          className="fixed inset-0 z-[9999] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setShowCatModal(false)}
+        >
+          <div
+            className="w-full max-w-sm bg-slate-900 border border-slate-800 rounded-lg p-6 shadow-2xl space-y-4"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-white">Create New Category</h3>
               <button
                 type="button"
                 onClick={() => setShowCatModal(false)}
-                className="p-1 rounded text-slate-400 hover:text-white transition"
+                className="p-1 rounded text-slate-400 hover:text-white transition cursor-pointer"
                 title="Close"
               >
                 <X className="w-4 h-4" />
@@ -887,18 +929,19 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
                 placeholder="Category Name (e.g. Paid Media)"
                 required
                 className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                autoFocus
               />
               <div className="flex justify-end gap-2 pt-2">
                 <button
                   type="button"
                   onClick={() => setShowCatModal(false)}
-                  className="px-3 py-1.5 rounded-md bg-slate-800 text-slate-300 text-xs"
+                  className="px-3 py-1.5 rounded-md bg-slate-800 text-slate-300 text-xs cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold"
+                  className="px-4 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold cursor-pointer"
                 >
                   Save Category
                 </button>
@@ -910,8 +953,14 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
 
       {/* Live Preview Modal */}
       {showPreview && (
-        <div className="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="w-full max-w-3xl bg-white text-slate-900 rounded-lg p-6 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto space-y-6">
+        <div
+          className="fixed inset-0 z-[9999] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4"
+          onClick={() => setShowPreview(false)}
+        >
+          <div
+            className="w-full max-w-3xl bg-white text-slate-900 rounded-lg p-6 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto space-y-6"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex items-center justify-between border-b pb-4">
               <span className="text-xs uppercase font-bold tracking-wider text-blue-600">
                 Live Article Preview

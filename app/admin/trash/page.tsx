@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Trash2, AlertTriangle, RotateCcw, X } from 'lucide-react';
+import { Trash2, AlertTriangle, RotateCcw, X, Clock } from 'lucide-react';
 import AdminPagination from '@/components/admin/AdminPagination';
 
 interface TrashItem {
@@ -122,17 +122,28 @@ export default function RecycleBinPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-white tracking-tight">Recycle Bin</h1>
+          <h1 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Recycle Bin</h1>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+            Safely recover deleted articles, projects, FAQs, team members, and job openings.
+          </p>
         </div>
         {items.length > 0 && (
           <button
             onClick={handleEmptyTrash}
-            className="px-4 py-2 bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-white font-medium rounded-md border border-rose-500/30 transition inline-flex items-center gap-1.5 text-xs font-semibold justify-center whitespace-nowrap shrink-0"
+            className="px-4 py-2 bg-rose-500/10 hover:bg-rose-600 text-rose-600 dark:text-rose-400 hover:text-white font-medium rounded-md border border-rose-500/20 transition inline-flex items-center gap-1.5 text-xs font-semibold justify-center whitespace-nowrap shrink-0 cursor-pointer"
           >
             <AlertTriangle className="w-4 h-4 shrink-0" />
             <span>Empty Bin</span>
           </button>
         )}
+      </div>
+
+      {/* 30-Day Retention Notice */}
+      <div className="flex items-center gap-2.5 p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg text-xs text-amber-700 dark:text-amber-300">
+        <Clock className="w-4 h-4 shrink-0 text-amber-500" />
+        <span>
+          <strong>30-Day Retention Limit:</strong> Trashed items are automatically purged permanently after 30 days to keep your database lean, fast, and free of obsolete data.
+        </span>
       </div>
 
       {feedbackMsg && (
@@ -198,6 +209,11 @@ export default function RecycleBinPage() {
               label: item.type,
               color: 'bg-slate-800 text-slate-300',
             };
+            const daysRemaining = Math.max(
+              0,
+              30 - Math.floor((Date.now() - new Date(item.deletedAt).getTime()) / (1000 * 60 * 60 * 24))
+            );
+
             return (
               <div
                 key={`${item.type}-${item.id}`}
@@ -212,6 +228,9 @@ export default function RecycleBinPage() {
                     </span>
                     <span className="text-xs text-slate-500">
                       • Deleted {new Date(item.deletedAt).toLocaleDateString()}
+                    </span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                      {daysRemaining === 0 ? 'Purges today' : `${daysRemaining}d left`}
                     </span>
                   </div>
                   <h3 className="text-sm font-semibold text-white leading-snug">{item.title}</h3>

@@ -30,12 +30,14 @@ export async function PUT(
   try {
     const id = parseInt(params.id, 10);
     const body = await request.json();
-    const { question, answer, category, assignedPages } = body;
+    const { question, answer, category, assignedPages, sortOrder } = body;
 
     const existing = await prisma.faqItem.findUnique({ where: { id } });
     if (!existing) {
       return NextResponse.json({ error: 'FAQ not found' }, { status: 404 });
     }
+
+    const newSortOrder = sortOrder !== undefined ? (parseInt(sortOrder, 10) || 0) : existing.sortOrder;
 
     const updated = await prisma.faqItem.update({
       where: { id },
@@ -43,6 +45,7 @@ export async function PUT(
         question: question !== undefined ? question : existing.question,
         answer: answer !== undefined ? answer : existing.answer,
         category: category !== undefined ? category : existing.category,
+        sortOrder: newSortOrder,
       },
     });
 
@@ -53,11 +56,13 @@ export async function PUT(
 
       // Add new assignments with duplicate prevention
       const uniquePages = Array.from(new Set(assignedPages));
-      for (const pagePath of uniquePages) {
+      for (let i = 0; i < uniquePages.length; i++) {
+        const pagePath = uniquePages[i];
         await prisma.pageFaq.create({
           data: {
             pagePath,
             faqId: id,
+            sortOrder: newSortOrder,
           },
         });
       }

@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getAllPosts, getPostBySlug } from '@/lib/markdown';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((p) => ({ slug: p.slug }));
