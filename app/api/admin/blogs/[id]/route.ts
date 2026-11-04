@@ -48,6 +48,11 @@ export async function PUT(
       featuredImage,
       imageAlt,
       authorName,
+      authorRole,
+      authorImage,
+      authorBio,
+      authorLinkedin,
+      readTime,
       status,
       scheduledAt,
       isFeatured,
@@ -74,6 +79,14 @@ export async function PUT(
       }
     }
 
+    let finalReadTime = readTime !== undefined ? readTime : existing.readTime;
+    if (!finalReadTime || !finalReadTime.trim()) {
+      const cHtml = contentHtml !== undefined ? contentHtml : existing.contentHtml;
+      const cExcerpt = excerpt !== undefined ? excerpt : existing.excerpt;
+      const words = (cHtml || cExcerpt || '').replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
+      finalReadTime = `${Math.max(1, Math.round(words / 200))} min read`;
+    }
+
     const updated = await prisma.blogPost.update({
       where: { id },
       data: {
@@ -84,6 +97,11 @@ export async function PUT(
         featuredImage: featuredImage !== undefined ? featuredImage : existing.featuredImage,
         imageAlt: imageAlt !== undefined ? imageAlt : existing.imageAlt,
         authorName: authorName !== undefined ? authorName : existing.authorName,
+        authorRole: authorRole !== undefined ? authorRole : existing.authorRole,
+        authorImage: authorImage !== undefined ? authorImage : existing.authorImage,
+        authorBio: authorBio !== undefined ? authorBio : existing.authorBio,
+        authorLinkedin: authorLinkedin !== undefined ? authorLinkedin : existing.authorLinkedin,
+        readTime: finalReadTime,
         status: status !== undefined ? status : existing.status,
         scheduledAt: scheduledAt ? new Date(scheduledAt) : null,
         publishedAt:

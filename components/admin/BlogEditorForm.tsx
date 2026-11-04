@@ -22,6 +22,11 @@ interface BlogPostData {
   featuredImage: string;
   imageAlt: string;
   authorName: string;
+  authorRole?: string;
+  authorImage?: string;
+  authorBio?: string;
+  authorLinkedin?: string;
+  readTime?: string;
   status: 'draft' | 'published' | 'scheduled';
   scheduledAt: string;
   isFeatured: boolean;
@@ -126,7 +131,13 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
       contentHtml: '',
       featuredImage: '',
       imageAlt: '',
-      authorName: 'Amplipath Team',
+      authorName: 'Adebayo Ogungbemile',
+      authorRole: 'Founder & CEO of Amplipath & Owner of Boostfunders',
+      authorImage: '/images/team/adebayo-ogungbemile-320.jpg',
+      authorBio:
+        'Adebayo Ogungbemile is the founder and CEO of Amplipath, an integrated digital marketing, technology and AI agency. He leads the company’s work across SEO, generative engine optimization (GEO), answer engine optimization (AEO), paid advertising, website and mobile app development, analytics, and AI automation.',
+      authorLinkedin: 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+      readTime: '',
       status: 'draft',
       scheduledAt: '',
       isFeatured: false,
@@ -142,6 +153,11 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
     };
     return {
       ...data,
+      authorRole: data.authorRole || 'Founder & CEO of Amplipath & Owner of Boostfunders',
+      authorImage: data.authorImage || '/images/team/adebayo-ogungbemile-320.jpg',
+      authorBio: data.authorBio !== undefined ? data.authorBio : 'Adebayo Ogungbemile is the founder and CEO of Amplipath, an integrated digital marketing, technology and AI agency.',
+      authorLinkedin: data.authorLinkedin || 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+      readTime: data.readTime || '',
       scheduledAt: toLocalDatetimeString(data.scheduledAt),
       contentHtml: markdownToHtml(data.contentHtml || ''),
     };
@@ -314,10 +330,17 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
       finalScheduledAt = formData.scheduledAt ? new Date(formData.scheduledAt).toISOString() : null;
     }
 
+    let effectiveReadTime = formData.readTime?.trim();
+    if (!effectiveReadTime) {
+      const words = (formData.contentHtml || formData.excerpt || '').replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
+      effectiveReadTime = `${Math.max(1, Math.round(words / 200))} min read`;
+    }
+
     setSaving(true);
     try {
       const payload = {
         ...formData,
+        readTime: effectiveReadTime,
         slug: cleanSlug,
         status: targetStatus,
         scheduledAt: finalScheduledAt,
@@ -869,11 +892,29 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
             </div>
           </div>
 
-          {/* Author & Tags */}
+          {/* Author Profile & Read Time */}
           <div className="bg-slate-900 border border-slate-800 rounded-lg p-5 space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-              Author &amp; Tags
-            </h3>
+            <div className="flex items-center justify-between">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                Author &amp; Byline Profile
+              </h3>
+              <button
+                type="button"
+                onClick={() => {
+                  setFormData((prev) => ({
+                    ...prev,
+                    authorName: 'Adebayo Ogungbemile',
+                    authorRole: 'Founder & CEO of Amplipath & Owner of Boostfunders',
+                    authorImage: '/images/team/adebayo-ogungbemile-320.jpg',
+                    authorBio: 'Adebayo Ogungbemile is the founder and CEO of Amplipath, an integrated digital marketing, technology and AI agency. He leads the company’s work across SEO, generative engine optimization (GEO), answer engine optimization (AEO), paid advertising, website and mobile app development, analytics, and AI automation. Through one integrated team, Amplipath helps businesses attract qualified customers, increase conversions and build scalable digital systems. Adebayo also owns Boostfunders, a crowdfunding marketing agency that helps creators and businesses launch and grow campaigns on Kickstarter, Indiegogo and other leading crowdfunding platforms.',
+                    authorLinkedin: 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+                  }));
+                }}
+                className="text-[10px] text-blue-400 hover:text-blue-300 font-semibold"
+              >
+                Set Adebayo (Default)
+              </button>
+            </div>
 
             <div>
               <label className="block text-xs text-slate-400 mb-1">Author Name</label>
@@ -881,8 +922,77 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
                 type="text"
                 value={formData.authorName}
                 onChange={(e) => setFormData({ ...formData, authorName: e.target.value })}
-                placeholder="Amplipath Team"
+                placeholder="Adebayo Ogungbemile"
                 className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs text-slate-400 mb-1">Author Position / Role</label>
+              <input
+                type="text"
+                value={formData.authorRole || ''}
+                onChange={(e) => setFormData({ ...formData, authorRole: e.target.value })}
+                placeholder="Founder & CEO of Amplipath & Owner of Boostfunders"
+                className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs text-slate-400 mb-1">Author Photo URL</label>
+              <input
+                type="text"
+                value={formData.authorImage || ''}
+                onChange={(e) => setFormData({ ...formData, authorImage: e.target.value })}
+                placeholder="/images/team/adebayo-ogungbemile-320.jpg"
+                className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-[11px]"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs text-slate-400 mb-1">Author LinkedIn URL</label>
+              <input
+                type="text"
+                value={formData.authorLinkedin || ''}
+                onChange={(e) => setFormData({ ...formData, authorLinkedin: e.target.value })}
+                placeholder="https://www.linkedin.com/in/adebayo-ogungbemile/"
+                className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-[11px]"
+              />
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between mb-1">
+                <label className="block text-xs text-slate-400">Reading Time</label>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const text = formData.contentHtml.replace(/<[^>]*>/g, ' ');
+                    const words = text.trim().split(/\s+/).filter(Boolean).length;
+                    const mins = Math.max(1, Math.round(words / 200));
+                    setFormData((prev) => ({ ...prev, readTime: `${mins} min read` }));
+                  }}
+                  className="text-[10px] text-slate-400 hover:text-white"
+                >
+                  Auto-calculate
+                </button>
+              </div>
+              <input
+                type="text"
+                value={formData.readTime || ''}
+                onChange={(e) => setFormData({ ...formData, readTime: e.target.value })}
+                placeholder="e.g. 5 min read (leave blank to auto-calculate)"
+                className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs text-slate-400 mb-1">Author Bio / Details</label>
+              <textarea
+                rows={4}
+                value={formData.authorBio || ''}
+                onChange={(e) => setFormData({ ...formData, authorBio: e.target.value })}
+                placeholder="Detailed author background displayed in the About the Author card..."
+                className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 leading-relaxed"
               />
             </div>
 
@@ -892,7 +1002,7 @@ export default function BlogEditorForm({ initialData, categories: initialCategor
                 type="text"
                 value={formData.tags}
                 onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-                placeholder="SEO, Generative AI, LLMs, Perplexity"
+                placeholder="AEO, GEO, AI Search, Citations"
                 className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-md text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>

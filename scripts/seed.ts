@@ -99,6 +99,61 @@ async function main() {
     console.log(`✅ ${postFiles.length} blog posts imported from /posts.`);
   }
 
+  // 3b. Seed the comprehensive "What Are GEO and AEO?" post
+  const geoHtmlPath = path.join(process.cwd(), 'data', 'what-are-geo-and-aeo-content.html');
+  if (fs.existsSync(geoHtmlPath)) {
+    const geoContentHtml = fs.readFileSync(geoHtmlPath, 'utf8');
+    await prisma.blogPost.upsert({
+      where: { slug: 'what-are-geo-and-aeo' },
+      update: {
+        title: 'What Are GEO and AEO? How to Get Cited by AI Search',
+        excerpt: 'Learn what GEO and AEO mean, how ChatGPT, Gemini, Perplexity and Google AI Overviews choose sources, and the steps that make your pages worth citing.',
+        contentHtml: geoContentHtml,
+        featuredImage: '/images/blog/what-are-geo-and-aeo-cover.webp',
+        imageAlt: 'What Are GEO and AEO? How to Get Cited by AI Search: Amplipath guide cover showing cited documents and search icons',
+        authorName: 'Adebayo Ogungbemile',
+        authorRole: 'Founder & CEO of Amplipath & Owner of Boostfunders',
+        authorImage: '/images/team/adebayo-ogungbemile-320.jpg',
+        authorBio: 'Adebayo Ogungbemile is the founder and CEO of <a href="https://amplipath.com/about">Amplipath</a>, an integrated digital marketing, technology and AI agency. He leads the company’s work across SEO, generative engine optimization (GEO), answer engine optimization (AEO), paid advertising, website and mobile app development, analytics, and AI automation. Through one integrated team, Amplipath helps businesses attract qualified customers, increase conversions and build scalable digital systems. Adebayo also owns <a href="https://boostfunders.com" target="_blank" rel="noopener">Boostfunders</a>, a crowdfunding marketing agency that helps creators and businesses launch and grow campaigns on Kickstarter, Indiegogo and other leading crowdfunding platforms.',
+        authorLinkedin: 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+        readTime: '20 min read',
+        status: 'published',
+        publishedAt: new Date('2026-10-27T10:00:00.000Z'),
+        categoryId: catGeo.id,
+        seoTitle: 'What Are GEO and AEO? How to Get Cited by AI Search',
+        metaDescription: 'Learn what GEO and AEO mean, how ChatGPT, Gemini, Perplexity and Google AI Overviews choose sources, and the steps that make your pages worth citing.',
+        canonicalUrl: '/blog/what-are-geo-and-aeo',
+        ogTitle: 'What Are GEO and AEO? How to Get Cited by AI Search',
+        ogDescription: 'Learn what GEO and AEO mean, how ChatGPT, Gemini, Perplexity and Google AI Overviews choose sources, and the steps that make your pages worth citing.',
+        ogImage: '/images/blog/what-are-geo-and-aeo-og.jpg',
+      },
+      create: {
+        title: 'What Are GEO and AEO? How to Get Cited by AI Search',
+        slug: 'what-are-geo-and-aeo',
+        excerpt: 'Learn what GEO and AEO mean, how ChatGPT, Gemini, Perplexity and Google AI Overviews choose sources, and the steps that make your pages worth citing.',
+        contentHtml: geoContentHtml,
+        featuredImage: '/images/blog/what-are-geo-and-aeo-cover.webp',
+        imageAlt: 'What Are GEO and AEO? How to Get Cited by AI Search: Amplipath guide cover showing cited documents and search icons',
+        authorName: 'Adebayo Ogungbemile',
+        authorRole: 'Founder & CEO of Amplipath & Owner of Boostfunders',
+        authorImage: '/images/team/adebayo-ogungbemile-320.jpg',
+        authorBio: 'Adebayo Ogungbemile is the founder and CEO of <a href="https://amplipath.com/about">Amplipath</a>, an integrated digital marketing, technology and AI agency. He leads the company’s work across SEO, generative engine optimization (GEO), answer engine optimization (AEO), paid advertising, website and mobile app development, analytics, and AI automation. Through one integrated team, Amplipath helps businesses attract qualified customers, increase conversions and build scalable digital systems. Adebayo also owns <a href="https://boostfunders.com" target="_blank" rel="noopener">Boostfunders</a>, a crowdfunding marketing agency that helps creators and businesses launch and grow campaigns on Kickstarter, Indiegogo and other leading crowdfunding platforms.',
+        authorLinkedin: 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+        readTime: '20 min read',
+        status: 'published',
+        publishedAt: new Date('2026-10-27T10:00:00.000Z'),
+        categoryId: catGeo.id,
+        seoTitle: 'What Are GEO and AEO? How to Get Cited by AI Search',
+        metaDescription: 'Learn what GEO and AEO mean, how ChatGPT, Gemini, Perplexity and Google AI Overviews choose sources, and the steps that make your pages worth citing.',
+        canonicalUrl: '/blog/what-are-geo-and-aeo',
+        ogTitle: 'What Are GEO and AEO? How to Get Cited by AI Search',
+        ogDescription: 'Learn what GEO and AEO mean, how ChatGPT, Gemini, Perplexity and Google AI Overviews choose sources, and the steps that make your pages worth citing.',
+        ogImage: '/images/blog/what-are-geo-and-aeo-og.jpg',
+      },
+    });
+    console.log('✅ "What Are GEO and AEO?" flagship post seeded.');
+  }
+
   // 4. Seed Case Studies
   for (let idx = 0; idx < CASE_STUDIES.length; idx++) {
     const cs = CASE_STUDIES[idx];

@@ -87,6 +87,11 @@ export async function POST(request: Request) {
       featuredImage,
       imageAlt,
       authorName,
+      authorRole,
+      authorImage,
+      authorBio,
+      authorLinkedin,
+      readTime,
       status,
       scheduledAt,
       isFeatured,
@@ -122,6 +127,10 @@ export async function POST(request: Request) {
       counter++;
     }
 
+    const textWords = (contentHtml || excerpt || '').replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
+    const autoMins = Math.max(1, Math.round(textWords / 200));
+    const finalReadTime = readTime && readTime.trim() ? readTime.trim() : `${autoMins} min read`;
+
     const post = await prisma.blogPost.create({
       data: {
         title,
@@ -130,7 +139,12 @@ export async function POST(request: Request) {
         contentHtml: contentHtml || '',
         featuredImage: featuredImage || null,
         imageAlt: imageAlt || null,
-        authorName: authorName || 'Amplipath Team',
+        authorName: authorName || 'Adebayo Ogungbemile',
+        authorRole: authorRole || 'Founder & CEO of Amplipath & Owner of Boostfunders',
+        authorImage: authorImage || '/images/team/adebayo-ogungbemile-320.jpg',
+        authorBio: authorBio || null,
+        authorLinkedin: authorLinkedin || 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+        readTime: finalReadTime,
         status: status || 'draft',
         scheduledAt: scheduledAt ? new Date(scheduledAt) : null,
         publishedAt: status === 'published' ? new Date() : null,

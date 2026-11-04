@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { getAllPosts, getPostBySlug } from '@/lib/markdown';
+import BlogPostClient from '@/components/blog/BlogPostClient';
+import './article.css';
 
 export const dynamic = 'force-dynamic';
 
@@ -17,16 +18,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const pageTitle = post.seoTitle || `${post.title} | AMPLIPATH`;
   const pageDesc = post.metaDescription || post.excerpt || '';
-  const canonicalUrl = post.canonicalUrl || `/blog/${post.slug}`;
-  const ogImg = post.ogImage || post.featuredImage || '/images/logo-horizontal.jpg';
+  const canonicalUrl = post.canonicalUrl
+    ? (post.canonicalUrl.startsWith('http') ? post.canonicalUrl : `https://amplipath.com${post.canonicalUrl}`)
+    : `https://amplipath.com/blog/${post.slug}`;
+  const ogImg = post.ogImage || post.featuredImage || 'https://amplipath.com/images/blog/what-are-geo-and-aeo-og.jpg';
 
   return {
     title: pageTitle,
     description: pageDesc,
-    robots: post.noIndex ? { index: false, follow: false } : { index: true, follow: true },
+    robots: post.noIndex ? { index: false, follow: false } : { index: true, follow: true, 'max-image-preview': 'large' },
     alternates: {
       canonical: canonicalUrl,
     },
+    authors: [{ name: post.authorName || 'Adebayo Ogungbemile' }],
     openGraph: {
       title: post.ogTitle || pageTitle,
       description: post.ogDescription || pageDesc,
@@ -42,13 +46,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         },
       ],
       publishedTime: post.date,
-      authors: [post.authorName || 'AMPLIPATH Research'],
+      authors: [post.authorName || 'Adebayo Ogungbemile'],
+      section: post.category,
     },
     twitter: {
       card: 'summary_large_image',
       title: post.ogTitle || pageTitle,
       description: post.ogDescription || pageDesc,
       images: [ogImg],
+      site: '@amplipath',
     },
   };
 }
@@ -60,92 +66,114 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     notFound();
   }
 
-  // Schema.org Article Structured Data
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    image: post.featuredImage || 'https://amplipath.com/images/logo-horizontal.jpg',
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      '@type': 'Organization',
-      name: post.authorName || 'AMPLIPATH Research',
-      url: 'https://amplipath.com',
+  const postUrl = post.canonicalUrl
+    ? (post.canonicalUrl.startsWith('http') ? post.canonicalUrl : `https://amplipath.com${post.canonicalUrl}`)
+    : `https://amplipath.com/blog/${post.slug}`;
+
+  const featuredImgUrl = post.featuredImage
+    ? (post.featuredImage.startsWith('http') ? post.featuredImage : `https://amplipath.com${post.featuredImage}`)
+    : 'https://amplipath.com/images/blog/what-are-geo-and-aeo-cover.webp';
+
+  // Extract FAQ items from HTML for FAQPage Schema if present
+  const faqMatches = Array.from(
+    (post.contentHtml || '').matchAll(
+      /<details[^>]*class=["'][^"']*apb-faq[^"']*["'][^>]*>[\s\S]*?<h3[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<div[^>]*class=["'][^"']*apb-faq-a[^"']*["'][^>]*>([\s\S]*?)<\/div>[\s\S]*?<\/details>/gi
+    )
+  );
+
+  const faqEntities = faqMatches.map((m) => ({
+    '@type': 'Question',
+    name: m[1].replace(/<[^>]+>/g, '').trim(),
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: m[2].replace(/<[^>]+>/g, '').trim(),
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'AMPLIPATH',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://amplipath.com/images/logo-horizontal.jpg',
+  }));
+
+  // Schema.org Graph Data (BlogPosting, Breadcrumbs, FAQs)
+  const schemaGraph: any[] = [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${postUrl}#article`,
+      headline: post.title,
+      description: post.metaDescription || post.excerpt,
+      image: [featuredImgUrl],
+      datePublished: post.date,
+      dateModified: post.date,
+      articleSection: post.category,
+      inLanguage: 'en',
+      mainEntityOfPage: postUrl,
+      author: {
+        '@type': 'Person',
+        name: post.authorName || 'Adebayo Ogungbemile',
+        url: post.authorLinkedin || 'https://www.linkedin.com/in/adebayo-ogungbemile/',
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Amplipath',
+          url: 'https://amplipath.com',
+        },
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'AMPLIPATH',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://amplipath.com/images/logo-horizontal.jpg',
+        },
       },
     },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://amplipath.com/blog/${post.slug}`,
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://amplipath.com/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Blog',
+          item: 'https://amplipath.com/blog',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: post.category,
+          item: `https://amplipath.com/blog?category=${post.categorySlug || 'all'}`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: post.title,
+          item: postUrl,
+        },
+      ],
     },
+  ];
+
+  if (faqEntities.length > 0) {
+    schemaGraph.push({
+      '@type': 'FAQPage',
+      mainEntity: faqEntities,
+    });
+  }
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': schemaGraph,
   };
 
   return (
-    <article className="py-12 px-6 md:px-12 bg-white">
-      {/* Schema.org Article JSON-LD */}
+    <>
+      {/* Schema.org Article Graph JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-3xl mx-auto">
-        <div className="mb-6">
-          <Link href="/blog" className="text-xs text-blue-600 font-bold hover:underline">
-            &larr; Back to all articles
-          </Link>
-        </div>
-
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-2xl">{post.emoji}</span>
-          <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">
-            {post.category}
-          </span>
-        </div>
-
-        <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
-          {post.title}
-        </h1>
-
-        <div className="flex items-center gap-4 text-xs text-slate-500 pb-6 mb-8 border-b border-slate-200">
-          <span>Published on {post.date}</span>
-          <span>&middot;</span>
-          <span>{post.readTime}</span>
-          <span>&middot;</span>
-          <span>By {post.authorName || 'AMPLIPATH Research'}</span>
-        </div>
-
-        {post.featuredImage && (
-          <div className="mb-8 rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
-            <img
-              src={post.featuredImage}
-              alt={post.imageAlt || post.title}
-              className="w-full h-auto object-cover max-h-[460px]"
-            />
-          </div>
-        )}
-
-        <div
-          className="prose prose-slate blog-article-prose max-w-none leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }}
-        />
-
-        <div className="mt-16 pt-8 border-t border-slate-200 flex justify-between items-center">
-          <Link href="/blog" className="text-sm font-bold text-blue-600 hover:underline">
-            &larr; Back to all insights
-          </Link>
-          <Link href="/contact" className="btn-fill no-underline text-xs">
-            Discuss This Strategy &rarr;
-          </Link>
-        </div>
-      </div>
-    </article>
+      <BlogPostClient post={post} />
+    </>
   );
 }

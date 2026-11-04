@@ -4,7 +4,8 @@ datasource db {
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x", "rhel-openssl-3.0.x", "debian-openssl-1.1.x", "debian-openssl-3.0.x"]
 }
 
 model AdminUser {
@@ -35,7 +36,12 @@ model BlogPost {
   contentHtml     String        @db.LongText
   featuredImage   String?
   imageAlt        String?
-  authorName      String        @default("Amplipath Team")
+  authorName      String        @default("Adebayo Ogungbemile")
+  authorRole      String?       @default("Founder & CEO of Amplipath & Owner of Boostfunders")
+  authorImage     String?       @default("/images/team/adebayo-ogungbemile-320.jpg")
+  authorBio       String?       @db.Text
+  authorLinkedin  String?       @default("https://www.linkedin.com/in/adebayo-ogungbemile/")
+  readTime        String?       @default("20 min read")
   status          String        @default("draft") // "draft", "published", "scheduled"
   scheduledAt     DateTime?
   publishedAt     DateTime?

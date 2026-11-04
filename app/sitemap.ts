@@ -4,6 +4,9 @@ import { SERVICES_DATA } from '@/data/servicesData';
 import { getAllPosts } from '@/lib/markdown';
 import { CASE_STUDIES } from '@/data/caseStudiesData';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://amplipath.com';
   const currentDate = new Date();

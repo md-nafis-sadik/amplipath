@@ -11,7 +11,9 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
+  dateTxt?: string;
   category: string;
+  categorySlug?: string;
   excerpt: string;
   emoji: string;
   readTime: string;
@@ -19,6 +21,10 @@ export interface BlogPost {
   featuredImage?: string | null;
   imageAlt?: string | null;
   authorName?: string;
+  authorRole?: string | null;
+  authorImage?: string | null;
+  authorBio?: string | null;
+  authorLinkedin?: string | null;
   seoTitle?: string | null;
   metaDescription?: string | null;
   canonicalUrl?: string | null;
@@ -26,6 +32,31 @@ export interface BlogPost {
   ogDescription?: string | null;
   ogImage?: string | null;
   noIndex?: boolean;
+}
+
+export function calculateReadTime(
+  contentHtml?: string | null,
+  fallbackText?: string | null,
+  customReadTime?: string | null
+): string {
+  const text = (contentHtml || fallbackText || '').replace(/<[^>]+>/g, ' ').trim();
+  const words = text ? text.split(/\s+/).filter(Boolean).length : 0;
+  const calculatedMins = Math.max(1, Math.round(words / 200));
+
+  if (customReadTime && customReadTime.trim()) {
+    const trimmed = customReadTime.trim();
+    // If it was the old default '20 min read' on a short post, use the actual calculated read time
+    if (trimmed === '20 min read' && words > 0 && words < 2000) {
+      return `${calculatedMins} min read`;
+    }
+    const match = trimmed.match(/^\d+/);
+    if (match) {
+      return `${match[0]} min read`;
+    }
+    return trimmed;
+  }
+
+  return `${calculatedMins} min read`;
 }
 
 export function getAllPosts(): BlogPost[] {
@@ -92,20 +123,32 @@ export async function getLivePosts(): Promise<BlogPost[]> {
       orderBy: [{ publishedAt: 'desc' }, { createdAt: 'desc' }],
     });
 
-    if (dbPosts && dbPosts.length > 0) {
-      return dbPosts.map((p) => ({
+    // If database query succeeded, the DB is the source of truth (even if 0 posts)
+    return dbPosts.map((p) => {
+      const pubDate = p.publishedAt || p.createdAt;
+      const dateTxt = pubDate ? pubDate.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      }) : '';
+
+      return {
         slug: p.slug,
         title: p.title,
-        date: p.publishedAt
-          ? p.publishedAt.toISOString().split('T')[0]
-          : p.createdAt.toISOString().split('T')[0],
+        date: pubDate ? pubDate.toISOString().split('T')[0] : '',
+        dateTxt,
         category: p.category?.name || 'General',
+        categorySlug: p.category?.slug || 'all',
         excerpt: p.excerpt || '',
         emoji: '📝',
-        readTime: '5 min read',
-        featuredImage: p.featuredImage,
-        imageAlt: p.imageAlt,
-        authorName: p.authorName || 'AMPLIPATH Research',
+        readTime: calculateReadTime(p.contentHtml, p.excerpt, p.readTime),
+        featuredImage: p.featuredImage || '/images/blog/what-are-geo-and-aeo-cover-800.webp',
+        imageAlt: p.imageAlt || p.title,
+        authorName: p.authorName || 'Adebayo Ogungbemile',
+        authorRole: p.authorRole || 'Founder & CEO of Amplipath & Owner of Boostfunders',
+        authorImage: p.authorImage || '/images/team/adebayo-ogungbemile-320.jpg',
+        authorBio: p.authorBio || 'Adebayo Ogungbemile is the founder and CEO of Amplipath, an integrated digital marketing, technology and AI agency.',
+        authorLinkedin: p.authorLinkedin || 'https://www.linkedin.com/in/adebayo-ogungbemile/',
         seoTitle: p.seoTitle,
         metaDescription: p.metaDescription,
         canonicalUrl: p.canonicalUrl,
@@ -113,13 +156,12 @@ export async function getLivePosts(): Promise<BlogPost[]> {
         ogDescription: p.ogDescription,
         ogImage: p.ogImage,
         noIndex: p.noIndex,
-      }));
-    }
+      };
+    });
   } catch (err) {
     console.warn('DB getLivePosts fallback:', err);
+    return getAllPosts();
   }
-
-  return getAllPosts();
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
@@ -131,13 +173,17 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       include: { category: true },
     });
 
-    const isLive =
-      dbPost &&
-      !dbPost.isDeleted &&
-      (dbPost.status === 'published' ||
-        (dbPost.status === 'scheduled' && dbPost.scheduledAt && dbPost.scheduledAt <= now));
+    // If the record exists in the database, DB is the absolute source of truth
+    if (dbPost) {
+      // If deleted or not published yet, strictly return null (do NOT fall back to local disk files)
+      if (
+        dbPost.isDeleted ||
+        (dbPost.status !== 'published' &&
+          !(dbPost.status === 'scheduled' && dbPost.scheduledAt && dbPost.scheduledAt <= now))
+      ) {
+        return null;
+      }
 
-    if (dbPost && isLive) {
       if (dbPost.status === 'scheduled') {
         try {
           await prisma.blogPost.update({
@@ -149,20 +195,31 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
         }
       }
 
+      const pubDate = dbPost.publishedAt || dbPost.scheduledAt || dbPost.createdAt;
+      const dateTxt = pubDate ? pubDate.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      }) : '';
+
       return {
         slug: dbPost.slug,
         title: dbPost.title,
-        date: dbPost.publishedAt
-          ? dbPost.publishedAt.toISOString().split('T')[0]
-          : (dbPost.scheduledAt ? dbPost.scheduledAt.toISOString().split('T')[0] : dbPost.createdAt.toISOString().split('T')[0]),
-        category: dbPost.category?.name || 'General',
+        date: pubDate ? pubDate.toISOString().split('T')[0] : '',
+        dateTxt,
+        category: dbPost.category?.name || 'AEO / GEO',
+        categorySlug: dbPost.category?.slug || 'aeo-geo',
         excerpt: dbPost.excerpt || '',
         emoji: '📝',
-        readTime: '5 min read',
+        readTime: calculateReadTime(dbPost.contentHtml, dbPost.excerpt, dbPost.readTime),
         contentHtml: dbPost.contentHtml,
-        featuredImage: dbPost.featuredImage,
-        imageAlt: dbPost.imageAlt,
-        authorName: dbPost.authorName || 'AMPLIPATH Research',
+        featuredImage: dbPost.featuredImage || '/images/blog/what-are-geo-and-aeo-cover.webp',
+        imageAlt: dbPost.imageAlt || dbPost.title,
+        authorName: dbPost.authorName || 'Adebayo Ogungbemile',
+        authorRole: dbPost.authorRole || 'Founder & CEO of Amplipath & Owner of Boostfunders',
+        authorImage: dbPost.authorImage || '/images/team/adebayo-ogungbemile-320.jpg',
+        authorBio: dbPost.authorBio || 'Adebayo Ogungbemile is the founder and CEO of Amplipath, an integrated digital marketing, technology and AI agency.',
+        authorLinkedin: dbPost.authorLinkedin || 'https://www.linkedin.com/in/adebayo-ogungbemile/',
         seoTitle: dbPost.seoTitle,
         metaDescription: dbPost.metaDescription,
         canonicalUrl: dbPost.canonicalUrl,
@@ -172,11 +229,14 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
         noIndex: dbPost.noIndex,
       };
     }
+
+    // If DB is healthy and record is not found in DB at all, return null
+    return null;
   } catch (dbErr) {
     console.warn(`DB getPostBySlug(${slug}) fallback:`, dbErr);
   }
 
-  // 2. Fallback to local markdown file in posts/
+  // 2. Only fallback to local markdown file if database connection failed/offline
   try {
     const fullPath = path.join(postsDirectory, `${slug}.md`);
     if (!fs.existsSync(fullPath)) {
