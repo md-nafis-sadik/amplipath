@@ -421,8 +421,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                     {tocItems.map((item) => (
                       <li key={item.id}>
                         <a href={`#${item.id}`} onClick={(e) => handleAnchorClick(e, item.id)}>
-                          {item.number ? <em>{item.number} </em> : null}
-                          {item.title}
+                          {item.number ? <em>{item.number}</em> : null}
+                          <span>{item.title}</span>
                         </a>
                       </li>
                     ))}
@@ -487,35 +487,45 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                 <nav className="apb-toc" aria-label="Table of contents">
                   <div className="apb-toc-h">
                     <b>Table of Contents</b>
-                    <div className="apb-share" aria-label="Share this article">
+                    <div className="apb-share" aria-label="Follow Amplipath & Share">
                       <a
-                        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`}
+                        href="https://www.facebook.com/amplipath"
                         target="_blank"
-                        rel="noopener"
-                        aria-label="Share on Facebook"
+                        rel="noopener noreferrer"
+                        aria-label="Amplipath on Facebook"
                       >
                         <svg viewBox="0 0 24 24">
                           <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07" />
                         </svg>
                       </a>
                       <a
-                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonicalUrl)}`}
+                        href="https://www.linkedin.com/company/amplipath"
                         target="_blank"
-                        rel="noopener"
-                        aria-label="Share on LinkedIn"
+                        rel="noopener noreferrer"
+                        aria-label="Amplipath on LinkedIn"
                       >
                         <svg viewBox="0 0 24 24">
                           <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.2h4.56V23H.22zM8.1 8.2h4.37v2.02h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7V23h-4.56v-7.1c0-1.69-.03-3.87-2.36-3.87-2.36 0-2.72 1.84-2.72 3.75V23H8.1z" />
                         </svg>
                       </a>
                       <a
-                        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(canonicalUrl)}&text=${encodeURIComponent(post.title)}`}
+                        href="https://x.com/amplipaths"
                         target="_blank"
-                        rel="noopener"
-                        aria-label="Share on X"
+                        rel="noopener noreferrer"
+                        aria-label="Amplipath on X"
                       >
                         <svg viewBox="0 0 24 24">
                           <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z" />
+                        </svg>
+                      </a>
+                      <a
+                        href="https://www.pinterest.com/Amplipaths"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Amplipath on Pinterest"
+                      >
+                        <svg viewBox="0 0 24 24">
+                          <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z" />
                         </svg>
                       </a>
                       <button
@@ -541,8 +551,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                           className={activeId === item.id ? 'is-active' : ''}
                           onClick={(e) => handleAnchorClick(e, item.id)}
                         >
-                          {item.number ? <em>{item.number} </em> : null}
-                          {item.title}
+                          {item.number ? <em>{item.number}</em> : null}
+                          <span>{item.title}</span>
                         </a>
                       </li>
                     ))}

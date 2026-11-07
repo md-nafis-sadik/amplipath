@@ -1500,7 +1500,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
   padding: 14px 16px;
   border-bottom: 1px solid var(--line);
 }
@@ -1512,21 +1512,22 @@
 
 .apb-share {
   display: flex;
-  gap: 4px;
+  align-items: center;
+  gap: 3px;
 }
 
 .apb-share a,
 .apb-share button {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
   display: grid;
   place-items: center;
   color: var(--mut);
   background: none;
   border: 0;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -1554,15 +1555,17 @@
 .apb-toc ol {
   list-style: none;
   margin: 0;
-  padding: 10px 8px 12px;
+  padding: 8px 8px 12px;
   max-height: 380px;
   overflow-y: auto;
 }
 
 .apb-toc li a {
-  display: block;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
   position: relative;
-  padding: 7px 10px 7px 24px;
+  padding: 7px 12px;
   border-radius: 8px;
   font-size: 13.5px;
   line-height: 1.45;
@@ -1571,22 +1574,15 @@
 }
 
 .apb-toc li a::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 13px;
-  width: 6px;
-  height: 6px;
-  border-radius: 2px;
-  background: #c3cde0;
-  transform: rotate(45deg);
-  transition: background 0.2s;
+  content: none !important;
+  display: none !important;
 }
 
 .apb-toc li a em {
   font-style: normal;
   font-weight: 700;
   color: var(--mut);
+  flex-shrink: 0;
 }
 
 .apb-toc li a:hover {
@@ -1601,7 +1597,8 @@
 }
 
 .apb-toc li a.is-active::before {
-  background: var(--ab);
+  content: none !important;
+  display: none !important;
 }
 
 .apb-toc li a.is-active em {
