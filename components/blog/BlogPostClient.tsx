@@ -43,7 +43,7 @@ export function extractTocFromHtml(htmlContent: string): TocItem[] {
   const items: TocItem[] = [];
   const h2Regex = /<h2([^>]*)>([\s\S]*?)<\/h2>/gi;
   let match: RegExpExecArray | null;
-  let bodyCounter = 0;
+  let counter = 0;
 
   while ((match = h2Regex.exec(htmlContent)) !== null) {
     const attrs = match[1] || '';
@@ -64,21 +64,15 @@ export function extractTocFromHtml(htmlContent: string): TocItem[] {
       id = rawTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `sec-${items.length + 1}`;
     }
 
-    let number = '';
-    const lower = rawTitle.toLowerCase();
-    const isSpecial =
-      lower.includes('key takeaway') ||
-      lower.includes('takeaways') ||
-      lower.includes('faq') ||
-      lower.includes('frequently asked') ||
-      lower.includes('conclusion');
+    counter++;
+    const number = `${counter}.`;
 
-    if (!isSpecial) {
-      bodyCounter++;
-      number = `${bodyCounter}.`;
+    let title = rawTitle;
+    if (/^frequently asked questions?/i.test(title.trim())) {
+      title = 'FAQs';
     }
 
-    items.push({ id, title: rawTitle, number });
+    items.push({ id, title, number });
   }
 
   return items;
@@ -122,7 +116,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
     if (!articleRef.current) return;
     const h2Elements = Array.from(articleRef.current.querySelectorAll('h2'));
     const detected: TocItem[] = [];
-    let bodyCount = 0;
+    let counter = 0;
 
     h2Elements.forEach((h2) => {
       if (
@@ -134,11 +128,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         return;
       }
 
-      let id = h2.id;
       const parentSec = h2.closest('section');
-      if (!id && parentSec && parentSec.id) {
-        id = parentSec.id;
-      }
+      let id = parentSec?.id || h2.id;
       const rawText = h2.textContent?.trim() || '';
       if (!rawText) return;
 
@@ -147,21 +138,15 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         h2.id = id;
       }
 
-      let number = '';
-      const lower = rawText.toLowerCase();
-      const isSpecial =
-        lower.includes('key takeaway') ||
-        lower.includes('takeaways') ||
-        lower.includes('faq') ||
-        lower.includes('frequently asked') ||
-        lower.includes('conclusion');
+      counter++;
+      const number = `${counter}.`;
 
-      if (!isSpecial) {
-        bodyCount++;
-        number = `${bodyCount}.`;
+      let title = rawText;
+      if (/^frequently asked questions?/i.test(title.trim())) {
+        title = 'FAQs';
       }
 
-      detected.push({ id, title: rawText, number });
+      detected.push({ id, title, number });
     });
 
     if (detected.length > 0) {
@@ -421,7 +406,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                     {tocItems.map((item) => (
                       <li key={item.id}>
                         <a href={`#${item.id}`} onClick={(e) => handleAnchorClick(e, item.id)}>
-                          {item.number ? <em>{item.number}</em> : null}
+                          {item.number ? <em style={{ marginRight: '6px' }}>{item.number}</em> : null}{' '}
                           <span>{item.title}</span>
                         </a>
                       </li>
@@ -551,7 +536,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                           className={activeId === item.id ? 'is-active' : ''}
                           onClick={(e) => handleAnchorClick(e, item.id)}
                         >
-                          {item.number ? <em>{item.number}</em> : null}
+                          {item.number ? <em style={{ marginRight: '6px' }}>{item.number}</em> : null}{' '}
                           <span>{item.title}</span>
                         </a>
                       </li>

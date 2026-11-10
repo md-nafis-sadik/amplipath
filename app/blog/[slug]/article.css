@@ -304,6 +304,7 @@
   font-style: normal;
   color: var(--ab);
   font-weight: 700;
+  margin-right: 6px;
 }
 
 /* Prose */
@@ -1493,7 +1494,6 @@
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 18px 40px -32px rgba(11, 23, 48, 0.4);
-  overflow: hidden;
 }
 
 .apb-toc-h {
@@ -1556,8 +1556,6 @@
   list-style: none;
   margin: 0;
   padding: 8px 8px 12px;
-  max-height: 380px;
-  overflow-y: auto;
 }
 
 .apb-toc li a {
@@ -1583,6 +1581,7 @@
   font-weight: 700;
   color: var(--mut);
   flex-shrink: 0;
+  margin-right: 6px;
 }
 
 .apb-toc li a:hover {
@@ -1901,3 +1900,19 @@
   border-color: var(--ok) !important;
   box-shadow: 0 0 0 6px rgba(21, 128, 61, 0.14) !important;
 }
+
+/* Softer headings and text (Neil Patel style) */
+.apb h1, .apb h2, .apb h3, .apb h4, .apb-faq summary h3 {
+  color: #1f2430 !important;
+  font-weight: 600 !important;
+}
+.apb-prose p, .apb-prose li { color: #4a5568; }
+
+/* Keep headings white on dark/blue boxes */
+.apb-callout h3, .apb-cta h3, .apb-endcta h3,
+.apb-trio-card.is-hi h3, .q-cell.q-hi h3, .q-cell.q-hi strong {
+  color: #fff !important;
+}
+
+/* Fix "Get a Free Audit" button text on the blue end box */
+.apb-endcta .apb-btn.ghost { color: #fff !important; }
