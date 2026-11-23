@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
+import { submitToIndexNow } from '@/lib/indexnow';
 
 export async function GET(
   _request: Request,
@@ -108,6 +110,18 @@ export async function PUT(
       },
     });
 
+    revalidatePath('/work');
+    if (updated.slug) revalidatePath(`/work/${updated.slug}`);
+    if (existing.slug && existing.slug !== updated.slug) revalidatePath(`/work/${existing.slug}`);
+    revalidatePath('/api/portfolio');
+    revalidatePath('/');
+
+    if (updated.status === 'published' && !updated.noIndex) {
+      submitToIndexNow([`/work/${updated.slug}`, '/work']).catch((e) =>
+        console.error('IndexNow portfolio update ping error:', e)
+      );
+    }
+
     return NextResponse.json({ success: true, caseStudy: updated });
   } catch (error) {
     console.error('Failed to update case study:', error);
@@ -122,6 +136,7 @@ export async function DELETE(
 ) {
   try {
     const id = parseInt(params.id, 10);
+    const existing = await prisma.caseStudy.findUnique({ where: { id } });
     await prisma.caseStudy.update({
       where: { id },
       data: {
@@ -129,6 +144,17 @@ export async function DELETE(
         deletedAt: new Date(),
       },
     });
+
+    revalidatePath('/work');
+    if (existing?.slug) revalidatePath(`/work/${existing.slug}`);
+    revalidatePath('/api/portfolio');
+    revalidatePath('/');
+
+    if (existing?.slug) {
+      submitToIndexNow([`/work/${existing.slug}`, '/work']).catch((e) =>
+        console.error('IndexNow portfolio delete ping error:', e)
+      );
+    }
 
     return NextResponse.json({ success: true, message: 'Case study moved to Recycle Bin' });
   } catch (error) {

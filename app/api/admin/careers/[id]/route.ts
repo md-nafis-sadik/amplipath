@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export async function GET(
@@ -75,6 +76,10 @@ export async function PUT(
       },
     });
 
+    revalidatePath('/careers');
+    revalidatePath('/api/careers');
+    revalidatePath('/');
+
     return NextResponse.json({ success: true, job: updated });
   } catch (error) {
     console.error('Failed to update job listing:', error);
@@ -96,6 +101,10 @@ export async function DELETE(
         deletedAt: new Date(),
       },
     });
+
+    revalidatePath('/careers');
+    revalidatePath('/api/careers');
+    revalidatePath('/');
 
     return NextResponse.json({ success: true, message: 'Job listing moved to Recycle Bin' });
   } catch (error) {

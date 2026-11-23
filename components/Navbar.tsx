@@ -6,6 +6,7 @@ import Logo from './Logo';
 import MegaMenu from './MegaMenu';
 import { useModal } from './ModalContext';
 import GlobalLanguageSwitcher from './GlobalLanguageSwitcher';
+import { useHiringStatus } from '@/lib/useHiringStatus';
 
 // Comprehensive catalog of all 73 services grouped by their 8 categories
 const SERVICE_CATEGORIES = [
@@ -148,6 +149,7 @@ const INDUSTRIES = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { hasActiveJobs } = useHiringStatus();
   if (pathname?.startsWith('/admin')) {
     return null;
   }
@@ -609,9 +611,11 @@ export default function Navbar() {
                 >
                   <div className="flex items-center">
                     <span>Careers</span>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-300 ml-2.5">
-                      We&apos;re hiring
-                    </span>
+                    {hasActiveJobs && (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-300 ml-2.5 animate-pulse">
+                        We&apos;re hiring
+                      </span>
+                    )}
                   </div>
                   <span className="text-slate-400 text-xs">→</span>
                 </Link>

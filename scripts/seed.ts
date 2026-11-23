@@ -272,6 +272,13 @@ async function main() {
       metaDescription:
         'Request a comprehensive, no-obligation audit of your website, SEO rankings, paid advertising, and conversion funnels.',
     },
+    {
+      pagePath: '/industries',
+      pageName: 'Industries We Serve',
+      seoTitle: 'Industries We Serve | Amplipath Marketing & AI Solutions',
+      metaDescription:
+        'Tailored digital marketing, SEO, web technology, and AI automation across high-growth industries globally.',
+    },
   ];
 
   for (const cp of corePages) {
@@ -370,10 +377,24 @@ async function main() {
   console.log(`✅ ${serviceKeys.length} services SEO & FAQs seeded.`);
 
   // 7. Seed All 11 Industries SEO
+  const INDUSTRY_KEY_TO_ROUTE: Record<string, string> = {
+    law: '/industries/law-firms',
+    game: '/industries/gaming',
+    course: '/industries/education',
+    realestate: '/industries/real-estate',
+    roofing: '/industries/home-services',
+    restaurant: '/industries/restaurants',
+    nonprofit: '/industries/nonprofits',
+    ecommerce: '/industries/ecommerce',
+    fintech: '/industries/fintech',
+    healthcare: '/industries/healthcare',
+    saas: '/industries/saas',
+  };
+
   const indKeys = Object.keys(INDUSTRIES_DATA);
   for (const slug of indKeys) {
     const ind = INDUSTRIES_DATA[slug];
-    const pathUrl = `/industries/${slug}`;
+    const pathUrl = INDUSTRY_KEY_TO_ROUTE[slug] || `/industries/${slug}`;
 
     const seoTitle = `${ind.h1} | Amplipath`;
     const metaDescription =
@@ -484,6 +505,7 @@ async function main() {
         'Understanding of technical SEO principles, semantic markup, and performance optimization',
         'Portfolio of live websites or web applications that you have built or contributed to',
       ]),
+      status: 'archived',
     },
     {
       title: 'Full-Stack Software Developer',
@@ -508,6 +530,7 @@ async function main() {
         'Strong problem-solving ability with attention to security, performance, and code quality',
         'Clean communication skills and ability to manage project milestones autonomously',
       ]),
+      status: 'archived',
     },
     {
       title: 'Senior SEO & Technical Search Specialist',
@@ -532,6 +555,7 @@ async function main() {
         'Solid grasp of modern LLM citation models and Answer Engine Optimization (AEO) mechanics',
         'Strong English business writing and client communication capability',
       ]),
+      status: 'archived',
     },
   ];
 

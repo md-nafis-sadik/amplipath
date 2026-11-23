@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
+import { submitToIndexNow } from '@/lib/indexnow';
 
 export const dynamic = 'force-dynamic';
 
@@ -130,6 +132,17 @@ export async function POST(request: Request) {
         ogImage: ogImage || image || '/images/logo-horizontal.jpg',
       },
     });
+
+    revalidatePath('/work');
+    if (created.slug) revalidatePath(`/work/${created.slug}`);
+    revalidatePath('/api/portfolio');
+    revalidatePath('/');
+
+    if (created.status === 'published' && !created.noIndex) {
+      submitToIndexNow([`/work/${created.slug}`, '/work']).catch((e) =>
+        console.error('IndexNow portfolio ping error:', e)
+      );
+    }
 
     return NextResponse.json({ success: true, caseStudy: created });
   } catch (error) {

@@ -1,36 +1,18 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { INDUSTRIES_DATA } from '@/data/industriesData';
 import IndustryPageTemplate from '@/components/IndustryPageTemplate';
+import { getPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: "Healthcare & Wellness Marketing Agency | Amplipath",
-  description: "Amplipath helps clinics, practices and wellness brands attract patients with local SEO, content, paid ads and websites, with advertising rules in mind",
-  alternates: {
-    canonical: '/industries/healthcare',
-  },
-  openGraph: {
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return getPageMetadata('/industries/healthcare', {
     title: "Healthcare & Wellness Marketing Agency | Amplipath",
     description: "Amplipath helps clinics, practices and wellness brands attract patients with local SEO, content, paid ads and websites, with advertising rules in mind",
-    url: '/industries/healthcare',
-    siteName: 'AMPLIPATH',
-    images: [
-      {
-        url: '/images/industries-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Amplipath Industries - Healthcare & Wellness Marketing Agency',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Healthcare & Wellness Marketing Agency | Amplipath",
-    description: "Amplipath helps clinics, practices and wellness brands attract patients with local SEO, content, paid ads and websites, with advertising rules in mind",
-    images: ['/images/industries-og.jpg'],
-  },
-};
+    canonicalUrl: '/industries/healthcare',
+    ogImage: '/images/industries-og.jpg',
+  });
+}
 
 export default function IndustryPage() {
   const data = INDUSTRIES_DATA['healthcare'] || Object.values(INDUSTRIES_DATA)[0];

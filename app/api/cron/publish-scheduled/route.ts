@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
+import { submitToIndexNow } from '@/lib/indexnow';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,6 +29,20 @@ export async function GET(request: Request) {
         publishedAt: now,
       },
     });
+
+    if (result.count > 0) {
+      try {
+        const newlyPublished = await prisma.blogPost.findMany({
+          where: { publishedAt: now, status: 'published', isDeleted: false, noIndex: false },
+          select: { slug: true },
+        });
+        const urls = newlyPublished.map((p) => `/blog/${p.slug}`);
+        urls.push('/blog');
+        submitToIndexNow(urls).catch((e) => console.error('Cron IndexNow ping error:', e));
+      } catch (e) {
+        console.error('Failed to notify IndexNow in cron:', e);
+      }
+    }
 
     // Auto-purge any Recycle Bin items older than 30 days
     const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);

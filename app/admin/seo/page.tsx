@@ -2,7 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, Pencil } from 'lucide-react';
+import {
+  Search,
+  Pencil,
+  ExternalLink,
+  Zap,
+  CheckCircle2,
+  AlertCircle,
+  Loader2,
+} from 'lucide-react';
 import AdminPagination from '@/components/admin/AdminPagination';
 
 interface PageSeoItem {
@@ -31,6 +39,74 @@ export default function UniversalSeoPage() {
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
+  const [indexNowLoading, setIndexNowLoading] = useState(false);
+  const [pingingPath, setPingingPath] = useState<string | null>(null);
+  const [indexNowStatus, setIndexNowStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleIndexNowSubmitAll = async () => {
+    setIndexNowLoading(true);
+    setIndexNowStatus({ type: null, message: '' });
+    try {
+      const res = await fetch('/api/admin/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ all: true }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setIndexNowStatus({
+          type: 'success',
+          message: `Successfully notified IndexNow for ${data.submittedCount} live site URLs!`,
+        });
+      } else {
+        setIndexNowStatus({
+          type: 'error',
+          message: data.message || data.error || 'Failed to submit URLs to IndexNow.',
+        });
+      }
+    } catch (err: any) {
+      setIndexNowStatus({
+        type: 'error',
+        message: err.message || 'Network error pinging IndexNow.',
+      });
+    } finally {
+      setIndexNowLoading(false);
+    }
+  };
+
+  const handlePingSingleUrl = async (path: string) => {
+    setPingingPath(path);
+    setIndexNowStatus({ type: null, message: '' });
+    try {
+      const res = await fetch('/api/admin/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: path }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setIndexNowStatus({
+          type: 'success',
+          message: `IndexNow pinged for ${path}! Search engines notified.`,
+        });
+      } else {
+        setIndexNowStatus({
+          type: 'error',
+          message: data.message || data.error || `Failed to ping IndexNow for ${path}.`,
+        });
+      }
+    } catch (err: any) {
+      setIndexNowStatus({
+        type: 'error',
+        message: err.message || `Network error pinging IndexNow for ${path}.`,
+      });
+    } finally {
+      setPingingPath(null);
+    }
+  };
 
   const fetchPages = async (targetPage = page) => {
     setLoading(true);
@@ -67,6 +143,80 @@ export default function UniversalSeoPage() {
             Configure metadata, OpenGraph tags, and indexing settings across all platform routes.
           </p>
         </div>
+      </div>
+
+      {/* IndexNow Protocol Integration Card */}
+      <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-blue-900/10 via-slate-900 to-indigo-950/20 border border-blue-500/20 dark:border-blue-500/30">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                IndexNow Protocol Active
+              </span>
+            </div>
+            <h2 className="text-sm font-bold text-slate-900 dark:text-white">
+              Instant Search Engine Indexing (Bing, Yandex, Naver & Seznam)
+            </h2>
+            <p className="text-xs text-slate-500 dark:text-slate-400 max-w-2xl leading-relaxed">
+              When content is published or updated, Amplipath pings IndexNow automatically. You can also trigger an immediate full-site re-crawl across participating search engines below.
+            </p>
+            <div className="flex flex-wrap items-center gap-3 pt-1 text-[11px] text-slate-500 font-mono">
+              <span>Host: <strong className="text-slate-700 dark:text-slate-300">amplipath.com</strong></span>
+              <span>•</span>
+              <a
+                href="/c83e71d4b65942f2a91f5319e78a6340.txt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
+                title="Verify IndexNow key file"
+              >
+                <span>Key File (c83e...6340.txt)</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={handleIndexNowSubmitAll}
+              disabled={indexNowLoading}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:bg-blue-600/50 text-white text-xs font-semibold shadow-sm transition cursor-pointer"
+            >
+              {indexNowLoading ? (
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Submitting to IndexNow...</span>
+                </>
+              ) : (
+                <>
+                  <Zap className="w-3.5 h-3.5 fill-current" />
+                  <span>Ping All Search Engines</span>
+                </>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {indexNowStatus.type && (
+          <div
+            className={`mt-3 p-3 rounded-lg text-xs flex items-center gap-2 border ${
+              indexNowStatus.type === 'success'
+                ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300'
+                : 'bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300'
+            }`}
+          >
+            {indexNowStatus.type === 'success' ? (
+              <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-500" />
+            ) : (
+              <AlertCircle className="w-4 h-4 shrink-0 text-rose-500" />
+            )}
+            <span>{indexNowStatus.message}</span>
+          </div>
+        )}
       </div>
 
       {/* Filter & Search Bar */}
@@ -188,13 +338,40 @@ export default function UniversalSeoPage() {
                         </span>
                       </td>
                       <td className="py-3.5 px-4 text-right">
-                        <Link
-                          href={`/admin/seo/${p.id}`}
-                          title="Edit SEO"
-                          className="p-1.5 text-slate-400 hover:text-blue-500 transition rounded inline-flex items-center justify-center cursor-pointer"
-                        >
-                          <Pencil className="w-4 h-4" />
-                        </Link>
+                        <div className="flex items-center justify-end gap-1.5">
+                          {p.pagePath && (
+                            <button
+                              onClick={() => handlePingSingleUrl(p.pagePath)}
+                              disabled={pingingPath === p.pagePath}
+                              title="Instant Index with IndexNow"
+                              className="p-1.5 text-slate-400 hover:text-amber-500 dark:hover:text-amber-400 transition rounded inline-flex items-center justify-center cursor-pointer disabled:opacity-40"
+                            >
+                              {pingingPath === p.pagePath ? (
+                                <Loader2 className="w-3.5 h-3.5 animate-spin text-amber-500" />
+                              ) : (
+                                <Zap className="w-3.5 h-3.5" />
+                              )}
+                            </button>
+                          )}
+                          {p.pagePath && (
+                            <a
+                              href={p.pagePath.startsWith('/') ? p.pagePath : `/${p.pagePath}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="Visit Live Page"
+                              className="p-1.5 text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition rounded inline-flex items-center justify-center"
+                            >
+                              <ExternalLink className="w-3.5 h-3.5" />
+                            </a>
+                          )}
+                          <Link
+                            href={`/admin/seo/${p.id}`}
+                            title="Edit SEO"
+                            className="p-1.5 text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition rounded inline-flex items-center justify-center cursor-pointer"
+                          >
+                            <Pencil className="w-4 h-4" />
+                          </Link>
+                        </div>
                       </td>
                     </tr>
                   );

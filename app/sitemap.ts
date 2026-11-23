@@ -70,12 +70,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'restaurants', 'saas',
   ];
 
-  const industryPages: MetadataRoute.Sitemap = industries.map((ind) => ({
-    url: `${baseUrl}/industries/${ind}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
+  const industryPages: MetadataRoute.Sitemap = industries.map((ind) => {
+    const dbPage = dbSeoPages.find((p) => p.pagePath === `/industries/${ind}`);
+    return {
+      url: `${baseUrl}/industries/${ind}`,
+      lastModified: dbPage ? new Date(dbPage.updatedAt) : currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    };
+  });
 
   // 4. Build Service pages
   const dynamicServiceSlugs = Object.keys(SERVICES_DATA);

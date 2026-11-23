@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
+import { submitToIndexNow } from '@/lib/indexnow';
 
 export async function GET(
   _request: Request,
@@ -60,6 +62,18 @@ export async function PUT(
         breadcrumbTitle: breadcrumbTitle ? String(breadcrumbTitle) : null,
       },
     });
+
+    if (updated.pagePath) {
+      revalidatePath(updated.pagePath);
+      revalidatePath(updated.pagePath, 'layout');
+      if (!updated.noIndex) {
+        submitToIndexNow(updated.pagePath).catch((e) =>
+          console.error('IndexNow SEO ping error:', e)
+        );
+      }
+    }
+    revalidatePath('/');
+    revalidatePath('/sitemap.xml');
 
     return NextResponse.json({ success: true, page: updated });
   } catch (error) {

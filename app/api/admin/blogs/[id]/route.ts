@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
+import { submitToIndexNow } from '@/lib/indexnow';
 
 export async function GET(
   _request: Request,
@@ -122,6 +124,17 @@ export async function PUT(
       },
     });
 
+    revalidatePath('/blog');
+    if (updated.slug) revalidatePath(`/blog/${updated.slug}`);
+    if (existing.slug && existing.slug !== updated.slug) revalidatePath(`/blog/${existing.slug}`);
+    revalidatePath('/');
+
+    if (updated.status === 'published' && !updated.noIndex) {
+      submitToIndexNow([`/blog/${updated.slug}`, '/blog']).catch((e) =>
+        console.error('IndexNow update ping error:', e)
+      );
+    }
+
     return NextResponse.json({ success: true, post: updated });
   } catch (error) {
     console.error('Failed to update blog post:', error);
@@ -136,6 +149,7 @@ export async function DELETE(
 ) {
   try {
     const id = parseInt(params.id, 10);
+    const existing = await prisma.blogPost.findUnique({ where: { id } });
     await prisma.blogPost.update({
       where: { id },
       data: {
@@ -143,6 +157,16 @@ export async function DELETE(
         deletedAt: new Date(),
       },
     });
+
+    revalidatePath('/blog');
+    if (existing?.slug) revalidatePath(`/blog/${existing.slug}`);
+    revalidatePath('/');
+
+    if (existing?.slug) {
+      submitToIndexNow([`/blog/${existing.slug}`, '/blog']).catch((e) =>
+        console.error('IndexNow delete ping error:', e)
+      );
+    }
 
     return NextResponse.json({ success: true, message: 'Post moved to Recycle Bin' });
   } catch (error) {

@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export async function POST(
@@ -51,6 +52,10 @@ export async function POST(
         ogImage: original.ogImage,
       },
     });
+
+    revalidatePath('/work');
+    revalidatePath('/api/portfolio');
+    revalidatePath('/');
 
     return NextResponse.json({ success: true, caseStudy: duplicated });
   } catch (error) {

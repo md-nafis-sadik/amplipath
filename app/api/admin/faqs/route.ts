@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export const dynamic = 'force-dynamic';
@@ -155,6 +156,14 @@ export async function POST(request: Request) {
         });
       }
     }
+
+    revalidatePath('/api/faqs');
+    if (Array.isArray(assignedPages)) {
+      assignedPages.forEach((p) => {
+        if (p) revalidatePath(p);
+      });
+    }
+    revalidatePath('/');
 
     return NextResponse.json({ success: true, faq });
   } catch (error) {

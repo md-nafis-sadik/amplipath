@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export const dynamic = 'force-dynamic';
@@ -145,15 +146,30 @@ export async function POST(request: Request) {
     if (action === 'restore') {
       const numId = parseInt(id, 10);
       if (type === 'blog') {
-        await prisma.blogPost.update({ where: { id: numId }, data: { isDeleted: false, deletedAt: null } });
+        const p = await prisma.blogPost.update({ where: { id: numId }, data: { isDeleted: false, deletedAt: null } });
+        revalidatePath('/blog');
+        if (p.slug) revalidatePath(`/blog/${p.slug}`);
+        revalidatePath('/');
       } else if (type === 'case_study') {
-        await prisma.caseStudy.update({ where: { id: numId }, data: { isDeleted: false, deletedAt: null } });
+        const cs = await prisma.caseStudy.update({ where: { id: numId }, data: { isDeleted: false, deletedAt: null } });
+        revalidatePath('/work');
+        if (cs.slug) revalidatePath(`/work/${cs.slug}`);
+        revalidatePath('/api/portfolio');
+        revalidatePath('/');
       } else if (type === 'faq') {
         await prisma.faqItem.update({ where: { id: numId }, data: { isDeleted: false, deletedAt: null } });
+        revalidatePath('/api/faqs');
+        revalidatePath('/');
       } else if (type === 'team') {
         await prisma.teamMember.update({ where: { id: numId }, data: { isDeleted: false, deletedAt: null } });
+        revalidatePath('/about');
+        revalidatePath('/api/team');
+        revalidatePath('/');
       } else if (type === 'career') {
         await prisma.jobListing.update({ where: { id: numId }, data: { isDeleted: false, deletedAt: null } });
+        revalidatePath('/careers');
+        revalidatePath('/api/careers');
+        revalidatePath('/');
       }
       return NextResponse.json({ success: true, message: 'Item restored successfully' });
     }
@@ -162,14 +178,27 @@ export async function POST(request: Request) {
       const numId = parseInt(id, 10);
       if (type === 'blog') {
         await prisma.blogPost.delete({ where: { id: numId } });
+        revalidatePath('/blog');
+        revalidatePath('/');
       } else if (type === 'case_study') {
         await prisma.caseStudy.delete({ where: { id: numId } });
+        revalidatePath('/work');
+        revalidatePath('/api/portfolio');
+        revalidatePath('/');
       } else if (type === 'faq') {
         await prisma.faqItem.delete({ where: { id: numId } });
+        revalidatePath('/api/faqs');
+        revalidatePath('/');
       } else if (type === 'team') {
         await prisma.teamMember.delete({ where: { id: numId } });
+        revalidatePath('/about');
+        revalidatePath('/api/team');
+        revalidatePath('/');
       } else if (type === 'career') {
         await prisma.jobListing.delete({ where: { id: numId } });
+        revalidatePath('/careers');
+        revalidatePath('/api/careers');
+        revalidatePath('/');
       }
       return NextResponse.json({ success: true, message: 'Item permanently deleted' });
     }
@@ -182,6 +211,15 @@ export async function POST(request: Request) {
         prisma.teamMember.deleteMany({ where: { isDeleted: true } }),
         prisma.jobListing.deleteMany({ where: { isDeleted: true } }),
       ]);
+      revalidatePath('/blog');
+      revalidatePath('/work');
+      revalidatePath('/about');
+      revalidatePath('/careers');
+      revalidatePath('/api/portfolio');
+      revalidatePath('/api/team');
+      revalidatePath('/api/faqs');
+      revalidatePath('/api/careers');
+      revalidatePath('/');
       return NextResponse.json({ success: true, message: 'Recycle bin emptied' });
     }
 

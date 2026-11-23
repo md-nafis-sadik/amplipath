@@ -35,12 +35,19 @@ export async function GET(request: Request) {
       }),
     ]);
 
-    return NextResponse.json({
-      pages,
-      total,
-      page,
-      totalPages: Math.ceil(total / limit) || 1,
-    });
+    return NextResponse.json(
+      {
+        pages,
+        total,
+        page,
+        totalPages: Math.ceil(total / limit) || 1,
+      },
+      {
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
+        },
+      }
+    );
   } catch (error) {
     console.error('Failed to fetch page SEO:', error);
     return NextResponse.json({ error: 'Failed to fetch page SEO' }, { status: 500 });

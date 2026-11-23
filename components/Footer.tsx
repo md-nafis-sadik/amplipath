@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useModal } from './ModalContext';
 import { LANGUAGES, switchWebsiteLanguage } from './GlobalLanguageSwitcher';
+import { useHiringStatus } from '@/lib/useHiringStatus';
 
 export default function Footer() {
   const { openModal } = useModal();
   const pathname = usePathname();
+  const { hasActiveJobs } = useHiringStatus();
 
   if (pathname?.startsWith('/admin')) {
     return null;
@@ -315,9 +317,11 @@ export default function Footer() {
             <Link href="/blog" className="fl">Blog &amp; Insights</Link>
             <Link href="/careers" className="fl" style={{ display: 'inline-flex', alignItems: 'center' }}>
               <span>Careers</span>
-              <span style={{ fontSize: '10px', fontWeight: 600, padding: '2px 8px', borderRadius: '10px', background: 'rgba(34, 197, 94, 0.15)', color: '#4ade80', border: '1px solid rgba(34, 197, 94, 0.3)', marginLeft: '10px', whiteSpace: 'nowrap' }}>
-                We&apos;re hiring
-              </span>
+              {hasActiveJobs && (
+                <span style={{ fontSize: '10px', fontWeight: 600, padding: '2px 8px', borderRadius: '10px', background: 'rgba(34, 197, 94, 0.15)', color: '#4ade80', border: '1px solid rgba(34, 197, 94, 0.3)', marginLeft: '10px', whiteSpace: 'nowrap' }}>
+                  We&apos;re hiring
+                </span>
+              )}
             </Link>
             <Link href="/ai" className="fl">AI &amp; Technology</Link>
             <Link href="/contact" className="fl">Contact</Link>

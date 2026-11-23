@@ -66,7 +66,7 @@ export default function SeoForm({ initialData }: SeoFormProps) {
         throw new Error(data.error || 'Failed to update page SEO');
       }
 
-      setSuccessMsg('Page SEO updated successfully!');
+      setSuccessMsg('Page SEO updated & notified to IndexNow search engines!');
       setTimeout(() => {
         router.push('/admin/seo');
         router.refresh();
@@ -119,17 +119,19 @@ export default function SeoForm({ initialData }: SeoFormProps) {
             {formData.pagePath}
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <a
-            href={formData.pagePath}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition"
-          >
-            <Globe className="w-3.5 h-3.5" />
-            <span>Visit Live Page</span>
-          </a>
-        </div>
+        {formData.pagePath && (
+          <div className="flex items-center gap-2">
+            <a
+              href={formData.pagePath.startsWith('/') ? formData.pagePath : `/${formData.pagePath}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              <span>Visit Live Page</span>
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Google SERP Snippet Preview */}
@@ -139,11 +141,22 @@ export default function SeoForm({ initialData }: SeoFormProps) {
         </p>
         <div className="space-y-1">
           <div className="text-xs font-mono font-medium text-emerald-700 dark:text-emerald-400 truncate">
-            https://amplipath.com{formData.pagePath}
+            https://amplipath.com{formData.pagePath?.startsWith('/') ? formData.pagePath : `/${formData.pagePath || ''}`}
           </div>
-          <div className="text-base text-blue-600 dark:text-blue-400 font-semibold hover:underline cursor-pointer line-clamp-1">
-            {formData.seoTitle || formData.pageName}
-          </div>
+          {formData.pagePath ? (
+            <a
+              href={formData.pagePath.startsWith('/') ? formData.pagePath : `/${formData.pagePath}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base text-blue-600 dark:text-blue-400 font-semibold hover:underline cursor-pointer line-clamp-1 block"
+            >
+              {formData.seoTitle || formData.pageName}
+            </a>
+          ) : (
+            <div className="text-base text-blue-600 dark:text-blue-400 font-semibold line-clamp-1">
+              {formData.seoTitle || formData.pageName}
+            </div>
+          )}
           <div className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
             {formData.metaDescription || 'No meta description set. Search engines will generate a fallback snippet.'}
           </div>

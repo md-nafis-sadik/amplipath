@@ -13,23 +13,29 @@ export async function generateStaticParams() {
       where: { isDeleted: false, status: 'published' },
       select: { slug: true },
     });
-    if (dbCases.length > 0) {
-      return dbCases.map((c) => ({ slug: c.slug }));
-    }
+    return dbCases.map((c) => ({ slug: c.slug }));
   } catch (err) {
-    // DB offline fallback
+    return [];
   }
-  return CASE_STUDIES.map((c) => ({ slug: c.id }));
 }
 
 async function getCaseStudyData(slug: string) {
   let dbCs: any = null;
+  let dbHealthy = false;
   try {
     dbCs = await prisma.caseStudy.findFirst({
-      where: { slug, isDeleted: false },
+      where: { slug },
     });
+    dbHealthy = true;
   } catch (err) {
     console.error('Error fetching case study from database:', err);
+  }
+
+  // If database query succeeded, DB is the absolute source of truth (do NOT resurrect deleted/draft from static fallback)
+  if (dbHealthy) {
+    if (!dbCs || dbCs.isDeleted || dbCs.status !== 'published') {
+      return null;
+    }
   }
 
   const fallback = CASE_STUDIES.find((c) => c.id === slug);

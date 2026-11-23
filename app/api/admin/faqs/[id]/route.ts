@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export async function GET(
@@ -68,6 +69,14 @@ export async function PUT(
       }
     }
 
+    revalidatePath('/api/faqs');
+    if (Array.isArray(assignedPages)) {
+      assignedPages.forEach((p) => {
+        if (p) revalidatePath(p);
+      });
+    }
+    revalidatePath('/');
+
     return NextResponse.json({ success: true, faq: updated });
   } catch (error) {
     console.error('Failed to update FAQ:', error);
@@ -82,6 +91,10 @@ export async function DELETE(
 ) {
   try {
     const id = parseInt(params.id, 10);
+    const pageAssignments = await prisma.pageFaq.findMany({
+      where: { faqId: id },
+      select: { pagePath: true },
+    });
     await prisma.faqItem.update({
       where: { id },
       data: {
@@ -89,6 +102,12 @@ export async function DELETE(
         deletedAt: new Date(),
       },
     });
+
+    revalidatePath('/api/faqs');
+    pageAssignments.forEach((pa) => {
+      if (pa.pagePath) revalidatePath(pa.pagePath);
+    });
+    revalidatePath('/');
 
     return NextResponse.json({ success: true, message: 'FAQ moved to Recycle Bin' });
   } catch (error) {

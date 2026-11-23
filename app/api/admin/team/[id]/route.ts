@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export async function GET(
@@ -50,6 +51,10 @@ export async function PUT(
       },
     });
 
+    revalidatePath('/about');
+    revalidatePath('/api/team');
+    revalidatePath('/');
+
     return NextResponse.json({ success: true, member: updated });
   } catch (error) {
     console.error('Failed to update team member:', error);
@@ -71,6 +76,10 @@ export async function DELETE(
         deletedAt: new Date(),
       },
     });
+
+    revalidatePath('/about');
+    revalidatePath('/api/team');
+    revalidatePath('/');
 
     return NextResponse.json({ success: true, message: 'Team member moved to Recycle Bin' });
   } catch (error) {

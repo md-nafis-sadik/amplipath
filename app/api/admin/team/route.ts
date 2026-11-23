@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export const dynamic = 'force-dynamic';
@@ -62,6 +63,10 @@ export async function POST(request: Request) {
         isActive: isActive !== undefined ? Boolean(isActive) : true,
       },
     });
+
+    revalidatePath('/about');
+    revalidatePath('/api/team');
+    revalidatePath('/');
 
     return NextResponse.json({ success: true, member });
   } catch (error) {

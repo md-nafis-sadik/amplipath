@@ -2,8 +2,30 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Airtable from 'airtable';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+export const fetchCache = 'force-no-store';
+
 export async function POST(req: Request) {
   try {
+    const prisma = (await import('@/lib/prisma')).default;
+
+    // Check if hiring is active (at least one active job in database)
+    const activeJobsCount = await prisma.jobListing.count({
+      where: { isDeleted: false, status: 'active' },
+    });
+
+    if (activeJobsCount === 0) {
+      return NextResponse.json(
+        {
+          success: false,
+          message:
+            'Applications are currently closed. All positions have been filled and we are not accepting submissions at this time.',
+        },
+        { status: 403 }
+      );
+    }
+
     const body = await req.json();
     const {
       firstName = '',
@@ -146,10 +168,31 @@ export async function GET() {
       where: { isDeleted: false, status: 'active' },
       orderBy: { createdAt: 'desc' },
     });
-    return NextResponse.json({ jobs });
+    return NextResponse.json(
+      {
+        jobs,
+        hasActiveJobs: jobs.length > 0,
+      },
+      {
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        },
+      }
+    );
   } catch (error) {
     console.warn('GET /api/careers fallback:', error);
-    return NextResponse.json({ jobs: [] });
+    return NextResponse.json(
+      { jobs: [], hasActiveJobs: false },
+      {
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        },
+      }
+    );
   }
 }
 

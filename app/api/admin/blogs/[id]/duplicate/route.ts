@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export async function POST(
@@ -42,6 +43,9 @@ export async function POST(
         noIndex: false,
       },
     });
+
+    revalidatePath('/blog');
+    revalidatePath('/');
 
     return NextResponse.json({ success: true, post: duplicated });
   } catch (error) {

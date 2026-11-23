@@ -57,48 +57,26 @@ export default function AboutPage() {
       .catch(() => {});
   }, []);
 
-  const [teamList, setTeamList] = useState([
-    {
-      name: 'Adebayo Ogungbemile',
-      role: 'Founder & Chief Executive Officer',
-      photoUrl: '/images/team/adebayo.png',
-      linkedinUrl: 'https://www.linkedin.com/in/adebayo-ogungbemile/',
-    },
-    {
-      name: 'Nafis Sadik',
-      role: 'SEO & Web Development Lead',
-      photoUrl: '/images/team/nafis.png',
-      linkedinUrl: 'https://md-nafis-sadik.vercel.app/',
-    },
-    {
-      name: 'Raheel Wazir',
-      role: 'AI Systems & Full-Stack Software Developer',
-      photoUrl: '/images/team/raheel.png',
-      linkedinUrl: 'https://linkedin.com/in/rahil-wazir',
-    },
-    {
-      name: 'Rana Fahad',
-      role: 'Mobile App Developer Lead',
-      photoUrl: '/images/team/rana.png',
-      linkedinUrl: 'https://www.linkedin.com/company/amplipath',
-    },
-    {
-      name: 'Gouravdeep Singh',
-      role: 'Mobile App Developer',
-      photoUrl: '/images/team/gouravdeep.png',
-      linkedinUrl: 'https://www.linkedin.com/in/gouravdeepsingh/',
-    },
-  ]);
+  const [teamList, setTeamList] = useState<any[]>([]);
 
-  React.useEffect(() => {
-    fetch('/api/team')
+  useEffect(() => {
+    fetch(`/api/team?t=${Date.now()}`, {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache',
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
-        if (data.team && data.team.length > 0) {
+        if (data.team && Array.isArray(data.team)) {
           setTeamList(data.team);
+        } else {
+          setTeamList([]);
         }
       })
-      .catch(() => {});
+      .catch(() => {
+        setTeamList([]);
+      });
   }, []);
 
   return (
@@ -175,35 +153,37 @@ export default function AboutPage() {
     </div>
   </div>
 </div>
-<div className="s-dark">
-  <div className="sec-tag wh">LEADERSHIP TEAM</div>
-  <h2 className="sec-h2 wh">The specialists behind your growth.</h2>
-  <div className="aln wh"></div>
-  <p className="sec-sub wh" style={{"marginBottom":"24px"}}>Our leadership team brings together deep expertise across SEO and web development, mobile and AI systems, and automation.</p>
-  
-  <div className="lt-grid">
-    {teamList.map((member, idx) => (
-      <div key={idx} className="lt-card">
-        <div className="lt-photo">
-          <img src={member.photoUrl || '/images/team/adebayo.png'} alt={member.name} />
+{teamList.length > 0 && (
+  <div className="s-dark">
+    <div className="sec-tag wh">LEADERSHIP TEAM</div>
+    <h2 className="sec-h2 wh">The specialists behind your growth.</h2>
+    <div className="aln wh"></div>
+    <p className="sec-sub wh" style={{"marginBottom":"24px"}}>Our leadership team brings together deep expertise across SEO and web development, mobile and AI systems, and automation.</p>
+    
+    <div className="lt-grid">
+      {teamList.map((member, idx) => (
+        <div key={idx} className="lt-card">
+          <div className="lt-photo">
+            <img src={member.photoUrl || '/images/team/adebayo.png'} alt={member.name} />
+          </div>
+          <div className="lt-name">{member.name}</div>
+          <div className="lt-role">{member.role}</div>
+          {member.linkedinUrl && (
+            <a
+              className="lt-linkedin"
+              href={member.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} on LinkedIn`}
+            >
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+          )}
         </div>
-        <div className="lt-name">{member.name}</div>
-        <div className="lt-role">{member.role}</div>
-        {member.linkedinUrl && (
-          <a
-            className="lt-linkedin"
-            href={member.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${member.name} on LinkedIn`}
-          >
-            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          </a>
-        )}
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
-</div>
+)}
 
 <div className="s-white">
   <div className="sec-tag">GLOBAL OFFICES</div>

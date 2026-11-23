@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
+import { submitToIndexNow } from '@/lib/indexnow';
 
 export const dynamic = 'force-dynamic';
 
@@ -161,6 +163,16 @@ export async function POST(request: Request) {
         noIndex: Boolean(noIndex),
       },
     });
+
+    revalidatePath('/blog');
+    if (post.slug) revalidatePath(`/blog/${post.slug}`);
+    revalidatePath('/');
+
+    if (post.status === 'published' && !post.noIndex) {
+      submitToIndexNow([`/blog/${post.slug}`, '/blog']).catch((e) =>
+        console.error('IndexNow post ping error:', e)
+      );
+    }
 
     return NextResponse.json({ success: true, post });
   } catch (error) {
